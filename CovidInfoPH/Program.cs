@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace DataViz
+namespace CovidInfoPH
 {
     static class Program
     {

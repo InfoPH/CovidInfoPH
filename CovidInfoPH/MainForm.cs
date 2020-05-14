@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace DataViz
+namespace CovidInfoPH
 {
     public partial class MainForm : Form
     {

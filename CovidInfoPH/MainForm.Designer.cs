@@ -1,4 +1,4 @@
-﻿namespace DataViz
+﻿namespace CovidInfoPH
 {
     partial class MainForm
     {
