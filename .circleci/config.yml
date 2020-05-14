@@ -12,7 +12,7 @@ jobs:
       - run:
           name: "Install dotnet-zip utility"
           command: |
-            cd DataViz
+            cd CovidInfoPH
             dotnet new tool-manifest
             dotnet tool install dotnet-zip
             dotnet zip install
@@ -23,7 +23,7 @@ jobs:
       - run:
           name: "Build and pack to win-x64"
           command: |
-            cd DataViz
+            cd CovidInfoPH
             dotnet zip -r win-x64 -c Release -o ../output --no-restore
       - store_artifacts:
           path: output
