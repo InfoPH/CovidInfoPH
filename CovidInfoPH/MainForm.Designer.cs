@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.bunifuDataViz1 = new Bunifu.DataViz.WinForms.BunifuDataViz();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // bunifuDataViz1
@@ -52,24 +50,20 @@
             0,
             0});
             this.bunifuDataViz1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuDataViz1.Location = new System.Drawing.Point(112, 63);
-            this.bunifuDataViz1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuDataViz1.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDataViz1.Location = new System.Drawing.Point(26, 3);
+            this.bunifuDataViz1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuDataViz1.Name = "bunifuDataViz1";
-            this.bunifuDataViz1.Size = new System.Drawing.Size(506, 253);
+            this.bunifuDataViz1.Size = new System.Drawing.Size(669, 392);
             this.bunifuDataViz1.TabIndex = 18;
             this.bunifuDataViz1.Theme = Bunifu.DataViz.WinForms.BunifuDataViz._theme.theme1;
             this.bunifuDataViz1.Title = "";
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 30000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 360);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.bunifuDataViz1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
@@ -81,7 +75,6 @@
 
         #endregion
         private Bunifu.DataViz.WinForms.BunifuDataViz bunifuDataViz1;
-        private System.Windows.Forms.Timer timer1;
     }
 }
 
