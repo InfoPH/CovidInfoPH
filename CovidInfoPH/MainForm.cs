@@ -3,81 +3,64 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Serialization;
-using SheetToObjects.Adapters.GoogleSheets;
 using SheetToObjects.Lib;
 using SheetToObjects.Lib.FluentConfiguration;
+using SheetToObjects.Adapters.GoogleSheets;
+using Bunifu.DataViz.WinForms;
+using CovidInfoPH.Models;
 
 
 namespace CovidInfoPH
 {
     public partial class MainForm : Form
     {
-
-        public SheetMapper SheetMapper;
-        public Sheet SheetData;
-        public MappingResult<PatientInfo> Result;
-
+        public List<Patient> Patients;
         public MainForm()
         {
             InitializeComponent();
         }
 
-        private async Task LoadStuff()
+        private async void MainForm_Load(object sender, EventArgs e)
         {
-            SheetMapper = new SheetMapper()
-                .AddConfigFor<PatientInfo>(cfg => cfg
+            await LoadDataFromSheet();
+            DisplayGraph();
+        }
+
+        private async Task LoadDataFromSheet()  
+        {
+            SheetMapper sheetMapper = new SheetMapper()
+                .AddConfigFor<Patient>(cfg => cfg
                    .MapColumn(column => column.WithHeader("Age").IsRequired().MapTo(p => p.Age))
                    .MapColumn(column => column.WithHeader("DateRepConf").IsRequired().UsingFormat("dd-MM-yy").MapTo(p => p.DateConfirmed))
                    .MapColumn(column => column.WithHeader("DateRecover").UsingFormat("dd-MM-yy").WithDefaultValue<DateTime?>(null).MapTo(p => p.DateRecovered))
                    .MapColumn(column => column.WithHeader("DateDied").UsingFormat("dd-MM-yy")
                        .WithDefaultValue<DateTime?>(null).MapTo(p => p.DateDied)));
 
+            
+            Sheet sheetData = await new GoogleSheetAdapter().GetAsync("16g_PUxKYMC0XjeEKF6FPUBq2-pFgmTkHoj5lbVrGLhE", "'DOH Data Drop'!A1:ZZ", "AIzaSyCkssJLOPN-8WdM3HX_8N3kdq62_9hn_wA");
+            MappingResult<Patient> result = sheetMapper.Map<Patient>(sheetData);
+            Patients = result.ParsedModels.Select(o => o.Value).OrderBy(o => o.DateConfirmed).ToList();
 
-            SheetData = await new GoogleSheetAdapter().GetAsync("16g_PUxKYMC0XjeEKF6FPUBq2-pFgmTkHoj5lbVrGLhE", "'DOH Data Drop'!A1:ZZ", "AIzaSyCkssJLOPN-8WdM3HX_8N3kdq62_9hn_wA");
-            Result = SheetMapper.Map<PatientInfo>(SheetData);
-        }
+        } 
 
-        private void LoadData()
+        private void DisplayGraph()
         {
-            Bunifu.DataViz.WinForms.Canvas canvas = new Bunifu.DataViz.WinForms.Canvas();
-            Bunifu.DataViz.WinForms.DataPoint data = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_line);
+            Canvas canvas = new Canvas();
+            DataPoint data = new DataPoint(BunifuDataViz._type.Bunifu_line);
 
-            int caseNum = 0;
+            int caseDayCount = 0;
 
             for (int j = 0; j < 10; j++)
             {
-                DateTime currentDate = Result.ParsedModels[caseNum].Value.DateConfirmed;
-                for (int i = caseNum; currentDate == Result.ParsedModels[i].Value.DateConfirmed; i++)
-                {
-                    caseNum++;
-                }
-                data.addLabely(Result.ParsedModels[caseNum].Value.DateConfirmed.ToString("d"), caseNum);
+                DateTime currentDate = Patients[caseDayCount].DateConfirmed;
+                //Count all patients that are confirmed on the current date
+                caseDayCount += Patients.Count(patient => patient.DateConfirmed == currentDate);
+
+                data.addLabely(Patients[caseDayCount].DateConfirmed.ToString("d"), caseDayCount);
                 canvas.addData(data);
 
             }
             bunifuDataViz1.Render(canvas);
-        }
-
-
-
-        private void MainForm_Load(object sender, System.EventArgs e)
-        {
-            LoadStuff();
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            LoadData();
-            timer1.Stop();
-        }
-
-        public class PatientInfo
-        {
-            public int Age { get; set; }
-            public DateTime DateConfirmed { get; set; }
-            public DateTime? DateRecovered { get; set; }
-            public DateTime? DateDied { get; set; }
         }
     }
 }
