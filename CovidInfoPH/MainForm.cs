@@ -31,13 +31,21 @@ namespace CovidInfoPH
 
         private async Task LoadDataFromSheetAsync()
         {
+            //create config for sheetMapper
             SheetMapper sheetMapper = new SheetMapper()
                 .AddConfigFor<Patient>(cfg => cfg
-                   .MapColumn(column => column.WithHeader("Age").IsRequired().MapTo(p => p.Age))
-                   .MapColumn(column => column.WithHeader("DateRepConf").IsRequired().UsingFormat("dd-MM-yy").MapTo(p => p.DateConfirmed))
-                   .MapColumn(column => column.WithHeader("DateRecover").UsingFormat("dd-MM-yy").WithDefaultValue<DateTime?>(null).MapTo(p => p.DateRecovered))
-                   .MapColumn(column => column.WithHeader("DateDied").UsingFormat("dd-MM-yy")
-                       .WithDefaultValue<DateTime?>(null).MapTo(p => p.DateDied)))
+                    .MapColumn(column => column.WithHeader("Age").IsRequired().MapTo(p => p.Age))
+                    .MapColumn(column =>
+                        column.WithHeader("DateRepConf").IsRequired().UsingFormat("dd-MM-yy")
+                            .MapTo(p => p.DateConfirmed))
+                    .MapColumn(column =>
+                        column.WithHeader("DateRecover").UsingFormat("dd-MM-yy").WithDefaultValue<DateTime?>(null)
+                            .MapTo(p => p.DateRecovered))
+                    .MapColumn(column => column.WithHeader("DateDied").UsingFormat("dd-MM-yy")
+                        .WithDefaultValue<DateTime?>(null).MapTo(p => p.DateDied))
+                    .MapColumn(column => column.WithHeader("RegionRes").MapTo(p => p.Region))
+                    .MapColumn(column => column.WithHeader("ProvRes").MapTo(p => p.Province))
+                    .MapColumn(column => column.WithHeader("ProvCityRes").MapTo(p => p.City)))
                 .AddConfigFor<HistoricalInfo>(cfg => cfg
                     .MapColumn(column => column.WithHeader("Cases").IsRequired().MapTo(p => p.Cases))
                     .MapColumn(column => column.WithHeader("Deaths").IsRequired().MapTo(p => p.Deaths))
@@ -50,9 +58,10 @@ namespace CovidInfoPH
             Task<Sheet> historicalSheet = adapter.GetAsync("16g_PUxKYMC0XjeEKF6FPUBq2-pFgmTkHoj5lbVrGLhE",
                 "'Historical'!A1:ZZ", "AIzaSyCkssJLOPN-8WdM3HX_8N3kdq62_9hn_wA");
             await Task.WhenAll(dohDataDropSheet, historicalSheet);
-            //Map the data accordingly
+            //Map Patients
             Patients = sheetMapper.Map<Patient>(dohDataDropSheet.Result).ParsedModels.Select(o => o.Value)
                 .OrderBy(o => o.DateConfirmed).ToList();
+            //Map Historical
             List<HistoricalInfo> historicalInfos = sheetMapper.Map<HistoricalInfo>(historicalSheet.Result).ParsedModels
                 .Select(o => o.Value).ToList();
             List<DateTime> historicalDates = historicalSheet.Result.Rows
