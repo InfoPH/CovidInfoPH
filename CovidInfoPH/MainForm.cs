@@ -9,6 +9,7 @@ using SheetToObjects.Adapters.GoogleSheets;
 using Bunifu.DataViz.WinForms;
 using CovidInfoPH.Models;
 using Task = System.Threading.Tasks.Task;
+using System.Drawing;
 
 namespace CovidInfoPH
 {
@@ -25,8 +26,10 @@ namespace CovidInfoPH
         private async void MainForm_Load(object sender, EventArgs e)
         { 
             await LoadDataFromSheetAsync();
+            SetChartColors();
             DisplayGraph();
-         
+            DisplayDataGrid();
+            RefreshData();
         }
 
         private async Task LoadDataFromSheetAsync()
@@ -71,6 +74,22 @@ namespace CovidInfoPH
                 .ToDictionary(i => historicalDates[i], i => historicalInfos[i]);           
         }
 
+        private void SetChartColors()
+        {
+            GeneralCaseChart.colorSet.Add(Color.FromArgb(152, 135, 143));
+            GeneralCaseChart.colorSet.Add(Color.FromArgb(152, 94, 109));
+            GeneralCaseChart.colorSet.Add(Color.FromArgb(142, 174, 189));
+        }
+
+        private void DisplayDataGrid()
+        {
+            caseGridView.Rows.Clear();
+            for (int i = 0; i < 7; i++)
+            {
+                caseGridView.Rows.Add(DatePicker.Value.AddDays(i).ToString("d"), Historical[DatePicker.Value.AddDays(i)].Cases,
+                Historical[DatePicker.Value.AddDays(i)].Deaths, Historical[DatePicker.Value.AddDays(i)].Recoveries);
+            }
+        }
         private void DisplayGraph()
         {
             Canvas canvas = new Canvas();
@@ -80,9 +99,9 @@ namespace CovidInfoPH
             
             for(int i = 0; i < 7; i++)
             {
-                cases.addLabely(DatePicker.Value.AddDays(i).DayOfWeek.ToString(), Historical[DatePicker.Value].Cases);
-                deaths.addLabely(DatePicker.Value.AddDays(i).DayOfWeek.ToString(), Historical[DatePicker.Value].Deaths);
-                recoveries.addLabely(DatePicker.Value.AddDays(i).DayOfWeek.ToString(), Historical[DatePicker.Value].Recoveries);
+                cases.addLabely(DatePicker.Value.AddDays(i).DayOfWeek.ToString(), Historical[DatePicker.Value.AddDays(i)].Cases);
+                deaths.addLabely(DatePicker.Value.AddDays(i).DayOfWeek.ToString(), Historical[DatePicker.Value.AddDays(i)].Deaths);
+                recoveries.addLabely(DatePicker.Value.AddDays(i).DayOfWeek.ToString(), Historical[DatePicker.Value.AddDays(i)].Recoveries);
             }
 
             canvas.addData(cases);
@@ -90,11 +109,33 @@ namespace CovidInfoPH
             canvas.addData(deaths);
             GeneralCaseChart.Render(canvas);
         }
+
+        private void RefreshData()
+        {
+           int cases = 0, deaths = 0, recoveries = 0;
+           int admitPercentage = Historical[DatePicker.Value.AddDays(6)].Admitted / Historical[DatePicker.Value].Admitted * 100;
+           int newCases = Historical[DatePicker.Value.AddDays(6)].Cases - Historical[DatePicker.Value].Cases;
+           for (int i = 0; i < caseGridView.Rows.Count; i++)
+           {
+                cases += Convert.ToInt32(caseGridView[1, i].Value);
+                deaths += Convert.ToInt32(caseGridView[2, i].Value);
+                recoveries += Convert.ToInt32(caseGridView[3, i].Value);
+           }
+
+            casesNum.Text = cases.ToString();
+            deathNum.Text = deaths.ToString();
+            recovNum.Text = recoveries.ToString();
+            admitted.Text = admitPercentage.ToString() + "%";
+            newCasesNum.Text = newCases.ToString();
+            newCasesDesc.Text = "New cases since " + "\n" + DatePicker.Value.DayOfWeek.ToString();
+        }
         
         private void DatePicker_ValueChanged(object sender, EventArgs e)
         {
+            RefreshData();
             bunifuTransition1.HideSync(GeneralCaseChart);
             DisplayGraph();
+            DisplayDataGrid();
             bunifuTransition1.Show(GeneralCaseChart);
         }
     }
