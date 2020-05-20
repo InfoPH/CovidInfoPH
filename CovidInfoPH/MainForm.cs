@@ -64,31 +64,16 @@ namespace CovidInfoPH
 
         private void DisplayGraph()
         {
-            SetDateLimit();
             Canvas canvas = new Canvas();
             DataPoint cases = new DataPoint(BunifuDataViz._type.Bunifu_column);
             DataPoint deaths = new DataPoint(BunifuDataViz._type.Bunifu_column);
             DataPoint recoveries = new DataPoint(BunifuDataViz._type.Bunifu_column);
-            DateTime currentDate;
-            int month = DatePicker.Value.Month;
-            int day = DatePicker.Value.Day;
-           for(int i = 0; i < 7; i++, day++)
+            
+            for(int i = 0; i < 7; i++)
             {
-                if(((month == 1 || month == 3) && day > 31) ||
-                    (month == 2 && day > 29))
-                {
-                    month++;
-                    day = 1;
-                }
-                else if (day > 30)
-                {
-                    month++;
-                    day = 1;
-                }
-                currentDate = new DateTime(2020, month, day);
-                cases.addLabely(currentDate.DayOfWeek.ToString(), Historical[currentDate].Cases);
-                deaths.addLabely(currentDate.DayOfWeek.ToString(), Historical[currentDate].Deaths);
-                recoveries.addLabely(currentDate.DayOfWeek.ToString(), Historical[currentDate].Recoveries);
+                cases.addLabely(DatePicker.Value.AddDays(i).DayOfWeek.ToString(), Historical[DatePicker.Value].Cases);
+                deaths.addLabely(DatePicker.Value.AddDays(i).DayOfWeek.ToString(), Historical[DatePicker.Value].Deaths);
+                recoveries.addLabely(DatePicker.Value.AddDays(i).DayOfWeek.ToString(), Historical[DatePicker.Value].Recoveries);
             }
 
             canvas.addData(cases);
@@ -96,21 +81,11 @@ namespace CovidInfoPH
             canvas.addData(deaths);
             GeneralCaseChart.Render(canvas);
         }
-        private void SetDateLimit()
-        {
-            DatePicker.MaxDate = Historical.ElementAt(Historical.Count - 7).Key;
-            DatePicker.MinDate = Historical.ElementAt(0).Key;
-        }
+        
         private void DatePicker_ValueChanged(object sender, EventArgs e)
         {
-            bunifuTransition1.Hide(GeneralCaseChart);
+            bunifuTransition1.HideSync(GeneralCaseChart);
             DisplayGraph();
-            FadeTimer.Start();
-        }
-
-        private void FadeTimer_Tick(object sender, EventArgs e)
-        {
-            FadeTimer.Stop();
             bunifuTransition1.Show(GeneralCaseChart);
         }
     }
