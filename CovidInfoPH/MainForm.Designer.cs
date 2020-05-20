@@ -509,7 +509,7 @@
             this.bunifuPictureBox3.BorderRadius = 50;
             this.bunifuTransition2.SetDecoration(this.bunifuPictureBox3, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.bunifuPictureBox3, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuPictureBox3.Image = global::CovidInfoPH.Properties.Resources.arrow_right;
+ 
             this.bunifuPictureBox3.IsCircle = true;
             this.bunifuPictureBox3.Location = new System.Drawing.Point(607, 710);
             this.bunifuPictureBox3.Name = "bunifuPictureBox3";
@@ -527,7 +527,7 @@
             this.bunifuPictureBox2.BorderRadius = 50;
             this.bunifuTransition2.SetDecoration(this.bunifuPictureBox2, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.bunifuPictureBox2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuPictureBox2.Image = global::CovidInfoPH.Properties.Resources.up_arrow1;
+
             this.bunifuPictureBox2.IsCircle = true;
             this.bunifuPictureBox2.Location = new System.Drawing.Point(17, 11);
             this.bunifuPictureBox2.Name = "bunifuPictureBox2";
@@ -545,7 +545,7 @@
             this.bunifuPictureBox1.BorderRadius = 50;
             this.bunifuTransition2.SetDecoration(this.bunifuPictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.bunifuPictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuPictureBox1.Image = global::CovidInfoPH.Properties.Resources.up_arrow1;
+          
             this.bunifuPictureBox1.IsCircle = true;
             this.bunifuPictureBox1.Location = new System.Drawing.Point(-3, 11);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
@@ -588,7 +588,7 @@
             this.bunifuPictureBox4.BorderRadius = 50;
             this.bunifuTransition2.SetDecoration(this.bunifuPictureBox4, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.bunifuPictureBox4, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuPictureBox4.Image = global::CovidInfoPH.Properties.Resources.arrow_right;
+         
             this.bunifuPictureBox4.IsCircle = true;
             this.bunifuPictureBox4.Location = new System.Drawing.Point(896, 712);
             this.bunifuPictureBox4.Name = "bunifuPictureBox4";
@@ -605,7 +605,7 @@
             this.bunifuPictureBox5.BorderRadius = 50;
             this.bunifuTransition2.SetDecoration(this.bunifuPictureBox5, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.bunifuPictureBox5, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuPictureBox5.Image = global::CovidInfoPH.Properties.Resources.arrow_right;
+         
             this.bunifuPictureBox5.IsCircle = true;
             this.bunifuPictureBox5.Location = new System.Drawing.Point(1200, 710);
             this.bunifuPictureBox5.Name = "bunifuPictureBox5";
