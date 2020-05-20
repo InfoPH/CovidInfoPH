@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CovidInfoPH.Models
 {
-    class DateHistoricalInfo
+    public class HistoricalInfo
     {
         public int Cases { get; set; }
         public int Deaths { get; set; }
