@@ -10,7 +10,6 @@ using Bunifu.DataViz.WinForms;
 using CovidInfoPH.Models;
 using Task = System.Threading.Tasks.Task;
 
-
 namespace CovidInfoPH
 {
     public partial class MainForm : Form
@@ -24,9 +23,10 @@ namespace CovidInfoPH
         }
 
         private async void MainForm_Load(object sender, EventArgs e)
-        {
+        { 
             await LoadDataFromSheetAsync();
             DisplayGraph();
+         
         }
 
         private async Task LoadDataFromSheetAsync()
@@ -59,28 +59,59 @@ namespace CovidInfoPH
                 .Where(o => DateTime.TryParse((string)o.Cells[0].Value, out _) && o.Cells.Count != 1)
                 .Select(o => DateTime.Parse((string)o.Cells[0].Value)).ToList();
             Historical = Enumerable.Range(0, historicalDates.Count)
-                .ToDictionary(i => historicalDates[i], i => historicalInfos[i]);
-
+                .ToDictionary(i => historicalDates[i], i => historicalInfos[i]);           
         }
 
         private void DisplayGraph()
         {
+            SetDateLimit();
             Canvas canvas = new Canvas();
-            DataPoint data = new DataPoint(BunifuDataViz._type.Bunifu_line);
-
-            int caseDayCount = 0;
-
-            for (int j = 0; j < 10; j++)
+            DataPoint cases = new DataPoint(BunifuDataViz._type.Bunifu_column);
+            DataPoint deaths = new DataPoint(BunifuDataViz._type.Bunifu_column);
+            DataPoint recoveries = new DataPoint(BunifuDataViz._type.Bunifu_column);
+            DateTime currentDate;
+            int month = DatePicker.Value.Month;
+            int day = DatePicker.Value.Day;
+           for(int i = 0; i < 7; i++, day++)
             {
-                DateTime currentDate = Patients[caseDayCount].DateConfirmed;
-                //Count all patients that are confirmed on the current date
-                caseDayCount += Patients.Count(patient => patient.DateConfirmed == currentDate);
-
-                data.addLabely(Patients[caseDayCount].DateConfirmed.ToString("d"), caseDayCount);
-                canvas.addData(data);
-
+                if(((month == 1 || month == 3) && day > 31) ||
+                    (month == 2 && day > 29))
+                {
+                    month++;
+                    day = 1;
+                }
+                else if (day > 30)
+                {
+                    month++;
+                    day = 1;
+                }
+                currentDate = new DateTime(2020, month, day);
+                cases.addLabely(currentDate.DayOfWeek.ToString(), Historical[currentDate].Cases);
+                deaths.addLabely(currentDate.DayOfWeek.ToString(), Historical[currentDate].Deaths);
+                recoveries.addLabely(currentDate.DayOfWeek.ToString(), Historical[currentDate].Recoveries);
             }
-            bunifuDataViz1.Render(canvas);
+
+            canvas.addData(cases);
+            canvas.addData(recoveries);
+            canvas.addData(deaths);
+            GeneralCaseChart.Render(canvas);
+        }
+        private void SetDateLimit()
+        {
+            DatePicker.MaxDate = Historical.ElementAt(Historical.Count - 7).Key;
+            DatePicker.MinDate = Historical.ElementAt(0).Key;
+        }
+        private void DatePicker_ValueChanged(object sender, EventArgs e)
+        {
+            bunifuTransition1.Hide(GeneralCaseChart);
+            DisplayGraph();
+            FadeTimer.Start();
+        }
+
+        private void FadeTimer_Tick(object sender, EventArgs e)
+        {
+            FadeTimer.Stop();
+            bunifuTransition1.Show(GeneralCaseChart);
         }
     }
 }
