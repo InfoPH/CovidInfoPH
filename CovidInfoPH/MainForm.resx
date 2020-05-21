@@ -1532,7 +1532,7 @@
   <data name="datePicker.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGCSURBVFhH7ZZNTsMwEIWNuAGNkLgAS5as2SIhLsKGG5QT
+        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAGCSURBVFhH7ZZNTsMwEIWNuAGNkLgAS5as2SIhLsKGG5QT
         INrcggMhkapnCXnWvHQytlMnTpCQ+KSRMs9vPNPa/XGWx+eXFiHpZErr/wf4/QE+ro93uij2nBupevRA
         HoUmxP7q+z72nBtj9dIuRJsQKJzTnJGql3Yh1rhWSLuQmHmNkHYhMfMaIe1CzhoK+XsDMC/VSUrvsQbm
         pTpJ6T3WwLxUz8YW6s1K9GxmFyaoq+PtbnN400MhoGFNbCdokHQ2rWsvdlXzqpvGAh54pSwcQJtzdIAN
@@ -1566,15 +1566,6 @@
   <data name="bunifuLabel3.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Proxima Soft'; font-size: 10.2pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: White; text-align: center; }</value>
   </data>
-  <data name="recovNum.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 1.2px; font-family: 'Proxima Soft'; font-size: 16.2pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: White; text-align: center; }</value>
-  </data>
-  <data name="deathNum.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 1.2px; font-family: 'Proxima Soft'; font-size: 16.2pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: White; text-align: center; }</value>
-  </data>
-  <data name="casesNum.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 1.2px; font-family: 'Proxima Soft'; font-size: 16.2pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: White; text-align: center; }</value>
-  </data>
   <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Century Gothic'; font-size: 22.2pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: White; text-align: left; }</value>
   </data>
@@ -1598,6 +1589,15 @@
   </data>
   <data name="recovDesc.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Proxima Soft'; font-size: 10.2pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: White; text-align: center; }</value>
+  </data>
+  <data name="casesNum.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 1.2px; font-family: 'Proxima Soft'; font-size: 16.2pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: White; text-align: center; }</value>
+  </data>
+  <data name="deathNum.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 1.2px; font-family: 'Proxima Soft'; font-size: 16.2pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: White; text-align: center; }</value>
+  </data>
+  <data name="recovNum.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 1.2px; font-family: 'Proxima Soft'; font-size: 16.2pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: White; text-align: center; }</value>
   </data>
   <data name="animation3.BlindCoeff" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
