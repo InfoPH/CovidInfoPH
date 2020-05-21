@@ -8,8 +8,8 @@ using SheetToObjects.Lib.FluentConfiguration;
 using SheetToObjects.Adapters.GoogleSheets;
 using Bunifu.DataViz.WinForms;
 using CovidInfoPH.Models;
-using Task = System.Threading.Tasks.Task;
 using System.Drawing;
+using System.Globalization;
 
 namespace CovidInfoPH
 {
@@ -23,8 +23,11 @@ namespace CovidInfoPH
             InitializeComponent();
         }
 
+        #region Methods
+
+        #region Form load & Data fetch Init
         private async void MainForm_Load(object sender, EventArgs e)
-        { 
+        {
             await LoadDataFromSheetAsync();
             SetChartColors();
             DisplayGraph();
@@ -71,7 +74,7 @@ namespace CovidInfoPH
                 .Where(o => DateTime.TryParse((string)o.Cells[0].Value, out _) && o.Cells.Count != 1)
                 .Select(o => DateTime.Parse((string)o.Cells[0].Value)).ToList();
             Historical = Enumerable.Range(0, historicalDates.Count)
-                .ToDictionary(i => historicalDates[i], i => historicalInfos[i]);           
+                .ToDictionary(i => historicalDates[i], i => historicalInfos[i]);
         }
 
         private void SetChartColors()
@@ -80,7 +83,9 @@ namespace CovidInfoPH
             generalCaseChart.colorSet.Add(Color.FromArgb(152, 94, 109));
             generalCaseChart.colorSet.Add(Color.FromArgb(142, 174, 189));
         }
+        #endregion
 
+        #region Display data
         private void DisplayDataGrid()
         {
             caseGridView.Rows.Clear();
@@ -96,8 +101,8 @@ namespace CovidInfoPH
             DataPoint cases = new DataPoint(BunifuDataViz._type.Bunifu_column);
             DataPoint deaths = new DataPoint(BunifuDataViz._type.Bunifu_column);
             DataPoint recoveries = new DataPoint(BunifuDataViz._type.Bunifu_column);
-            
-            for(int i = 0; i < 7; i++)
+
+            for (int i = 0; i < 7; i++)
             {
                 cases.addLabely(datePicker.Value.AddDays(i).DayOfWeek.ToString(), Historical[datePicker.Value.AddDays(i)].Cases);
                 deaths.addLabely(datePicker.Value.AddDays(i).DayOfWeek.ToString(), Historical[datePicker.Value.AddDays(i)].Deaths);
@@ -115,50 +120,56 @@ namespace CovidInfoPH
             double cases = Historical[datePicker.Value.AddDays(6)].Cases;
             double deaths = Historical[datePicker.Value.AddDays(6)].Deaths;
             double recoveries = Historical[datePicker.Value.AddDays(6)].Recoveries;
-            double deathpercent = Convert.ToDouble(deaths / cases * 100);
-            int newCases = Historical[datePicker.Value.AddDays(6)].Cases - Historical[datePicker.Value].Cases;         
-            casesNum.Text = cases.ToString();
-            deathNum.Text = deaths.ToString();
-            caseNum2.Text = cases.ToString();
-            deathNum2.Text = deaths.ToString();
-            recovNum.Text = recoveries.ToString();
+            int newCases = Historical[datePicker.Value.AddDays(6)].Cases - Historical[datePicker.Value].Cases;
+            casesNum.Text = cases.ToString(CultureInfo.InvariantCulture);
+            deathNum.Text = deaths.ToString(CultureInfo.InvariantCulture);
+            caseNum2.Text = cases.ToString(CultureInfo.InvariantCulture);
+            deathNum2.Text = deaths.ToString(CultureInfo.InvariantCulture);
+            recovNum.Text = recoveries.ToString(CultureInfo.InvariantCulture);
             newCasesNum.Text = newCases.ToString();
-            deathPercent.Value = (int)deathpercent;
-            newCasesDesc.Text = "New cases since " + "\n" + datePicker.Value.DayOfWeek.ToString();
+            deathPercent.Value = Convert.ToInt32(deaths / cases * 100);
+            newCasesDesc.Text = $"New cases since\n{datePicker.Value.DayOfWeek}";
         }
-        
+        #endregion
+
+        #region Transtion data
+
         private void FadeOutValues()
         {
             datePicker.Enabled = false;
-            bunifuTransition1.HideSync(caseGridView, true);
-            bunifuTransition1.HideSync(generalCaseChart, true);
-            bunifuTransition1.HideSync(newCasesNum, true);
-            bunifuTransition1.HideSync(deathNum2, true);
-            bunifuTransition1.HideSync(caseNum2, true);         
-            bunifuTransition1.HideSync(casesNum, true);
-            bunifuTransition1.HideSync(deathNum, true);
-            bunifuTransition1.HideSync(recovNum, true);
+            bunifuTransition2.HideSync(generalCaseChart);
+            bunifuTransition2.HideSync(caseGridView);
+            bunifuTransition1.HideSync(newCasesNum);
+            bunifuTransition1.HideSync(deathNum2);
+            bunifuTransition1.HideSync(caseNum2);
+            bunifuTransition1.HideSync(casesNum);
+            bunifuTransition1.HideSync(deathNum);
+            bunifuTransition1.HideSync(recovNum);
         }
 
         private void FadeInValues()
         {
-            bunifuTransition1.Show(caseGridView);
-            bunifuTransition1.Show(newCasesNum);
-            bunifuTransition1.Show(deathNum2);
-            bunifuTransition1.Show(caseNum2);        
-            bunifuTransition1.Show(casesNum);
-            bunifuTransition1.Show(deathNum);
-            bunifuTransition1.Show(recovNum);
-            bunifuTransition1.Show(generalCaseChart);
+            bunifuTransition1.ShowSync(recovNum);
+            bunifuTransition1.ShowSync(deathNum);
+            bunifuTransition1.ShowSync(casesNum);
+            bunifuTransition1.ShowSync(caseNum2);
+            bunifuTransition1.ShowSync(deathNum2);
+            bunifuTransition1.ShowSync(newCasesNum);
+            bunifuTransition2.ShowSync(caseGridView);
+            bunifuTransition2.ShowSync(generalCaseChart);
             datePicker.Enabled = true;
         }
+        #endregion
+
+        #region Input events
+
         private void DatePicker_ValueChanged(object sender, EventArgs e)
         {
             FadeOutValues();
-            RefreshData();         
+            RefreshData();
             DisplayGraph();
             DisplayDataGrid();
-            FadeInValues();        
+            FadeInValues();
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
@@ -180,5 +191,10 @@ namespace CovidInfoPH
         {
             WindowState = FormWindowState.Maximized;
         }
+
+
+        #endregion
+
+        #endregion
     }
 }
