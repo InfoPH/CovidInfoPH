@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 
-using Bunifu.UI.WinForms.BunifuAnimatorNS;
-
 namespace CovidInfoPH
 {
     public partial class SplashScreen : Form
@@ -24,8 +22,6 @@ namespace CovidInfoPH
                 if (count == 11)
                 {
                     pictureBox1.Enabled = false;
-                    bunifuTransition1.ShowSync(continueButton, true, Animation.Transparent);
-
                     timer.Stop();
                 }
             };
@@ -37,7 +33,7 @@ namespace CovidInfoPH
             PlayAnimation();
         }
 
-        private void OnClickClose(object sender, EventArgs e)
+        public void OnClickClose(object sender, EventArgs e)
         {
             Close();
         }

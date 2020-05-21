@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Caching;
 using System.Windows.Forms;
 using SheetToObjects.Lib;
 using SheetToObjects.Lib.FluentConfiguration;
@@ -10,9 +11,9 @@ using Bunifu.DataViz.WinForms;
 using CovidInfoPH.Models;
 using Task = System.Threading.Tasks.Task;
 
-
 namespace CovidInfoPH
 {
+
     public partial class MainForm : Form
     {
         public List<Patient> Patients;
@@ -20,12 +21,17 @@ namespace CovidInfoPH
 
         public MainForm()
         {
+
             InitializeComponent();
         }
 
         private async void MainForm_Load(object sender, EventArgs e)
         {
+            Form splash = new SplashScreen();
+            splash.Show();
             await LoadDataFromSheetAsync();
+            bunifuTransition1.HideSync(splash);
+            splash.Hide();
             DisplayGraph();
         }
 
