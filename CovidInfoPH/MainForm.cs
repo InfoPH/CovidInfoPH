@@ -125,18 +125,39 @@ namespace CovidInfoPH
             casesNum.Text = cases.ToString();
             deathNum.Text = deaths.ToString();
             recovNum.Text = recoveries.ToString();
-            admitted.Text = admitPercentage.ToString() + "%";
+            admittedNum.Text = admitPercentage.ToString() + "%";
             newCasesNum.Text = newCases.ToString();
             newCasesDesc.Text = "New cases since " + "\n" + DatePicker.Value.DayOfWeek.ToString();
         }
         
+        private void FadeOutValues()
+        {
+            bunifuTransition1.HideSync(caseGridView, true);
+            bunifuTransition1.HideSync(GeneralCaseChart, true);
+            bunifuTransition1.HideSync(newCasesNum, true);
+            bunifuTransition1.HideSync(admittedNum, true);
+            bunifuTransition1.HideSync(casesNum, true);
+            bunifuTransition1.HideSync(deathNum, true);
+            bunifuTransition1.HideSync(recovNum, true);
+        }
+
+        private void FadeInValues()
+        {
+            bunifuTransition1.Show(caseGridView);
+            bunifuTransition1.Show(newCasesNum);
+            bunifuTransition1.Show(admittedNum);
+            bunifuTransition1.Show(casesNum);
+            bunifuTransition1.Show(deathNum);
+            bunifuTransition1.Show(recovNum);
+            bunifuTransition1.Show(GeneralCaseChart);
+        }
         private void DatePicker_ValueChanged(object sender, EventArgs e)
         {
-            RefreshData();
-            bunifuTransition1.HideSync(GeneralCaseChart);
+            FadeOutValues();
+            RefreshData();         
             DisplayGraph();
             DisplayDataGrid();
-            bunifuTransition1.Show(GeneralCaseChart);
+            FadeInValues();        
         }
     }
 }

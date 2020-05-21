@@ -104,12 +104,6 @@
       <HintPath>..\lib\Guna UI\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System.Management" />
-    <Reference Include="TeeChart">
-      <HintPath>..\lib\TeeChart.NET\TeeChart.dll</HintPath>
-    </Reference>
-    <Reference Include="TeeGrid.WinForm">
-      <HintPath>..\lib\TeeChart.NET\TeeGrid.WinForm.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
   <ItemGroup>
