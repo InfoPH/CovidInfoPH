@@ -25,7 +25,7 @@ namespace CovidInfoPH
 
         #region Methods
 
-        #region Form load & Data fetch Init
+        #region Load form & chart
         private async void MainForm_Load(object sender, EventArgs e)
         {
             await LoadDataFromSheetAsync();
@@ -34,7 +34,15 @@ namespace CovidInfoPH
             DisplayDataGrid();
             RefreshData();
         }
+        private void SetChartColors()
+        {
+            generalCaseChart.colorSet.Add(Color.FromArgb(152, 135, 143));
+            generalCaseChart.colorSet.Add(Color.FromArgb(152, 94, 109));
+            generalCaseChart.colorSet.Add(Color.FromArgb(142, 174, 189));
+        }
+        #endregion
 
+        #region Fetch data
         private async Task LoadDataFromSheetAsync()
         {
             //create config for sheetMapper
@@ -75,13 +83,6 @@ namespace CovidInfoPH
                 .Select(o => DateTime.Parse((string)o.Cells[0].Value)).ToList();
             Historical = Enumerable.Range(0, historicalDates.Count)
                 .ToDictionary(i => historicalDates[i], i => historicalInfos[i]);
-        }
-
-        private void SetChartColors()
-        {
-            generalCaseChart.colorSet.Add(Color.FromArgb(152, 135, 143));
-            generalCaseChart.colorSet.Add(Color.FromArgb(152, 94, 109));
-            generalCaseChart.colorSet.Add(Color.FromArgb(142, 174, 189));
         }
         #endregion
 
