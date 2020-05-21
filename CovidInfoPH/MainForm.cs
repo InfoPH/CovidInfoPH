@@ -175,5 +175,10 @@ namespace CovidInfoPH
         {
             DashBoard.SetPage(2);
         }
+
+        private void guna2PictureBox6_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+        }
     }
 }
