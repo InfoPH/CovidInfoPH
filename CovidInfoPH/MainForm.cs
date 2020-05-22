@@ -158,19 +158,20 @@ namespace CovidInfoPH
             bunifuTransition1.ShowSync(newCasesNum);
             bunifuTransition2.ShowSync(caseGridView);
             bunifuTransition2.ShowSync(generalCaseChart);
-            datePicker.Enabled = true;
+           
         }
         #endregion
 
         #region Input events
 
         private void DatePicker_ValueChanged(object sender, EventArgs e)
-        {
+        {         
             FadeOutValues();
             RefreshData();
             DisplayGraph();
             DisplayDataGrid();
             FadeInValues();
+            datePicker.Enabled = true;
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
