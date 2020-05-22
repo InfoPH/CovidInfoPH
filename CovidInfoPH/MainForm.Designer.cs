@@ -935,6 +935,8 @@
             this.datePicker.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
             this.datePicker.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.datePicker.Location = new System.Drawing.Point(880, 3);
+            this.datePicker.MaxDate = new System.DateTime(9998, 5, 14, 0, 0, 0, 0);
+            this.datePicker.MinDate = new System.DateTime(2020, 2, 4, 0, 0, 0, 0);
             this.datePicker.MinimumSize = new System.Drawing.Size(266, 32);
             this.datePicker.Name = "datePicker";
             this.datePicker.Size = new System.Drawing.Size(314, 32);

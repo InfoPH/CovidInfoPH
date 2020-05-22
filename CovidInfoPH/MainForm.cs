@@ -155,7 +155,7 @@ namespace CovidInfoPH
             newCasesNum.Text = newCases.ToString();
             deathPercent.Value = Convert.ToInt32(deaths / cases * 100);
             weeklyReport.Text = $"Weekly Report as of {month} {datePicker.Value.Day}, 2020";
-            newCasesDesc.Text = $"New cases since\n{datePicker.Value.DayOfWeek}";
+            newCasesDesc.Text = $"New cases since\n{datePicker.Value.AddDays(-6).DayOfWeek}";
         }
         #endregion
 
