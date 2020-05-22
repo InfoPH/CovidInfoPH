@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Caching;
 using System.Windows.Forms;
 using SheetToObjects.Lib;
 using SheetToObjects.Lib.FluentConfiguration;
@@ -10,6 +11,8 @@ using Bunifu.DataViz.WinForms;
 using CovidInfoPH.Models;
 using System.Drawing;
 using System.Globalization;
+using Task = System.Threading.Tasks.Task;
+
 
 namespace CovidInfoPH
 {
@@ -20,6 +23,7 @@ namespace CovidInfoPH
 
         public MainForm()
         {
+
             InitializeComponent();
         }
 
@@ -28,11 +32,15 @@ namespace CovidInfoPH
         #region Load form & chart
         private async void MainForm_Load(object sender, EventArgs e)
         {
+            Form splash = new SplashScreen();
+            splash.Show();
             await LoadDataFromSheetAsync();
-            SetChartColors();
+            SetChartColors();   
             DisplayGraph();
             DisplayDataGrid();
             RefreshData();
+            bunifuTransition1.HideSync(splash);
+            splash.Hide();
         }
         private void SetChartColors()
         {
