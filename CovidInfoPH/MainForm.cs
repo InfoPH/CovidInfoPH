@@ -10,6 +10,7 @@ using Bunifu.DataViz.WinForms;
 using CovidInfoPH.Models;
 using System.Drawing;
 using System.Globalization;
+using Syncfusion.Windows.Forms.Maps;
 
 namespace CovidInfoPH
 {
@@ -92,7 +93,7 @@ namespace CovidInfoPH
             caseGridView.Rows.Clear();
             for (int i = -6; i < 1; i++)
             {
-                caseGridView.Rows.Add($"{datePicker.Value.AddDays(i) : MM-dd-yyyy}", Historical[datePicker.Value.AddDays(i)].Cases,
+                caseGridView.Rows.Add($"{datePicker.Value.AddDays(i): MM-dd-yyyy}", Historical[datePicker.Value.AddDays(i)].Cases,
                 Historical[datePicker.Value.AddDays(i)].Deaths, Historical[datePicker.Value.AddDays(i)].Recoveries);
             }
         }
@@ -159,14 +160,14 @@ namespace CovidInfoPH
             bunifuTransition1.ShowSync(newCasesNum);
             bunifuTransition1.ShowSync(caseGridView);
             bunifuTransition2.ShowSync(generalCaseChart);
-           
+
         }
         #endregion
 
         #region Input events
 
         private void DatePicker_ValueChanged(object sender, EventArgs e)
-        {         
+        {
             FadeOutValues();
             RefreshData();
             DisplayGraph();

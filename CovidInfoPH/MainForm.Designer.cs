@@ -597,10 +597,10 @@
             this.DashBoard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DashBoard.Multiline = true;
             this.DashBoard.Name = "DashBoard";
-            this.DashBoard.Page = this.healthCapacity;
-            this.DashBoard.PageIndex = 2;
-            this.DashBoard.PageName = "healthCapacity";
-            this.DashBoard.PageTitle = "tabPage3";
+            this.DashBoard.Page = this.locationRegion;
+            this.DashBoard.PageIndex = 1;
+            this.DashBoard.PageName = "locationRegion";
+            this.DashBoard.PageTitle = "tabPage2";
             this.DashBoard.SelectedIndex = 0;
             this.DashBoard.Size = new System.Drawing.Size(1389, 745);
             this.DashBoard.TabIndex = 54;
