@@ -90,9 +90,9 @@ namespace CovidInfoPH
         private void DisplayDataGrid()
         {
             caseGridView.Rows.Clear();
-            for (int i = 0; i < 7; i++)
+            for (int i = -6; i < 1; i++)
             {
-                caseGridView.Rows.Add(datePicker.Value.AddDays(i).ToString("d"), Historical[datePicker.Value.AddDays(i)].Cases,
+                caseGridView.Rows.Add($"{datePicker.Value.AddDays(i) : MM-dd-yyyy}", Historical[datePicker.Value.AddDays(i)].Cases,
                 Historical[datePicker.Value.AddDays(i)].Deaths, Historical[datePicker.Value.AddDays(i)].Recoveries);
             }
         }
@@ -103,7 +103,7 @@ namespace CovidInfoPH
             DataPoint deaths = new DataPoint(BunifuDataViz._type.Bunifu_column);
             DataPoint recoveries = new DataPoint(BunifuDataViz._type.Bunifu_column);
 
-            for (int i = 0; i < 7; i++)
+            for (int i = -6; i < 1; i++)
             {
                 cases.addLabely(datePicker.Value.AddDays(i).DayOfWeek.ToString(), Historical[datePicker.Value.AddDays(i)].Cases);
                 deaths.addLabely(datePicker.Value.AddDays(i).DayOfWeek.ToString(), Historical[datePicker.Value.AddDays(i)].Deaths);
@@ -116,12 +116,37 @@ namespace CovidInfoPH
             generalCaseChart.Render(canvas);
         }
 
+        private string SetMonth(int month)
+        {
+            if (month == 1)
+            {
+                return "January";
+            }
+            else if (month == 2)
+            {
+                return "February";
+            }
+            else if (month == 3)
+            {
+                return "March";
+            }
+            else if (month == 4)
+            {
+                return "April";
+            }
+            else if (month == 5)
+            {
+                return "May";
+            }
+            else return " ";
+        }
         private void RefreshData()
         {
-            double cases = Historical[datePicker.Value.AddDays(6)].Cases;
-            double deaths = Historical[datePicker.Value.AddDays(6)].Deaths;
-            double recoveries = Historical[datePicker.Value.AddDays(6)].Recoveries;
-            int newCases = Historical[datePicker.Value.AddDays(6)].Cases - Historical[datePicker.Value].Cases;
+            string month = SetMonth(datePicker.Value.Month);
+            double cases = Historical[datePicker.Value].Cases;
+            double deaths = Historical[datePicker.Value].Deaths;
+            double recoveries = Historical[datePicker.Value].Recoveries;
+            int newCases = Historical[datePicker.Value].Cases - Historical[datePicker.Value.AddDays(-6)].Cases;
             casesNum.Text = cases.ToString(CultureInfo.InvariantCulture);
             deathNum.Text = deaths.ToString(CultureInfo.InvariantCulture);
             caseNum2.Text = cases.ToString(CultureInfo.InvariantCulture);
@@ -129,6 +154,7 @@ namespace CovidInfoPH
             recovNum.Text = recoveries.ToString(CultureInfo.InvariantCulture);
             newCasesNum.Text = newCases.ToString();
             deathPercent.Value = Convert.ToInt32(deaths / cases * 100);
+            weeklyReport.Text = $"Weekly Report as of {month} {datePicker.Value.Day}, 2020";
             newCasesDesc.Text = $"New cases since\n{datePicker.Value.DayOfWeek}";
         }
         #endregion

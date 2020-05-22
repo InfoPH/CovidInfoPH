@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation6 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation3 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -71,7 +71,7 @@
             this.weeklyReportPanel = new System.Windows.Forms.TableLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.weeklyReport = new Bunifu.UI.WinForms.BunifuLabel();
             this.newCasesNum = new Bunifu.UI.WinForms.BunifuLabel();
             this.newCasesDesc = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -282,22 +282,22 @@
             // 
             this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.bunifuTransition2.Cursor = null;
-            animation5.AnimateOnlyDifferences = true;
-            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
-            animation5.LeafCoeff = 0F;
-            animation5.MaxTime = 1F;
-            animation5.MinTime = 0F;
-            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
-            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
-            animation5.MosaicSize = 0;
-            animation5.Padding = new System.Windows.Forms.Padding(0);
-            animation5.RotateCoeff = 0F;
-            animation5.RotateLimit = 0F;
-            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
-            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
-            animation5.TimeCoeff = 0F;
-            animation5.TransparencyCoeff = 1F;
-            this.bunifuTransition2.DefaultAnimation = animation5;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 1F;
+            this.bunifuTransition2.DefaultAnimation = animation2;
             this.bunifuTransition2.Interval = 1;
             // 
             // healthCapacity
@@ -386,22 +386,22 @@
             // 
             // caseGridView
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            this.caseGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.caseGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.caseGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.caseGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.caseGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.caseGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.caseGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.caseGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.caseGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.caseGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.caseGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Date,
@@ -410,14 +410,14 @@
             this.Recoveries});
             this.bunifuTransition2.SetDecoration(this.caseGridView, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.caseGridView, BunifuAnimatorNS.DecorationType.None);
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(32)))), ((int)(((byte)(44)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.caseGridView.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(32)))), ((int)(((byte)(44)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.caseGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.caseGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.caseGridView.DoubleBuffered = true;
             this.caseGridView.EnableHeadersVisualStyles = false;
@@ -691,7 +691,7 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.guna2PictureBox1);
-            this.panel7.Controls.Add(this.bunifuLabel3);
+            this.panel7.Controls.Add(this.weeklyReport);
             this.panel7.Controls.Add(this.newCasesNum);
             this.panel7.Controls.Add(this.newCasesDesc);
             this.bunifuTransition1.SetDecoration(this.panel7, BunifuAnimatorNS.DecorationType.None);
@@ -715,22 +715,22 @@
             this.guna2PictureBox1.TabIndex = 59;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // bunifuLabel3
+            // weeklyReport
             // 
-            this.bunifuLabel3.AutoEllipsis = false;
-            this.bunifuLabel3.CursorType = null;
-            this.bunifuTransition1.SetDecoration(this.bunifuLabel3, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.bunifuLabel3, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuLabel3.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel3.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel3.Location = new System.Drawing.Point(12, 3);
-            this.bunifuLabel3.Name = "bunifuLabel3";
-            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(114, 22);
-            this.bunifuLabel3.TabIndex = 66;
-            this.bunifuLabel3.Text = "Weekly Report";
-            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.weeklyReport.AutoEllipsis = false;
+            this.weeklyReport.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.weeklyReport, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.weeklyReport, BunifuAnimatorNS.DecorationType.None);
+            this.weeklyReport.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weeklyReport.ForeColor = System.Drawing.Color.White;
+            this.weeklyReport.Location = new System.Drawing.Point(12, 3);
+            this.weeklyReport.Name = "weeklyReport";
+            this.weeklyReport.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.weeklyReport.Size = new System.Drawing.Size(114, 22);
+            this.weeklyReport.TabIndex = 66;
+            this.weeklyReport.Text = "Weekly Report";
+            this.weeklyReport.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.weeklyReport.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // newCasesNum
             // 
@@ -758,10 +758,10 @@
             this.bunifuTransition2.SetDecoration(this.newCasesDesc, BunifuAnimatorNS.DecorationType.None);
             this.newCasesDesc.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newCasesDesc.ForeColor = System.Drawing.Color.White;
-            this.newCasesDesc.Location = new System.Drawing.Point(108, 102);
+            this.newCasesDesc.Location = new System.Drawing.Point(108, 94);
             this.newCasesDesc.Name = "newCasesDesc";
             this.newCasesDesc.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.newCasesDesc.Size = new System.Drawing.Size(164, 68);
+            this.newCasesDesc.Size = new System.Drawing.Size(160, 96);
             this.newCasesDesc.TabIndex = 58;
             this.newCasesDesc.Text = "New Cases \r\nThis Week";
             this.newCasesDesc.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1031,9 +1031,9 @@
             this.bunifuLabel9.Margin = new System.Windows.Forms.Padding(0);
             this.bunifuLabel9.Name = "bunifuLabel9";
             this.bunifuLabel9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel9.Size = new System.Drawing.Size(159, 23);
+            this.bunifuLabel9.Size = new System.Drawing.Size(202, 23);
             this.bunifuLabel9.TabIndex = 61;
-            this.bunifuLabel9.Text = "7 - Day History Data";
+            this.bunifuLabel9.Text = "Data from the past 7 days";
             this.bunifuLabel9.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel9.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1141,22 +1141,22 @@
             this.DashBoard.SelectedIndex = 0;
             this.DashBoard.Size = new System.Drawing.Size(1231, 656);
             this.DashBoard.TabIndex = 54;
-            animation6.AnimateOnlyDifferences = true;
-            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
-            animation6.LeafCoeff = 0F;
-            animation6.MaxTime = 1F;
-            animation6.MinTime = 0F;
-            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
-            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
-            animation6.MosaicSize = 0;
-            animation6.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            animation6.RotateCoeff = 0F;
-            animation6.RotateLimit = 0F;
-            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
-            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
-            animation6.TimeCoeff = 0F;
-            animation6.TransparencyCoeff = 1F;
-            this.DashBoard.Transition = animation6;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 1F;
+            this.DashBoard.Transition = animation3;
             this.DashBoard.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Transparent;
             // 
             // bunifuSeparator1
@@ -1219,22 +1219,22 @@
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.bunifuTransition1.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(0);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 1F;
-            this.bunifuTransition1.DefaultAnimation = animation4;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 1F;
+            this.bunifuTransition1.DefaultAnimation = animation1;
             this.bunifuTransition1.Interval = 1;
             this.bunifuTransition1.TimeStep = 0.01F;
             // 
@@ -1343,7 +1343,7 @@
         private System.Windows.Forms.TableLayoutPanel weeklyReportPanel;
         private System.Windows.Forms.Panel panel7;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
+        private Bunifu.UI.WinForms.BunifuLabel weeklyReport;
         private Bunifu.UI.WinForms.BunifuLabel newCasesNum;
         private Bunifu.UI.WinForms.BunifuLabel newCasesDesc;
         private System.Windows.Forms.Panel panel8;
