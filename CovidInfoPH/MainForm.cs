@@ -165,7 +165,7 @@ namespace CovidInfoPH
         {
             datePicker.Enabled = false;
             bunifuTransition2.HideSync(generalCaseChart);
-            bunifuTransition2.HideSync(caseGridView);
+            bunifuTransition1.HideSync(caseGridView);
             bunifuTransition1.HideSync(newCasesNum);
             bunifuTransition1.HideSync(deathNum2);
             bunifuTransition1.HideSync(caseNum2);
@@ -182,7 +182,7 @@ namespace CovidInfoPH
             bunifuTransition1.ShowSync(caseNum2);
             bunifuTransition1.ShowSync(deathNum2);
             bunifuTransition1.ShowSync(newCasesNum);
-            bunifuTransition2.ShowSync(caseGridView);
+            bunifuTransition1.ShowSync(caseGridView);
             bunifuTransition2.ShowSync(generalCaseChart);
            
         }
