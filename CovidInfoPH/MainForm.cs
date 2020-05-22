@@ -202,16 +202,25 @@ namespace CovidInfoPH
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
+            bunifuImageButton1.FadeWhenInactive = false;
+            bunifuImageButton2.FadeWhenInactive = true;
+            bunifuImageButton3.FadeWhenInactive = true;
             DashBoard.SetPage(0);
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
+            bunifuImageButton1.FadeWhenInactive = true;
+            bunifuImageButton2.FadeWhenInactive = false;
+            bunifuImageButton3.FadeWhenInactive = true;
             DashBoard.SetPage(1);
         }
 
         private void bunifuImageButton3_Click(object sender, EventArgs e)
         {
+            bunifuImageButton1.FadeWhenInactive = true;
+            bunifuImageButton2.FadeWhenInactive = true;
+            bunifuImageButton3.FadeWhenInactive = false;
             DashBoard.SetPage(2);
         }
 
