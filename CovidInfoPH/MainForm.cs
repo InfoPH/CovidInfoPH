@@ -116,33 +116,8 @@ namespace CovidInfoPH
             generalCaseChart.Render(canvas);
         }
 
-        private string SetMonth(int month)
-        {
-            if (month == 1)
-            {
-                return "January";
-            }
-            else if (month == 2)
-            {
-                return "February";
-            }
-            else if (month == 3)
-            {
-                return "March";
-            }
-            else if (month == 4)
-            {
-                return "April";
-            }
-            else if (month == 5)
-            {
-                return "May";
-            }
-            else return " ";
-        }
         private void RefreshData()
         {
-            string month = SetMonth(datePicker.Value.Month);
             double cases = Historical[datePicker.Value].Cases;
             double deaths = Historical[datePicker.Value].Deaths;
             double recoveries = Historical[datePicker.Value].Recoveries;
@@ -154,7 +129,7 @@ namespace CovidInfoPH
             recovNum.Text = recoveries.ToString(CultureInfo.InvariantCulture);
             newCasesNum.Text = newCases.ToString();
             deathPercent.Value = Convert.ToInt32(deaths / cases * 100);
-            weeklyReport.Text = $"Weekly Report as of {month} {datePicker.Value.Day}, 2020";
+            weeklyReport.Text = $"Weekly Report as of {datePicker.Value:MMMM dd, yyyy}";
             newCasesDesc.Text = $"New cases since\n{datePicker.Value.AddDays(-6).DayOfWeek}";
         }
         #endregion
