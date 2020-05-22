@@ -20,6 +20,7 @@ namespace CovidInfoPH
     {
         public List<Patient> Patients;
         public Dictionary<DateTime, HistoricalInfo> Historical;
+        public Form splash = new SplashScreen();
 
         public MainForm()
         {
@@ -32,15 +33,14 @@ namespace CovidInfoPH
         #region Load form & chart
         private async void MainForm_Load(object sender, EventArgs e)
         {
-            Form splash = new SplashScreen();
+            this.Opacity = 0;
+            splashTimer.Start();         
             splash.Show();
             await LoadDataFromSheetAsync();
             SetChartColors();   
             DisplayGraph();
             DisplayDataGrid();
             RefreshData();
-            bunifuTransition1.HideSync(splash);
-            splash.Hide();
         }
         private void SetChartColors()
         {
@@ -236,6 +236,13 @@ namespace CovidInfoPH
         private void guna2PictureBox5_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void splashTimer_Tick(object sender, EventArgs e)
+        {
+            splash.Close();
+            splashTimer.Stop();
+            bunifuFormFadeTransition1.ShowAsyc(this);
         }
     }
 }

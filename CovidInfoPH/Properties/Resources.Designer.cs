@@ -63,6 +63,56 @@ namespace CovidInfoPH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _100061169_276338833522119_1402422700361646080_n {
+            get {
+                object obj = ResourceManager.GetObject("_100061169_276338833522119_1402422700361646080_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _72766113_3217244771649584_1088017474953150464_o {
+            get {
+                object obj = ResourceManager.GetObject("_72766113_3217244771649584_1088017474953150464_o", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _78932966_2476722459093725_2081503394031206400_o {
+            get {
+                object obj = ResourceManager.GetObject("_78932966_2476722459093725_2081503394031206400_o", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _95527983_10213327038009303_2560924187824750592_o {
+            get {
+                object obj = ResourceManager.GetObject("_95527983_10213327038009303_2560924187824750592_o", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _98425531_541015779926144_8229802726691700736_n {
+            get {
+                object obj = ResourceManager.GetObject("_98425531_541015779926144_8229802726691700736_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _98443875_1239509479739033_3322527171938877440_n {
             get {
                 object obj = ResourceManager.GetObject("98443875_1239509479739033_3322527171938877440_n", resourceCulture);
@@ -176,6 +226,16 @@ namespace CovidInfoPH.Properties {
         internal static System.Drawing.Bitmap up_arrow1 {
             get {
                 object obj = ResourceManager.GetObject("up_arrow1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yes {
+            get {
+                object obj = ResourceManager.GetObject("yes", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
