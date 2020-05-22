@@ -190,12 +190,17 @@ namespace CovidInfoPH
 
         private void guna2PictureBox6_Click(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;
+            WindowState = FormWindowState.Minimized;
         }
 
 
         #endregion
 
         #endregion
+
+        private void guna2PictureBox5_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
