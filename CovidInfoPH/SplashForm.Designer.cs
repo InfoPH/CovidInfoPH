@@ -1,6 +1,6 @@
 ﻿namespace CovidInfoPH
 {
-    partial class SplashScreen
+    partial class SplashForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashScreen));
+            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashForm));
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.name = new System.Windows.Forms.Label();
             this.ortega = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -49,14 +49,14 @@
             this.itangName = new System.Windows.Forms.Label();
             this.ortegaName = new System.Windows.Forms.Label();
             this.splashScreenElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.logoTimer = new System.Windows.Forms.Timer(this.components);
             this.nameTimer = new System.Windows.Forms.Timer(this.components);
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.showLogo = new System.Windows.Forms.Timer(this.components);
             this.showFace = new System.Windows.Forms.Timer(this.components);
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.guna2WinProgressIndicator1 = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
             ((System.ComponentModel.ISupportInitialize)(this.ortega)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.martinez)).BeginInit();
@@ -64,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nino)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.braulio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
+            this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuToolTip1
@@ -107,9 +108,9 @@
             this.bunifuTransition1.SetDecoration(this.name, BunifuAnimatorNS.DecorationType.None);
             this.name.Font = new System.Drawing.Font("Proxima Soft", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name.ForeColor = System.Drawing.Color.White;
-            this.name.Location = new System.Drawing.Point(285, 96);
+            this.name.Location = new System.Drawing.Point(261, 96);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(230, 37);
+            this.name.Size = new System.Drawing.Size(279, 45);
             this.name.TabIndex = 3;
             this.name.Text = "COVIDinfo-PH";
             this.bunifuToolTip1.SetToolTip(this.name, "");
@@ -121,7 +122,7 @@
             // 
             this.bunifuTransition1.SetDecoration(this.ortega, BunifuAnimatorNS.DecorationType.None);
             this.ortega.Image = global::CovidInfoPH.Properties.Resources._100061169_276338833522119_1402422700361646080_n;
-            this.ortega.Location = new System.Drawing.Point(508, 145);
+            this.ortega.Location = new System.Drawing.Point(509, 145);
             this.ortega.Name = "ortega";
             this.ortega.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.ortega.ShadowDecoration.Parent = this.ortega;
@@ -138,7 +139,7 @@
             // 
             this.bunifuTransition1.SetDecoration(this.itang, BunifuAnimatorNS.DecorationType.None);
             this.itang.Image = global::CovidInfoPH.Properties.Resources._98425531_541015779926144_8229802726691700736_n;
-            this.itang.Location = new System.Drawing.Point(508, 145);
+            this.itang.Location = new System.Drawing.Point(509, 145);
             this.itang.Name = "itang";
             this.itang.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.itang.ShadowDecoration.Parent = this.itang;
@@ -155,7 +156,7 @@
             // 
             this.bunifuTransition1.SetDecoration(this.martinez, BunifuAnimatorNS.DecorationType.None);
             this.martinez.Image = global::CovidInfoPH.Properties.Resources.yes;
-            this.martinez.Location = new System.Drawing.Point(130, 145);
+            this.martinez.Location = new System.Drawing.Point(131, 145);
             this.martinez.Name = "martinez";
             this.martinez.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.martinez.ShadowDecoration.Parent = this.martinez;
@@ -172,7 +173,7 @@
             // 
             this.bunifuTransition1.SetDecoration(this.arizala, BunifuAnimatorNS.DecorationType.None);
             this.arizala.Image = global::CovidInfoPH.Properties.Resources._78932966_2476722459093725_2081503394031206400_o;
-            this.arizala.Location = new System.Drawing.Point(130, 145);
+            this.arizala.Location = new System.Drawing.Point(131, 145);
             this.arizala.Name = "arizala";
             this.arizala.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.arizala.ShadowDecoration.Parent = this.arizala;
@@ -248,6 +249,7 @@
             this.bunifuImageButton1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.ErrorImage")));
             this.bunifuImageButton1.FadeWhenInactive = true;
             this.bunifuImageButton1.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.bunifuImageButton1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
             this.bunifuImageButton1.ImageLocation = null;
@@ -280,9 +282,9 @@
             this.bunifuTransition1.SetDecoration(this.meetLabel, BunifuAnimatorNS.DecorationType.None);
             this.meetLabel.Font = new System.Drawing.Font("Proxima Soft", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.meetLabel.ForeColor = System.Drawing.Color.White;
-            this.meetLabel.Location = new System.Drawing.Point(256, 96);
+            this.meetLabel.Location = new System.Drawing.Point(226, 96);
             this.meetLabel.Name = "meetLabel";
-            this.meetLabel.Size = new System.Drawing.Size(286, 37);
+            this.meetLabel.Size = new System.Drawing.Size(349, 45);
             this.meetLabel.TabIndex = 3;
             this.meetLabel.Text = "Meet the creators!";
             this.bunifuToolTip1.SetToolTip(this.meetLabel, "");
@@ -296,9 +298,9 @@
             this.bunifuTransition1.SetDecoration(this.arizalaName, BunifuAnimatorNS.DecorationType.None);
             this.arizalaName.Font = new System.Drawing.Font("Proxima Soft", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.arizalaName.ForeColor = System.Drawing.Color.White;
-            this.arizalaName.Location = new System.Drawing.Point(153, 308);
+            this.arizalaName.Location = new System.Drawing.Point(146, 308);
             this.arizalaName.Name = "arizalaName";
-            this.arizalaName.Size = new System.Drawing.Size(112, 54);
+            this.arizalaName.Size = new System.Drawing.Size(131, 64);
             this.arizalaName.TabIndex = 3;
             this.arizalaName.Text = "Arizala\r\nJohndayll";
             this.bunifuToolTip1.SetToolTip(this.arizalaName, "");
@@ -312,9 +314,9 @@
             this.bunifuTransition1.SetDecoration(this.martinezName, BunifuAnimatorNS.DecorationType.None);
             this.martinezName.Font = new System.Drawing.Font("Proxima Soft", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.martinezName.ForeColor = System.Drawing.Color.White;
-            this.martinezName.Location = new System.Drawing.Point(153, 308);
+            this.martinezName.Location = new System.Drawing.Point(151, 308);
             this.martinezName.Name = "martinezName";
-            this.martinezName.Size = new System.Drawing.Size(102, 54);
+            this.martinezName.Size = new System.Drawing.Size(120, 64);
             this.martinezName.TabIndex = 3;
             this.martinezName.Text = "Raphael\r\nMartinez";
             this.bunifuToolTip1.SetToolTip(this.martinezName, "");
@@ -328,9 +330,9 @@
             this.bunifuTransition1.SetDecoration(this.braulioName, BunifuAnimatorNS.DecorationType.None);
             this.braulioName.Font = new System.Drawing.Font("Proxima Soft", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.braulioName.ForeColor = System.Drawing.Color.White;
-            this.braulioName.Location = new System.Drawing.Point(357, 308);
+            this.braulioName.Location = new System.Drawing.Point(350, 308);
             this.braulioName.Name = "braulioName";
-            this.braulioName.Size = new System.Drawing.Size(85, 54);
+            this.braulioName.Size = new System.Drawing.Size(100, 64);
             this.braulioName.TabIndex = 3;
             this.braulioName.Text = "Braulio\r\nVaeda";
             this.bunifuToolTip1.SetToolTip(this.braulioName, "");
@@ -344,9 +346,9 @@
             this.bunifuTransition1.SetDecoration(this.ninoName, BunifuAnimatorNS.DecorationType.None);
             this.ninoName.Font = new System.Drawing.Font("Proxima Soft", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ninoName.ForeColor = System.Drawing.Color.White;
-            this.ninoName.Location = new System.Drawing.Point(372, 308);
+            this.ninoName.Location = new System.Drawing.Point(359, 308);
             this.ninoName.Name = "ninoName";
-            this.ninoName.Size = new System.Drawing.Size(70, 54);
+            this.ninoName.Size = new System.Drawing.Size(83, 64);
             this.ninoName.TabIndex = 3;
             this.ninoName.Text = "Nino\r\nKovie";
             this.bunifuToolTip1.SetToolTip(this.ninoName, "");
@@ -360,9 +362,9 @@
             this.bunifuTransition1.SetDecoration(this.itangName, BunifuAnimatorNS.DecorationType.None);
             this.itangName.Font = new System.Drawing.Font("Proxima Soft", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.itangName.ForeColor = System.Drawing.Color.White;
-            this.itangName.Location = new System.Drawing.Point(555, 308);
+            this.itangName.Location = new System.Drawing.Point(551, 308);
             this.itangName.Name = "itangName";
-            this.itangName.Size = new System.Drawing.Size(65, 54);
+            this.itangName.Size = new System.Drawing.Size(76, 64);
             this.itangName.TabIndex = 3;
             this.itangName.Text = "Itang\r\nRyan";
             this.bunifuToolTip1.SetToolTip(this.itangName, "");
@@ -376,9 +378,9 @@
             this.bunifuTransition1.SetDecoration(this.ortegaName, BunifuAnimatorNS.DecorationType.None);
             this.ortegaName.Font = new System.Drawing.Font("Proxima Soft", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ortegaName.ForeColor = System.Drawing.Color.White;
-            this.ortegaName.Location = new System.Drawing.Point(529, 308);
+            this.ortegaName.Location = new System.Drawing.Point(498, 308);
             this.ortegaName.Name = "ortegaName";
-            this.ortegaName.Size = new System.Drawing.Size(156, 54);
+            this.ortegaName.Size = new System.Drawing.Size(182, 64);
             this.ortegaName.TabIndex = 3;
             this.ortegaName.Text = "Jiz De Ortega\r\nKeino";
             this.bunifuToolTip1.SetToolTip(this.ortegaName, "");
@@ -390,16 +392,6 @@
             // 
             this.splashScreenElipse.ElipseRadius = 60;
             this.splashScreenElipse.TargetControl = this;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 25;
-            this.bunifuElipse1.TargetControl = this;
-            // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 30;
-            this.bunifuElipse2.TargetControl = this;
             // 
             // logoTimer
             // 
@@ -415,22 +407,22 @@
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.bunifuTransition1.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 1F;
-            this.bunifuTransition1.DefaultAnimation = animation3;
+            animation5.AnimateOnlyDifferences = true;
+            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
+            animation5.LeafCoeff = 0F;
+            animation5.MaxTime = 1F;
+            animation5.MinTime = 0F;
+            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
+            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
+            animation5.MosaicSize = 0;
+            animation5.Padding = new System.Windows.Forms.Padding(0);
+            animation5.RotateCoeff = 0F;
+            animation5.RotateLimit = 0F;
+            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
+            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
+            animation5.TimeCoeff = 0F;
+            animation5.TransparencyCoeff = 1F;
+            this.bunifuTransition1.DefaultAnimation = animation5;
             // 
             // showLogo
             // 
@@ -442,31 +434,83 @@
             this.showFace.Interval = 1000;
             this.showFace.Tick += new System.EventHandler(this.showFace_Tick);
             // 
-            // SplashScreen
+            // guna2GradientPanel1
+            // 
+            this.guna2GradientPanel1.BorderRadius = 20;
+            this.guna2GradientPanel1.Controls.Add(this.bunifuLabel1);
+            this.bunifuTransition1.SetDecoration(this.guna2GradientPanel1, BunifuAnimatorNS.DecorationType.None);
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(60)))), ((int)(((byte)(78)))));
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(12, 0);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(227, 40);
+            this.guna2GradientPanel1.TabIndex = 4;
+            this.bunifuToolTip1.SetToolTip(this.guna2GradientPanel1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.guna2GradientPanel1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.guna2GradientPanel1, "");
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.bunifuLabel1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuLabel1.Font = new System.Drawing.Font("Proxima Soft", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel1.Location = new System.Drawing.Point(12, 0);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(203, 38);
+            this.bunifuLabel1.TabIndex = 5;
+            this.bunifuLabel1.Text = "COVIDinfo-PH";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuToolTip1.SetToolTip(this.bunifuLabel1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuLabel1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuLabel1, "<b>COVIDinfo-PH</b> <span style=\\\"color: darkgray;\\\">•</span> <span style=\"color:" +
+        " dimgray; font-family: consolas; font-size: 13px\">v1.0.0</span>");
+            // 
+            // guna2WinProgressIndicator1
+            // 
+            this.guna2WinProgressIndicator1.AutoStart = true;
+            this.guna2WinProgressIndicator1.CircleSize = 1F;
+            this.bunifuTransition1.SetDecoration(this.guna2WinProgressIndicator1, BunifuAnimatorNS.DecorationType.None);
+            this.guna2WinProgressIndicator1.Location = new System.Drawing.Point(355, 3);
+            this.guna2WinProgressIndicator1.Name = "guna2WinProgressIndicator1";
+            this.guna2WinProgressIndicator1.Size = new System.Drawing.Size(90, 90);
+            this.guna2WinProgressIndicator1.TabIndex = 5;
+            this.bunifuToolTip1.SetToolTip(this.guna2WinProgressIndicator1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.guna2WinProgressIndicator1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.guna2WinProgressIndicator1, "");
+            this.guna2WinProgressIndicator1.Visible = false;
+            // 
+            // SplashForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.ortegaName);
-            this.Controls.Add(this.itangName);
-            this.Controls.Add(this.ninoName);
-            this.Controls.Add(this.braulioName);
-            this.Controls.Add(this.martinezName);
-            this.Controls.Add(this.arizalaName);
-            this.Controls.Add(this.meetLabel);
-            this.Controls.Add(this.name);
+            this.Controls.Add(this.guna2WinProgressIndicator1);
+            this.Controls.Add(this.guna2GradientPanel1);
+            this.Controls.Add(this.bunifuImageButton1);
             this.Controls.Add(this.ortega);
-            this.Controls.Add(this.itang);
             this.Controls.Add(this.martinez);
-            this.Controls.Add(this.arizala);
             this.Controls.Add(this.nino);
+            this.Controls.Add(this.ortegaName);
+            this.Controls.Add(this.ninoName);
+            this.Controls.Add(this.martinezName);
+            this.Controls.Add(this.itangName);
+            this.Controls.Add(this.braulioName);
+            this.Controls.Add(this.arizalaName);
+            this.Controls.Add(this.itang);
+            this.Controls.Add(this.arizala);
             this.Controls.Add(this.braulio);
             this.Controls.Add(this.logoPictureBox);
-            this.Controls.Add(this.bunifuImageButton1);
+            this.Controls.Add(this.meetLabel);
+            this.Controls.Add(this.name);
             this.bunifuTransition1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
-            this.Name = "SplashScreen";
+            this.Name = "SplashForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "COVIDinfo-PH";
             this.Shown += new System.EventHandler(this.OnShowForm);
@@ -477,6 +521,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nino)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.braulio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
+            this.guna2GradientPanel1.ResumeLayout(false);
+            this.guna2GradientPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -486,9 +532,6 @@
         private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton1;
         private Bunifu.UI.WinForms.BunifuToolTip bunifuToolTip1;
         private Bunifu.Framework.UI.BunifuElipse splashScreenElipse;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
-        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private System.Windows.Forms.Label name;
         private Guna.UI2.WinForms.Guna2CirclePictureBox logoPictureBox;
         private System.Windows.Forms.Timer logoTimer;
@@ -509,6 +552,9 @@
         private BunifuAnimatorNS.BunifuTransition bunifuTransition1;
         private System.Windows.Forms.Timer showLogo;
         private System.Windows.Forms.Timer showFace;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Guna.UI2.WinForms.Guna2WinProgressIndicator guna2WinProgressIndicator1;
     }
 }
 
