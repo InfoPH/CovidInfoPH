@@ -11,8 +11,7 @@ using Bunifu.DataViz.WinForms;
 using CovidInfoPH.Models;
 using System.Drawing;
 using System.Globalization;
-using Task = System.Threading.Tasks.Task;
-
+using Syncfusion.Windows.Forms.Maps;
 
 namespace CovidInfoPH
 {
@@ -56,7 +55,7 @@ namespace CovidInfoPH
             caseGridView.Rows.Clear();
             for (int i = -6; i < 1; i++)
             {
-                caseGridView.Rows.Add($"{datePicker.Value.AddDays(i) : MM-dd-yyyy}", Historical[datePicker.Value.AddDays(i)].Cases,
+                caseGridView.Rows.Add($"{datePicker.Value.AddDays(i): MM-dd-yyyy}", Historical[datePicker.Value.AddDays(i)].Cases,
                 Historical[datePicker.Value.AddDays(i)].Deaths, Historical[datePicker.Value.AddDays(i)].Recoveries);
             }
         }
@@ -80,33 +79,8 @@ namespace CovidInfoPH
             generalCaseChart.Render(canvas);
         }
 
-        private string SetMonth(int month)
-        {
-            if (month == 1)
-            {
-                return "January";
-            }
-            else if (month == 2)
-            {
-                return "February";
-            }
-            else if (month == 3)
-            {
-                return "March";
-            }
-            else if (month == 4)
-            {
-                return "April";
-            }
-            else if (month == 5)
-            {
-                return "May";
-            }
-            else return " ";
-        }
         private void RefreshData()
         {
-            string month = SetMonth(datePicker.Value.Month);
             double cases = Historical[datePicker.Value].Cases;
             double deaths = Historical[datePicker.Value].Deaths;
             double recoveries = Historical[datePicker.Value].Recoveries;
@@ -118,7 +92,7 @@ namespace CovidInfoPH
             recovNum.Text = recoveries.ToString(CultureInfo.InvariantCulture);
             newCasesNum.Text = newCases.ToString();
             deathPercent.Value = Convert.ToInt32(deaths / cases * 100);
-            weeklyReport.Text = $"Weekly Report as of {month} {datePicker.Value.Day}, 2020";
+            weeklyReport.Text = $"Weekly Report as of {datePicker.Value:MMMM dd, yyyy}";
             newCasesDesc.Text = $"New cases since\n{datePicker.Value.AddDays(-6).DayOfWeek}";
         }
         #endregion
@@ -129,7 +103,7 @@ namespace CovidInfoPH
         {
             datePicker.Enabled = false;
             bunifuTransition2.HideSync(generalCaseChart);
-            bunifuTransition2.HideSync(caseGridView);
+            bunifuTransition1.HideSync(caseGridView);
             bunifuTransition1.HideSync(newCasesNum);
             bunifuTransition1.HideSync(deathNum2);
             bunifuTransition1.HideSync(caseNum2);
@@ -146,16 +120,16 @@ namespace CovidInfoPH
             bunifuTransition1.ShowSync(caseNum2);
             bunifuTransition1.ShowSync(deathNum2);
             bunifuTransition1.ShowSync(newCasesNum);
-            bunifuTransition2.ShowSync(caseGridView);
+            bunifuTransition1.ShowSync(caseGridView);
             bunifuTransition2.ShowSync(generalCaseChart);
-           
+
         }
         #endregion
 
         #region Input events
 
         private void DatePicker_ValueChanged(object sender, EventArgs e)
-        {         
+        {
             FadeOutValues();
             RefreshData();
             DisplayGraph();
@@ -166,16 +140,25 @@ namespace CovidInfoPH
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
+            bunifuImageButton1.FadeWhenInactive = false;
+            bunifuImageButton2.FadeWhenInactive = true;
+            bunifuImageButton3.FadeWhenInactive = true;
             DashBoard.SetPage(0);
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
+            bunifuImageButton1.FadeWhenInactive = true;
+            bunifuImageButton2.FadeWhenInactive = false;
+            bunifuImageButton3.FadeWhenInactive = true;
             DashBoard.SetPage(1);
         }
 
         private void bunifuImageButton3_Click(object sender, EventArgs e)
         {
+            bunifuImageButton1.FadeWhenInactive = true;
+            bunifuImageButton2.FadeWhenInactive = true;
+            bunifuImageButton3.FadeWhenInactive = false;
             DashBoard.SetPage(2);
         }
 
