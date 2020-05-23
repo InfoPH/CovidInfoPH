@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashForm));
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.name = new System.Windows.Forms.Label();
@@ -48,15 +48,15 @@
             this.ninoName = new System.Windows.Forms.Label();
             this.itangName = new System.Windows.Forms.Label();
             this.ortegaName = new System.Windows.Forms.Label();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.guna2WinProgressIndicator1 = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
             this.splashScreenElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.logoTimer = new System.Windows.Forms.Timer(this.components);
             this.nameTimer = new System.Windows.Forms.Timer(this.components);
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.showLogo = new System.Windows.Forms.Timer(this.components);
             this.showFace = new System.Windows.Forms.Timer(this.components);
-            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.guna2WinProgressIndicator1 = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
             ((System.ComponentModel.ISupportInitialize)(this.ortega)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.martinez)).BeginInit();
@@ -104,6 +104,7 @@
             // 
             // name
             // 
+            this.name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.name.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.name, BunifuAnimatorNS.DecorationType.None);
             this.name.Font = new System.Drawing.Font("Proxima Soft", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,6 +121,7 @@
             // 
             // ortega
             // 
+            this.ortega.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuTransition1.SetDecoration(this.ortega, BunifuAnimatorNS.DecorationType.None);
             this.ortega.Image = global::CovidInfoPH.Properties.Resources._100061169_276338833522119_1402422700361646080_n;
             this.ortega.Location = new System.Drawing.Point(509, 145);
@@ -137,6 +139,7 @@
             // 
             // itang
             // 
+            this.itang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuTransition1.SetDecoration(this.itang, BunifuAnimatorNS.DecorationType.None);
             this.itang.Image = global::CovidInfoPH.Properties.Resources._98425531_541015779926144_8229802726691700736_n;
             this.itang.Location = new System.Drawing.Point(509, 145);
@@ -154,6 +157,7 @@
             // 
             // martinez
             // 
+            this.martinez.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuTransition1.SetDecoration(this.martinez, BunifuAnimatorNS.DecorationType.None);
             this.martinez.Image = global::CovidInfoPH.Properties.Resources.yes;
             this.martinez.Location = new System.Drawing.Point(131, 145);
@@ -171,6 +175,7 @@
             // 
             // arizala
             // 
+            this.arizala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuTransition1.SetDecoration(this.arizala, BunifuAnimatorNS.DecorationType.None);
             this.arizala.Image = global::CovidInfoPH.Properties.Resources._78932966_2476722459093725_2081503394031206400_o;
             this.arizala.Location = new System.Drawing.Point(131, 145);
@@ -188,6 +193,7 @@
             // 
             // nino
             // 
+            this.nino.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuTransition1.SetDecoration(this.nino, BunifuAnimatorNS.DecorationType.None);
             this.nino.Image = global::CovidInfoPH.Properties.Resources._95527983_10213327038009303_2560924187824750592_o;
             this.nino.Location = new System.Drawing.Point(320, 145);
@@ -205,6 +211,7 @@
             // 
             // braulio
             // 
+            this.braulio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuTransition1.SetDecoration(this.braulio, BunifuAnimatorNS.DecorationType.None);
             this.braulio.Image = global::CovidInfoPH.Properties.Resources._72766113_3217244771649584_1088017474953150464_o;
             this.braulio.Location = new System.Drawing.Point(320, 145);
@@ -222,6 +229,7 @@
             // 
             // logoPictureBox
             // 
+            this.logoPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuTransition1.SetDecoration(this.logoPictureBox, BunifuAnimatorNS.DecorationType.None);
             this.logoPictureBox.Image = global::CovidInfoPH.Properties.Resources._98443875_1239509479739033_3322527171938877440_n;
             this.logoPictureBox.Location = new System.Drawing.Point(320, 145);
@@ -278,6 +286,7 @@
             // 
             // meetLabel
             // 
+            this.meetLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.meetLabel.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.meetLabel, BunifuAnimatorNS.DecorationType.None);
             this.meetLabel.Font = new System.Drawing.Font("Proxima Soft", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -294,6 +303,7 @@
             // 
             // arizalaName
             // 
+            this.arizalaName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.arizalaName.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.arizalaName, BunifuAnimatorNS.DecorationType.None);
             this.arizalaName.Font = new System.Drawing.Font("Proxima Soft", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -310,15 +320,16 @@
             // 
             // martinezName
             // 
+            this.martinezName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.martinezName.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.martinezName, BunifuAnimatorNS.DecorationType.None);
             this.martinezName.Font = new System.Drawing.Font("Proxima Soft", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.martinezName.ForeColor = System.Drawing.Color.White;
-            this.martinezName.Location = new System.Drawing.Point(151, 308);
+            this.martinezName.Location = new System.Drawing.Point(122, 308);
             this.martinezName.Name = "martinezName";
-            this.martinezName.Size = new System.Drawing.Size(120, 64);
+            this.martinezName.Size = new System.Drawing.Size(179, 64);
             this.martinezName.TabIndex = 3;
-            this.martinezName.Text = "Raphael\r\nMartinez";
+            this.martinezName.Text = "Martinez\r\nJose Raphael";
             this.bunifuToolTip1.SetToolTip(this.martinezName, "");
             this.bunifuToolTip1.SetToolTipIcon(this.martinezName, null);
             this.bunifuToolTip1.SetToolTipTitle(this.martinezName, "");
@@ -326,6 +337,7 @@
             // 
             // braulioName
             // 
+            this.braulioName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.braulioName.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.braulioName, BunifuAnimatorNS.DecorationType.None);
             this.braulioName.Font = new System.Drawing.Font("Proxima Soft", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -342,6 +354,7 @@
             // 
             // ninoName
             // 
+            this.ninoName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ninoName.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.ninoName, BunifuAnimatorNS.DecorationType.None);
             this.ninoName.Font = new System.Drawing.Font("Proxima Soft", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -358,6 +371,7 @@
             // 
             // itangName
             // 
+            this.itangName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.itangName.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.itangName, BunifuAnimatorNS.DecorationType.None);
             this.itangName.Font = new System.Drawing.Font("Proxima Soft", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -374,6 +388,7 @@
             // 
             // ortegaName
             // 
+            this.ortegaName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ortegaName.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.ortegaName, BunifuAnimatorNS.DecorationType.None);
             this.ortegaName.Font = new System.Drawing.Font("Proxima Soft", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -387,52 +402,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.ortegaName, null);
             this.bunifuToolTip1.SetToolTipTitle(this.ortegaName, "");
             this.ortegaName.Visible = false;
-            // 
-            // splashScreenElipse
-            // 
-            this.splashScreenElipse.ElipseRadius = 60;
-            this.splashScreenElipse.TargetControl = this;
-            // 
-            // logoTimer
-            // 
-            this.logoTimer.Interval = 500;
-            this.logoTimer.Tick += new System.EventHandler(this.logoTimer_Tick);
-            // 
-            // nameTimer
-            // 
-            this.nameTimer.Interval = 1000;
-            this.nameTimer.Tick += new System.EventHandler(this.nameTimer_Tick);
-            // 
-            // bunifuTransition1
-            // 
-            this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
-            this.bunifuTransition1.Cursor = null;
-            animation5.AnimateOnlyDifferences = true;
-            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
-            animation5.LeafCoeff = 0F;
-            animation5.MaxTime = 1F;
-            animation5.MinTime = 0F;
-            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
-            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
-            animation5.MosaicSize = 0;
-            animation5.Padding = new System.Windows.Forms.Padding(0);
-            animation5.RotateCoeff = 0F;
-            animation5.RotateLimit = 0F;
-            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
-            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
-            animation5.TimeCoeff = 0F;
-            animation5.TransparencyCoeff = 1F;
-            this.bunifuTransition1.DefaultAnimation = animation5;
-            // 
-            // showLogo
-            // 
-            this.showLogo.Interval = 1000;
-            this.showLogo.Tick += new System.EventHandler(this.showLogo_Tick);
-            // 
-            // showFace
-            // 
-            this.showFace.Interval = 1000;
-            this.showFace.Tick += new System.EventHandler(this.showFace_Tick);
             // 
             // guna2GradientPanel1
             // 
@@ -472,6 +441,7 @@
             // 
             // guna2WinProgressIndicator1
             // 
+            this.guna2WinProgressIndicator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2WinProgressIndicator1.AutoStart = true;
             this.guna2WinProgressIndicator1.CircleSize = 1F;
             this.bunifuTransition1.SetDecoration(this.guna2WinProgressIndicator1, BunifuAnimatorNS.DecorationType.None);
@@ -484,11 +454,58 @@
             this.bunifuToolTip1.SetToolTipTitle(this.guna2WinProgressIndicator1, "");
             this.guna2WinProgressIndicator1.Visible = false;
             // 
+            // splashScreenElipse
+            // 
+            this.splashScreenElipse.ElipseRadius = 60;
+            this.splashScreenElipse.TargetControl = this;
+            // 
+            // logoTimer
+            // 
+            this.logoTimer.Interval = 500;
+            this.logoTimer.Tick += new System.EventHandler(this.logoTimer_Tick);
+            // 
+            // nameTimer
+            // 
+            this.nameTimer.Interval = 1000;
+            this.nameTimer.Tick += new System.EventHandler(this.nameTimer_Tick);
+            // 
+            // bunifuTransition1
+            // 
+            this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
+            this.bunifuTransition1.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 1F;
+            this.bunifuTransition1.DefaultAnimation = animation1;
+            // 
+            // showLogo
+            // 
+            this.showLogo.Interval = 1000;
+            this.showLogo.Tick += new System.EventHandler(this.showLogo_Tick);
+            // 
+            // showFace
+            // 
+            this.showFace.Interval = 1000;
+            this.showFace.Tick += new System.EventHandler(this.showFace_Tick);
+            // 
             // SplashForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.guna2WinProgressIndicator1);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.bunifuImageButton1);
@@ -510,6 +527,8 @@
             this.bunifuTransition1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SplashForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "COVIDinfo-PH";
