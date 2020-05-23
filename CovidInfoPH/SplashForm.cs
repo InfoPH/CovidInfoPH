@@ -68,7 +68,7 @@ namespace CovidInfoPH
 
         public void OnClickClose(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         private void logoTimer_Tick(object sender, EventArgs e)
@@ -142,6 +142,91 @@ namespace CovidInfoPH
             bunifuTransition1.HideSync(meetLabel);
 
             Close();
+        }
+
+        private void nino_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ortega_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void name_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void itang_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void arizala_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void braulio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logoPictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void arizalaName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void martinezName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void braulioName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ninoName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void itangName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ortegaName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2WinProgressIndicator1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void meetLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void martinez_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
