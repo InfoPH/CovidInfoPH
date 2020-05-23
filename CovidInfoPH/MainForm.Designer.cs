@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
-            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation3 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation6 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
             this.menuBarPanel = new System.Windows.Forms.Panel();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.bunifuImageButton3 = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -47,88 +47,89 @@
             this.generalCases = new System.Windows.Forms.TabPage();
             this.tableDashBoard = new System.Windows.Forms.TableLayoutPanel();
             this.lowerDataPanel = new System.Windows.Forms.Panel();
+            this.lowerDataTablePanel = new System.Windows.Forms.TableLayoutPanel();
+            this.caseGridView = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cases = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Deaths = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Recoveries = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.casesNum = new Bunifu.UI.WinForms.BunifuLabel();
+            this.casesDesc = new Bunifu.UI.WinForms.BunifuLabel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.deathsDesc = new Bunifu.UI.WinForms.BunifuLabel();
+            this.deathNum = new Bunifu.UI.WinForms.BunifuLabel();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.recovDesc = new Bunifu.UI.WinForms.BunifuLabel();
+            this.recovNum = new Bunifu.UI.WinForms.BunifuLabel();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.weeklyReportPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.weeklyReport = new Bunifu.UI.WinForms.BunifuLabel();
+            this.newCasesNum = new Bunifu.UI.WinForms.BunifuLabel();
+            this.newCasesDesc = new Bunifu.UI.WinForms.BunifuLabel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.deathPercent = new Bunifu.UI.WinForms.BunifuCircleProgress();
+            this.deathNum2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.caseNum2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
             this.chartPanel = new System.Windows.Forms.Panel();
             this.datePicker = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.generalCaseChart = new Bunifu.DataViz.WinForms.BunifuDataViz();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel9 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.casesColorlabel = new System.Windows.Forms.Label();
             this.recoveriesColorLabel = new System.Windows.Forms.Label();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.deathsColorlabel = new System.Windows.Forms.Label();
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.DashBoard = new Bunifu.UI.WinForms.BunifuPages();
-            this.formElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.casesColorlabel = new System.Windows.Forms.Label();
-            this.bunifuCasesElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuDeathsElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuRecoveriesElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.menuBarElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.topPanel = new System.Windows.Forms.Panel();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.formElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.bunifuCasesElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuDeathsElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuRecoveriesElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.menuBarElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.topDragControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.caseGridView = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.Recoveries = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Deaths = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cases = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lowerDataTablePanel = new System.Windows.Forms.TableLayoutPanel();
-            this.recovNum = new Bunifu.UI.WinForms.BunifuLabel();
-            this.recovDesc = new Bunifu.UI.WinForms.BunifuLabel();
-            this.deathNum = new Bunifu.UI.WinForms.BunifuLabel();
-            this.deathsDesc = new Bunifu.UI.WinForms.BunifuLabel();
-            this.casesDesc = new Bunifu.UI.WinForms.BunifuLabel();
-            this.casesNum = new Bunifu.UI.WinForms.BunifuLabel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.deathPercent = new Bunifu.UI.WinForms.BunifuCircleProgress();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.weeklyReportPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.caseNum2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.deathNum2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.newCasesDesc = new Bunifu.UI.WinForms.BunifuLabel();
-            this.newCasesNum = new Bunifu.UI.WinForms.BunifuLabel();
-            this.weeklyReport = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuFormFadeTransition1 = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
             this.menuBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.generalCases.SuspendLayout();
             this.tableDashBoard.SuspendLayout();
             this.lowerDataPanel.SuspendLayout();
+            this.lowerDataTablePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.caseGridView)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
+            this.weeklyReportPanel.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.panel8.SuspendLayout();
             this.chartPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.DashBoard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.caseGridView)).BeginInit();
-            this.lowerDataTablePanel.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            this.weeklyReportPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuBarPanel
@@ -271,22 +272,22 @@
             // 
             this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.bunifuTransition2.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.bunifuTransition2.DefaultAnimation = animation2;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.bunifuTransition2.DefaultAnimation = animation4;
             this.bunifuTransition2.Interval = 1;
             // 
             // healthCapacity
@@ -360,6 +361,577 @@
             this.lowerDataPanel.Name = "lowerDataPanel";
             this.lowerDataPanel.Size = new System.Drawing.Size(1360, 341);
             this.lowerDataPanel.TabIndex = 76;
+            // 
+            // lowerDataTablePanel
+            // 
+            this.lowerDataTablePanel.ColumnCount = 2;
+            this.lowerDataTablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.lowerDataTablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.lowerDataTablePanel.Controls.Add(this.caseGridView, 0, 0);
+            this.lowerDataTablePanel.Controls.Add(this.panel2, 1, 0);
+            this.bunifuTransition1.SetDecoration(this.lowerDataTablePanel, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.lowerDataTablePanel, BunifuAnimatorNS.DecorationType.None);
+            this.lowerDataTablePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lowerDataTablePanel.Location = new System.Drawing.Point(0, 0);
+            this.lowerDataTablePanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lowerDataTablePanel.Name = "lowerDataTablePanel";
+            this.lowerDataTablePanel.RowCount = 1;
+            this.lowerDataTablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.lowerDataTablePanel.Size = new System.Drawing.Size(1360, 341);
+            this.lowerDataTablePanel.TabIndex = 0;
+            // 
+            // caseGridView
+            // 
+            this.caseGridView.AllowUserToAddRows = false;
+            this.caseGridView.AllowUserToDeleteRows = false;
+            this.caseGridView.AllowUserToResizeColumns = false;
+            this.caseGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            this.caseGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.caseGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.caseGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            this.caseGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.caseGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.caseGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.caseGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.caseGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.caseGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Date,
+            this.Cases,
+            this.Deaths,
+            this.Recoveries});
+            this.bunifuTransition2.SetDecoration(this.caseGridView, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.caseGridView, BunifuAnimatorNS.DecorationType.None);
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(32)))), ((int)(((byte)(44)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.caseGridView.DefaultCellStyle = dataGridViewCellStyle6;
+            this.caseGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.caseGridView.DoubleBuffered = true;
+            this.caseGridView.EnableHeadersVisualStyles = false;
+            this.caseGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            this.caseGridView.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            this.caseGridView.HeaderForeColor = System.Drawing.Color.White;
+            this.caseGridView.Location = new System.Drawing.Point(3, 4);
+            this.caseGridView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.caseGridView.Name = "caseGridView";
+            this.caseGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.caseGridView.RowHeadersVisible = false;
+            this.caseGridView.RowHeadersWidth = 51;
+            this.caseGridView.RowTemplate.Height = 40;
+            this.caseGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.caseGridView.Size = new System.Drawing.Size(674, 333);
+            this.caseGridView.TabIndex = 49;
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Date";
+            this.Date.MinimumWidth = 6;
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // Cases
+            // 
+            this.Cases.HeaderText = "Cases";
+            this.Cases.MinimumWidth = 6;
+            this.Cases.Name = "Cases";
+            this.Cases.ReadOnly = true;
+            // 
+            // Deaths
+            // 
+            this.Deaths.HeaderText = "Deaths";
+            this.Deaths.MinimumWidth = 6;
+            this.Deaths.Name = "Deaths";
+            this.Deaths.ReadOnly = true;
+            // 
+            // Recoveries
+            // 
+            this.Recoveries.HeaderText = "Recoveries";
+            this.Recoveries.MinimumWidth = 6;
+            this.Recoveries.Name = "Recoveries";
+            this.Recoveries.ReadOnly = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.tableLayoutPanel2);
+            this.panel2.Controls.Add(this.weeklyReportPanel);
+            this.bunifuTransition1.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
+            this.panel2.Location = new System.Drawing.Point(683, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(660, 333);
+            this.panel2.TabIndex = 77;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.Controls.Add(this.panel4, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel5, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel6, 2, 0);
+            this.bunifuTransition1.SetDecoration(this.tableLayoutPanel2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.tableLayoutPanel2, BunifuAnimatorNS.DecorationType.None);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 258);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(660, 75);
+            this.tableLayoutPanel2.TabIndex = 76;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            this.panel4.Controls.Add(this.casesNum);
+            this.panel4.Controls.Add(this.casesDesc);
+            this.panel4.Controls.Add(this.guna2PictureBox2);
+            this.bunifuTransition1.SetDecoration(this.panel4, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.panel4, BunifuAnimatorNS.DecorationType.None);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(3, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(214, 67);
+            this.panel4.TabIndex = 0;
+            // 
+            // casesNum
+            // 
+            this.casesNum.AutoEllipsis = false;
+            this.casesNum.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.casesNum, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.casesNum, BunifuAnimatorNS.DecorationType.None);
+            this.casesNum.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.casesNum.ForeColor = System.Drawing.Color.White;
+            this.casesNum.Location = new System.Drawing.Point(66, 4);
+            this.casesNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.casesNum.Name = "casesNum";
+            this.casesNum.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.casesNum.Size = new System.Drawing.Size(23, 38);
+            this.casesNum.TabIndex = 60;
+            this.casesNum.Text = "--";
+            this.casesNum.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.casesNum.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // casesDesc
+            // 
+            this.casesDesc.AutoEllipsis = false;
+            this.casesDesc.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.casesDesc, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.casesDesc, BunifuAnimatorNS.DecorationType.None);
+            this.casesDesc.Font = new System.Drawing.Font("Proxima Soft", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.casesDesc.ForeColor = System.Drawing.Color.White;
+            this.casesDesc.Location = new System.Drawing.Point(66, 40);
+            this.casesDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.casesDesc.Name = "casesDesc";
+            this.casesDesc.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.casesDesc.Size = new System.Drawing.Size(50, 23);
+            this.casesDesc.TabIndex = 62;
+            this.casesDesc.Text = "Cases";
+            this.casesDesc.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.casesDesc.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // guna2PictureBox2
+            // 
+            this.bunifuTransition1.SetDecoration(this.guna2PictureBox2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.guna2PictureBox2, BunifuAnimatorNS.DecorationType.None);
+            this.guna2PictureBox2.Image = global::CovidInfoPH.Properties.Resources.arrow_right1;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(-7, 3);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(82, 45);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 69;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            this.panel5.Controls.Add(this.deathsDesc);
+            this.panel5.Controls.Add(this.deathNum);
+            this.panel5.Controls.Add(this.guna2PictureBox3);
+            this.bunifuTransition1.SetDecoration(this.panel5, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.panel5, BunifuAnimatorNS.DecorationType.None);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(223, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(214, 67);
+            this.panel5.TabIndex = 1;
+            // 
+            // deathsDesc
+            // 
+            this.deathsDesc.AutoEllipsis = false;
+            this.deathsDesc.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.deathsDesc, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.deathsDesc, BunifuAnimatorNS.DecorationType.None);
+            this.deathsDesc.Font = new System.Drawing.Font("Proxima Soft", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deathsDesc.ForeColor = System.Drawing.Color.White;
+            this.deathsDesc.Location = new System.Drawing.Point(66, 40);
+            this.deathsDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.deathsDesc.Name = "deathsDesc";
+            this.deathsDesc.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.deathsDesc.Size = new System.Drawing.Size(58, 23);
+            this.deathsDesc.TabIndex = 67;
+            this.deathsDesc.Text = "Deaths";
+            this.deathsDesc.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.deathsDesc.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // deathNum
+            // 
+            this.deathNum.AutoEllipsis = false;
+            this.deathNum.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.deathNum, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.deathNum, BunifuAnimatorNS.DecorationType.None);
+            this.deathNum.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deathNum.ForeColor = System.Drawing.Color.White;
+            this.deathNum.Location = new System.Drawing.Point(66, 4);
+            this.deathNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.deathNum.Name = "deathNum";
+            this.deathNum.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.deathNum.Size = new System.Drawing.Size(23, 38);
+            this.deathNum.TabIndex = 59;
+            this.deathNum.Text = "--";
+            this.deathNum.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.deathNum.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // guna2PictureBox3
+            // 
+            this.bunifuTransition1.SetDecoration(this.guna2PictureBox3, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.guna2PictureBox3, BunifuAnimatorNS.DecorationType.None);
+            this.guna2PictureBox3.Image = global::CovidInfoPH.Properties.Resources.arrow_right1;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(-4, 3);
+            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
+            this.guna2PictureBox3.Size = new System.Drawing.Size(82, 45);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 70;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            this.panel6.Controls.Add(this.recovDesc);
+            this.panel6.Controls.Add(this.recovNum);
+            this.panel6.Controls.Add(this.guna2PictureBox4);
+            this.bunifuTransition1.SetDecoration(this.panel6, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.panel6, BunifuAnimatorNS.DecorationType.None);
+            this.panel6.Location = new System.Drawing.Point(443, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(214, 67);
+            this.panel6.TabIndex = 2;
+            // 
+            // recovDesc
+            // 
+            this.recovDesc.AutoEllipsis = false;
+            this.recovDesc.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.recovDesc, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.recovDesc, BunifuAnimatorNS.DecorationType.None);
+            this.recovDesc.Font = new System.Drawing.Font("Proxima Soft", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.recovDesc.ForeColor = System.Drawing.Color.White;
+            this.recovDesc.Location = new System.Drawing.Point(74, 40);
+            this.recovDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.recovDesc.Name = "recovDesc";
+            this.recovDesc.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.recovDesc.Size = new System.Drawing.Size(90, 23);
+            this.recovDesc.TabIndex = 68;
+            this.recovDesc.Text = "Recoveries";
+            this.recovDesc.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.recovDesc.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // recovNum
+            // 
+            this.recovNum.AutoEllipsis = false;
+            this.recovNum.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.recovNum, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.recovNum, BunifuAnimatorNS.DecorationType.None);
+            this.recovNum.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.recovNum.ForeColor = System.Drawing.Color.White;
+            this.recovNum.Location = new System.Drawing.Point(74, 4);
+            this.recovNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.recovNum.Name = "recovNum";
+            this.recovNum.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.recovNum.Size = new System.Drawing.Size(23, 38);
+            this.recovNum.TabIndex = 58;
+            this.recovNum.Text = "--";
+            this.recovNum.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.recovNum.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // guna2PictureBox4
+            // 
+            this.bunifuTransition1.SetDecoration(this.guna2PictureBox4, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.guna2PictureBox4, BunifuAnimatorNS.DecorationType.None);
+            this.guna2PictureBox4.Image = global::CovidInfoPH.Properties.Resources.arrow_right1;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(-1, 3);
+            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
+            this.guna2PictureBox4.Size = new System.Drawing.Size(82, 45);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox4.TabIndex = 72;
+            this.guna2PictureBox4.TabStop = false;
+            // 
+            // weeklyReportPanel
+            // 
+            this.weeklyReportPanel.ColumnCount = 2;
+            this.weeklyReportPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.weeklyReportPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.weeklyReportPanel.Controls.Add(this.panel7, 0, 0);
+            this.weeklyReportPanel.Controls.Add(this.panel8, 1, 0);
+            this.bunifuTransition1.SetDecoration(this.weeklyReportPanel, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.weeklyReportPanel, BunifuAnimatorNS.DecorationType.None);
+            this.weeklyReportPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.weeklyReportPanel.Location = new System.Drawing.Point(0, 0);
+            this.weeklyReportPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.weeklyReportPanel.Name = "weeklyReportPanel";
+            this.weeklyReportPanel.RowCount = 1;
+            this.weeklyReportPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.weeklyReportPanel.Size = new System.Drawing.Size(660, 333);
+            this.weeklyReportPanel.TabIndex = 75;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            this.panel7.Controls.Add(this.guna2PictureBox1);
+            this.panel7.Controls.Add(this.weeklyReport);
+            this.panel7.Controls.Add(this.newCasesNum);
+            this.panel7.Controls.Add(this.newCasesDesc);
+            this.bunifuTransition1.SetDecoration(this.panel7, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.panel7, BunifuAnimatorNS.DecorationType.None);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(3, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(324, 325);
+            this.panel7.TabIndex = 0;
+            // 
+            // guna2PictureBox1
+            // 
+            this.bunifuTransition1.SetDecoration(this.guna2PictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.guna2PictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.guna2PictureBox1.Image = global::CovidInfoPH.Properties.Resources.increase_480px;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(14, 73);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(101, 101);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 59;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // weeklyReport
+            // 
+            this.weeklyReport.AutoEllipsis = false;
+            this.weeklyReport.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.weeklyReport, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.weeklyReport, BunifuAnimatorNS.DecorationType.None);
+            this.weeklyReport.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weeklyReport.ForeColor = System.Drawing.Color.White;
+            this.weeklyReport.Location = new System.Drawing.Point(14, 4);
+            this.weeklyReport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.weeklyReport.Name = "weeklyReport";
+            this.weeklyReport.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.weeklyReport.Size = new System.Drawing.Size(131, 24);
+            this.weeklyReport.TabIndex = 66;
+            this.weeklyReport.Text = "Weekly Report";
+            this.weeklyReport.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.weeklyReport.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // newCasesNum
+            // 
+            this.newCasesNum.AutoEllipsis = false;
+            this.newCasesNum.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.newCasesNum, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.newCasesNum, BunifuAnimatorNS.DecorationType.None);
+            this.newCasesNum.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newCasesNum.ForeColor = System.Drawing.Color.White;
+            this.newCasesNum.Location = new System.Drawing.Point(122, 79);
+            this.newCasesNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.newCasesNum.Name = "newCasesNum";
+            this.newCasesNum.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.newCasesNum.Size = new System.Drawing.Size(23, 38);
+            this.newCasesNum.TabIndex = 52;
+            this.newCasesNum.Text = "--";
+            this.newCasesNum.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.newCasesNum.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // newCasesDesc
+            // 
+            this.newCasesDesc.AutoEllipsis = false;
+            this.newCasesDesc.AutoSize = false;
+            this.newCasesDesc.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.newCasesDesc, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.newCasesDesc, BunifuAnimatorNS.DecorationType.None);
+            this.newCasesDesc.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newCasesDesc.ForeColor = System.Drawing.Color.White;
+            this.newCasesDesc.Location = new System.Drawing.Point(122, 118);
+            this.newCasesDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.newCasesDesc.Name = "newCasesDesc";
+            this.newCasesDesc.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.newCasesDesc.Size = new System.Drawing.Size(180, 120);
+            this.newCasesDesc.TabIndex = 58;
+            this.newCasesDesc.Text = "New Cases \r\nThis Week";
+            this.newCasesDesc.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.newCasesDesc.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            this.panel8.Controls.Add(this.deathPercent);
+            this.panel8.Controls.Add(this.deathNum2);
+            this.panel8.Controls.Add(this.bunifuLabel7);
+            this.panel8.Controls.Add(this.bunifuLabel8);
+            this.panel8.Controls.Add(this.caseNum2);
+            this.panel8.Controls.Add(this.bunifuLabel10);
+            this.bunifuTransition1.SetDecoration(this.panel8, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.panel8, BunifuAnimatorNS.DecorationType.None);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(333, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(324, 325);
+            this.panel8.TabIndex = 1;
+            // 
+            // deathPercent
+            // 
+            this.deathPercent.Animated = true;
+            this.deathPercent.AnimationInterval = 1;
+            this.deathPercent.AnimationSpeed = 1;
+            this.deathPercent.BackColor = System.Drawing.Color.Transparent;
+            this.deathPercent.CircleMargin = 10;
+            this.bunifuTransition2.SetDecoration(this.deathPercent, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.deathPercent, BunifuAnimatorNS.DecorationType.None);
+            this.deathPercent.Font = new System.Drawing.Font("Proxima Soft", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deathPercent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
+            this.deathPercent.IsPercentage = true;
+            this.deathPercent.LineProgressThickness = 8;
+            this.deathPercent.LineThickness = 5;
+            this.deathPercent.Location = new System.Drawing.Point(4, 61);
+            this.deathPercent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.deathPercent.Name = "deathPercent";
+            this.deathPercent.ProgressBackColor = System.Drawing.Color.Gainsboro;
+            this.deathPercent.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
+            this.deathPercent.SecondaryFont = new System.Drawing.Font("Proxima Soft", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deathPercent.Size = new System.Drawing.Size(124, 124);
+            this.deathPercent.SubScriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.deathPercent.SubScriptMargin = new System.Windows.Forms.Padding(5, -35, 0, 0);
+            this.deathPercent.SubScriptText = "";
+            this.deathPercent.SuperScriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.deathPercent.SuperScriptMargin = new System.Windows.Forms.Padding(5, 50, 0, 0);
+            this.deathPercent.SuperScriptText = "%";
+            this.deathPercent.TabIndex = 51;
+            this.deathPercent.Text = "10";
+            this.deathPercent.TextMargin = new System.Windows.Forms.Padding(2, 5, 0, 0);
+            this.deathPercent.Value = 10;
+            // 
+            // deathNum2
+            // 
+            this.deathNum2.AutoEllipsis = false;
+            this.deathNum2.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.deathNum2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.deathNum2, BunifuAnimatorNS.DecorationType.None);
+            this.deathNum2.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deathNum2.ForeColor = System.Drawing.Color.White;
+            this.deathNum2.Location = new System.Drawing.Point(135, 69);
+            this.deathNum2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.deathNum2.Name = "deathNum2";
+            this.deathNum2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.deathNum2.Size = new System.Drawing.Size(23, 38);
+            this.deathNum2.TabIndex = 56;
+            this.deathNum2.Text = "--";
+            this.deathNum2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.deathNum2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel7
+            // 
+            this.bunifuLabel7.AutoEllipsis = false;
+            this.bunifuLabel7.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.bunifuLabel7, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.bunifuLabel7, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuLabel7.Font = new System.Drawing.Font("Proxima Soft", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel7.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel7.Location = new System.Drawing.Point(218, 79);
+            this.bunifuLabel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bunifuLabel7.Name = "bunifuLabel7";
+            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel7.Size = new System.Drawing.Size(58, 23);
+            this.bunifuLabel7.TabIndex = 55;
+            this.bunifuLabel7.Text = "Deaths";
+            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel8
+            // 
+            this.bunifuLabel8.AutoEllipsis = false;
+            this.bunifuLabel8.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.bunifuLabel8, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.bunifuLabel8, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuLabel8.Font = new System.Drawing.Font("Proxima Soft", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel8.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel8.Location = new System.Drawing.Point(134, 118);
+            this.bunifuLabel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bunifuLabel8.Name = "bunifuLabel8";
+            this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel8.Size = new System.Drawing.Size(22, 20);
+            this.bunifuLabel8.TabIndex = 53;
+            this.bunifuLabel8.Text = "vs.";
+            this.bunifuLabel8.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.bunifuLabel8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // caseNum2
+            // 
+            this.caseNum2.AutoEllipsis = false;
+            this.caseNum2.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.caseNum2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.caseNum2, BunifuAnimatorNS.DecorationType.None);
+            this.caseNum2.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.caseNum2.ForeColor = System.Drawing.Color.White;
+            this.caseNum2.Location = new System.Drawing.Point(134, 146);
+            this.caseNum2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.caseNum2.Name = "caseNum2";
+            this.caseNum2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.caseNum2.Size = new System.Drawing.Size(23, 38);
+            this.caseNum2.TabIndex = 57;
+            this.caseNum2.Text = "--";
+            this.caseNum2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.caseNum2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel10
+            // 
+            this.bunifuLabel10.AutoEllipsis = false;
+            this.bunifuLabel10.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.bunifuLabel10, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.bunifuLabel10, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuLabel10.Font = new System.Drawing.Font("Proxima Soft", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel10.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel10.Location = new System.Drawing.Point(218, 164);
+            this.bunifuLabel10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bunifuLabel10.Name = "bunifuLabel10";
+            this.bunifuLabel10.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel10.Size = new System.Drawing.Size(50, 23);
+            this.bunifuLabel10.TabIndex = 54;
+            this.bunifuLabel10.Text = "Cases";
+            this.bunifuLabel10.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.bunifuLabel10.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // chartPanel
             // 
@@ -505,6 +1077,17 @@
             this.bunifuLabel9.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel9.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // casesColorlabel
+            // 
+            this.casesColorlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
+            this.bunifuTransition1.SetDecoration(this.casesColorlabel, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.casesColorlabel, BunifuAnimatorNS.DecorationType.None);
+            this.casesColorlabel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.casesColorlabel.Location = new System.Drawing.Point(458, 0);
+            this.casesColorlabel.Name = "casesColorlabel";
+            this.casesColorlabel.Size = new System.Drawing.Size(30, 33);
+            this.casesColorlabel.TabIndex = 73;
+            // 
             // recoveriesColorLabel
             // 
             this.recoveriesColorLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
@@ -604,82 +1187,23 @@
             this.DashBoard.SelectedIndex = 0;
             this.DashBoard.Size = new System.Drawing.Size(1389, 745);
             this.DashBoard.TabIndex = 54;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 1F;
-            this.DashBoard.Transition = animation3;
+            animation6.AnimateOnlyDifferences = true;
+            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
+            animation6.LeafCoeff = 0F;
+            animation6.MaxTime = 1F;
+            animation6.MinTime = 0F;
+            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
+            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
+            animation6.MosaicSize = 0;
+            animation6.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation6.RotateCoeff = 0F;
+            animation6.RotateLimit = 0F;
+            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
+            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
+            animation6.TimeCoeff = 0F;
+            animation6.TransparencyCoeff = 1F;
+            this.DashBoard.Transition = animation6;
             this.DashBoard.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Transparent;
-            // 
-            // formElipse
-            // 
-            this.formElipse.ElipseRadius = 50;
-            this.formElipse.TargetControl = this;
-            // 
-            // bunifuTransition1
-            // 
-            this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
-            this.bunifuTransition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 1F;
-            this.bunifuTransition1.DefaultAnimation = animation1;
-            this.bunifuTransition1.Interval = 1;
-            this.bunifuTransition1.TimeStep = 0.01F;
-            // 
-            // casesColorlabel
-            // 
-            this.casesColorlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
-            this.bunifuTransition1.SetDecoration(this.casesColorlabel, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.casesColorlabel, BunifuAnimatorNS.DecorationType.None);
-            this.casesColorlabel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.casesColorlabel.Location = new System.Drawing.Point(458, 0);
-            this.casesColorlabel.Name = "casesColorlabel";
-            this.casesColorlabel.Size = new System.Drawing.Size(30, 33);
-            this.casesColorlabel.TabIndex = 73;
-            // 
-            // bunifuCasesElipse
-            // 
-            this.bunifuCasesElipse.ElipseRadius = 50;
-            this.bunifuCasesElipse.TargetControl = this.casesColorlabel;
-            // 
-            // bunifuDeathsElipse
-            // 
-            this.bunifuDeathsElipse.ElipseRadius = 50;
-            this.bunifuDeathsElipse.TargetControl = this.deathsColorlabel;
-            // 
-            // bunifuRecoveriesElipse
-            // 
-            this.bunifuRecoveriesElipse.ElipseRadius = 50;
-            this.bunifuRecoveriesElipse.TargetControl = this.recoveriesColorLabel;
-            // 
-            // menuBarElipse
-            // 
-            this.menuBarElipse.ElipseRadius = 50;
-            this.menuBarElipse.TargetControl = this.menuBarPanel;
             // 
             // topPanel
             // 
@@ -762,582 +1286,63 @@
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // formElipse
+            // 
+            this.formElipse.ElipseRadius = 50;
+            this.formElipse.TargetControl = this;
+            // 
+            // bunifuTransition1
+            // 
+            this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
+            this.bunifuTransition1.Cursor = null;
+            animation5.AnimateOnlyDifferences = true;
+            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
+            animation5.LeafCoeff = 0F;
+            animation5.MaxTime = 1F;
+            animation5.MinTime = 0F;
+            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
+            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
+            animation5.MosaicSize = 0;
+            animation5.Padding = new System.Windows.Forms.Padding(0);
+            animation5.RotateCoeff = 0F;
+            animation5.RotateLimit = 0F;
+            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
+            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
+            animation5.TimeCoeff = 0F;
+            animation5.TransparencyCoeff = 1F;
+            this.bunifuTransition1.DefaultAnimation = animation5;
+            this.bunifuTransition1.Interval = 1;
+            this.bunifuTransition1.TimeStep = 0.01F;
+            // 
+            // bunifuCasesElipse
+            // 
+            this.bunifuCasesElipse.ElipseRadius = 50;
+            this.bunifuCasesElipse.TargetControl = this.casesColorlabel;
+            // 
+            // bunifuDeathsElipse
+            // 
+            this.bunifuDeathsElipse.ElipseRadius = 50;
+            this.bunifuDeathsElipse.TargetControl = this.deathsColorlabel;
+            // 
+            // bunifuRecoveriesElipse
+            // 
+            this.bunifuRecoveriesElipse.ElipseRadius = 50;
+            this.bunifuRecoveriesElipse.TargetControl = this.recoveriesColorLabel;
+            // 
+            // menuBarElipse
+            // 
+            this.menuBarElipse.ElipseRadius = 50;
+            this.menuBarElipse.TargetControl = this.menuBarPanel;
+            // 
             // topDragControl
             // 
             this.topDragControl.DragStartTransparencyValue = 0.8D;
             this.topDragControl.TargetControl = this.topPanel;
             this.topDragControl.UseTransparentDrag = true;
             // 
-            // panel2
+            // bunifuFormFadeTransition1
             // 
-            this.panel2.Controls.Add(this.tableLayoutPanel2);
-            this.panel2.Controls.Add(this.weeklyReportPanel);
-            this.bunifuTransition2.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
-            this.panel2.Location = new System.Drawing.Point(683, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(660, 333);
-            this.panel2.TabIndex = 77;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Controls.Add(this.panel4, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.panel5, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.panel6, 2, 0);
-            this.bunifuTransition1.SetDecoration(this.tableLayoutPanel2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.tableLayoutPanel2, BunifuAnimatorNS.DecorationType.None);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 258);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(660, 75);
-            this.tableLayoutPanel2.TabIndex = 76;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.panel6.Controls.Add(this.recovDesc);
-            this.panel6.Controls.Add(this.recovNum);
-            this.panel6.Controls.Add(this.guna2PictureBox4);
-            this.bunifuTransition2.SetDecoration(this.panel6, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.panel6, BunifuAnimatorNS.DecorationType.None);
-            this.panel6.Location = new System.Drawing.Point(443, 4);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(214, 67);
-            this.panel6.TabIndex = 2;
-            // 
-            // guna2PictureBox4
-            // 
-            this.bunifuTransition1.SetDecoration(this.guna2PictureBox4, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.guna2PictureBox4, BunifuAnimatorNS.DecorationType.None);
-            this.guna2PictureBox4.Image = global::CovidInfoPH.Properties.Resources.arrow_right1;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(-1, 3);
-            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
-            this.guna2PictureBox4.Size = new System.Drawing.Size(82, 45);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox4.TabIndex = 72;
-            this.guna2PictureBox4.TabStop = false;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.panel5.Controls.Add(this.deathsDesc);
-            this.panel5.Controls.Add(this.deathNum);
-            this.panel5.Controls.Add(this.guna2PictureBox3);
-            this.bunifuTransition2.SetDecoration(this.panel5, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.panel5, BunifuAnimatorNS.DecorationType.None);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(223, 4);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(214, 67);
-            this.panel5.TabIndex = 1;
-            // 
-            // guna2PictureBox3
-            // 
-            this.bunifuTransition1.SetDecoration(this.guna2PictureBox3, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.guna2PictureBox3, BunifuAnimatorNS.DecorationType.None);
-            this.guna2PictureBox3.Image = global::CovidInfoPH.Properties.Resources.arrow_right1;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(-4, 3);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
-            this.guna2PictureBox3.Size = new System.Drawing.Size(82, 45);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 70;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.panel4.Controls.Add(this.casesNum);
-            this.panel4.Controls.Add(this.casesDesc);
-            this.panel4.Controls.Add(this.guna2PictureBox2);
-            this.bunifuTransition2.SetDecoration(this.panel4, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.panel4, BunifuAnimatorNS.DecorationType.None);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 4);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(214, 67);
-            this.panel4.TabIndex = 0;
-            // 
-            // guna2PictureBox2
-            // 
-            this.bunifuTransition1.SetDecoration(this.guna2PictureBox2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.guna2PictureBox2, BunifuAnimatorNS.DecorationType.None);
-            this.guna2PictureBox2.Image = global::CovidInfoPH.Properties.Resources.arrow_right1;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(-7, 3);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(82, 45);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 69;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // caseGridView
-            // 
-            this.caseGridView.AllowUserToAddRows = false;
-            this.caseGridView.AllowUserToDeleteRows = false;
-            this.caseGridView.AllowUserToResizeColumns = false;
-            this.caseGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.caseGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.caseGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.caseGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.caseGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.caseGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.caseGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.caseGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.caseGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.caseGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Date,
-            this.Cases,
-            this.Deaths,
-            this.Recoveries});
-            this.bunifuTransition1.SetDecoration(this.caseGridView, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.caseGridView, BunifuAnimatorNS.DecorationType.None);
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(32)))), ((int)(((byte)(44)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.caseGridView.DefaultCellStyle = dataGridViewCellStyle3;
-            this.caseGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.caseGridView.DoubleBuffered = true;
-            this.caseGridView.EnableHeadersVisualStyles = false;
-            this.caseGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.caseGridView.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.caseGridView.HeaderForeColor = System.Drawing.Color.White;
-            this.caseGridView.Location = new System.Drawing.Point(3, 4);
-            this.caseGridView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.caseGridView.Name = "caseGridView";
-            this.caseGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.caseGridView.RowHeadersVisible = false;
-            this.caseGridView.RowHeadersWidth = 51;
-            this.caseGridView.RowTemplate.Height = 40;
-            this.caseGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.caseGridView.Size = new System.Drawing.Size(674, 333);
-            this.caseGridView.TabIndex = 49;
-            // 
-            // Recoveries
-            // 
-            this.Recoveries.HeaderText = "Recoveries";
-            this.Recoveries.MinimumWidth = 6;
-            this.Recoveries.Name = "Recoveries";
-            this.Recoveries.ReadOnly = true;
-            // 
-            // Deaths
-            // 
-            this.Deaths.HeaderText = "Deaths";
-            this.Deaths.MinimumWidth = 6;
-            this.Deaths.Name = "Deaths";
-            this.Deaths.ReadOnly = true;
-            // 
-            // Cases
-            // 
-            this.Cases.HeaderText = "Cases";
-            this.Cases.MinimumWidth = 6;
-            this.Cases.Name = "Cases";
-            this.Cases.ReadOnly = true;
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Date";
-            this.Date.MinimumWidth = 6;
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            // 
-            // lowerDataTablePanel
-            // 
-            this.lowerDataTablePanel.ColumnCount = 2;
-            this.lowerDataTablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.lowerDataTablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.lowerDataTablePanel.Controls.Add(this.caseGridView, 0, 0);
-            this.lowerDataTablePanel.Controls.Add(this.panel2, 1, 0);
-            this.bunifuTransition1.SetDecoration(this.lowerDataTablePanel, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.lowerDataTablePanel, BunifuAnimatorNS.DecorationType.None);
-            this.lowerDataTablePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lowerDataTablePanel.Location = new System.Drawing.Point(0, 0);
-            this.lowerDataTablePanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.lowerDataTablePanel.Name = "lowerDataTablePanel";
-            this.lowerDataTablePanel.RowCount = 1;
-            this.lowerDataTablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.lowerDataTablePanel.Size = new System.Drawing.Size(1360, 341);
-            this.lowerDataTablePanel.TabIndex = 0;
-            // 
-            // recovNum
-            // 
-            this.recovNum.AutoEllipsis = false;
-            this.recovNum.CursorType = null;
-            this.bunifuTransition1.SetDecoration(this.recovNum, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.recovNum, BunifuAnimatorNS.DecorationType.None);
-            this.recovNum.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.recovNum.ForeColor = System.Drawing.Color.White;
-            this.recovNum.Location = new System.Drawing.Point(74, 4);
-            this.recovNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.recovNum.Name = "recovNum";
-            this.recovNum.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.recovNum.Size = new System.Drawing.Size(23, 38);
-            this.recovNum.TabIndex = 58;
-            this.recovNum.Text = "--";
-            this.recovNum.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.recovNum.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // recovDesc
-            // 
-            this.recovDesc.AutoEllipsis = false;
-            this.recovDesc.CursorType = null;
-            this.bunifuTransition1.SetDecoration(this.recovDesc, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.recovDesc, BunifuAnimatorNS.DecorationType.None);
-            this.recovDesc.Font = new System.Drawing.Font("Proxima Soft", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.recovDesc.ForeColor = System.Drawing.Color.White;
-            this.recovDesc.Location = new System.Drawing.Point(74, 40);
-            this.recovDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.recovDesc.Name = "recovDesc";
-            this.recovDesc.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.recovDesc.Size = new System.Drawing.Size(90, 23);
-            this.recovDesc.TabIndex = 68;
-            this.recovDesc.Text = "Recoveries";
-            this.recovDesc.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.recovDesc.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // deathNum
-            // 
-            this.deathNum.AutoEllipsis = false;
-            this.deathNum.CursorType = null;
-            this.bunifuTransition1.SetDecoration(this.deathNum, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.deathNum, BunifuAnimatorNS.DecorationType.None);
-            this.deathNum.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deathNum.ForeColor = System.Drawing.Color.White;
-            this.deathNum.Location = new System.Drawing.Point(66, 4);
-            this.deathNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.deathNum.Name = "deathNum";
-            this.deathNum.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.deathNum.Size = new System.Drawing.Size(23, 38);
-            this.deathNum.TabIndex = 59;
-            this.deathNum.Text = "--";
-            this.deathNum.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.deathNum.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // deathsDesc
-            // 
-            this.deathsDesc.AutoEllipsis = false;
-            this.deathsDesc.CursorType = null;
-            this.bunifuTransition1.SetDecoration(this.deathsDesc, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.deathsDesc, BunifuAnimatorNS.DecorationType.None);
-            this.deathsDesc.Font = new System.Drawing.Font("Proxima Soft", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deathsDesc.ForeColor = System.Drawing.Color.White;
-            this.deathsDesc.Location = new System.Drawing.Point(66, 40);
-            this.deathsDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.deathsDesc.Name = "deathsDesc";
-            this.deathsDesc.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.deathsDesc.Size = new System.Drawing.Size(58, 23);
-            this.deathsDesc.TabIndex = 67;
-            this.deathsDesc.Text = "Deaths";
-            this.deathsDesc.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.deathsDesc.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // casesDesc
-            // 
-            this.casesDesc.AutoEllipsis = false;
-            this.casesDesc.CursorType = null;
-            this.bunifuTransition1.SetDecoration(this.casesDesc, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.casesDesc, BunifuAnimatorNS.DecorationType.None);
-            this.casesDesc.Font = new System.Drawing.Font("Proxima Soft", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.casesDesc.ForeColor = System.Drawing.Color.White;
-            this.casesDesc.Location = new System.Drawing.Point(66, 40);
-            this.casesDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.casesDesc.Name = "casesDesc";
-            this.casesDesc.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.casesDesc.Size = new System.Drawing.Size(50, 23);
-            this.casesDesc.TabIndex = 62;
-            this.casesDesc.Text = "Cases";
-            this.casesDesc.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.casesDesc.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // casesNum
-            // 
-            this.casesNum.AutoEllipsis = false;
-            this.casesNum.CursorType = null;
-            this.bunifuTransition1.SetDecoration(this.casesNum, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.casesNum, BunifuAnimatorNS.DecorationType.None);
-            this.casesNum.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.casesNum.ForeColor = System.Drawing.Color.White;
-            this.casesNum.Location = new System.Drawing.Point(66, 4);
-            this.casesNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.casesNum.Name = "casesNum";
-            this.casesNum.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.casesNum.Size = new System.Drawing.Size(23, 38);
-            this.casesNum.TabIndex = 60;
-            this.casesNum.Text = "--";
-            this.casesNum.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.casesNum.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.panel8.Controls.Add(this.deathPercent);
-            this.panel8.Controls.Add(this.deathNum2);
-            this.panel8.Controls.Add(this.bunifuLabel7);
-            this.panel8.Controls.Add(this.bunifuLabel8);
-            this.panel8.Controls.Add(this.caseNum2);
-            this.panel8.Controls.Add(this.bunifuLabel10);
-            this.bunifuTransition2.SetDecoration(this.panel8, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.panel8, BunifuAnimatorNS.DecorationType.None);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(333, 4);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(324, 325);
-            this.panel8.TabIndex = 1;
-            // 
-            // deathPercent
-            // 
-            this.deathPercent.Animated = true;
-            this.deathPercent.AnimationInterval = 1;
-            this.deathPercent.AnimationSpeed = 1;
-            this.deathPercent.BackColor = System.Drawing.Color.Transparent;
-            this.deathPercent.CircleMargin = 10;
-            this.bunifuTransition2.SetDecoration(this.deathPercent, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.deathPercent, BunifuAnimatorNS.DecorationType.None);
-            this.deathPercent.Font = new System.Drawing.Font("Proxima Soft", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deathPercent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.deathPercent.IsPercentage = true;
-            this.deathPercent.LineProgressThickness = 8;
-            this.deathPercent.LineThickness = 5;
-            this.deathPercent.Location = new System.Drawing.Point(4, 61);
-            this.deathPercent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.deathPercent.Name = "deathPercent";
-            this.deathPercent.ProgressBackColor = System.Drawing.Color.Gainsboro;
-            this.deathPercent.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.deathPercent.SecondaryFont = new System.Drawing.Font("Proxima Soft", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deathPercent.Size = new System.Drawing.Size(124, 124);
-            this.deathPercent.SubScriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.deathPercent.SubScriptMargin = new System.Windows.Forms.Padding(5, -35, 0, 0);
-            this.deathPercent.SubScriptText = "";
-            this.deathPercent.SuperScriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.deathPercent.SuperScriptMargin = new System.Windows.Forms.Padding(5, 50, 0, 0);
-            this.deathPercent.SuperScriptText = "%";
-            this.deathPercent.TabIndex = 51;
-            this.deathPercent.Text = "10";
-            this.deathPercent.TextMargin = new System.Windows.Forms.Padding(2, 5, 0, 0);
-            this.deathPercent.Value = 10;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.panel7.Controls.Add(this.guna2PictureBox1);
-            this.panel7.Controls.Add(this.weeklyReport);
-            this.panel7.Controls.Add(this.newCasesNum);
-            this.panel7.Controls.Add(this.newCasesDesc);
-            this.bunifuTransition2.SetDecoration(this.panel7, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.panel7, BunifuAnimatorNS.DecorationType.None);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(3, 4);
-            this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(324, 325);
-            this.panel7.TabIndex = 0;
-            // 
-            // guna2PictureBox1
-            // 
-            this.bunifuTransition1.SetDecoration(this.guna2PictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.guna2PictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.guna2PictureBox1.Image = global::CovidInfoPH.Properties.Resources.increase_480px;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(14, 73);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(101, 101);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 59;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // weeklyReportPanel
-            // 
-            this.weeklyReportPanel.ColumnCount = 2;
-            this.weeklyReportPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.weeklyReportPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.weeklyReportPanel.Controls.Add(this.panel7, 0, 0);
-            this.weeklyReportPanel.Controls.Add(this.panel8, 1, 0);
-            this.bunifuTransition1.SetDecoration(this.weeklyReportPanel, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.weeklyReportPanel, BunifuAnimatorNS.DecorationType.None);
-            this.weeklyReportPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.weeklyReportPanel.Location = new System.Drawing.Point(0, 0);
-            this.weeklyReportPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.weeklyReportPanel.Name = "weeklyReportPanel";
-            this.weeklyReportPanel.RowCount = 1;
-            this.weeklyReportPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.weeklyReportPanel.Size = new System.Drawing.Size(660, 333);
-            this.weeklyReportPanel.TabIndex = 75;
-            // 
-            // bunifuLabel10
-            // 
-            this.bunifuLabel10.AutoEllipsis = false;
-            this.bunifuLabel10.CursorType = null;
-            this.bunifuTransition1.SetDecoration(this.bunifuLabel10, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.bunifuLabel10, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuLabel10.Font = new System.Drawing.Font("Proxima Soft", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel10.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel10.Location = new System.Drawing.Point(218, 164);
-            this.bunifuLabel10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuLabel10.Name = "bunifuLabel10";
-            this.bunifuLabel10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel10.Size = new System.Drawing.Size(50, 23);
-            this.bunifuLabel10.TabIndex = 54;
-            this.bunifuLabel10.Text = "Cases";
-            this.bunifuLabel10.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.bunifuLabel10.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // caseNum2
-            // 
-            this.caseNum2.AutoEllipsis = false;
-            this.caseNum2.CursorType = null;
-            this.bunifuTransition1.SetDecoration(this.caseNum2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.caseNum2, BunifuAnimatorNS.DecorationType.None);
-            this.caseNum2.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.caseNum2.ForeColor = System.Drawing.Color.White;
-            this.caseNum2.Location = new System.Drawing.Point(134, 146);
-            this.caseNum2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.caseNum2.Name = "caseNum2";
-            this.caseNum2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.caseNum2.Size = new System.Drawing.Size(23, 38);
-            this.caseNum2.TabIndex = 57;
-            this.caseNum2.Text = "--";
-            this.caseNum2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.caseNum2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel8
-            // 
-            this.bunifuLabel8.AutoEllipsis = false;
-            this.bunifuLabel8.CursorType = null;
-            this.bunifuTransition1.SetDecoration(this.bunifuLabel8, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.bunifuLabel8, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuLabel8.Font = new System.Drawing.Font("Proxima Soft", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel8.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel8.Location = new System.Drawing.Point(134, 118);
-            this.bunifuLabel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuLabel8.Name = "bunifuLabel8";
-            this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel8.Size = new System.Drawing.Size(22, 20);
-            this.bunifuLabel8.TabIndex = 53;
-            this.bunifuLabel8.Text = "vs.";
-            this.bunifuLabel8.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.bunifuLabel8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel7
-            // 
-            this.bunifuLabel7.AutoEllipsis = false;
-            this.bunifuLabel7.CursorType = null;
-            this.bunifuTransition1.SetDecoration(this.bunifuLabel7, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.bunifuLabel7, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuLabel7.Font = new System.Drawing.Font("Proxima Soft", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel7.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel7.Location = new System.Drawing.Point(218, 79);
-            this.bunifuLabel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuLabel7.Name = "bunifuLabel7";
-            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel7.Size = new System.Drawing.Size(58, 23);
-            this.bunifuLabel7.TabIndex = 55;
-            this.bunifuLabel7.Text = "Deaths";
-            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // deathNum2
-            // 
-            this.deathNum2.AutoEllipsis = false;
-            this.deathNum2.CursorType = null;
-            this.bunifuTransition1.SetDecoration(this.deathNum2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.deathNum2, BunifuAnimatorNS.DecorationType.None);
-            this.deathNum2.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deathNum2.ForeColor = System.Drawing.Color.White;
-            this.deathNum2.Location = new System.Drawing.Point(135, 69);
-            this.deathNum2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.deathNum2.Name = "deathNum2";
-            this.deathNum2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.deathNum2.Size = new System.Drawing.Size(23, 38);
-            this.deathNum2.TabIndex = 56;
-            this.deathNum2.Text = "--";
-            this.deathNum2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.deathNum2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // newCasesDesc
-            // 
-            this.newCasesDesc.AutoEllipsis = false;
-            this.newCasesDesc.AutoSize = false;
-            this.newCasesDesc.CursorType = null;
-            this.bunifuTransition1.SetDecoration(this.newCasesDesc, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.newCasesDesc, BunifuAnimatorNS.DecorationType.None);
-            this.newCasesDesc.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newCasesDesc.ForeColor = System.Drawing.Color.White;
-            this.newCasesDesc.Location = new System.Drawing.Point(122, 118);
-            this.newCasesDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.newCasesDesc.Name = "newCasesDesc";
-            this.newCasesDesc.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.newCasesDesc.Size = new System.Drawing.Size(180, 120);
-            this.newCasesDesc.TabIndex = 58;
-            this.newCasesDesc.Text = "New Cases \r\nThis Week";
-            this.newCasesDesc.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.newCasesDesc.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // newCasesNum
-            // 
-            this.newCasesNum.AutoEllipsis = false;
-            this.newCasesNum.CursorType = null;
-            this.bunifuTransition1.SetDecoration(this.newCasesNum, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.newCasesNum, BunifuAnimatorNS.DecorationType.None);
-            this.newCasesNum.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newCasesNum.ForeColor = System.Drawing.Color.White;
-            this.newCasesNum.Location = new System.Drawing.Point(122, 79);
-            this.newCasesNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.newCasesNum.Name = "newCasesNum";
-            this.newCasesNum.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.newCasesNum.Size = new System.Drawing.Size(23, 38);
-            this.newCasesNum.TabIndex = 52;
-            this.newCasesNum.Text = "--";
-            this.newCasesNum.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.newCasesNum.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // weeklyReport
-            // 
-            this.weeklyReport.AutoEllipsis = false;
-            this.weeklyReport.CursorType = null;
-            this.bunifuTransition1.SetDecoration(this.weeklyReport, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.weeklyReport, BunifuAnimatorNS.DecorationType.None);
-            this.weeklyReport.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weeklyReport.ForeColor = System.Drawing.Color.White;
-            this.weeklyReport.Location = new System.Drawing.Point(14, 4);
-            this.weeklyReport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.weeklyReport.Name = "weeklyReport";
-            this.weeklyReport.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.weeklyReport.Size = new System.Drawing.Size(131, 24);
-            this.weeklyReport.TabIndex = 66;
-            this.weeklyReport.Text = "Weekly Report";
-            this.weeklyReport.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.weeklyReport.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuFormFadeTransition1.Delay = 1;
             // 
             // MainForm
             // 
@@ -1357,39 +1362,40 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
+            this.Opacity = 0D;
+            this.ShowInTaskbar = false;
             this.Text = "MainForm";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuBarPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.generalCases.ResumeLayout(false);
             this.generalCases.PerformLayout();
             this.tableDashBoard.ResumeLayout(false);
             this.lowerDataPanel.ResumeLayout(false);
+            this.lowerDataTablePanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.caseGridView)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            this.weeklyReportPanel.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.chartPanel.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.DashBoard.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.caseGridView)).EndInit();
-            this.lowerDataTablePanel.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            this.weeklyReportPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1465,6 +1471,7 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel8;
         private Bunifu.UI.WinForms.BunifuLabel caseNum2;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel10;
+        private Bunifu.Framework.UI.BunifuFormFadeTransition bunifuFormFadeTransition1;
     }
 }
 
