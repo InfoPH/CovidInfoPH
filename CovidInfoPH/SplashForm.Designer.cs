@@ -104,13 +104,7 @@
             // 
             // name
             // 
-<<<<<<< HEAD
-            this.name.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-=======
             this.name.Anchor = System.Windows.Forms.AnchorStyles.None;
->>>>>>> 215975c0955e560807dfdf74d347b6596e53c376
             this.name.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.name, BunifuAnimatorNS.DecorationType.None);
             this.name.Font = new System.Drawing.Font("Proxima Soft", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

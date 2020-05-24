@@ -7,6 +7,7 @@ using CovidInfoPH.Models;
 using System.Drawing;
 using System.Globalization;
 using Syncfusion.Windows.Forms.Maps;
+using Syncfusion.UI.Xaml.Maps;
 
 namespace CovidInfoPH
 {
@@ -14,6 +15,7 @@ namespace CovidInfoPH
     {
         internal static List<Patient> Patients;
         internal static Dictionary<DateTime, HistoricalInfo> Historical;
+        public Dictionary<string, Models.RegionInfo> Regions = new Dictionary<string, Models.RegionInfo>();
 
         public MainForm()
         {
@@ -34,6 +36,8 @@ namespace CovidInfoPH
             bunifuFormFadeTransition1.ShowAsyc(this);
             SetChartColors();
             DisplayGraph();
+            InitializeRegions();
+            InitializeMap();
             DisplayDataGrid();
             RefreshData();
         }
@@ -90,6 +94,49 @@ namespace CovidInfoPH
             deathPercent.Value = Convert.ToInt32(deaths / cases * 100);
             weeklyReport.Text = $"Weekly Report as of {datePicker.Value:MMMM dd, yyyy}";
             newCasesDesc.Text = $"New cases since\n{datePicker.Value.AddDays(-6).DayOfWeek}";
+        }
+
+        private void InitializeRegions()
+        {
+            List<string> regions = Patients.Select(p => p.Region).Where(p => !string.IsNullOrEmpty(p)).Distinct().ToList();
+
+            foreach (string region in regions)
+            {
+                Models.RegionInfo regionInfo = new Models.RegionInfo();
+                List<Patient> localPatients = Patients.Where(p => p.Region == region).ToList();
+
+                regionInfo.Cases = localPatients.Count;
+                regionInfo.Deaths = localPatients.Count(p => p.DateDied != null);
+                regionInfo.Recoveries = localPatients.Count(p => p.DateRecovered != null);
+
+                Regions.Add(region, regionInfo);
+            }
+        }
+
+        private void InitializeMap()
+        {
+            ItemSource item = new ItemSource(Regions);
+            ShapeFileLayer philippineShape = new ShapeFileLayer
+            {
+                Uri = @"Resources\ph-regions\ph-regions-2015.shp",
+                ShapeSetting = { SelectedShapeColor = "#8EAEBD" },
+                ItemSource = item.Regions,
+                ShapeIDPath = "Region",
+                ShapeIDTableField = "REGION",
+                EnableSelection = true,
+                ShowMapItem = true
+            };
+            philippineShape.ShapeSetting.FillSetting.AutoFillColors = false;
+            philippineShape.ShapeSetting.ShapeColorValuePath = "Cases";
+            philippineShape.ShapeSetting.FillSetting.ColorMappings = new System.Collections.ObjectModel.ObservableCollection<ColorMapping>();
+            philippineShape.ShapeSetting.FillSetting.ColorMappings.Add(new RangeColorMapping { From = 4, To = 22, Color = System.Drawing.Color.FromArgb(255, 193, 0) });
+            philippineShape.ShapeSetting.FillSetting.ColorMappings.Add(new RangeColorMapping { From = 28, To = 37, Color = System.Drawing.Color.FromArgb(255, 154, 0) });
+            philippineShape.ShapeSetting.FillSetting.ColorMappings.Add(new RangeColorMapping { From = 47, To = 69, Color = System.Drawing.Color.FromArgb(255, 116, 0) });
+            philippineShape.ShapeSetting.FillSetting.ColorMappings.Add(new RangeColorMapping { From = 107, To = 237, Color = System.Drawing.Color.FromArgb(255, 77, 0) });
+            philippineShape.ShapeSetting.FillSetting.ColorMappings.Add(new RangeColorMapping { From = 481, To = 9000, Color = System.Drawing.Color.FromArgb(255, 0, 0) });
+            philippinesMap.MapBackgroundBrush = new SolidBrush(Color.FromArgb(20, 30, 39));
+            philippinesMap.ShapeSelected += PhilippinesMap_ShapeSelected; //Hook the ShapeSelected event
+            philippinesMap.Layers.Add(philippineShape);
         }
         #endregion
 
@@ -156,6 +203,10 @@ namespace CovidInfoPH
         private void minimizeButton_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+        private void PhilippinesMap_ShapeSelected(object sender, ShapeSelectedEventArgs e)
+        {
+            
         }
 
         #endregion
