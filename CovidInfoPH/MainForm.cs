@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using System.Web.Caching;
 using System.Windows.Forms;
-using SheetToObjects.Lib;
-using SheetToObjects.Lib.FluentConfiguration;
-using SheetToObjects.Adapters.GoogleSheets;
 using Bunifu.DataViz.WinForms;
 using CovidInfoPH.Models;
 using System.Drawing;
