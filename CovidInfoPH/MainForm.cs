@@ -34,6 +34,7 @@ namespace CovidInfoPH
         #region Load form & chart
         private void ShowForm(object sender, EventArgs e)
         {
+            latestData.Text = $"Latest data fetched: {Historical.Keys.Last():MMMM dd, yyyy}";
             ShowInTaskbar = true;
             bunifuFormFadeTransition1.ShowAsyc(this);
             SetChartColors();
@@ -142,7 +143,6 @@ namespace CovidInfoPH
         {
             bunifuImageButton1.FadeWhenInactive = false;
             bunifuImageButton2.FadeWhenInactive = true;
-            bunifuImageButton3.FadeWhenInactive = true;
             DashBoard.SetPage(0);
         }
 
@@ -150,7 +150,6 @@ namespace CovidInfoPH
         {
             bunifuImageButton1.FadeWhenInactive = true;
             bunifuImageButton2.FadeWhenInactive = false;
-            bunifuImageButton3.FadeWhenInactive = true;
             DashBoard.SetPage(1);
         }
 
@@ -158,7 +157,6 @@ namespace CovidInfoPH
         {
             bunifuImageButton1.FadeWhenInactive = true;
             bunifuImageButton2.FadeWhenInactive = true;
-            bunifuImageButton3.FadeWhenInactive = false;
             DashBoard.SetPage(2);
         }
 
