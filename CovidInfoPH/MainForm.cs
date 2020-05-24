@@ -15,7 +15,7 @@ namespace CovidInfoPH
     {
         internal static List<Patient> Patients;
         internal static Dictionary<DateTime, HistoricalInfo> Historical;
-        public Dictionary<string, Models.RegionInfo> Regions = new Dictionary<string, Models.RegionInfo>();
+        internal static Dictionary<string, Models.RegionInfo> Regions = new Dictionary<string, Models.RegionInfo>();
 
         public MainForm()
         {
@@ -36,7 +36,6 @@ namespace CovidInfoPH
             bunifuFormFadeTransition1.ShowAsyc(this);
             SetChartColors();
             DisplayGraph();
-            InitializeRegions();
             InitializeMap();
             DisplayDataGrid();
             RefreshData();
@@ -94,23 +93,6 @@ namespace CovidInfoPH
             deathPercent.Value = Convert.ToInt32(deaths / cases * 100);
             weeklyReport.Text = $"Weekly Report as of {datePicker.Value:MMMM dd, yyyy}";
             newCasesDesc.Text = $"New cases since\n{datePicker.Value.AddDays(-6).DayOfWeek}";
-        }
-
-        private void InitializeRegions()
-        {
-            List<string> regions = Patients.Select(p => p.Region).Where(p => !string.IsNullOrEmpty(p)).Distinct().ToList();
-
-            foreach (string region in regions)
-            {
-                Models.RegionInfo regionInfo = new Models.RegionInfo();
-                List<Patient> localPatients = Patients.Where(p => p.Region == region).ToList();
-
-                regionInfo.Cases = localPatients.Count;
-                regionInfo.Deaths = localPatients.Count(p => p.DateDied != null);
-                regionInfo.Recoveries = localPatients.Count(p => p.DateRecovered != null);
-
-                Regions.Add(region, regionInfo);
-            }
         }
 
         private void InitializeMap()
