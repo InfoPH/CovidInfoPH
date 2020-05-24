@@ -68,7 +68,7 @@ namespace CovidInfoPH
 
         public void OnClickClose(object sender, EventArgs e)
         {
-            Application.Exit();
+            Environment.Exit(0);
         }
 
         private void logoTimer_Tick(object sender, EventArgs e)
@@ -109,7 +109,7 @@ namespace CovidInfoPH
 
             bunifuTransition1.HideSync(itang);
             bunifuTransition1.HideSync(itangName);
-            
+
             bunifuTransition1.HideSync(braulio);
             bunifuTransition1.HideSync(braulioName);
 
