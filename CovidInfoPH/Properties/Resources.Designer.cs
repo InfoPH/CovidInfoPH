@@ -103,16 +103,6 @@ namespace CovidInfoPH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap horizontal_line_480px {
-            get {
-                object obj = ResourceManager.GetObject("horizontal_line_480px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_calendar_100px {
             get {
                 object obj = ResourceManager.GetObject("icons8_calendar_100px", resourceCulture);
@@ -206,16 +196,6 @@ namespace CovidInfoPH.Properties {
         internal static System.Drawing.Bitmap logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap multiply_480px {
-            get {
-                object obj = ResourceManager.GetObject("multiply_480px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
