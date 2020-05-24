@@ -153,17 +153,6 @@ namespace CovidInfoPH
             DashBoard.SetPage(1);
         }
 
-        private void bunifuImageButton3_Click(object sender, EventArgs e)
-        {
-            bunifuImageButton1.FadeWhenInactive = true;
-            bunifuImageButton2.FadeWhenInactive = true;
-            DashBoard.SetPage(2);
-        }
-
-        private void guna2PictureBox6_Click(object sender, EventArgs e)
-        {
-        }
-
         private void closeButton_Click(object sender, EventArgs e)
         {
             Close();
