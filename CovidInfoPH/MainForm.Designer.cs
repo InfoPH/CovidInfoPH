@@ -585,8 +585,8 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.panel5.Controls.Add(this.recovNum);
             this.panel5.Controls.Add(this.deathsDesc);
+            this.panel5.Controls.Add(this.deathNum);
             this.panel5.Controls.Add(this.guna2PictureBox3);
             this.bunifuTransition2.SetDecoration(this.panel5, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.panel5, BunifuAnimatorNS.DecorationType.None);
@@ -606,7 +606,7 @@
             this.bunifuTransition2.SetDecoration(this.recovNum, BunifuAnimatorNS.DecorationType.None);
             this.recovNum.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.recovNum.ForeColor = System.Drawing.Color.White;
-            this.recovNum.Location = new System.Drawing.Point(69, 2);
+            this.recovNum.Location = new System.Drawing.Point(60, 2);
             this.recovNum.Name = "recovNum";
             this.recovNum.Size = new System.Drawing.Size(31, 32);
             this.recovNum.TabIndex = 0;
@@ -654,7 +654,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.panel6.Controls.Add(this.deathNum);
+            this.panel6.Controls.Add(this.recovNum);
             this.panel6.Controls.Add(this.recovDesc);
             this.panel6.Controls.Add(this.guna2PictureBox4);
             this.bunifuTransition2.SetDecoration(this.panel6, BunifuAnimatorNS.DecorationType.None);
@@ -674,7 +674,7 @@
             this.bunifuTransition2.SetDecoration(this.deathNum, BunifuAnimatorNS.DecorationType.None);
             this.deathNum.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deathNum.ForeColor = System.Drawing.Color.White;
-            this.deathNum.Location = new System.Drawing.Point(78, 2);
+            this.deathNum.Location = new System.Drawing.Point(58, 2);
             this.deathNum.Name = "deathNum";
             this.deathNum.Size = new System.Drawing.Size(31, 32);
             this.deathNum.TabIndex = 0;
@@ -1216,10 +1216,10 @@
             this.DashBoard.Location = new System.Drawing.Point(72, 70);
             this.DashBoard.Multiline = true;
             this.DashBoard.Name = "DashBoard";
-            this.DashBoard.Page = this.locationRegion;
-            this.DashBoard.PageIndex = 1;
-            this.DashBoard.PageName = "locationRegion";
-            this.DashBoard.PageTitle = "tabPage2";
+            this.DashBoard.Page = this.generalCases;
+            this.DashBoard.PageIndex = 0;
+            this.DashBoard.PageName = "generalCases";
+            this.DashBoard.PageTitle = "tabPage1";
             this.DashBoard.SelectedIndex = 0;
             this.DashBoard.Size = new System.Drawing.Size(1235, 596);
             this.DashBoard.TabIndex = 54;
