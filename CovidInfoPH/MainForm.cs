@@ -154,7 +154,7 @@ namespace CovidInfoPH
             bunifuTransition1.HideSync(deathNum);
             bunifuTransition1.HideSync(recovNum);
         }
-
+     
         private void FadeInValues()
         {
             bunifuTransition1.ShowSync(recovNum);
@@ -206,11 +206,24 @@ namespace CovidInfoPH
         }
         private void PhilippinesMap_ShapeSelected(object sender, ShapeSelectedEventArgs e)
         {
-            
+           //Adding transitions makes it laggy ://
+            foreach (PhRegion region in e.Data)
+            {
+                double deaths = Convert.ToDouble(Regions[region.Region].Deaths);
+                double cases = Convert.ToDouble(Regions[region.Region].Cases);
+                regionLabel.Text = region.Region;
+                regionCases.Text = Regions[region.Region].Cases.ToString();
+                regionDeaths.Text = Regions[region.Region].Deaths.ToString();
+                regionRecoveries.Text = Regions[region.Region].Recoveries.ToString();
+                regionCases2.Text = Regions[region.Region].Cases.ToString();
+                regionDeaths2.Text = Regions[region.Region].Deaths.ToString();
+                regionCircleProgress.Value = Convert.ToInt32(deaths/cases * 100);
+            }
+           
+
+            #endregion
+
+            #endregion
         }
-
-        #endregion
-
-        #endregion
     }
 }
