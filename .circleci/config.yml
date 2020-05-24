@@ -9,13 +9,7 @@ jobs:
 
     steps:
       - checkout
-      - run:
-          name: "Install dotnet-zip utility"
-          command: |
-            cd CovidInfoPH
-            dotnet new tool-manifest
-            dotnet tool install dotnet-zip
-            dotnet zip install
+      - run: Install-Module Invoke-MsBuild -Force
       - run:
           name: "Create output directory"
           command: mkdir output
@@ -23,8 +17,12 @@ jobs:
       - run:
           name: "Build and pack to win-x64"
           command: |
-            cd CovidInfoPH
-            dotnet zip -r win-x64 -c Release -o ../output --no-restore
+            $env:MSBuildSDKsPath = "C:\Program Files\dotnet\sdk\$(dotnet --version)\Sdks"
+            Invoke-MsBuild -Path .\CovidInfoPH.sln -MsBuildParameters "-property:Configuration=Release -p:RuntimeIdentifier=win-x64 -p:OutputPath=win-x64/"
+            [xml]$cn = Get-Content CovidInfoPH\CovidInfoPH.csproj
+            if (!([string]::IsNullOrWhiteSpace($cn.Project.PropertyGroup.VersionSuffix))) { $outputPath = "output/CovidInfoPH.$(([string]$cn.Project.PropertyGroup.VersionPrefix).Trim())-$(([string]$cn.Project.PropertyGroup.VersionSuffix).Trim()).win-x64.zip"}
+            else { $outputPath = "output/CovidInfoPH.$(([string]$cn.Project.PropertyGroup.VersionPrefix).Trim()).win-x64.zip" }
+            Compress-Archive -Path CovidInfoPH\win-x64\ -DestinationPath $outputPath
       - store_artifacts:
           path: output
       - persist_to_workspace:
