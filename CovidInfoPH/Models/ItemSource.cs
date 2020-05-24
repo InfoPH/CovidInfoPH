@@ -23,7 +23,6 @@ namespace CovidInfoPH.Models
             {
                 regionsList.Add(new PhRegion() { Cases = item.Value.Cases, Region = item.Key });
             }
-            regionsList.Add(new PhRegion() { Cases = 11, Region = "Negros Island Region (NIR)" });
             return regionsList;
         }
     }

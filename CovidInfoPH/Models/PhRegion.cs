@@ -10,5 +10,6 @@ namespace CovidInfoPH.Models
     {
         public string Region { get; set; }
         public int Cases { get; set; }
+
     }
 }
