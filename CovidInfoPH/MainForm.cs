@@ -33,11 +33,6 @@ namespace CovidInfoPH
         {
             //Add negros occidental data
             Models.RegionInfo regionInfo = new Models.RegionInfo();
-            regionInfo.Cases = 12;
-            regionInfo.Deaths = 0;
-            regionInfo.Recoveries = 4;
-            Regions.Add("Negros Island Region (NIR)", regionInfo);
-            latestData.Text = $"Latest data fetched: {Historical.Keys.Last():MMMM dd, yyyy}";
             ShowInTaskbar = true;
             bunifuFormFadeTransition1.ShowAsyc(this);
             SetChartColors();

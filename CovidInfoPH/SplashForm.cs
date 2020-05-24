@@ -51,7 +51,7 @@ namespace CovidInfoPH
             MainForm.Patients = sheetMapper.Map<Patient>(dohDataDropSheet.Result).ParsedModels.Select(o => o.Value)
                 .OrderBy(o => o.DateConfirmed).ToList();
             //Negros Island Region (NIR) data update
-            foreach (Patient patient in MainForm.Patients.Where(p => p.Province == "Negros Occidental"))
+            foreach (Patient patient in MainForm.Patients.Where(p => p.Province == "Negros Occidental" || p.Province == "Negros Oriental"))
             {
                 patient.Region = "Negros Island Region (NIR)";
             }
