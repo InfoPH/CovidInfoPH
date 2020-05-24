@@ -44,8 +44,8 @@ namespace CovidInfoPH
         private void SetChartColors()
         {
             generalCaseChart.colorSet.Add(Color.FromArgb(152, 135, 143));
-            generalCaseChart.colorSet.Add(Color.FromArgb(152, 94, 109));
             generalCaseChart.colorSet.Add(Color.FromArgb(142, 174, 189));
+            generalCaseChart.colorSet.Add(Color.FromArgb(152, 94, 109));
         }
         #endregion
 
