@@ -648,11 +648,11 @@
             this.newCasesDesc.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.newCasesDesc, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.newCasesDesc, BunifuAnimatorNS.DecorationType.None);
-            this.newCasesDesc.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newCasesDesc.Font = new System.Drawing.Font("Proxima Soft", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newCasesDesc.ForeColor = System.Drawing.Color.White;
             this.newCasesDesc.Location = new System.Drawing.Point(102, 99);
             this.newCasesDesc.Name = "newCasesDesc";
-            this.newCasesDesc.Size = new System.Drawing.Size(150, 32);
+            this.newCasesDesc.Size = new System.Drawing.Size(128, 27);
             this.newCasesDesc.TabIndex = 0;
             this.newCasesDesc.Text = "New cases";
             // 
