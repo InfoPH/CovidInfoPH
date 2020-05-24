@@ -162,17 +162,20 @@ namespace CovidInfoPH
 
         private void guna2PictureBox6_Click(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Minimized;
         }
 
-
-        #endregion
-
-        #endregion
-
-        private void guna2PictureBox5_Click(object sender, EventArgs e)
+        private void closeButton_Click(object sender, EventArgs e)
         {
             Close();
         }
+
+        private void minimizeButton_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        #endregion
+
+        #endregion
     }
 }
