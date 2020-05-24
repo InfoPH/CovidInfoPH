@@ -63,66 +63,6 @@ namespace CovidInfoPH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _100061169_276338833522119_1402422700361646080_n {
-            get {
-                object obj = ResourceManager.GetObject("_100061169_276338833522119_1402422700361646080_n", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _72766113_3217244771649584_1088017474953150464_o {
-            get {
-                object obj = ResourceManager.GetObject("_72766113_3217244771649584_1088017474953150464_o", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _78932966_2476722459093725_2081503394031206400_o {
-            get {
-                object obj = ResourceManager.GetObject("_78932966_2476722459093725_2081503394031206400_o", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _95527983_10213327038009303_2560924187824750592_o {
-            get {
-                object obj = ResourceManager.GetObject("_95527983_10213327038009303_2560924187824750592_o", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _98425531_541015779926144_8229802726691700736_n {
-            get {
-                object obj = ResourceManager.GetObject("_98425531_541015779926144_8229802726691700736_n", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _98443875_1239509479739033_3322527171938877440_n {
-            get {
-                object obj = ResourceManager.GetObject("98443875_1239509479739033_3322527171938877440_n", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap arrow_right {
             get {
                 object obj = ResourceManager.GetObject("arrow_right", resourceCulture);
@@ -173,9 +113,79 @@ namespace CovidInfoPH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_calendar_100px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_calendar_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_close_window_104px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_close_window_104px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_idea_100px_2 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_idea_100px_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_minimize_window_104px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_minimize_window_104px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap increase_480px {
             get {
                 object obj = ResourceManager.GetObject("increase_480px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Johndayll {
+            get {
+                object obj = ResourceManager.GetObject("Johndayll", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Keino {
+            get {
+                object obj = ResourceManager.GetObject("Keino", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Kovie {
+            get {
+                object obj = ResourceManager.GetObject("Kovie", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +203,39 @@ namespace CovidInfoPH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap multiply_480px {
             get {
                 object obj = ResourceManager.GetObject("multiply_480px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rafa {
+            get {
+                object obj = ResourceManager.GetObject("Rafa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ryan {
+            get {
+                object obj = ResourceManager.GetObject("Ryan", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +273,9 @@ namespace CovidInfoPH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap yes {
+        internal static System.Drawing.Bitmap Vaeda {
             get {
-                object obj = ResourceManager.GetObject("yes", resourceCulture);
+                object obj = ResourceManager.GetObject("Vaeda", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
