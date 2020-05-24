@@ -130,7 +130,7 @@
             // 
             this.ortega.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuTransition1.SetDecoration(this.ortega, BunifuAnimatorNS.DecorationType.None);
-            this.ortega.Image = global::CovidInfoPH.Properties.Resources._100061169_276338833522119_1402422700361646080_n;
+            this.ortega.Image = global::CovidInfoPH.Properties.Resources.Keino;
             this.ortega.Location = new System.Drawing.Point(509, 145);
             this.ortega.Name = "ortega";
             this.ortega.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -149,7 +149,7 @@
             // 
             this.itang.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuTransition1.SetDecoration(this.itang, BunifuAnimatorNS.DecorationType.None);
-            this.itang.Image = global::CovidInfoPH.Properties.Resources._98425531_541015779926144_8229802726691700736_n;
+            this.itang.Image = global::CovidInfoPH.Properties.Resources.Ryan;
             this.itang.Location = new System.Drawing.Point(509, 145);
             this.itang.Name = "itang";
             this.itang.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -168,7 +168,7 @@
             // 
             this.martinez.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuTransition1.SetDecoration(this.martinez, BunifuAnimatorNS.DecorationType.None);
-            this.martinez.Image = global::CovidInfoPH.Properties.Resources.yes;
+            this.martinez.Image = global::CovidInfoPH.Properties.Resources.Rafa;
             this.martinez.Location = new System.Drawing.Point(131, 145);
             this.martinez.Name = "martinez";
             this.martinez.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -187,7 +187,7 @@
             // 
            this.arizala.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuTransition1.SetDecoration(this.arizala, BunifuAnimatorNS.DecorationType.None);
-            this.arizala.Image = global::CovidInfoPH.Properties.Resources._78932966_2476722459093725_2081503394031206400_o;
+            this.arizala.Image = global::CovidInfoPH.Properties.Resources.Johndayll;
             this.arizala.Location = new System.Drawing.Point(131, 145);
             this.arizala.Name = "arizala";
             this.arizala.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -206,7 +206,7 @@
             // 
             this.nino.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuTransition1.SetDecoration(this.nino, BunifuAnimatorNS.DecorationType.None);
-            this.nino.Image = global::CovidInfoPH.Properties.Resources._95527983_10213327038009303_2560924187824750592_o;
+            this.nino.Image = global::CovidInfoPH.Properties.Resources.Kovie;
             this.nino.Location = new System.Drawing.Point(320, 145);
             this.nino.Name = "nino";
             this.nino.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -225,7 +225,7 @@
             // 
             this.braulio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuTransition1.SetDecoration(this.braulio, BunifuAnimatorNS.DecorationType.None);
-            this.braulio.Image = global::CovidInfoPH.Properties.Resources._72766113_3217244771649584_1088017474953150464_o;
+            this.braulio.Image = global::CovidInfoPH.Properties.Resources.Vaeda;
             this.braulio.Location = new System.Drawing.Point(320, 145);
             this.braulio.Name = "braulio";
             this.braulio.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -244,7 +244,7 @@
             // 
             this.logoPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuTransition1.SetDecoration(this.logoPictureBox, BunifuAnimatorNS.DecorationType.None);
-            this.logoPictureBox.Image = global::CovidInfoPH.Properties.Resources._98443875_1239509479739033_3322527171938877440_n;
+            this.logoPictureBox.Image = global::CovidInfoPH.Properties.Resources.logo;
             this.logoPictureBox.Location = new System.Drawing.Point(320, 145);
             this.logoPictureBox.Name = "logoPictureBox";
             this.logoPictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -562,6 +562,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(800, 450);
             this.Name = "SplashForm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "COVIDinfo-PH";
             this.Shown += new System.EventHandler(this.OnShowForm);

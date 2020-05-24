@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using System.Web.Caching;
 using System.Windows.Forms;
-using SheetToObjects.Lib;
-using SheetToObjects.Lib.FluentConfiguration;
-using SheetToObjects.Adapters.GoogleSheets;
 using Bunifu.DataViz.WinForms;
 using CovidInfoPH.Models;
 using System.Drawing;
@@ -34,6 +29,7 @@ namespace CovidInfoPH
         #region Load form & chart
         private void ShowForm(object sender, EventArgs e)
         {
+            latestData.Text = $"Latest data fetched: {Historical.Keys.Last():MMMM dd, yyyy}";
             ShowInTaskbar = true;
             bunifuFormFadeTransition1.ShowAsyc(this);
             SetChartColors();
@@ -142,7 +138,6 @@ namespace CovidInfoPH
         {
             bunifuImageButton1.FadeWhenInactive = false;
             bunifuImageButton2.FadeWhenInactive = true;
-            bunifuImageButton3.FadeWhenInactive = true;
             DashBoard.SetPage(0);
         }
 
@@ -150,31 +145,21 @@ namespace CovidInfoPH
         {
             bunifuImageButton1.FadeWhenInactive = true;
             bunifuImageButton2.FadeWhenInactive = false;
-            bunifuImageButton3.FadeWhenInactive = true;
             DashBoard.SetPage(1);
         }
 
-        private void bunifuImageButton3_Click(object sender, EventArgs e)
+        private void closeButton_Click(object sender, EventArgs e)
         {
-            bunifuImageButton1.FadeWhenInactive = true;
-            bunifuImageButton2.FadeWhenInactive = true;
-            bunifuImageButton3.FadeWhenInactive = false;
-            DashBoard.SetPage(2);
+            Close();
         }
 
-        private void guna2PictureBox6_Click(object sender, EventArgs e)
+        private void minimizeButton_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
 
-
         #endregion
 
         #endregion
-
-        private void guna2PictureBox5_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
     }
 }
