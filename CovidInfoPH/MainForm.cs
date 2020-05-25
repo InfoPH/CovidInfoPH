@@ -418,11 +418,5 @@ namespace CovidInfoPH
         }
 
         #endregion
-
-        private void bunifuImageButton3_Click(object sender, EventArgs e)
-        {
-            AboutForm aboutForm = new AboutForm();
-            aboutForm.ShowDialog();
-        }
     }
 }
