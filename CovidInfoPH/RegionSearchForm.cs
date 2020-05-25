@@ -25,13 +25,17 @@ namespace CovidInfoPH
 
         private void RegionSearchForm_Load(object sender, EventArgs e)
         {
+            List<string> regions = MainForm.Regions.Keys.OrderBy(k => k).ToList();
             DataTable dt = new DataTable();
             guna2ShadowForm1.SetShadowForm(this);
             dt.Columns.Add("Regions");
-            foreach (var region in MainForm.Regions.Keys.OrderBy(k => k))
+            foreach (var region in regions)
             {
                 dt.Rows.Add(region);
             }
+            AutoCompleteStringCollection regionsCollection = new AutoCompleteStringCollection();
+            regionsCollection.AddRange(regions.ToArray());
+            searchBarTextBox.AutoCompleteCustomSource = regionsCollection;
             bunifuDataGridView1.DataSource = dt;
         }
 

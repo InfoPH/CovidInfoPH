@@ -90,8 +90,8 @@
             this.searchBarTextBox.AcceptsReturn = false;
             this.searchBarTextBox.AcceptsTab = false;
             this.searchBarTextBox.AnimationSpeed = 200;
-            this.searchBarTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.searchBarTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.searchBarTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.searchBarTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.searchBarTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
             this.searchBarTextBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchBarTextBox.BackgroundImage")));
             this.searchBarTextBox.BorderColorActive = System.Drawing.Color.Silver;

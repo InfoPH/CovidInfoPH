@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation8 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation7 = new BunifuAnimatorNS.Animation();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation3 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.menuBarPanel = new System.Windows.Forms.Panel();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.bunifuImageButton2 = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -104,16 +104,17 @@
             this.datePicker = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.generalCaseChart = new Bunifu.DataViz.WinForms.BunifuDataViz();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.casesColorlabel = new System.Windows.Forms.Label();
             this.deathsColorlabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.recoveriesColorlabel = new System.Windows.Forms.Label();
+            this.casesColorlabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.recoveriesColorlabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.DashBoard = new Bunifu.UI.WinForms.BunifuPages();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.searchRegionButton = new Guna.UI2.WinForms.Guna2Button();
             this.minimizeButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.closeButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -135,7 +136,7 @@
             this.bunifuPanelElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuPanelElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
-            this.searchRegionButton = new Guna.UI2.WinForms.Guna2Button();
+            this.selectedRegionlabel = new System.Windows.Forms.Label();
             this.menuBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.locationRegion.SuspendLayout();
@@ -225,7 +226,7 @@
             this.bunifuImageButton2.ImageZoomSize = new System.Drawing.Size(80, 80);
             this.bunifuImageButton2.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.InitialImage")));
             this.bunifuImageButton2.Location = new System.Drawing.Point(0, 442);
-            this.bunifuImageButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuImageButton2.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
             this.bunifuImageButton2.Rotation = 0;
             this.bunifuImageButton2.ShowActiveImage = true;
@@ -263,7 +264,7 @@
             this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(80, 80);
             this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
             this.bunifuImageButton1.Location = new System.Drawing.Point(2, 226);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Rotation = 0;
             this.bunifuImageButton1.ShowActiveImage = true;
@@ -285,22 +286,22 @@
             // 
             this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.bunifuTransition2.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.bunifuTransition2.DefaultAnimation = animation3;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.bunifuTransition2.DefaultAnimation = animation1;
             this.bunifuTransition2.Interval = 1;
             // 
             // locationRegion
@@ -312,7 +313,7 @@
             this.bunifuTransition2.SetDecoration(this.locationRegion, BunifuAnimatorNS.DecorationType.None);
             this.locationRegion.Location = new System.Drawing.Point(4, 4);
             this.locationRegion.Name = "locationRegion";
-            this.locationRegion.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.locationRegion.Padding = new System.Windows.Forms.Padding(3);
             this.locationRegion.Size = new System.Drawing.Size(1381, 712);
             this.locationRegion.TabIndex = 1;
             this.locationRegion.Text = "tabPage2";
@@ -717,7 +718,7 @@
             this.bunifuTransition2.SetDecoration(this.generalCases, BunifuAnimatorNS.DecorationType.None);
             this.generalCases.Location = new System.Drawing.Point(4, 4);
             this.generalCases.Name = "generalCases";
-            this.generalCases.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.generalCases.Padding = new System.Windows.Forms.Padding(3);
             this.generalCases.Size = new System.Drawing.Size(1381, 712);
             this.generalCases.TabIndex = 0;
             this.generalCases.Text = "tabPage1";
@@ -786,22 +787,22 @@
             this.caseGridView.AllowUserToDeleteRows = false;
             this.caseGridView.AllowUserToResizeColumns = false;
             this.caseGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            this.caseGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.caseGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.caseGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.caseGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.caseGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.caseGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.caseGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.caseGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.caseGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.caseGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.caseGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Date,
@@ -810,14 +811,14 @@
             this.Recoveries});
             this.bunifuTransition1.SetDecoration(this.caseGridView, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.caseGridView, BunifuAnimatorNS.DecorationType.None);
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(32)))), ((int)(((byte)(44)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.caseGridView.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(32)))), ((int)(((byte)(44)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.caseGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.caseGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.caseGridView.DoubleBuffered = true;
             this.caseGridView.EnableHeadersVisualStyles = false;
@@ -1444,7 +1445,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.153847F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.153847F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
             this.tableLayoutPanel1.Controls.Add(this.deathsColorlabel, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label8, 6, 0);
@@ -1465,27 +1466,13 @@
             this.bunifuToolTip1.SetToolTipIcon(this.tableLayoutPanel1, null);
             this.bunifuToolTip1.SetToolTipTitle(this.tableLayoutPanel1, "");
             // 
-            // casesColorlabel
-            // 
-            this.casesColorlabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.casesColorlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
-            this.bunifuTransition1.SetDecoration(this.casesColorlabel, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.casesColorlabel, BunifuAnimatorNS.DecorationType.None);
-            this.casesColorlabel.Location = new System.Drawing.Point(672, 8);
-            this.casesColorlabel.Name = "casesColorlabel";
-            this.casesColorlabel.Size = new System.Drawing.Size(20, 20);
-            this.casesColorlabel.TabIndex = 73;
-            this.bunifuToolTip1.SetToolTip(this.casesColorlabel, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.casesColorlabel, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.casesColorlabel, "");
-            // 
             // deathsColorlabel
             // 
             this.deathsColorlabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.deathsColorlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109)))));
             this.bunifuTransition1.SetDecoration(this.deathsColorlabel, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.deathsColorlabel, BunifuAnimatorNS.DecorationType.None);
-            this.deathsColorlabel.Location = new System.Drawing.Point(1134, 8);
+            this.deathsColorlabel.Location = new System.Drawing.Point(1132, 8);
             this.deathsColorlabel.Name = "deathsColorlabel";
             this.deathsColorlabel.Size = new System.Drawing.Size(20, 20);
             this.deathsColorlabel.TabIndex = 75;
@@ -1519,7 +1506,7 @@
             this.label8.Dock = System.Windows.Forms.DockStyle.Left;
             this.label8.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(1160, 0);
+            this.label8.Location = new System.Drawing.Point(1158, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 36);
             this.label8.TabIndex = 0;
@@ -1529,19 +1516,19 @@
             this.bunifuToolTip1.SetToolTipIcon(this.label8, null);
             this.bunifuToolTip1.SetToolTipTitle(this.label8, "");
             // 
-            // recoveriesColorlabel
+            // casesColorlabel
             // 
-            this.recoveriesColorlabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.recoveriesColorlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.bunifuTransition1.SetDecoration(this.recoveriesColorlabel, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.recoveriesColorlabel, BunifuAnimatorNS.DecorationType.None);
-            this.recoveriesColorlabel.Location = new System.Drawing.Point(903, 8);
-            this.recoveriesColorlabel.Name = "recoveriesColorlabel";
-            this.recoveriesColorlabel.Size = new System.Drawing.Size(20, 20);
-            this.recoveriesColorlabel.TabIndex = 74;
-            this.bunifuToolTip1.SetToolTip(this.recoveriesColorlabel, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.recoveriesColorlabel, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.recoveriesColorlabel, "");
+            this.casesColorlabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.casesColorlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
+            this.bunifuTransition1.SetDecoration(this.casesColorlabel, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.casesColorlabel, BunifuAnimatorNS.DecorationType.None);
+            this.casesColorlabel.Location = new System.Drawing.Point(670, 8);
+            this.casesColorlabel.Name = "casesColorlabel";
+            this.casesColorlabel.Size = new System.Drawing.Size(20, 20);
+            this.casesColorlabel.TabIndex = 73;
+            this.bunifuToolTip1.SetToolTip(this.casesColorlabel, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.casesColorlabel, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.casesColorlabel, "");
             // 
             // label6
             // 
@@ -1551,7 +1538,7 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Left;
             this.label6.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(698, 0);
+            this.label6.Location = new System.Drawing.Point(696, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 36);
             this.label6.TabIndex = 0;
@@ -1561,6 +1548,20 @@
             this.bunifuToolTip1.SetToolTipIcon(this.label6, null);
             this.bunifuToolTip1.SetToolTipTitle(this.label6, "");
             // 
+            // recoveriesColorlabel
+            // 
+            this.recoveriesColorlabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.recoveriesColorlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
+            this.bunifuTransition1.SetDecoration(this.recoveriesColorlabel, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.recoveriesColorlabel, BunifuAnimatorNS.DecorationType.None);
+            this.recoveriesColorlabel.Location = new System.Drawing.Point(901, 8);
+            this.recoveriesColorlabel.Name = "recoveriesColorlabel";
+            this.recoveriesColorlabel.Size = new System.Drawing.Size(20, 20);
+            this.recoveriesColorlabel.TabIndex = 74;
+            this.bunifuToolTip1.SetToolTip(this.recoveriesColorlabel, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.recoveriesColorlabel, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.recoveriesColorlabel, "");
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -1569,7 +1570,7 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Left;
             this.label7.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(929, 0);
+            this.label7.Location = new System.Drawing.Point(927, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(112, 36);
             this.label7.TabIndex = 0;
@@ -1623,26 +1624,27 @@
             this.bunifuToolTip1.SetToolTip(this.DashBoard, "");
             this.bunifuToolTip1.SetToolTipIcon(this.DashBoard, null);
             this.bunifuToolTip1.SetToolTipTitle(this.DashBoard, "");
-            animation8.AnimateOnlyDifferences = true;
-            animation8.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.BlindCoeff")));
-            animation8.LeafCoeff = 0F;
-            animation8.MaxTime = 1F;
-            animation8.MinTime = 0F;
-            animation8.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicCoeff")));
-            animation8.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicShift")));
-            animation8.MosaicSize = 0;
-            animation8.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            animation8.RotateCoeff = 0F;
-            animation8.RotateLimit = 0F;
-            animation8.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.ScaleCoeff")));
-            animation8.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.SlideCoeff")));
-            animation8.TimeCoeff = 0F;
-            animation8.TransparencyCoeff = 1F;
-            this.DashBoard.Transition = animation8;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 1F;
+            this.DashBoard.Transition = animation3;
             this.DashBoard.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Transparent;
             // 
             // topPanel
             // 
+            this.topPanel.Controls.Add(this.selectedRegionlabel);
             this.topPanel.Controls.Add(this.searchRegionButton);
             this.topPanel.Controls.Add(this.minimizeButton);
             this.topPanel.Controls.Add(this.closeButton);
@@ -1660,6 +1662,38 @@
             this.bunifuToolTip1.SetToolTip(this.topPanel, "");
             this.bunifuToolTip1.SetToolTipIcon(this.topPanel, null);
             this.bunifuToolTip1.SetToolTipTitle(this.topPanel, "");
+            // 
+            // searchRegionButton
+            // 
+            this.searchRegionButton.Animated = true;
+            this.searchRegionButton.AutoRoundedCorners = true;
+            this.searchRegionButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
+            this.searchRegionButton.BorderRadius = 19;
+            this.searchRegionButton.BorderThickness = 1;
+            this.searchRegionButton.CheckedState.Parent = this.searchRegionButton;
+            this.searchRegionButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.searchRegionButton.CustomImages.Parent = this.searchRegionButton;
+            this.bunifuTransition2.SetDecoration(this.searchRegionButton, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.searchRegionButton, BunifuAnimatorNS.DecorationType.None);
+            this.searchRegionButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
+            this.searchRegionButton.Font = new System.Drawing.Font("Proxima Soft", 11F);
+            this.searchRegionButton.ForeColor = System.Drawing.Color.White;
+            this.searchRegionButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
+            this.searchRegionButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
+            this.searchRegionButton.HoverState.Parent = this.searchRegionButton;
+            this.searchRegionButton.Image = global::CovidInfoPH.Properties.Resources.icons8_search_208px_1;
+            this.searchRegionButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.searchRegionButton.Location = new System.Drawing.Point(993, 38);
+            this.searchRegionButton.Name = "searchRegionButton";
+            this.searchRegionButton.ShadowDecoration.Parent = this.searchRegionButton;
+            this.searchRegionButton.Size = new System.Drawing.Size(225, 41);
+            this.searchRegionButton.TabIndex = 58;
+            this.searchRegionButton.Text = "Search region";
+            this.searchRegionButton.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.bunifuToolTip1.SetToolTip(this.searchRegionButton, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.searchRegionButton, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.searchRegionButton, "");
+            this.searchRegionButton.Click += new System.EventHandler(this.searchRegionButton_Click);
             // 
             // minimizeButton
             // 
@@ -1796,22 +1830,22 @@
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.bunifuTransition1.Cursor = null;
-            animation7.AnimateOnlyDifferences = true;
-            animation7.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.BlindCoeff")));
-            animation7.LeafCoeff = 0F;
-            animation7.MaxTime = 1F;
-            animation7.MinTime = 0F;
-            animation7.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicCoeff")));
-            animation7.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicShift")));
-            animation7.MosaicSize = 0;
-            animation7.Padding = new System.Windows.Forms.Padding(0);
-            animation7.RotateCoeff = 0F;
-            animation7.RotateLimit = 0F;
-            animation7.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.ScaleCoeff")));
-            animation7.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.SlideCoeff")));
-            animation7.TimeCoeff = 0F;
-            animation7.TransparencyCoeff = 1F;
-            this.bunifuTransition1.DefaultAnimation = animation7;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 1F;
+            this.bunifuTransition1.DefaultAnimation = animation2;
             this.bunifuTransition1.Interval = 1;
             this.bunifuTransition1.TimeStep = 0.01F;
             // 
@@ -1915,37 +1949,21 @@
             this.bunifuToolTip1.ToolTipPosition = new System.Drawing.Point(0, 0);
             this.bunifuToolTip1.ToolTipTitle = null;
             // 
-            // searchRegionButton
+            // selectedRegionlabel
             // 
-            this.searchRegionButton.Animated = true;
-            this.searchRegionButton.AutoRoundedCorners = true;
-            this.searchRegionButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.searchRegionButton.BorderRadius = 19;
-            this.searchRegionButton.BorderThickness = 1;
-            this.searchRegionButton.CheckedState.Parent = this.searchRegionButton;
-            this.searchRegionButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchRegionButton.CustomImages.Parent = this.searchRegionButton;
-            this.bunifuTransition2.SetDecoration(this.searchRegionButton, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.searchRegionButton, BunifuAnimatorNS.DecorationType.None);
-            this.searchRegionButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
-            this.searchRegionButton.Font = new System.Drawing.Font("Proxima Soft", 11F);
-            this.searchRegionButton.ForeColor = System.Drawing.Color.White;
-            this.searchRegionButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
-            this.searchRegionButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
-            this.searchRegionButton.HoverState.Parent = this.searchRegionButton;
-            this.searchRegionButton.Image = global::CovidInfoPH.Properties.Resources.icons8_search_208px_1;
-            this.searchRegionButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.searchRegionButton.Location = new System.Drawing.Point(993, 38);
-            this.searchRegionButton.Name = "searchRegionButton";
-            this.searchRegionButton.ShadowDecoration.Parent = this.searchRegionButton;
-            this.searchRegionButton.Size = new System.Drawing.Size(225, 41);
-            this.searchRegionButton.TabIndex = 58;
-            this.searchRegionButton.Text = "Search region";
-            this.searchRegionButton.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.bunifuToolTip1.SetToolTip(this.searchRegionButton, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.searchRegionButton, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.searchRegionButton, "");
-            this.searchRegionButton.Click += new System.EventHandler(this.searchRegionButton_Click);
+            this.selectedRegionlabel.AutoSize = true;
+            this.bunifuTransition2.SetDecoration(this.selectedRegionlabel, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.selectedRegionlabel, BunifuAnimatorNS.DecorationType.None);
+            this.selectedRegionlabel.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectedRegionlabel.ForeColor = System.Drawing.Color.White;
+            this.selectedRegionlabel.Location = new System.Drawing.Point(412, 28);
+            this.selectedRegionlabel.Name = "selectedRegionlabel";
+            this.selectedRegionlabel.Size = new System.Drawing.Size(166, 23);
+            this.selectedRegionlabel.TabIndex = 59;
+            this.selectedRegionlabel.Text = "Selected Region:";
+            this.bunifuToolTip1.SetToolTip(this.selectedRegionlabel, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.selectedRegionlabel, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.selectedRegionlabel, "");
             // 
             // MainForm
             // 
@@ -2110,6 +2128,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private Guna.UI2.WinForms.Guna2Button searchRegionButton;
+        private System.Windows.Forms.Label selectedRegionlabel;
     }
 }
 
