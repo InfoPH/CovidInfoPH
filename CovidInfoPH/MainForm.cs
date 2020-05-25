@@ -139,6 +139,23 @@ namespace CovidInfoPH
             newCasesDesc.Text = $"New cases since\n{datePicker.Value.AddDays(-6).DayOfWeek}";
         }
 
+        private void RefreshData(string region)
+        {
+            double cases = Regions[region][datePicker.Value].Cases;
+            double deaths = Regions[region][datePicker.Value].Deaths;
+            double recoveries = Regions[region][datePicker.Value].Recoveries;
+            int newCases = Regions[region][datePicker.Value].Cases - Regions[region][datePicker.Value.AddDays(-6)].Cases;
+            casesNum.Text = cases.ToString(CultureInfo.InvariantCulture);
+            deathNum.Text = deaths.ToString(CultureInfo.InvariantCulture);
+            caseNum2.Text = cases.ToString(CultureInfo.InvariantCulture);
+            deathNum2.Text = deaths.ToString(CultureInfo.InvariantCulture);
+            recovNum.Text = recoveries.ToString(CultureInfo.InvariantCulture);
+            newCasesNum.Text = newCases.ToString();
+            deathPercent.Value = Convert.ToInt32(deaths / cases * 100);
+            weeklyReport.Text = $"Weekly Report as of {datePicker.Value:MMMM dd, yyyy}";
+            newCasesDesc.Text = $"New cases since\n{datePicker.Value.AddDays(-6).DayOfWeek}";
+        }
+
         private void InitializeMap()
         {
             ItemSource item = new ItemSource(Regions);
@@ -318,12 +335,25 @@ namespace CovidInfoPH
 
         private void DatePicker_ValueChanged(object sender, EventArgs e)
         {
-            FadeOutValues();
-            RefreshData();
-            DisplayGraph();
-            DisplayDataGrid();
-            FadeInValues();
-            datePicker.Enabled = true;
+            if (RegionSearchForm.SearchResult != "All")
+            {
+                selectedRegionlabel.Text = $"Selected Region: {RegionSearchForm.SearchResult}";
+                FadeOutValues();
+                RefreshData(RegionSearchForm.SearchResult);
+                DisplayGraph(RegionSearchForm.SearchResult);
+                DisplayDataGrid(RegionSearchForm.SearchResult);
+                FadeInValues();
+                datePicker.Enabled = true;
+            }
+            else
+            {
+                FadeOutValues();
+                RefreshData();
+                DisplayGraph();
+                DisplayDataGrid();
+                FadeInValues();
+                datePicker.Enabled = true;
+            }
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
@@ -391,9 +421,28 @@ namespace CovidInfoPH
             };
             searchBar.guna2AnimateWindow1.SetAnimateWindow(searchBar);
             searchBar.ShowDialog();
-            if (!string.IsNullOrEmpty(RegionSearchForm.SearchResult) && RegionSearchForm.SearchResult != "All")
+            if (!string.IsNullOrEmpty(RegionSearchForm.SearchResult) && selectedRegionlabel.Text.Substring(
+                selectedRegionlabel.Text.IndexOf(':') + 2) != RegionSearchForm.SearchResult)
             {
-
+                if (RegionSearchForm.SearchResult != "All")
+                {
+                    selectedRegionlabel.Text = $"Selected Region: {RegionSearchForm.SearchResult}";
+                    FadeOutValues();
+                    RefreshData(RegionSearchForm.SearchResult);
+                    DisplayGraph(RegionSearchForm.SearchResult);
+                    DisplayDataGrid(RegionSearchForm.SearchResult);
+                    FadeInValues();
+                    datePicker.Enabled = true;
+                }
+                else
+                {
+                    FadeOutValues();
+                    RefreshData();
+                    DisplayGraph();
+                    DisplayDataGrid();
+                    FadeInValues();
+                    datePicker.Enabled = true;
+                }
             }
         }
 

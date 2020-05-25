@@ -65,7 +65,7 @@ namespace CovidInfoPH
             if (e.KeyCode == Keys.Return)
             {
                 e.Handled = true;
-                if (bunifuDataGridView1.RowCount <= 0 && bunifuDataGridView1.SelectedCells.Count <= 0) return;
+                if (bunifuDataGridView1.RowCount <= 0) return;
                 searchBarTextBox.Text = (string) bunifuDataGridView1.CurrentCell.Value;
                 SearchResult = (string) bunifuDataGridView1.CurrentCell.Value;
                 Close();
