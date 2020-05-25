@@ -1319,7 +1319,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.153847F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 178F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.153847F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 187F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 195F));
             this.tableLayoutPanel1.Controls.Add(this.deathsColorlabel, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label8, 6, 0);
@@ -1347,7 +1347,7 @@
             this.deathsColorlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109)))));
             this.bunifuTransition1.SetDecoration(this.deathsColorlabel, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.deathsColorlabel, BunifuAnimatorNS.DecorationType.None);
-            this.deathsColorlabel.Location = new System.Drawing.Point(997, 7);
+            this.deathsColorlabel.Location = new System.Drawing.Point(990, 7);
             this.deathsColorlabel.Name = "deathsColorlabel";
             this.deathsColorlabel.Size = new System.Drawing.Size(18, 16);
             this.deathsColorlabel.TabIndex = 75;
@@ -1381,7 +1381,7 @@
             this.label8.Dock = System.Windows.Forms.DockStyle.Left;
             this.label8.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(1021, 0);
+            this.label8.Location = new System.Drawing.Point(1014, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 30);
             this.label8.TabIndex = 0;
@@ -1397,7 +1397,7 @@
             this.casesColorlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
             this.bunifuTransition1.SetDecoration(this.casesColorlabel, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.casesColorlabel, BunifuAnimatorNS.DecorationType.None);
-            this.casesColorlabel.Location = new System.Drawing.Point(587, 7);
+            this.casesColorlabel.Location = new System.Drawing.Point(580, 7);
             this.casesColorlabel.Name = "casesColorlabel";
             this.casesColorlabel.Size = new System.Drawing.Size(18, 16);
             this.casesColorlabel.TabIndex = 73;
@@ -1413,7 +1413,7 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Left;
             this.label6.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(611, 0);
+            this.label6.Location = new System.Drawing.Point(604, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 30);
             this.label6.TabIndex = 0;
@@ -1429,7 +1429,7 @@
             this.recoveriesColorlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
             this.bunifuTransition1.SetDecoration(this.recoveriesColorlabel, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.recoveriesColorlabel, BunifuAnimatorNS.DecorationType.None);
-            this.recoveriesColorlabel.Location = new System.Drawing.Point(792, 7);
+            this.recoveriesColorlabel.Location = new System.Drawing.Point(785, 7);
             this.recoveriesColorlabel.Name = "recoveriesColorlabel";
             this.recoveriesColorlabel.Size = new System.Drawing.Size(18, 16);
             this.recoveriesColorlabel.TabIndex = 74;
@@ -1445,7 +1445,7 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Left;
             this.label7.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(816, 0);
+            this.label7.Location = new System.Drawing.Point(809, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 30);
             this.label7.TabIndex = 0;
@@ -1491,10 +1491,10 @@
             this.DashBoard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DashBoard.Multiline = true;
             this.DashBoard.Name = "DashBoard";
-            this.DashBoard.Page = this.locationRegion;
-            this.DashBoard.PageIndex = 1;
-            this.DashBoard.PageName = "locationRegion";
-            this.DashBoard.PageTitle = "tabPage2";
+            this.DashBoard.Page = this.generalCases;
+            this.DashBoard.PageIndex = 0;
+            this.DashBoard.PageName = "generalCases";
+            this.DashBoard.PageTitle = "tabPage1";
             this.DashBoard.SelectedIndex = 0;
             this.DashBoard.Size = new System.Drawing.Size(1235, 596);
             this.DashBoard.TabIndex = 54;
