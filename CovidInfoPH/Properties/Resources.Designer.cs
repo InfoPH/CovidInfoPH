@@ -243,6 +243,16 @@ namespace CovidInfoPH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap info_208px1 {
+            get {
+                object obj = ResourceManager.GetObject("info_208px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Johndayll {
             get {
                 object obj = ResourceManager.GetObject("Johndayll", resourceCulture);
