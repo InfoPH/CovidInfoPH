@@ -1,7 +1,6 @@
 using Syncfusion.Licensing;
 using System;
 using System.Windows.Forms;
-using Syncfusion.Licensing;
 
 namespace CovidInfoPH
 {

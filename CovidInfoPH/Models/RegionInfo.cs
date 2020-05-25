@@ -11,6 +11,5 @@ namespace CovidInfoPH.Models
         public int Deaths { get; set; }
         public int Cases { get; set; }
         public int Recoveries { get; set; }
-
     }
 }

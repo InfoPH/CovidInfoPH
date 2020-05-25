@@ -31,8 +31,7 @@ namespace CovidInfoPH
         #region Load form & chart
         private void ShowForm(object sender, EventArgs e)
         {
-            //Add negros occidental data
-            Models.RegionInfo regionInfo = new Models.RegionInfo();
+            latestData.Text = $"Latest data fetched: {Historical.Keys.Max(d => d):MMMM dd, yyyy}";
             ShowInTaskbar = true;
             bunifuFormFadeTransition1.ShowAsyc(this);
             SetChartColors();
@@ -137,7 +136,7 @@ namespace CovidInfoPH
             bunifuTransition1.HideSync(deathNum);
             bunifuTransition1.HideSync(recovNum);
         }
-     
+
         private void FadeInValues()
         {
             bunifuTransition1.ShowSync(recovNum);
@@ -189,7 +188,7 @@ namespace CovidInfoPH
         }
         private void PhilippinesMap_ShapeSelected(object sender, ShapeSelectedEventArgs e)
         {
-           //Adding transitions makes it laggy ://
+            //Adding transitions makes it laggy ://
             foreach (PhRegion region in e.Data)
             {
                 double deaths = Convert.ToDouble(Regions[region.Region].Deaths);
@@ -200,13 +199,26 @@ namespace CovidInfoPH
                 regionRecoveries.Text = Regions[region.Region].Recoveries.ToString();
                 regionCases2.Text = Regions[region.Region].Cases.ToString();
                 regionDeaths2.Text = Regions[region.Region].Deaths.ToString();
-                regionCircleProgress.Value = Convert.ToInt32(deaths/cases * 100);
+                regionCircleProgress.Value = Convert.ToInt32(deaths / cases * 100);
             }
-           
 
-            #endregion
 
-            #endregion
         }
+
+        private void searchRegionButton_Click(object sender, EventArgs e)
+        {
+            var searchButtonLocation = PointToScreen(searchRegionButton.Location);
+            RegionSearchForm searchBar = new RegionSearchForm
+            {
+                Location = searchButtonLocation,
+                ShowInTaskbar = false
+            };
+            searchBar.guna2AnimateWindow1.SetAnimateWindow(searchBar);
+            searchBar.ShowDialog();
+        }
+
+        #endregion
+
+        #endregion
     }
 }
