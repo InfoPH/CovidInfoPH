@@ -78,18 +78,21 @@ namespace CovidInfoPH
             MainForm.Regions = new Dictionary<string, Dictionary<DateTime, RegionDateInfo>>();
             foreach (string region in regions)
             {
-              
+
                 List<Patient> localPatients = MainForm.Patients.Where(p => p.Region == region).ToList();
                 Dictionary<DateTime, RegionDateInfo> regionHistorical = new Dictionary<DateTime, RegionDateInfo>();
+                RegionDateInfo regionDateInfo = new RegionDateInfo()
+                {
+                    Cases = 0,
+                    Deaths = 0,
+                    Recoveries = 0
+                };
 
                 foreach (DateTime date in dates)
                 {
-                    RegionDateInfo regionDateInfo = new RegionDateInfo
-                    {
-                        Cases = localPatients.Count(p => p.DateConfirmed == date),
-                        Deaths = localPatients.Count(p => p.DateDied == date),
-                        Recoveries = localPatients.Count(p => p.DateRecovered == date)
-                    };
+                    regionDateInfo.Cases += localPatients.Count(p => p.DateConfirmed == date);
+                    regionDateInfo.Deaths += localPatients.Count(p => p.DateDied == date);
+                    regionDateInfo.Recoveries += localPatients.Count(p => p.DateRecovered == date);
                     regionHistorical.Add(date, regionDateInfo);
 
 

@@ -178,6 +178,8 @@ namespace CovidInfoPH
         {
             bunifuImageButton1.FadeWhenInactive = false;
             bunifuImageButton2.FadeWhenInactive = true;
+            bunifuTransition1.Show(searchRegionButton);
+            bunifuTransition1.Show(selectedRegionlabel);
             DashBoard.SetPage(0);
         }
 
@@ -185,6 +187,8 @@ namespace CovidInfoPH
         {
             bunifuImageButton1.FadeWhenInactive = true;
             bunifuImageButton2.FadeWhenInactive = false;
+            bunifuTransition1.Hide(searchRegionButton);
+            bunifuTransition1.Hide(selectedRegionlabel);
             DashBoard.SetPage(1);
         }
 
