@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashForm));
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.name = new System.Windows.Forms.Label();
@@ -111,14 +111,13 @@
             this.name.ForeColor = System.Drawing.Color.White;
             this.name.Location = new System.Drawing.Point(284, 96);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(233, 37);
+            this.name.Size = new System.Drawing.Size(194, 31);
             this.name.TabIndex = 3;
             this.name.Text = "COVIDinfo-PH";
             this.bunifuToolTip1.SetToolTip(this.name, "");
             this.bunifuToolTip1.SetToolTipIcon(this.name, null);
             this.bunifuToolTip1.SetToolTipTitle(this.name, "");
             this.name.Visible = false;
-            this.name.Click += new System.EventHandler(this.name_Click);
             // 
             // ortega
             // 
@@ -137,7 +136,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.ortega, null);
             this.bunifuToolTip1.SetToolTipTitle(this.ortega, "");
             this.ortega.Visible = false;
-            this.ortega.Click += new System.EventHandler(this.ortega_Click);
             // 
             // itang
             // 
@@ -156,7 +154,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.itang, null);
             this.bunifuToolTip1.SetToolTipTitle(this.itang, "");
             this.itang.Visible = false;
-            this.itang.Click += new System.EventHandler(this.itang_Click);
             // 
             // martinez
             // 
@@ -175,7 +172,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.martinez, null);
             this.bunifuToolTip1.SetToolTipTitle(this.martinez, "");
             this.martinez.Visible = false;
-            this.martinez.Click += new System.EventHandler(this.martinez_Click);
             // 
             // arizala
             // 
@@ -194,7 +190,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.arizala, null);
             this.bunifuToolTip1.SetToolTipTitle(this.arizala, "");
             this.arizala.Visible = false;
-            this.arizala.Click += new System.EventHandler(this.arizala_Click);
             // 
             // nino
             // 
@@ -213,7 +208,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.nino, null);
             this.bunifuToolTip1.SetToolTipTitle(this.nino, "");
             this.nino.Visible = false;
-            this.nino.Click += new System.EventHandler(this.nino_Click);
             // 
             // braulio
             // 
@@ -232,7 +226,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.braulio, null);
             this.bunifuToolTip1.SetToolTipTitle(this.braulio, "");
             this.braulio.Visible = false;
-            this.braulio.Click += new System.EventHandler(this.braulio_Click);
             // 
             // logoPictureBox
             // 
@@ -251,7 +244,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.logoPictureBox, null);
             this.bunifuToolTip1.SetToolTipTitle(this.logoPictureBox, "");
             this.logoPictureBox.Visible = false;
-            this.logoPictureBox.Click += new System.EventHandler(this.logoPictureBox_Click);
             // 
             // bunifuImageButton1
             // 
@@ -301,14 +293,13 @@
             this.meetLabel.ForeColor = System.Drawing.Color.White;
             this.meetLabel.Location = new System.Drawing.Point(250, 96);
             this.meetLabel.Name = "meetLabel";
-            this.meetLabel.Size = new System.Drawing.Size(301, 37);
+            this.meetLabel.Size = new System.Drawing.Size(246, 31);
             this.meetLabel.TabIndex = 3;
             this.meetLabel.Text = "Meet the creators!";
             this.bunifuToolTip1.SetToolTip(this.meetLabel, "");
             this.bunifuToolTip1.SetToolTipIcon(this.meetLabel, null);
             this.bunifuToolTip1.SetToolTipTitle(this.meetLabel, "");
             this.meetLabel.Visible = false;
-            this.meetLabel.Click += new System.EventHandler(this.meetLabel_Click);
             // 
             // arizalaName
             // 
@@ -319,7 +310,7 @@
             this.arizalaName.ForeColor = System.Drawing.Color.White;
             this.arizalaName.Location = new System.Drawing.Point(154, 308);
             this.arizalaName.Name = "arizalaName";
-            this.arizalaName.Size = new System.Drawing.Size(112, 54);
+            this.arizalaName.Size = new System.Drawing.Size(88, 42);
             this.arizalaName.TabIndex = 3;
             this.arizalaName.Text = "Arizala\r\nJohndayll";
             this.arizalaName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -327,7 +318,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.arizalaName, null);
             this.bunifuToolTip1.SetToolTipTitle(this.arizalaName, "");
             this.arizalaName.Visible = false;
-            this.arizalaName.Click += new System.EventHandler(this.arizalaName_Click);
             // 
             // martinezName
             // 
@@ -338,7 +328,7 @@
             this.martinezName.ForeColor = System.Drawing.Color.White;
             this.martinezName.Location = new System.Drawing.Point(133, 308);
             this.martinezName.Name = "martinezName";
-            this.martinezName.Size = new System.Drawing.Size(155, 54);
+            this.martinezName.Size = new System.Drawing.Size(123, 42);
             this.martinezName.TabIndex = 3;
             this.martinezName.Text = "Martinez\r\nJose Raphael";
             this.martinezName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -346,7 +336,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.martinezName, null);
             this.bunifuToolTip1.SetToolTipTitle(this.martinezName, "");
             this.martinezName.Visible = false;
-            this.martinezName.Click += new System.EventHandler(this.martinezName_Click);
             // 
             // braulioName
             // 
@@ -357,7 +346,7 @@
             this.braulioName.ForeColor = System.Drawing.Color.White;
             this.braulioName.Location = new System.Drawing.Point(358, 308);
             this.braulioName.Name = "braulioName";
-            this.braulioName.Size = new System.Drawing.Size(85, 54);
+            this.braulioName.Size = new System.Drawing.Size(67, 42);
             this.braulioName.TabIndex = 3;
             this.braulioName.Text = "Braulio\r\nVaeda";
             this.braulioName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -365,7 +354,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.braulioName, null);
             this.bunifuToolTip1.SetToolTipTitle(this.braulioName, "");
             this.braulioName.Visible = false;
-            this.braulioName.Click += new System.EventHandler(this.braulioName_Click);
             // 
             // ninoName
             // 
@@ -376,7 +364,7 @@
             this.ninoName.ForeColor = System.Drawing.Color.White;
             this.ninoName.Location = new System.Drawing.Point(365, 308);
             this.ninoName.Name = "ninoName";
-            this.ninoName.Size = new System.Drawing.Size(70, 54);
+            this.ninoName.Size = new System.Drawing.Size(55, 42);
             this.ninoName.TabIndex = 3;
             this.ninoName.Text = "Nino\r\nKovie";
             this.ninoName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -384,7 +372,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.ninoName, null);
             this.bunifuToolTip1.SetToolTipTitle(this.ninoName, "");
             this.ninoName.Visible = false;
-            this.ninoName.Click += new System.EventHandler(this.ninoName_Click);
             // 
             // itangName
             // 
@@ -395,7 +382,7 @@
             this.itangName.ForeColor = System.Drawing.Color.White;
             this.itangName.Location = new System.Drawing.Point(558, 308);
             this.itangName.Name = "itangName";
-            this.itangName.Size = new System.Drawing.Size(65, 54);
+            this.itangName.Size = new System.Drawing.Size(52, 42);
             this.itangName.TabIndex = 3;
             this.itangName.Text = "Itang\r\nRyan";
             this.itangName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -403,7 +390,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.itangName, null);
             this.bunifuToolTip1.SetToolTipTitle(this.itangName, "");
             this.itangName.Visible = false;
-            this.itangName.Click += new System.EventHandler(this.itangName_Click);
             // 
             // ortegaName
             // 
@@ -414,7 +400,7 @@
             this.ortegaName.ForeColor = System.Drawing.Color.White;
             this.ortegaName.Location = new System.Drawing.Point(512, 308);
             this.ortegaName.Name = "ortegaName";
-            this.ortegaName.Size = new System.Drawing.Size(156, 54);
+            this.ortegaName.Size = new System.Drawing.Size(125, 42);
             this.ortegaName.TabIndex = 3;
             this.ortegaName.Text = "Jiz De Ortega\r\nKeino";
             this.ortegaName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -422,7 +408,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.ortegaName, null);
             this.bunifuToolTip1.SetToolTipTitle(this.ortegaName, "");
             this.ortegaName.Visible = false;
-            this.ortegaName.Click += new System.EventHandler(this.ortegaName_Click);
             // 
             // guna2GradientPanel1
             // 
@@ -439,7 +424,6 @@
             this.bunifuToolTip1.SetToolTip(this.guna2GradientPanel1, "");
             this.bunifuToolTip1.SetToolTipIcon(this.guna2GradientPanel1, null);
             this.bunifuToolTip1.SetToolTipTitle(this.guna2GradientPanel1, "");
-            this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
             // 
             // bunifuLabel1
             // 
@@ -452,7 +436,7 @@
             this.bunifuLabel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(227, 40);
+            this.bunifuLabel1.Size = new System.Drawing.Size(172, 33);
             this.bunifuLabel1.TabIndex = 5;
             this.bunifuLabel1.Text = "COVIDinfo-PH";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -476,7 +460,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.guna2WinProgressIndicator1, null);
             this.bunifuToolTip1.SetToolTipTitle(this.guna2WinProgressIndicator1, "");
             this.guna2WinProgressIndicator1.Visible = false;
-            this.guna2WinProgressIndicator1.Click += new System.EventHandler(this.guna2WinProgressIndicator1_Click);
             // 
             // splashScreenElipse
             // 
@@ -497,22 +480,22 @@
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.bunifuTransition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 1F;
-            this.bunifuTransition1.DefaultAnimation = animation1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 1F;
+            this.bunifuTransition1.DefaultAnimation = animation2;
             // 
             // showLogo
             // 
