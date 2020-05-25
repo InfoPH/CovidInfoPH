@@ -45,6 +45,9 @@ namespace CovidInfoPH
             generalCaseChart.colorSet.Add(Color.FromArgb(152, 135, 143));
             generalCaseChart.colorSet.Add(Color.FromArgb(142, 174, 189));
             generalCaseChart.colorSet.Add(Color.FromArgb(152, 94, 109));
+            regionMapView.colorSet.Add(Color.FromArgb(152, 135, 143));
+            regionMapView.colorSet.Add(Color.FromArgb(142, 174, 189));
+            regionMapView.colorSet.Add(Color.FromArgb(152, 94, 109));
         }
         #endregion
 
@@ -188,20 +191,28 @@ namespace CovidInfoPH
         }
         private void PhilippinesMap_ShapeSelected(object sender, ShapeSelectedEventArgs e)
         {
+            regionDatePicker.Enabled = true;
+            Canvas canvas = new Canvas();
+            DataPoint cases = new DataPoint(BunifuDataViz._type.Bunifu_line);
+            DataPoint deaths = new DataPoint(BunifuDataViz._type.Bunifu_line);
+            DataPoint recoveries = new DataPoint(BunifuDataViz._type.Bunifu_line);
+
             //Adding transitions makes it laggy ://
             foreach (PhRegion region in e.Data)
             {
-                double deaths = Convert.ToDouble(Regions[region.Region].Values.Sum(c => c.Deaths));
-                double cases = Convert.ToDouble(Regions[region.Region].Values.Sum(c => c.Cases));
                 regionLabel.Text = region.Region;
-                regionCases.Text = Regions[region.Region].Values.Sum(c => c.Cases).ToString();
-                regionDeaths.Text = Regions[region.Region].Values.Sum(c => c.Deaths).ToString();
-                regionRecoveries.Text = Regions[region.Region].Values.Sum(c => c.Recoveries).ToString();
-                regionCases2.Text = Regions[region.Region].Values.Sum(c => c.Cases).ToString();
-                regionDeaths2.Text = Regions[region.Region].Values.Sum(c => c.Deaths).ToString();
-                regionCircleProgress.Value = Convert.ToInt32(deaths / cases * 100);
-            }
+                for (int i = -6; i < 1; i++)
+                {
+                    cases.addLabely(regionDatePicker.Value.AddDays(i).DayOfWeek.ToString(), Regions[region.Region][regionDatePicker.Value.AddDays(i)].Cases);
+                    deaths.addLabely(regionDatePicker.Value.AddDays(i).DayOfWeek.ToString(), Regions[region.Region][regionDatePicker.Value.AddDays(i)].Deaths);
+                    recoveries.addLabely(regionDatePicker.Value.AddDays(i).DayOfWeek.ToString(), Regions[region.Region][regionDatePicker.Value.AddDays(i)].Recoveries);
+                }
 
+                canvas.addData(cases);
+                canvas.addData(recoveries);
+                canvas.addData(deaths);
+                regionMapView.Render(canvas);
+            }
 
         }
 
@@ -224,5 +235,40 @@ namespace CovidInfoPH
         #endregion
 
         #endregion
+
+        private void RegionDataTable_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void topPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void regionDatePicker_ValueChanged(object sender, EventArgs e)
+        {
+            Canvas canvas = new Canvas();
+            DataPoint cases = new DataPoint(BunifuDataViz._type.Bunifu_line);
+            DataPoint deaths = new DataPoint(BunifuDataViz._type.Bunifu_line);
+            DataPoint recoveries = new DataPoint(BunifuDataViz._type.Bunifu_line);
+
+            for (int i = -6; i < 1; i++)
+            {
+                cases.addLabely(regionDatePicker.Value.AddDays(i).DayOfWeek.ToString(), Regions[regionLabel.Text][regionDatePicker.Value.AddDays(i)].Cases);
+                deaths.addLabely(regionDatePicker.Value.AddDays(i).DayOfWeek.ToString(), Regions[regionLabel.Text][regionDatePicker.Value.AddDays(i)].Deaths);
+                recoveries.addLabely(regionDatePicker.Value.AddDays(i).DayOfWeek.ToString(), Regions[regionLabel.Text][regionDatePicker.Value.AddDays(i)].Recoveries);
+            }
+
+            canvas.addData(cases);
+            canvas.addData(recoveries);
+            canvas.addData(deaths);
+            regionMapView.Render(canvas);
+        }
+
+        private void regionMapView_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
