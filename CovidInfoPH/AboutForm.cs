@@ -16,5 +16,15 @@ namespace CovidInfoPH
         {
             InitializeComponent();
         }
+
+        private void AboutForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

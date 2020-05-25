@@ -29,27 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation3 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation6 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.menuBarPanel = new System.Windows.Forms.Panel();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.bunifuImageButton2 = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuTransition2 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.locationRegion = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.RegionDataTable = new System.Windows.Forms.TableLayoutPanel();
             this.regionDataPanel = new System.Windows.Forms.Panel();
-            this.regionDatePicker = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.regionMapView = new Bunifu.DataViz.WinForms.BunifuDataViz();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.uploadButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.regionLabel = new System.Windows.Forms.Label();
             this.philippinesMap = new Syncfusion.Windows.Forms.Maps.Maps();
             this.generalCases = new System.Windows.Forms.TabPage();
@@ -66,20 +61,16 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.casesNum = new System.Windows.Forms.Label();
             this.casesDesc = new Bunifu.UI.WinForms.BunifuLabel();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.deathsDesc = new Bunifu.UI.WinForms.BunifuLabel();
             this.deathNum = new System.Windows.Forms.Label();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.recovNum = new System.Windows.Forms.Label();
             this.recovDesc = new Bunifu.UI.WinForms.BunifuLabel();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.weeklyReportPanel = new System.Windows.Forms.TableLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.newCasesNum = new System.Windows.Forms.Label();
             this.newCasesDesc = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.weeklyReport = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.caseNum2 = new System.Windows.Forms.Label();
@@ -89,7 +80,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.chartPanel = new System.Windows.Forms.Panel();
-            this.datePicker = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.generalCaseChart = new Bunifu.DataViz.WinForms.BunifuDataViz();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.deathsColorlabel = new System.Windows.Forms.Label();
@@ -103,9 +93,6 @@
             this.DashBoard = new Bunifu.UI.WinForms.BunifuPages();
             this.topPanel = new System.Windows.Forms.Panel();
             this.selectedRegionlabel = new System.Windows.Forms.Label();
-            this.searchRegionButton = new Guna.UI2.WinForms.Guna2Button();
-            this.minimizeButton = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.closeButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.latestData = new System.Windows.Forms.Label();
@@ -126,8 +113,21 @@
             this.bunifuPanelElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.buttonElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.searchRegionButton = new Guna.UI2.WinForms.Guna2Button();
+            this.minimizeButton = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.closeButton = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.bunifuImageButton3 = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.bunifuImageButton2 = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.datePicker = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.regionDatePicker = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.uploadButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.menuBarPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.locationRegion.SuspendLayout();
             this.panel1.SuspendLayout();
             this.RegionDataTable.SuspendLayout();
@@ -141,25 +141,27 @@
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             this.weeklyReportPanel.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
             this.chartPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.DashBoard.SuspendLayout();
             this.topPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuBarPanel
             // 
             this.menuBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.menuBarPanel.Controls.Add(this.guna2CirclePictureBox1);
+            this.menuBarPanel.Controls.Add(this.bunifuImageButton3);
             this.menuBarPanel.Controls.Add(this.bunifuImageButton2);
             this.menuBarPanel.Controls.Add(this.bunifuImageButton1);
             this.bunifuTransition2.SetDecoration(this.menuBarPanel, BunifuAnimatorNS.DecorationType.None);
@@ -174,120 +176,26 @@
             this.bunifuToolTip1.SetToolTipIcon(this.menuBarPanel, null);
             this.bunifuToolTip1.SetToolTipTitle(this.menuBarPanel, "");
             // 
-            // guna2CirclePictureBox1
-            // 
-            this.bunifuTransition1.SetDecoration(this.guna2CirclePictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.guna2CirclePictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(7, 7);
-            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(60, 60);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 1;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.guna2CirclePictureBox1, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.guna2CirclePictureBox1, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.guna2CirclePictureBox1, "");
-            // 
-            // bunifuImageButton2
-            // 
-            this.bunifuImageButton2.ActiveImage = null;
-            this.bunifuImageButton2.AllowAnimations = true;
-            this.bunifuImageButton2.AllowBuffering = false;
-            this.bunifuImageButton2.AllowZooming = true;
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTransition1.SetDecoration(this.bunifuImageButton2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.bunifuImageButton2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuImageButton2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.ErrorImage")));
-            this.bunifuImageButton2.FadeWhenInactive = true;
-            this.bunifuImageButton2.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.ImageLocation = null;
-            this.bunifuImageButton2.ImageMargin = 35;
-            this.bunifuImageButton2.ImageSize = new System.Drawing.Size(36, 29);
-            this.bunifuImageButton2.ImageZoomSize = new System.Drawing.Size(71, 64);
-            this.bunifuImageButton2.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.InitialImage")));
-            this.bunifuImageButton2.Location = new System.Drawing.Point(0, 354);
-            this.bunifuImageButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Rotation = 0;
-            this.bunifuImageButton2.ShowActiveImage = true;
-            this.bunifuImageButton2.ShowCursorChanges = true;
-            this.bunifuImageButton2.ShowImageBorders = true;
-            this.bunifuImageButton2.ShowSizeMarkers = false;
-            this.bunifuImageButton2.Size = new System.Drawing.Size(71, 64);
-            this.bunifuImageButton2.TabIndex = 0;
-            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton2, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.bunifuImageButton2, ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.ToolTipIcon"))));
-            this.bunifuImageButton2.ToolTipText = "\r\n";
-            this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton2, "View by Region");
-            this.bunifuImageButton2.WaitOnLoad = false;
-            this.bunifuImageButton2.Zoom = 35;
-            this.bunifuImageButton2.ZoomSpeed = 10;
-            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
-            // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.ActiveImage = null;
-            this.bunifuImageButton1.AllowAnimations = true;
-            this.bunifuImageButton1.AllowBuffering = false;
-            this.bunifuImageButton1.AllowZooming = true;
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTransition1.SetDecoration(this.bunifuImageButton1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.bunifuImageButton1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuImageButton1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.ErrorImage")));
-            this.bunifuImageButton1.FadeWhenInactive = false;
-            this.bunifuImageButton1.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.ImageLocation = null;
-            this.bunifuImageButton1.ImageMargin = 35;
-            this.bunifuImageButton1.ImageSize = new System.Drawing.Size(36, 29);
-            this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(71, 64);
-            this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
-            this.bunifuImageButton1.Location = new System.Drawing.Point(2, 181);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Rotation = 0;
-            this.bunifuImageButton1.ShowActiveImage = true;
-            this.bunifuImageButton1.ShowCursorChanges = true;
-            this.bunifuImageButton1.ShowImageBorders = true;
-            this.bunifuImageButton1.ShowSizeMarkers = false;
-            this.bunifuImageButton1.Size = new System.Drawing.Size(71, 64);
-            this.bunifuImageButton1.TabIndex = 0;
-            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton1, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.bunifuImageButton1, ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.ToolTipIcon"))));
-            this.bunifuImageButton1.ToolTipText = "\r\n";
-            this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton1, "Dashboard");
-            this.bunifuImageButton1.WaitOnLoad = false;
-            this.bunifuImageButton1.Zoom = 35;
-            this.bunifuImageButton1.ZoomSpeed = 10;
-            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
-            // 
             // bunifuTransition2
             // 
             this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.bunifuTransition2.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.bunifuTransition2.DefaultAnimation = animation2;
+            animation5.AnimateOnlyDifferences = true;
+            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
+            animation5.LeafCoeff = 0F;
+            animation5.MaxTime = 1F;
+            animation5.MinTime = 0F;
+            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
+            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
+            animation5.MosaicSize = 0;
+            animation5.Padding = new System.Windows.Forms.Padding(0);
+            animation5.RotateCoeff = 0F;
+            animation5.RotateLimit = 0F;
+            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
+            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
+            animation5.TimeCoeff = 0F;
+            animation5.TransparencyCoeff = 0F;
+            this.bunifuTransition2.DefaultAnimation = animation5;
             this.bunifuTransition2.Interval = 1;
             // 
             // locationRegion
@@ -360,44 +268,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.regionDataPanel, null);
             this.bunifuToolTip1.SetToolTipTitle(this.regionDataPanel, "");
             // 
-            // regionDatePicker
-            // 
-            this.regionDatePicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.regionDatePicker.BorderRadius = 1;
-            this.regionDatePicker.CalendarForeColor = System.Drawing.Color.White;
-            this.regionDatePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
-            this.regionDatePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
-            this.regionDatePicker.Color = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
-            this.regionDatePicker.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.regionDatePicker.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
-            this.regionDatePicker.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.bunifuTransition1.SetDecoration(this.regionDatePicker, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.regionDatePicker, BunifuAnimatorNS.DecorationType.None);
-            this.regionDatePicker.DisabledColor = System.Drawing.Color.Gray;
-            this.regionDatePicker.DisplayWeekNumbers = false;
-            this.regionDatePicker.DPHeight = 0;
-            this.regionDatePicker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.regionDatePicker.Enabled = false;
-            this.regionDatePicker.FillDatePicker = false;
-            this.regionDatePicker.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.regionDatePicker.ForeColor = System.Drawing.Color.White;
-            this.regionDatePicker.Icon = ((System.Drawing.Image)(resources.GetObject("regionDatePicker.Icon")));
-            this.regionDatePicker.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
-            this.regionDatePicker.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.regionDatePicker.Location = new System.Drawing.Point(272, 11);
-            this.regionDatePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.regionDatePicker.MaxDate = new System.DateTime(9998, 5, 14, 0, 0, 0, 0);
-            this.regionDatePicker.MinDate = new System.DateTime(2020, 1, 29, 0, 0, 0, 0);
-            this.regionDatePicker.MinimumSize = new System.Drawing.Size(265, 32);
-            this.regionDatePicker.Name = "regionDatePicker";
-            this.regionDatePicker.Size = new System.Drawing.Size(313, 32);
-            this.regionDatePicker.TabIndex = 76;
-            this.bunifuToolTip1.SetToolTip(this.regionDatePicker, "Pick a date for the corresponding data");
-            this.bunifuToolTip1.SetToolTipIcon(this.regionDatePicker, ((System.Drawing.Image)(resources.GetObject("regionDatePicker.ToolTipIcon"))));
-            this.bunifuToolTip1.SetToolTipTitle(this.regionDatePicker, "Date Picker");
-            this.regionDatePicker.Value = new System.DateTime(2020, 5, 12, 0, 0, 0, 0);
-            this.regionDatePicker.ValueChanged += new System.EventHandler(this.regionDatePicker_ValueChanged);
-            // 
             // regionMapView
             // 
             this.regionMapView.animationEnabled = false;
@@ -445,82 +315,6 @@
             this.bunifuToolTip1.SetToolTip(this.panel3, "");
             this.bunifuToolTip1.SetToolTipIcon(this.panel3, null);
             this.bunifuToolTip1.SetToolTipTitle(this.panel3, "");
-            // 
-            // uploadButton
-            // 
-            this.uploadButton.AllowToggling = false;
-            this.uploadButton.AnimationSpeed = 200;
-            this.uploadButton.AutoGenerateColors = false;
-            this.uploadButton.BackColor = System.Drawing.Color.Transparent;
-            this.uploadButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.uploadButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uploadButton.BackgroundImage")));
-            this.uploadButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.uploadButton.ButtonText = "Upload Report";
-            this.uploadButton.ButtonTextMarginLeft = 0;
-            this.uploadButton.ColorContrastOnClick = 45;
-            this.uploadButton.ColorContrastOnHover = 45;
-            this.uploadButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.uploadButton.CustomizableEdges = borderEdges1;
-            this.bunifuTransition2.SetDecoration(this.uploadButton, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.uploadButton, BunifuAnimatorNS.DecorationType.None);
-            this.uploadButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.uploadButton.DisabledBorderColor = System.Drawing.Color.Empty;
-            this.uploadButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.uploadButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.uploadButton.Enabled = false;
-            this.uploadButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.uploadButton.Font = new System.Drawing.Font("Proxima Soft", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uploadButton.ForeColor = System.Drawing.Color.White;
-            this.uploadButton.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.uploadButton.IconMarginLeft = 11;
-            this.uploadButton.IconPadding = 10;
-            this.uploadButton.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.uploadButton.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.uploadButton.IdleBorderRadius = 3;
-            this.uploadButton.IdleBorderThickness = 1;
-            this.uploadButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.uploadButton.IdleIconLeftImage = null;
-            this.uploadButton.IdleIconRightImage = null;
-            this.uploadButton.IndicateFocus = false;
-            this.uploadButton.Location = new System.Drawing.Point(9, 56);
-            this.uploadButton.Name = "uploadButton";
-            this.uploadButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.uploadButton.onHoverState.BorderRadius = 3;
-            this.uploadButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.uploadButton.onHoverState.BorderThickness = 1;
-            this.uploadButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.uploadButton.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.uploadButton.onHoverState.IconLeftImage = null;
-            this.uploadButton.onHoverState.IconRightImage = null;
-            this.uploadButton.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.uploadButton.OnIdleState.BorderRadius = 3;
-            this.uploadButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.uploadButton.OnIdleState.BorderThickness = 1;
-            this.uploadButton.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.uploadButton.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.uploadButton.OnIdleState.IconLeftImage = null;
-            this.uploadButton.OnIdleState.IconRightImage = null;
-            this.uploadButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.uploadButton.OnPressedState.BorderRadius = 3;
-            this.uploadButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.uploadButton.OnPressedState.BorderThickness = 1;
-            this.uploadButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.uploadButton.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.uploadButton.OnPressedState.IconLeftImage = null;
-            this.uploadButton.OnPressedState.IconRightImage = null;
-            this.uploadButton.Size = new System.Drawing.Size(210, 45);
-            this.uploadButton.TabIndex = 75;
-            this.uploadButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uploadButton.TextMarginLeft = 0;
-            this.bunifuToolTip1.SetToolTip(this.uploadButton, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.uploadButton, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.uploadButton, "");
-            this.uploadButton.UseDefaultRadiusAndThickness = true;
-            this.uploadButton.Click += new System.EventHandler(this.uploadButton_Click);
             // 
             // regionLabel
             // 
@@ -641,22 +435,22 @@
             this.caseGridView.AllowUserToDeleteRows = false;
             this.caseGridView.AllowUserToResizeColumns = false;
             this.caseGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.caseGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            this.caseGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.caseGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.caseGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.caseGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.caseGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.caseGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.caseGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.caseGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.caseGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.caseGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Date,
@@ -665,14 +459,14 @@
             this.Recoveries});
             this.bunifuTransition1.SetDecoration(this.caseGridView, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.caseGridView, BunifuAnimatorNS.DecorationType.None);
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(32)))), ((int)(((byte)(44)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.caseGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(32)))), ((int)(((byte)(44)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.caseGridView.DefaultCellStyle = dataGridViewCellStyle6;
             this.caseGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.caseGridView.DoubleBuffered = true;
             this.caseGridView.EnableHeadersVisualStyles = false;
@@ -815,23 +609,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.casesDesc, null);
             this.bunifuToolTip1.SetToolTipTitle(this.casesDesc, "");
             // 
-            // guna2PictureBox2
-            // 
-            this.bunifuTransition1.SetDecoration(this.guna2PictureBox2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.guna2PictureBox2, BunifuAnimatorNS.DecorationType.None);
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.Location = new System.Drawing.Point(-5, 2);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(73, 36);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 69;
-            this.guna2PictureBox2.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.guna2PictureBox2, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.guna2PictureBox2, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.guna2PictureBox2, "");
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
@@ -887,23 +664,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.deathNum, null);
             this.bunifuToolTip1.SetToolTipTitle(this.deathNum, "");
             // 
-            // guna2PictureBox3
-            // 
-            this.bunifuTransition1.SetDecoration(this.guna2PictureBox3, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.guna2PictureBox3, BunifuAnimatorNS.DecorationType.None);
-            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
-            this.guna2PictureBox3.Location = new System.Drawing.Point(-4, 2);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
-            this.guna2PictureBox3.Size = new System.Drawing.Size(73, 36);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 70;
-            this.guna2PictureBox3.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.guna2PictureBox3, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.guna2PictureBox3, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.guna2PictureBox3, "");
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
@@ -957,23 +717,6 @@
             this.bunifuToolTip1.SetToolTip(this.recovDesc, "");
             this.bunifuToolTip1.SetToolTipIcon(this.recovDesc, null);
             this.bunifuToolTip1.SetToolTipTitle(this.recovDesc, "");
-            // 
-            // guna2PictureBox4
-            // 
-            this.bunifuTransition1.SetDecoration(this.guna2PictureBox4, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.guna2PictureBox4, BunifuAnimatorNS.DecorationType.None);
-            this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
-            this.guna2PictureBox4.Location = new System.Drawing.Point(-2, 2);
-            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
-            this.guna2PictureBox4.Size = new System.Drawing.Size(73, 36);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox4.TabIndex = 72;
-            this.guna2PictureBox4.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.guna2PictureBox4, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.guna2PictureBox4, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.guna2PictureBox4, "");
             // 
             // weeklyReportPanel
             // 
@@ -1046,23 +789,6 @@
             this.bunifuToolTip1.SetToolTip(this.newCasesDesc, "");
             this.bunifuToolTip1.SetToolTipIcon(this.newCasesDesc, null);
             this.bunifuToolTip1.SetToolTipTitle(this.newCasesDesc, "");
-            // 
-            // guna2PictureBox1
-            // 
-            this.bunifuTransition1.SetDecoration(this.guna2PictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.guna2PictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 58);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(91, 82);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 59;
-            this.guna2PictureBox1.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.guna2PictureBox1, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.guna2PictureBox1, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.guna2PictureBox1, "");
             // 
             // weeklyReport
             // 
@@ -1237,43 +963,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.chartPanel, null);
             this.bunifuToolTip1.SetToolTipTitle(this.chartPanel, "");
             // 
-            // datePicker
-            // 
-            this.datePicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.datePicker.BorderRadius = 1;
-            this.datePicker.CalendarForeColor = System.Drawing.Color.White;
-            this.datePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
-            this.datePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
-            this.datePicker.Color = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
-            this.datePicker.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.datePicker.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
-            this.datePicker.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.bunifuTransition1.SetDecoration(this.datePicker, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.datePicker, BunifuAnimatorNS.DecorationType.None);
-            this.datePicker.DisabledColor = System.Drawing.Color.Gray;
-            this.datePicker.DisplayWeekNumbers = false;
-            this.datePicker.DPHeight = 0;
-            this.datePicker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.datePicker.FillDatePicker = false;
-            this.datePicker.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datePicker.ForeColor = System.Drawing.Color.White;
-            this.datePicker.Icon = ((System.Drawing.Image)(resources.GetObject("datePicker.Icon")));
-            this.datePicker.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
-            this.datePicker.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.datePicker.Location = new System.Drawing.Point(880, 2);
-            this.datePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datePicker.MaxDate = new System.DateTime(9998, 5, 14, 0, 0, 0, 0);
-            this.datePicker.MinDate = new System.DateTime(2020, 2, 4, 0, 0, 0, 0);
-            this.datePicker.MinimumSize = new System.Drawing.Size(265, 32);
-            this.datePicker.Name = "datePicker";
-            this.datePicker.Size = new System.Drawing.Size(313, 32);
-            this.datePicker.TabIndex = 61;
-            this.bunifuToolTip1.SetToolTip(this.datePicker, "Pick a date for the corresponding data");
-            this.bunifuToolTip1.SetToolTipIcon(this.datePicker, ((System.Drawing.Image)(resources.GetObject("datePicker.ToolTipIcon"))));
-            this.bunifuToolTip1.SetToolTipTitle(this.datePicker, "Date Picker");
-            this.datePicker.Value = new System.DateTime(2020, 5, 12, 0, 0, 0, 0);
-            this.datePicker.ValueChanged += new System.EventHandler(this.DatePicker_ValueChanged);
-            // 
             // generalCaseChart
             // 
             this.generalCaseChart.animationEnabled = false;
@@ -1319,7 +1008,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.153847F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 178F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.153847F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 187F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 194F));
             this.tableLayoutPanel1.Controls.Add(this.deathsColorlabel, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label8, 6, 0);
@@ -1347,7 +1036,7 @@
             this.deathsColorlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109)))));
             this.bunifuTransition1.SetDecoration(this.deathsColorlabel, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.deathsColorlabel, BunifuAnimatorNS.DecorationType.None);
-            this.deathsColorlabel.Location = new System.Drawing.Point(997, 7);
+            this.deathsColorlabel.Location = new System.Drawing.Point(991, 7);
             this.deathsColorlabel.Name = "deathsColorlabel";
             this.deathsColorlabel.Size = new System.Drawing.Size(18, 16);
             this.deathsColorlabel.TabIndex = 75;
@@ -1381,7 +1070,7 @@
             this.label8.Dock = System.Windows.Forms.DockStyle.Left;
             this.label8.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(1021, 0);
+            this.label8.Location = new System.Drawing.Point(1015, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 30);
             this.label8.TabIndex = 0;
@@ -1397,7 +1086,7 @@
             this.casesColorlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
             this.bunifuTransition1.SetDecoration(this.casesColorlabel, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.casesColorlabel, BunifuAnimatorNS.DecorationType.None);
-            this.casesColorlabel.Location = new System.Drawing.Point(587, 7);
+            this.casesColorlabel.Location = new System.Drawing.Point(581, 7);
             this.casesColorlabel.Name = "casesColorlabel";
             this.casesColorlabel.Size = new System.Drawing.Size(18, 16);
             this.casesColorlabel.TabIndex = 73;
@@ -1413,7 +1102,7 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Left;
             this.label6.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(611, 0);
+            this.label6.Location = new System.Drawing.Point(605, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 30);
             this.label6.TabIndex = 0;
@@ -1429,7 +1118,7 @@
             this.recoveriesColorlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
             this.bunifuTransition1.SetDecoration(this.recoveriesColorlabel, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.recoveriesColorlabel, BunifuAnimatorNS.DecorationType.None);
-            this.recoveriesColorlabel.Location = new System.Drawing.Point(792, 7);
+            this.recoveriesColorlabel.Location = new System.Drawing.Point(786, 7);
             this.recoveriesColorlabel.Name = "recoveriesColorlabel";
             this.recoveriesColorlabel.Size = new System.Drawing.Size(18, 16);
             this.recoveriesColorlabel.TabIndex = 74;
@@ -1445,7 +1134,7 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Left;
             this.label7.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(816, 0);
+            this.label7.Location = new System.Drawing.Point(810, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 30);
             this.label7.TabIndex = 0;
@@ -1491,32 +1180,32 @@
             this.DashBoard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DashBoard.Multiline = true;
             this.DashBoard.Name = "DashBoard";
-            this.DashBoard.Page = this.locationRegion;
-            this.DashBoard.PageIndex = 1;
-            this.DashBoard.PageName = "locationRegion";
-            this.DashBoard.PageTitle = "tabPage2";
+            this.DashBoard.Page = this.generalCases;
+            this.DashBoard.PageIndex = 0;
+            this.DashBoard.PageName = "generalCases";
+            this.DashBoard.PageTitle = "tabPage1";
             this.DashBoard.SelectedIndex = 0;
             this.DashBoard.Size = new System.Drawing.Size(1235, 596);
             this.DashBoard.TabIndex = 54;
             this.bunifuToolTip1.SetToolTip(this.DashBoard, "");
             this.bunifuToolTip1.SetToolTipIcon(this.DashBoard, null);
             this.bunifuToolTip1.SetToolTipTitle(this.DashBoard, "");
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 1F;
-            this.DashBoard.Transition = animation3;
+            animation6.AnimateOnlyDifferences = true;
+            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
+            animation6.LeafCoeff = 0F;
+            animation6.MaxTime = 1F;
+            animation6.MinTime = 0F;
+            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
+            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
+            animation6.MosaicSize = 0;
+            animation6.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation6.RotateCoeff = 0F;
+            animation6.RotateLimit = 0F;
+            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
+            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
+            animation6.TimeCoeff = 0F;
+            animation6.TransparencyCoeff = 1F;
+            this.DashBoard.Transition = animation6;
             this.DashBoard.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Transparent;
             // 
             // topPanel
@@ -1556,6 +1245,189 @@
             this.bunifuToolTip1.SetToolTip(this.selectedRegionlabel, "");
             this.bunifuToolTip1.SetToolTipIcon(this.selectedRegionlabel, null);
             this.bunifuToolTip1.SetToolTipTitle(this.selectedRegionlabel, "");
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.label4, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.label4, BunifuAnimatorNS.DecorationType.None);
+            this.label4.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(18, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(188, 32);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "COVIDinfo-PH";
+            this.bunifuToolTip1.SetToolTip(this.label4, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label4, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label4, "");
+            // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTransition2.SetDecoration(this.bunifuSeparator1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.bunifuSeparator1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSeparator1.LineThickness = 2;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(18, 38);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Size = new System.Drawing.Size(301, 34);
+            this.bunifuSeparator1.TabIndex = 55;
+            this.bunifuToolTip1.SetToolTip(this.bunifuSeparator1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuSeparator1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuSeparator1, "");
+            this.bunifuSeparator1.Transparency = 255;
+            this.bunifuSeparator1.Vertical = false;
+            // 
+            // latestData
+            // 
+            this.latestData.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.latestData, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.latestData, BunifuAnimatorNS.DecorationType.None);
+            this.latestData.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.latestData.ForeColor = System.Drawing.Color.White;
+            this.latestData.Location = new System.Drawing.Point(340, 45);
+            this.latestData.Name = "latestData";
+            this.latestData.Size = new System.Drawing.Size(161, 20);
+            this.latestData.TabIndex = 0;
+            this.latestData.Text = "Latest data fetched: ";
+            this.bunifuToolTip1.SetToolTip(this.latestData, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.latestData, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.latestData, "");
+            // 
+            // formElipse
+            // 
+            this.formElipse.ElipseRadius = 50;
+            this.formElipse.TargetControl = this;
+            // 
+            // bunifuTransition1
+            // 
+            this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
+            this.bunifuTransition1.Cursor = null;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 1F;
+            this.bunifuTransition1.DefaultAnimation = animation4;
+            this.bunifuTransition1.Interval = 1;
+            this.bunifuTransition1.TimeStep = 0.01F;
+            // 
+            // bunifuCasesElipse
+            // 
+            this.bunifuCasesElipse.ElipseRadius = 50;
+            this.bunifuCasesElipse.TargetControl = this.casesColorlabel;
+            // 
+            // bunifuDeathsElipse
+            // 
+            this.bunifuDeathsElipse.ElipseRadius = 50;
+            this.bunifuDeathsElipse.TargetControl = this.recoveriesColorlabel;
+            // 
+            // bunifuRecoveriesElipse
+            // 
+            this.bunifuRecoveriesElipse.ElipseRadius = 50;
+            this.bunifuRecoveriesElipse.TargetControl = this.deathsColorlabel;
+            // 
+            // menuBarElipse
+            // 
+            this.menuBarElipse.ElipseRadius = 50;
+            this.menuBarElipse.TargetControl = this.menuBarPanel;
+            // 
+            // topDragControl
+            // 
+            this.topDragControl.DragStartTransparencyValue = 0.8D;
+            this.topDragControl.TargetControl = this.topPanel;
+            this.topDragControl.UseTransparentDrag = true;
+            // 
+            // bunifuFormFadeTransition1
+            // 
+            this.bunifuFormFadeTransition1.Delay = 1;
+            // 
+            // generalCaseElipse
+            // 
+            this.generalCaseElipse.ElipseRadius = 30;
+            this.generalCaseElipse.TargetControl = this.generalCaseChart;
+            // 
+            // caseGridViewElipse
+            // 
+            this.caseGridViewElipse.ElipseRadius = 30;
+            this.caseGridViewElipse.TargetControl = this.caseGridView;
+            // 
+            // bunifuPanelElipse1
+            // 
+            this.bunifuPanelElipse1.ElipseRadius = 30;
+            this.bunifuPanelElipse1.TargetControl = this.panel7;
+            // 
+            // bunifuPanelElipse2
+            // 
+            this.bunifuPanelElipse2.ElipseRadius = 30;
+            this.bunifuPanelElipse2.TargetControl = this.panel8;
+            // 
+            // bunifuPanelElipse4
+            // 
+            this.bunifuPanelElipse4.ElipseRadius = 30;
+            this.bunifuPanelElipse4.TargetControl = this.panel5;
+            // 
+            // bunifuPanelElipse5
+            // 
+            this.bunifuPanelElipse5.ElipseRadius = 30;
+            this.bunifuPanelElipse5.TargetControl = this.panel6;
+            // 
+            // bunifuPanelElipse3
+            // 
+            this.bunifuPanelElipse3.ElipseRadius = 30;
+            this.bunifuPanelElipse3.TargetControl = this.panel4;
+            // 
+            // bunifuToolTip1
+            // 
+            this.bunifuToolTip1.Active = true;
+            this.bunifuToolTip1.AlignTextWithTitle = false;
+            this.bunifuToolTip1.AllowAutoClose = false;
+            this.bunifuToolTip1.AllowFading = true;
+            this.bunifuToolTip1.AutoCloseDuration = 5000;
+            this.bunifuToolTip1.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuToolTip1.BorderColor = System.Drawing.Color.Gainsboro;
+            this.bunifuToolTip1.ClickToShowDisplayControl = false;
+            this.bunifuToolTip1.ConvertNewlinesToBreakTags = true;
+            this.bunifuToolTip1.DisplayControl = null;
+            this.bunifuToolTip1.EntryAnimationSpeed = 350;
+            this.bunifuToolTip1.ExitAnimationSpeed = 200;
+            this.bunifuToolTip1.GenerateAutoCloseDuration = false;
+            this.bunifuToolTip1.IconMargin = 6;
+            this.bunifuToolTip1.InitialDelay = 0;
+            this.bunifuToolTip1.Name = "bunifuToolTip1";
+            this.bunifuToolTip1.Opacity = 1D;
+            this.bunifuToolTip1.OverrideToolTipTitles = false;
+            this.bunifuToolTip1.Padding = new System.Windows.Forms.Padding(10);
+            this.bunifuToolTip1.ReshowDelay = 100;
+            this.bunifuToolTip1.ShowAlways = true;
+            this.bunifuToolTip1.ShowBorders = false;
+            this.bunifuToolTip1.ShowIcons = true;
+            this.bunifuToolTip1.ShowShadows = true;
+            this.bunifuToolTip1.Tag = null;
+            this.bunifuToolTip1.TextFont = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuToolTip1.TextForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuToolTip1.TextMargin = 2;
+            this.bunifuToolTip1.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.bunifuToolTip1.TitleForeColor = System.Drawing.Color.Black;
+            this.bunifuToolTip1.ToolTipPosition = new System.Drawing.Point(0, 0);
+            this.bunifuToolTip1.ToolTipTitle = null;
+            // 
+            // buttonElipse
+            // 
+            this.buttonElipse.ElipseRadius = 20;
+            this.buttonElipse.TargetControl = this.uploadButton;
             // 
             // searchRegionButton
             // 
@@ -1666,188 +1538,356 @@
             this.closeButton.ZoomSpeed = 10;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
-            // label4
+            // guna2CirclePictureBox1
             // 
-            this.label4.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.label4, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.label4, BunifuAnimatorNS.DecorationType.None);
-            this.label4.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(18, 14);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(188, 32);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "COVIDinfo-PH";
-            this.bunifuToolTip1.SetToolTip(this.label4, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.label4, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.label4, "");
+            this.bunifuTransition1.SetDecoration(this.guna2CirclePictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.guna2CirclePictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(7, 7);
+            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(60, 60);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 1;
+            this.guna2CirclePictureBox1.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.guna2CirclePictureBox1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.guna2CirclePictureBox1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.guna2CirclePictureBox1, "");
             // 
-            // bunifuSeparator1
+            // bunifuImageButton3
             // 
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTransition2.SetDecoration(this.bunifuSeparator1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.bunifuSeparator1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.bunifuSeparator1.LineThickness = 2;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(18, 38);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(301, 34);
-            this.bunifuSeparator1.TabIndex = 55;
-            this.bunifuToolTip1.SetToolTip(this.bunifuSeparator1, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.bunifuSeparator1, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.bunifuSeparator1, "");
-            this.bunifuSeparator1.Transparency = 255;
-            this.bunifuSeparator1.Vertical = false;
+            this.bunifuImageButton3.ActiveImage = null;
+            this.bunifuImageButton3.AllowAnimations = true;
+            this.bunifuImageButton3.AllowBuffering = false;
+            this.bunifuImageButton3.AllowZooming = true;
+            this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTransition1.SetDecoration(this.bunifuImageButton3, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.bunifuImageButton3, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuImageButton3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.ErrorImage")));
+            this.bunifuImageButton3.FadeWhenInactive = true;
+            this.bunifuImageButton3.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.bunifuImageButton3.Image = global::CovidInfoPH.Properties.Resources.info_208px;
+            this.bunifuImageButton3.ImageActive = null;
+            this.bunifuImageButton3.ImageLocation = null;
+            this.bunifuImageButton3.ImageMargin = 35;
+            this.bunifuImageButton3.ImageSize = new System.Drawing.Size(36, 29);
+            this.bunifuImageButton3.ImageZoomSize = new System.Drawing.Size(71, 64);
+            this.bunifuImageButton3.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.InitialImage")));
+            this.bunifuImageButton3.Location = new System.Drawing.Point(0, 578);
+            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuImageButton3.Name = "bunifuImageButton3";
+            this.bunifuImageButton3.Rotation = 0;
+            this.bunifuImageButton3.ShowActiveImage = true;
+            this.bunifuImageButton3.ShowCursorChanges = true;
+            this.bunifuImageButton3.ShowImageBorders = true;
+            this.bunifuImageButton3.ShowSizeMarkers = false;
+            this.bunifuImageButton3.Size = new System.Drawing.Size(71, 64);
+            this.bunifuImageButton3.TabIndex = 0;
+            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton3, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuImageButton3, null);
+            this.bunifuImageButton3.ToolTipText = "\r\n";
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton3, "");
+            this.bunifuImageButton3.WaitOnLoad = false;
+            this.bunifuImageButton3.Zoom = 35;
+            this.bunifuImageButton3.ZoomSpeed = 10;
+            this.bunifuImageButton3.Click += new System.EventHandler(this.bunifuImageButton3_Click);
             // 
-            // latestData
+            // bunifuImageButton2
             // 
-            this.latestData.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.latestData, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.latestData, BunifuAnimatorNS.DecorationType.None);
-            this.latestData.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.latestData.ForeColor = System.Drawing.Color.White;
-            this.latestData.Location = new System.Drawing.Point(340, 45);
-            this.latestData.Name = "latestData";
-            this.latestData.Size = new System.Drawing.Size(161, 20);
-            this.latestData.TabIndex = 0;
-            this.latestData.Text = "Latest data fetched: ";
-            this.bunifuToolTip1.SetToolTip(this.latestData, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.latestData, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.latestData, "");
+            this.bunifuImageButton2.ActiveImage = null;
+            this.bunifuImageButton2.AllowAnimations = true;
+            this.bunifuImageButton2.AllowBuffering = false;
+            this.bunifuImageButton2.AllowZooming = true;
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTransition1.SetDecoration(this.bunifuImageButton2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.bunifuImageButton2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuImageButton2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.ErrorImage")));
+            this.bunifuImageButton2.FadeWhenInactive = true;
+            this.bunifuImageButton2.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.ImageLocation = null;
+            this.bunifuImageButton2.ImageMargin = 35;
+            this.bunifuImageButton2.ImageSize = new System.Drawing.Size(36, 29);
+            this.bunifuImageButton2.ImageZoomSize = new System.Drawing.Size(71, 64);
+            this.bunifuImageButton2.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.InitialImage")));
+            this.bunifuImageButton2.Location = new System.Drawing.Point(0, 354);
+            this.bunifuImageButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Rotation = 0;
+            this.bunifuImageButton2.ShowActiveImage = true;
+            this.bunifuImageButton2.ShowCursorChanges = true;
+            this.bunifuImageButton2.ShowImageBorders = true;
+            this.bunifuImageButton2.ShowSizeMarkers = false;
+            this.bunifuImageButton2.Size = new System.Drawing.Size(71, 64);
+            this.bunifuImageButton2.TabIndex = 0;
+            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuImageButton2, ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.ToolTipIcon"))));
+            this.bunifuImageButton2.ToolTipText = "\r\n";
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton2, "View by Region");
+            this.bunifuImageButton2.WaitOnLoad = false;
+            this.bunifuImageButton2.Zoom = 35;
+            this.bunifuImageButton2.ZoomSpeed = 10;
+            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
             // 
-            // formElipse
+            // bunifuImageButton1
             // 
-            this.formElipse.ElipseRadius = 50;
-            this.formElipse.TargetControl = this;
+            this.bunifuImageButton1.ActiveImage = null;
+            this.bunifuImageButton1.AllowAnimations = true;
+            this.bunifuImageButton1.AllowBuffering = false;
+            this.bunifuImageButton1.AllowZooming = true;
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTransition1.SetDecoration(this.bunifuImageButton1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.bunifuImageButton1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuImageButton1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.ErrorImage")));
+            this.bunifuImageButton1.FadeWhenInactive = false;
+            this.bunifuImageButton1.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.ImageLocation = null;
+            this.bunifuImageButton1.ImageMargin = 35;
+            this.bunifuImageButton1.ImageSize = new System.Drawing.Size(36, 29);
+            this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(71, 64);
+            this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
+            this.bunifuImageButton1.Location = new System.Drawing.Point(2, 181);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Rotation = 0;
+            this.bunifuImageButton1.ShowActiveImage = true;
+            this.bunifuImageButton1.ShowCursorChanges = true;
+            this.bunifuImageButton1.ShowImageBorders = true;
+            this.bunifuImageButton1.ShowSizeMarkers = false;
+            this.bunifuImageButton1.Size = new System.Drawing.Size(71, 64);
+            this.bunifuImageButton1.TabIndex = 0;
+            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuImageButton1, ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.ToolTipIcon"))));
+            this.bunifuImageButton1.ToolTipText = "\r\n";
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton1, "Dashboard");
+            this.bunifuImageButton1.WaitOnLoad = false;
+            this.bunifuImageButton1.Zoom = 35;
+            this.bunifuImageButton1.ZoomSpeed = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
-            // bunifuTransition1
+            // guna2PictureBox2
             // 
-            this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
-            this.bunifuTransition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 1F;
-            this.bunifuTransition1.DefaultAnimation = animation1;
-            this.bunifuTransition1.Interval = 1;
-            this.bunifuTransition1.TimeStep = 0.01F;
+            this.bunifuTransition1.SetDecoration(this.guna2PictureBox2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.guna2PictureBox2, BunifuAnimatorNS.DecorationType.None);
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.Location = new System.Drawing.Point(-5, 2);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(73, 36);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 69;
+            this.guna2PictureBox2.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.guna2PictureBox2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.guna2PictureBox2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.guna2PictureBox2, "");
             // 
-            // bunifuCasesElipse
+            // guna2PictureBox3
             // 
-            this.bunifuCasesElipse.ElipseRadius = 50;
-            this.bunifuCasesElipse.TargetControl = this.casesColorlabel;
+            this.bunifuTransition1.SetDecoration(this.guna2PictureBox3, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.guna2PictureBox3, BunifuAnimatorNS.DecorationType.None);
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.Location = new System.Drawing.Point(-4, 2);
+            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
+            this.guna2PictureBox3.Size = new System.Drawing.Size(73, 36);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 70;
+            this.guna2PictureBox3.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.guna2PictureBox3, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.guna2PictureBox3, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.guna2PictureBox3, "");
             // 
-            // bunifuDeathsElipse
+            // guna2PictureBox4
             // 
-            this.bunifuDeathsElipse.ElipseRadius = 50;
-            this.bunifuDeathsElipse.TargetControl = this.recoveriesColorlabel;
+            this.bunifuTransition1.SetDecoration(this.guna2PictureBox4, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.guna2PictureBox4, BunifuAnimatorNS.DecorationType.None);
+            this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
+            this.guna2PictureBox4.Location = new System.Drawing.Point(-2, 2);
+            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
+            this.guna2PictureBox4.Size = new System.Drawing.Size(73, 36);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox4.TabIndex = 72;
+            this.guna2PictureBox4.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.guna2PictureBox4, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.guna2PictureBox4, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.guna2PictureBox4, "");
             // 
-            // bunifuRecoveriesElipse
+            // guna2PictureBox1
             // 
-            this.bunifuRecoveriesElipse.ElipseRadius = 50;
-            this.bunifuRecoveriesElipse.TargetControl = this.deathsColorlabel;
+            this.bunifuTransition1.SetDecoration(this.guna2PictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.guna2PictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 58);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(91, 82);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 59;
+            this.guna2PictureBox1.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.guna2PictureBox1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.guna2PictureBox1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.guna2PictureBox1, "");
             // 
-            // menuBarElipse
+            // datePicker
             // 
-            this.menuBarElipse.ElipseRadius = 50;
-            this.menuBarElipse.TargetControl = this.menuBarPanel;
+            this.datePicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            this.datePicker.BorderRadius = 1;
+            this.datePicker.CalendarForeColor = System.Drawing.Color.White;
+            this.datePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
+            this.datePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
+            this.datePicker.Color = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
+            this.datePicker.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.datePicker.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
+            this.datePicker.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.bunifuTransition1.SetDecoration(this.datePicker, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.datePicker, BunifuAnimatorNS.DecorationType.None);
+            this.datePicker.DisabledColor = System.Drawing.Color.Gray;
+            this.datePicker.DisplayWeekNumbers = false;
+            this.datePicker.DPHeight = 0;
+            this.datePicker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.datePicker.FillDatePicker = false;
+            this.datePicker.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datePicker.ForeColor = System.Drawing.Color.White;
+            this.datePicker.Icon = ((System.Drawing.Image)(resources.GetObject("datePicker.Icon")));
+            this.datePicker.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
+            this.datePicker.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.datePicker.Location = new System.Drawing.Point(880, 2);
+            this.datePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datePicker.MaxDate = new System.DateTime(9998, 5, 14, 0, 0, 0, 0);
+            this.datePicker.MinDate = new System.DateTime(2020, 2, 4, 0, 0, 0, 0);
+            this.datePicker.MinimumSize = new System.Drawing.Size(265, 32);
+            this.datePicker.Name = "datePicker";
+            this.datePicker.Size = new System.Drawing.Size(313, 32);
+            this.datePicker.TabIndex = 61;
+            this.bunifuToolTip1.SetToolTip(this.datePicker, "Pick a date for the corresponding data");
+            this.bunifuToolTip1.SetToolTipIcon(this.datePicker, ((System.Drawing.Image)(resources.GetObject("datePicker.ToolTipIcon"))));
+            this.bunifuToolTip1.SetToolTipTitle(this.datePicker, "Date Picker");
+            this.datePicker.Value = new System.DateTime(2020, 5, 12, 0, 0, 0, 0);
+            this.datePicker.ValueChanged += new System.EventHandler(this.DatePicker_ValueChanged);
             // 
-            // topDragControl
+            // regionDatePicker
             // 
-            this.topDragControl.DragStartTransparencyValue = 0.8D;
-            this.topDragControl.TargetControl = this.topPanel;
-            this.topDragControl.UseTransparentDrag = true;
+            this.regionDatePicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            this.regionDatePicker.BorderRadius = 1;
+            this.regionDatePicker.CalendarForeColor = System.Drawing.Color.White;
+            this.regionDatePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
+            this.regionDatePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
+            this.regionDatePicker.Color = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
+            this.regionDatePicker.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.regionDatePicker.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
+            this.regionDatePicker.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.bunifuTransition1.SetDecoration(this.regionDatePicker, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.regionDatePicker, BunifuAnimatorNS.DecorationType.None);
+            this.regionDatePicker.DisabledColor = System.Drawing.Color.Gray;
+            this.regionDatePicker.DisplayWeekNumbers = false;
+            this.regionDatePicker.DPHeight = 0;
+            this.regionDatePicker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.regionDatePicker.Enabled = false;
+            this.regionDatePicker.FillDatePicker = false;
+            this.regionDatePicker.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regionDatePicker.ForeColor = System.Drawing.Color.White;
+            this.regionDatePicker.Icon = ((System.Drawing.Image)(resources.GetObject("regionDatePicker.Icon")));
+            this.regionDatePicker.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
+            this.regionDatePicker.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.regionDatePicker.Location = new System.Drawing.Point(272, 11);
+            this.regionDatePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.regionDatePicker.MaxDate = new System.DateTime(9998, 5, 14, 0, 0, 0, 0);
+            this.regionDatePicker.MinDate = new System.DateTime(2020, 1, 29, 0, 0, 0, 0);
+            this.regionDatePicker.MinimumSize = new System.Drawing.Size(265, 32);
+            this.regionDatePicker.Name = "regionDatePicker";
+            this.regionDatePicker.Size = new System.Drawing.Size(313, 32);
+            this.regionDatePicker.TabIndex = 76;
+            this.bunifuToolTip1.SetToolTip(this.regionDatePicker, "Pick a date for the corresponding data");
+            this.bunifuToolTip1.SetToolTipIcon(this.regionDatePicker, ((System.Drawing.Image)(resources.GetObject("regionDatePicker.ToolTipIcon"))));
+            this.bunifuToolTip1.SetToolTipTitle(this.regionDatePicker, "Date Picker");
+            this.regionDatePicker.Value = new System.DateTime(2020, 5, 12, 0, 0, 0, 0);
+            this.regionDatePicker.ValueChanged += new System.EventHandler(this.regionDatePicker_ValueChanged);
             // 
-            // bunifuFormFadeTransition1
+            // uploadButton
             // 
-            this.bunifuFormFadeTransition1.Delay = 1;
-            // 
-            // generalCaseElipse
-            // 
-            this.generalCaseElipse.ElipseRadius = 30;
-            this.generalCaseElipse.TargetControl = this.generalCaseChart;
-            // 
-            // caseGridViewElipse
-            // 
-            this.caseGridViewElipse.ElipseRadius = 30;
-            this.caseGridViewElipse.TargetControl = this.caseGridView;
-            // 
-            // bunifuPanelElipse1
-            // 
-            this.bunifuPanelElipse1.ElipseRadius = 30;
-            this.bunifuPanelElipse1.TargetControl = this.panel7;
-            // 
-            // bunifuPanelElipse2
-            // 
-            this.bunifuPanelElipse2.ElipseRadius = 30;
-            this.bunifuPanelElipse2.TargetControl = this.panel8;
-            // 
-            // bunifuPanelElipse4
-            // 
-            this.bunifuPanelElipse4.ElipseRadius = 30;
-            this.bunifuPanelElipse4.TargetControl = this.panel5;
-            // 
-            // bunifuPanelElipse5
-            // 
-            this.bunifuPanelElipse5.ElipseRadius = 30;
-            this.bunifuPanelElipse5.TargetControl = this.panel6;
-            // 
-            // bunifuPanelElipse3
-            // 
-            this.bunifuPanelElipse3.ElipseRadius = 30;
-            this.bunifuPanelElipse3.TargetControl = this.panel4;
-            // 
-            // bunifuToolTip1
-            // 
-            this.bunifuToolTip1.Active = true;
-            this.bunifuToolTip1.AlignTextWithTitle = false;
-            this.bunifuToolTip1.AllowAutoClose = false;
-            this.bunifuToolTip1.AllowFading = true;
-            this.bunifuToolTip1.AutoCloseDuration = 5000;
-            this.bunifuToolTip1.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuToolTip1.BorderColor = System.Drawing.Color.Gainsboro;
-            this.bunifuToolTip1.ClickToShowDisplayControl = false;
-            this.bunifuToolTip1.ConvertNewlinesToBreakTags = true;
-            this.bunifuToolTip1.DisplayControl = null;
-            this.bunifuToolTip1.EntryAnimationSpeed = 350;
-            this.bunifuToolTip1.ExitAnimationSpeed = 200;
-            this.bunifuToolTip1.GenerateAutoCloseDuration = false;
-            this.bunifuToolTip1.IconMargin = 6;
-            this.bunifuToolTip1.InitialDelay = 0;
-            this.bunifuToolTip1.Name = "bunifuToolTip1";
-            this.bunifuToolTip1.Opacity = 1D;
-            this.bunifuToolTip1.OverrideToolTipTitles = false;
-            this.bunifuToolTip1.Padding = new System.Windows.Forms.Padding(10);
-            this.bunifuToolTip1.ReshowDelay = 100;
-            this.bunifuToolTip1.ShowAlways = true;
-            this.bunifuToolTip1.ShowBorders = false;
-            this.bunifuToolTip1.ShowIcons = true;
-            this.bunifuToolTip1.ShowShadows = true;
-            this.bunifuToolTip1.Tag = null;
-            this.bunifuToolTip1.TextFont = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuToolTip1.TextForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuToolTip1.TextMargin = 2;
-            this.bunifuToolTip1.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.bunifuToolTip1.TitleForeColor = System.Drawing.Color.Black;
-            this.bunifuToolTip1.ToolTipPosition = new System.Drawing.Point(0, 0);
-            this.bunifuToolTip1.ToolTipTitle = null;
-            // 
-            // buttonElipse
-            // 
-            this.buttonElipse.ElipseRadius = 20;
-            this.buttonElipse.TargetControl = this.uploadButton;
+            this.uploadButton.AllowToggling = false;
+            this.uploadButton.AnimationSpeed = 200;
+            this.uploadButton.AutoGenerateColors = false;
+            this.uploadButton.BackColor = System.Drawing.Color.Transparent;
+            this.uploadButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
+            this.uploadButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uploadButton.BackgroundImage")));
+            this.uploadButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.uploadButton.ButtonText = "Upload Report";
+            this.uploadButton.ButtonTextMarginLeft = 0;
+            this.uploadButton.ColorContrastOnClick = 45;
+            this.uploadButton.ColorContrastOnHover = 45;
+            this.uploadButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.uploadButton.CustomizableEdges = borderEdges2;
+            this.bunifuTransition2.SetDecoration(this.uploadButton, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.uploadButton, BunifuAnimatorNS.DecorationType.None);
+            this.uploadButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.uploadButton.DisabledBorderColor = System.Drawing.Color.Empty;
+            this.uploadButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.uploadButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.uploadButton.Enabled = false;
+            this.uploadButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.uploadButton.Font = new System.Drawing.Font("Proxima Soft", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uploadButton.ForeColor = System.Drawing.Color.White;
+            this.uploadButton.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.uploadButton.IconMarginLeft = 11;
+            this.uploadButton.IconPadding = 10;
+            this.uploadButton.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.uploadButton.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
+            this.uploadButton.IdleBorderRadius = 3;
+            this.uploadButton.IdleBorderThickness = 1;
+            this.uploadButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
+            this.uploadButton.IdleIconLeftImage = null;
+            this.uploadButton.IdleIconRightImage = null;
+            this.uploadButton.IndicateFocus = false;
+            this.uploadButton.Location = new System.Drawing.Point(9, 56);
+            this.uploadButton.Name = "uploadButton";
+            this.uploadButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.uploadButton.onHoverState.BorderRadius = 3;
+            this.uploadButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.uploadButton.onHoverState.BorderThickness = 1;
+            this.uploadButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.uploadButton.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.uploadButton.onHoverState.IconLeftImage = null;
+            this.uploadButton.onHoverState.IconRightImage = null;
+            this.uploadButton.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
+            this.uploadButton.OnIdleState.BorderRadius = 3;
+            this.uploadButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.uploadButton.OnIdleState.BorderThickness = 1;
+            this.uploadButton.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
+            this.uploadButton.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.uploadButton.OnIdleState.IconLeftImage = null;
+            this.uploadButton.OnIdleState.IconRightImage = null;
+            this.uploadButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.uploadButton.OnPressedState.BorderRadius = 3;
+            this.uploadButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.uploadButton.OnPressedState.BorderThickness = 1;
+            this.uploadButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.uploadButton.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.uploadButton.OnPressedState.IconLeftImage = null;
+            this.uploadButton.OnPressedState.IconRightImage = null;
+            this.uploadButton.Size = new System.Drawing.Size(210, 45);
+            this.uploadButton.TabIndex = 75;
+            this.uploadButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uploadButton.TextMarginLeft = 0;
+            this.bunifuToolTip1.SetToolTip(this.uploadButton, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.uploadButton, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.uploadButton, "");
+            this.uploadButton.UseDefaultRadiusAndThickness = true;
+            this.uploadButton.Click += new System.EventHandler(this.uploadButton_Click);
             // 
             // MainForm
             // 
@@ -1867,7 +1907,6 @@
             this.ShowInTaskbar = false;
             this.Text = "MainForm";
             this.menuBarPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.locationRegion.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.RegionDataTable.ResumeLayout(false);
@@ -1884,17 +1923,13 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             this.weeklyReportPanel.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.chartPanel.ResumeLayout(false);
@@ -1903,6 +1938,11 @@
             this.DashBoard.ResumeLayout(false);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1997,6 +2037,7 @@
         private System.Windows.Forms.Panel panel3;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton uploadButton;
         private Bunifu.Framework.UI.BunifuElipse buttonElipse;
+        private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton3;
     }
 }
 
