@@ -15,7 +15,7 @@ namespace CovidInfoPH
     {
         internal static List<Patient> Patients;
         internal static Dictionary<DateTime, HistoricalInfo> Historical;
-        internal static Dictionary<string, Models.RegionInfo> Regions = new Dictionary<string, Models.RegionInfo>();
+        internal static Dictionary<string, Dictionary<DateTime, Models.RegionDateInfo>> Regions;
 
         public MainForm()
         {
@@ -191,14 +191,14 @@ namespace CovidInfoPH
             //Adding transitions makes it laggy ://
             foreach (PhRegion region in e.Data)
             {
-                double deaths = Convert.ToDouble(Regions[region.Region].Deaths);
-                double cases = Convert.ToDouble(Regions[region.Region].Cases);
+                double deaths = Convert.ToDouble(Regions[region.Region].Values.Sum(c => c.Deaths));
+                double cases = Convert.ToDouble(Regions[region.Region].Values.Sum(c => c.Cases));
                 regionLabel.Text = region.Region;
-                regionCases.Text = Regions[region.Region].Cases.ToString();
-                regionDeaths.Text = Regions[region.Region].Deaths.ToString();
-                regionRecoveries.Text = Regions[region.Region].Recoveries.ToString();
-                regionCases2.Text = Regions[region.Region].Cases.ToString();
-                regionDeaths2.Text = Regions[region.Region].Deaths.ToString();
+                regionCases.Text = Regions[region.Region].Values.Sum(c => c.Cases).ToString();
+                regionDeaths.Text = Regions[region.Region].Values.Sum(c => c.Deaths).ToString();
+                regionRecoveries.Text = Regions[region.Region].Values.Sum(c => c.Recoveries).ToString();
+                regionCases2.Text = Regions[region.Region].Values.Sum(c => c.Cases).ToString();
+                regionDeaths2.Text = Regions[region.Region].Values.Sum(c => c.Deaths).ToString();
                 regionCircleProgress.Value = Convert.ToInt32(deaths / cases * 100);
             }
 
@@ -215,6 +215,10 @@ namespace CovidInfoPH
             };
             searchBar.guna2AnimateWindow1.SetAnimateWindow(searchBar);
             searchBar.ShowDialog();
+            if (!string.IsNullOrEmpty(RegionSearchForm.SearchResult) && RegionSearchForm.SearchResult != "All")
+            {
+
+            }
         }
 
         #endregion

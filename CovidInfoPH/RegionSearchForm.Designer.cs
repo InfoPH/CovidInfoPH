@@ -91,7 +91,7 @@
             this.searchBarTextBox.AcceptsTab = false;
             this.searchBarTextBox.AnimationSpeed = 200;
             this.searchBarTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.searchBarTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.searchBarTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.searchBarTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
             this.searchBarTextBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchBarTextBox.BackgroundImage")));
             this.searchBarTextBox.BorderColorActive = System.Drawing.Color.Silver;
@@ -111,7 +111,7 @@
             this.searchBarTextBox.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
             this.searchBarTextBox.IconPadding = 10;
             this.searchBarTextBox.IconRight = global::CovidInfoPH.Properties.Resources.icons8_search_208px_1;
-            this.searchBarTextBox.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.searchBarTextBox.IconRightCursor = System.Windows.Forms.Cursors.Arrow;
             this.searchBarTextBox.Lines = new string[0];
             this.searchBarTextBox.Location = new System.Drawing.Point(12, 12);
             this.searchBarTextBox.MaxLength = 32767;
@@ -159,6 +159,7 @@
             this.searchBarTextBox.UseSystemPasswordChar = false;
             this.searchBarTextBox.WordWrap = true;
             this.searchBarTextBox.TextChange += new System.EventHandler(this.searchBarTextBox_TextChange);
+            this.searchBarTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchBarTextBox_KeyDown);
             // 
             // bunifuDataGridView1
             // 

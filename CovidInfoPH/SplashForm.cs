@@ -66,24 +66,33 @@ namespace CovidInfoPH
                 .Select(o => DateTime.Parse((string)o.Cells[0].Value)).ToList();
             MainForm.Historical = Enumerable.Range(0, historicalDates.Count)
                 .ToDictionary(i => historicalDates[i], i => historicalInfos[i]);
-            
+
         }
 
         private void InitializeRegions()
         {
             List<string> regions = MainForm.Patients.Select(p => p.Region).Where(p => !string.IsNullOrEmpty(p)).Distinct()
                 .ToList();
-
+            List<DateTime> dates = MainForm.Patients.Select(p => p.DateConfirmed).Distinct().ToList();
+            dates.Sort();
+            
             foreach (string region in regions)
             {
-                RegionInfo regionInfo = new RegionInfo();
                 List<Patient> localPatients = MainForm.Patients.Where(p => p.Region == region).ToList();
+                Dictionary<DateTime, RegionDateInfo> regionHistorical = new Dictionary<DateTime, RegionDateInfo>();
 
-                regionInfo.Cases = localPatients.Count;
-                regionInfo.Deaths = localPatients.Count(p => p.DateDied != null);
-                regionInfo.Recoveries = localPatients.Count(p => p.DateRecovered != null);
+                foreach (DateTime date in dates)
+                {
+                    RegionDateInfo regionDateInfo = new RegionDateInfo
+                    {
+                        Cases = localPatients.Count(p => p.DateConfirmed == date),
+                        Deaths = localPatients.Count(p => p.DateDied != null && p.DateDied == date),
+                        Recoveries = localPatients.Count(p => p.DateRecovered != null && p.DateRecovered == date)
+                    };
+                    regionHistorical.Add(date, regionDateInfo);
+                }
 
-                MainForm.Regions.Add(region, regionInfo);
+                MainForm.Regions.Add(region, regionHistorical);
             }
         }
 
