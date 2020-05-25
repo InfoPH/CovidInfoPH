@@ -66,6 +66,18 @@ namespace CovidInfoPH
                 Historical[datePicker.Value.AddDays(i)].Deaths, Historical[datePicker.Value.AddDays(i)].Recoveries);
             }
         }
+
+        private void DisplayDataGrid(string region)
+        {
+            caseGridView.Rows.Clear();
+            for (int i = -6; i < 1; i++)
+            {
+                caseGridView.Rows.Add($"{datePicker.Value.AddDays(i): MM-dd-yyyy}",
+                    Regions[region][datePicker.Value.AddDays(i)].Cases,
+                    Regions[region][datePicker.Value.AddDays(i)].Deaths, Regions[region][datePicker.Value.AddDays(i)].Recoveries);
+            }
+        }
+
         private void DisplayGraph()
         {
             Canvas canvas = new Canvas();
@@ -78,6 +90,30 @@ namespace CovidInfoPH
                 cases.addLabely(datePicker.Value.AddDays(i).DayOfWeek.ToString(), Historical[datePicker.Value.AddDays(i)].Cases);
                 deaths.addLabely(datePicker.Value.AddDays(i).DayOfWeek.ToString(), Historical[datePicker.Value.AddDays(i)].Deaths);
                 recoveries.addLabely(datePicker.Value.AddDays(i).DayOfWeek.ToString(), Historical[datePicker.Value.AddDays(i)].Recoveries);
+            }
+
+            canvas.addData(cases);
+            canvas.addData(recoveries);
+            canvas.addData(deaths);
+            generalCaseChart.Render(canvas);
+        }
+
+        private void DisplayGraph(string region)
+        {
+            Canvas canvas = new Canvas();
+            DataPoint cases = new DataPoint(BunifuDataViz._type.Bunifu_column);
+            DataPoint deaths = new DataPoint(BunifuDataViz._type.Bunifu_column);
+            DataPoint recoveries = new DataPoint(BunifuDataViz._type.Bunifu_column);
+
+            for (int i = -6; i < 1; i++)
+            {
+                //datePicker.Value.AddDays(i) - Time of day
+                cases.addLabely(datePicker.Value.AddDays(i).DayOfWeek.ToString(),
+                    Regions[region][datePicker.Value.AddDays(i)].Cases);
+                deaths.addLabely(datePicker.Value.AddDays(i).DayOfWeek.ToString(),
+                    Regions[region][datePicker.Value.AddDays(i)].Deaths);
+                recoveries.addLabely(datePicker.Value.AddDays(i).DayOfWeek.ToString(),
+                    Regions[region][datePicker.Value.AddDays(i)].Recoveries);
             }
 
             canvas.addData(cases);
@@ -159,6 +195,122 @@ namespace CovidInfoPH
             bunifuTransition1.ShowSync(caseGridView);
             bunifuTransition2.ShowSync(generalCaseChart);
 
+        }
+        #endregion
+
+        #region Create Report
+        private void SetStyles(ref PdfCellStyle altStyle, ref PdfCellStyle defStyle, ref PdfCellStyle headerStyle)
+        {
+            PdfFont font = new PdfTrueTypeFont(new Font("Century Gothic", 12f), false);
+            PdfFont boldFont = new PdfTrueTypeFont(new Font("Century Gothic", 22f, FontStyle.Bold), false);
+            PdfPen borderPen = new PdfPen(PdfBrushes.Black) { Width = 0 };
+
+            //AltStyle
+            altStyle = new PdfCellStyle
+            {
+                Font = font, BackgroundBrush = new PdfSolidBrush(new PdfColor(192, 201, 219)), BorderPen = borderPen
+            };
+
+            //DefStyle
+            defStyle = new PdfCellStyle
+            {
+                Font = font,
+                BackgroundBrush = PdfBrushes.White,
+                BorderPen = borderPen,
+                StringFormat = new PdfStringFormat(PdfTextAlignment.Left, PdfVerticalAlignment.Middle)
+            };
+
+            //HeaderStyle
+            headerStyle = new PdfCellStyle(boldFont, PdfBrushes.White, PdfPens.DarkBlue)
+            {
+                BackgroundBrush = new PdfSolidBrush(Color.FromArgb(33, 67, 126)),
+                StringFormat = new PdfStringFormat(PdfTextAlignment.Center, PdfVerticalAlignment.Middle)
+            };
+        }
+
+        private void SetData(ref DataTable table)
+        {
+            table.Clear();
+            table.Columns.Add("Date");
+            table.Columns.Add("Cases");
+            table.Columns.Add("Deaths");
+            table.Columns.Add("Recoveries");
+            //Header
+            DataRow header = table.NewRow();
+            header["Date"] = "Date";
+            header["Cases"] = "Cases";
+            header["Deaths"] = "Deaths";
+            header["Recoveries"] = "Recoveries";
+            table.Rows.Add(header);
+
+            //FirstRow
+            DataRow date1 = table.NewRow();
+            date1["Date"] = regionDatePicker.Value.AddDays(-6);
+            date1["Cases"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-6)].Cases;
+            date1["Deaths"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-6)].Deaths;
+            date1["Recoveries"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-6)].Recoveries;
+            table.Rows.Add(date1);
+
+            DataRow date2 = table.NewRow();
+            date2["Date"] = regionDatePicker.Value.AddDays(-5);
+            date2["Cases"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-5)].Cases;
+            date2["Deaths"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-5)].Deaths;
+            date2["Recoveries"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-5)].Recoveries;
+            table.Rows.Add(date2);
+
+            DataRow date3 = table.NewRow();
+            date3["Date"] = regionDatePicker.Value.AddDays(-4);
+            date3["Cases"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-4)].Cases;
+            date3["Deaths"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-4)].Deaths;
+            date3["Recoveries"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-4)].Recoveries;
+            table.Rows.Add(date3);
+
+            DataRow date4 = table.NewRow();
+            date4["Date"] = regionDatePicker.Value.AddDays(-3);
+            date4["Cases"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-3)].Cases;
+            date4["Deaths"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-3)].Deaths;
+            date4["Recoveries"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-3)].Recoveries;
+            table.Rows.Add(date4);
+
+            DataRow date5 = table.NewRow();
+            date5["Date"] = regionDatePicker.Value.AddDays(-2);
+            date5["Cases"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-2)].Cases;
+            date5["Deaths"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-2)].Deaths;
+            date5["Recoveries"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-2)].Recoveries;
+            table.Rows.Add(date5);
+
+            DataRow date6 = table.NewRow();
+            date6["Date"] = regionDatePicker.Value.AddDays(-1);
+            date6["Cases"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-1)].Cases;
+            date6["Deaths"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-1)].Deaths;
+            date6["Recoveries"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-1)].Recoveries;
+            table.Rows.Add(date6);
+
+            DataRow date7 = table.NewRow();
+            date7["Date"] = regionDatePicker.Value;
+            date7["Cases"] = Regions[regionLabel.Text][regionDatePicker.Value].Cases;
+            date7["Deaths"] = Regions[regionLabel.Text][regionDatePicker.Value].Deaths;
+            date7["Recoveries"] = Regions[regionLabel.Text][regionDatePicker.Value].Recoveries;
+            table.Rows.Add(date7);
+        }
+
+        private string SetImage()
+        {
+            string regionText = regionLabel.Text;
+            if (regionText.IndexOf(':') != -1) regionText = regionText.Substring(0, regionText.IndexOf(':'));
+            else if (regionText.IndexOf('(') != -1) regionText = regionText.Substring(0, (regionText.IndexOf('(') - 1));
+            return regionText;
+        }
+
+        #endregion
+
+        #region Upload Report
+
+        private void UploadReport()
+        {
+            WebClient client = new WebClient {Credentials = new NetworkCredential("Johndayll", "apple2001")};
+            client.UploadFile("ftp://66.220.9.50/My Documents/RegionReport.pdf",
+                @"C:\Users\ADMIN\Downloads\CovidInfoPH\CovidInfoPH\bin\Debug\Documents\RegionInfo.pdf");
         }
         #endregion
 
@@ -245,17 +397,6 @@ namespace CovidInfoPH
             }
         }
 
-        #endregion
-
-        #endregion
-        private void UploadReport()
-        {
-            WebClient client = new WebClient();
-            client.Credentials = new NetworkCredential("Johndayll", "apple2001");
-            client.UploadFile("ftp://66.220.9.50/My Documents/RegionReport.pdf",
-                @"C:\Users\ADMIN\Downloads\CovidInfoPH\CovidInfoPH\bin\Debug\Documents\RegionInfo.pdf");
-        }
-
         private void regionDatePicker_ValueChanged(object sender, EventArgs e)
         {
             Canvas canvas = new Canvas();
@@ -317,106 +458,7 @@ namespace CovidInfoPH
 
             UploadReport();
         }
-
-        #region SetTable
-        private void SetStyles(ref PdfCellStyle altStyle, ref PdfCellStyle defStyle, ref PdfCellStyle headerStyle)
-        {
-            PdfFont font = new PdfTrueTypeFont(new Font("Century Gothic", 12f), false);
-            PdfFont boldFont = new PdfTrueTypeFont(new Font("Century Gothic", 22f, FontStyle.Bold), false);
-            PdfPen borderPen = new PdfPen(PdfBrushes.Black) { Width = 0 };
-
-            //AltStyle
-            altStyle = new PdfCellStyle();
-            altStyle.Font = font;
-            altStyle.BackgroundBrush = new PdfSolidBrush(new PdfColor(192, 201, 219));
-            altStyle.BorderPen = borderPen;
-
-            //DefStyle
-            defStyle = new PdfCellStyle();
-            defStyle.Font = font;
-            defStyle.BackgroundBrush = PdfBrushes.White;
-            defStyle.BorderPen = borderPen;
-            defStyle.StringFormat = new PdfStringFormat(PdfTextAlignment.Left, PdfVerticalAlignment.Middle);
-
-            //HeaderStyle
-            headerStyle = new PdfCellStyle(boldFont, PdfBrushes.White, PdfPens.DarkBlue);
-            headerStyle.BackgroundBrush = new PdfSolidBrush(Color.FromArgb(33, 67, 126));
-            headerStyle.StringFormat = new PdfStringFormat(PdfTextAlignment.Center, PdfVerticalAlignment.Middle);
-        }
-
-        private void SetData(ref DataTable table)
-        {
-            table.Clear();
-            table.Columns.Add("Date");
-            table.Columns.Add("Cases");
-            table.Columns.Add("Deaths");
-            table.Columns.Add("Recoveries");
-            //Header
-            DataRow header = table.NewRow();
-            header["Date"] = "Date";
-            header["Cases"] = "Cases";
-            header["Deaths"] = "Deaths";
-            header["Recoveries"] = "Recoveries";
-            table.Rows.Add(header);
-
-            //FirstRow
-            DataRow date1 = table.NewRow();
-            date1["Date"] = regionDatePicker.Value.AddDays(-6);
-            date1["Cases"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-6)].Cases;
-            date1["Deaths"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-6)].Deaths;
-            date1["Recoveries"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-6)].Recoveries;
-            table.Rows.Add(date1);
-
-            DataRow date2 = table.NewRow();
-            date2["Date"] = regionDatePicker.Value.AddDays(-5);
-            date2["Cases"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-5)].Cases;
-            date2["Deaths"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-5)].Deaths;
-            date2["Recoveries"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-5)].Recoveries;
-            table.Rows.Add(date2);
-
-            DataRow date3 = table.NewRow();
-            date3["Date"] = regionDatePicker.Value.AddDays(-4);
-            date3["Cases"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-4)].Cases;
-            date3["Deaths"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-4)].Deaths;
-            date3["Recoveries"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-4)].Recoveries;
-            table.Rows.Add(date3);
-
-            DataRow date4 = table.NewRow();
-            date4["Date"] = regionDatePicker.Value.AddDays(-3);
-            date4["Cases"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-3)].Cases;
-            date4["Deaths"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-3)].Deaths;
-            date4["Recoveries"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-3)].Recoveries;
-            table.Rows.Add(date4);
-
-            DataRow date5 = table.NewRow();
-            date5["Date"] = regionDatePicker.Value.AddDays(-2);
-            date5["Cases"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-2)].Cases;
-            date5["Deaths"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-2)].Deaths;
-            date5["Recoveries"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-2)].Recoveries;
-            table.Rows.Add(date5);
-
-            DataRow date6 = table.NewRow();
-            date6["Date"] = regionDatePicker.Value.AddDays(-1);
-            date6["Cases"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-1)].Cases;
-            date6["Deaths"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-1)].Deaths;
-            date6["Recoveries"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-1)].Recoveries;
-            table.Rows.Add(date6);
-
-            DataRow date7 = table.NewRow();
-            date7["Date"] = regionDatePicker.Value;
-            date7["Cases"] = Regions[regionLabel.Text][regionDatePicker.Value].Cases;
-            date7["Deaths"] = Regions[regionLabel.Text][regionDatePicker.Value].Deaths;
-            date7["Recoveries"] = Regions[regionLabel.Text][regionDatePicker.Value].Recoveries;
-            table.Rows.Add(date7);
-        }
-
-        private string SetImage()
-        {
-            string regionText = regionLabel.Text;
-            if (regionText.IndexOf(':') != -1) regionText = regionText.Substring(0, regionText.IndexOf(':'));
-            else if (regionText.IndexOf('(') != -1) regionText = regionText.Substring(0, (regionText.IndexOf('(') - 1));
-            return regionText;
-        }
+        #endregion
 
         #endregion
     }
