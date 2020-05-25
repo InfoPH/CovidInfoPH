@@ -50,6 +50,14 @@ namespace CovidInfoPH
             //Map Patients
             MainForm.Patients = sheetMapper.Map<Patient>(dohDataDropSheet.Result).ParsedModels.Select(o => o.Value)
                 .OrderBy(o => o.DateConfirmed).ToList();
+            //Negros Island Region (NIR) data update
+            foreach (Patient patient in MainForm.Patients.Where(p => p.Province == "Negros Occidental" || p.Province == "Negros Oriental"))
+            {
+                patient.Region = "Negros Island Region (NIR)";
+            }
+
+            InitializeRegions();
+
             //Map Historical
             List<HistoricalInfo> historicalInfos = sheetMapper.Map<HistoricalInfo>(historicalSheet.Result).ParsedModels
                 .Select(o => o.Value).ToList();
@@ -58,7 +66,39 @@ namespace CovidInfoPH
                 .Select(o => DateTime.Parse((string)o.Cells[0].Value)).ToList();
             MainForm.Historical = Enumerable.Range(0, historicalDates.Count)
                 .ToDictionary(i => historicalDates[i], i => historicalInfos[i]);
+
         }
+
+        private void InitializeRegions()
+        {
+            List<string> regions = MainForm.Patients.Select(p => p.Region).Where(p => !string.IsNullOrEmpty(p)).Distinct()
+                .ToList();
+            List<DateTime> dates = MainForm.Patients.Select(p => p.DateConfirmed).Distinct().ToList();
+            dates.Sort();
+            MainForm.Regions = new Dictionary<string, Dictionary<DateTime, RegionDateInfo>>();
+            foreach (string region in regions)
+            {
+
+                List<Patient> localPatients = MainForm.Patients.Where(p => p.Region == region).ToList();
+                Dictionary<DateTime, RegionDateInfo> regionHistorical = new Dictionary<DateTime, RegionDateInfo>();
+                RegionDateInfo regionDateInfo = new RegionDateInfo()
+                {
+                    Cases = 0,
+                    Deaths = 0,
+                    Recoveries = 0
+                };
+
+                foreach (DateTime date in dates)
+                {
+                    regionDateInfo.Cases += localPatients.Count(p => p.DateConfirmed == date);
+                    regionDateInfo.Deaths += localPatients.Count(p => p.DateDied == date);
+                    regionDateInfo.Recoveries += localPatients.Count(p => p.DateRecovered == date);
+                    regionHistorical.Add(date, regionDateInfo.ShallowCopy());
+                }
+                MainForm.Regions.Add(region, regionHistorical);
+            }
+        }
+
         #endregion
 
         private void OnShowForm(object sender, EventArgs e)
