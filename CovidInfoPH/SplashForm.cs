@@ -91,6 +91,8 @@ namespace CovidInfoPH
                         Recoveries = localPatients.Count(p => p.DateRecovered == date)
                     };
                     regionHistorical.Add(date, regionDateInfo);
+
+
                 }
                 MainForm.Regions.Add(region, regionHistorical);
             }

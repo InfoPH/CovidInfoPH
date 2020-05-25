@@ -28,6 +28,7 @@
   <ItemGroup>
     <PackageReference Include="SheetToObjects.Adapters.GoogleSheets" Version="2.5.0" />
     <PackageReference Include="Syncfusion.Maps.Windows" Version="18.1.0.53" />
+    <PackageReference Include="Syncfusion.Pdf.WinForms" Version="18.1.0.53" />
     <PackageReference Include="WinFormAnimation" Version="1.6.0.4" />
   </ItemGroup>
 
