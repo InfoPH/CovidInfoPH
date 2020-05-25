@@ -20,7 +20,7 @@ namespace CovidInfoPH
     {
         internal static List<Patient> Patients;
         internal static Dictionary<DateTime, HistoricalInfo> Historical;
-        internal static Dictionary<string, Dictionary<DateTime, Models.RegionDateInfo>> Regions;
+        internal static Dictionary<string, Dictionary<DateTime, RegionDateInfo>> Regions;
 
         public MainForm()
         {
@@ -118,12 +118,15 @@ namespace CovidInfoPH
             };
             philippineShape.ShapeSetting.FillSetting.AutoFillColors = false;
             philippineShape.ShapeSetting.ShapeColorValuePath = "Cases";
-            philippineShape.ShapeSetting.FillSetting.ColorMappings = new System.Collections.ObjectModel.ObservableCollection<ColorMapping>();
-            philippineShape.ShapeSetting.FillSetting.ColorMappings.Add(new RangeColorMapping { From = 4, To = 22, Color = System.Drawing.Color.FromArgb(255, 193, 0) });
-            philippineShape.ShapeSetting.FillSetting.ColorMappings.Add(new RangeColorMapping { From = 28, To = 37, Color = System.Drawing.Color.FromArgb(255, 154, 0) });
-            philippineShape.ShapeSetting.FillSetting.ColorMappings.Add(new RangeColorMapping { From = 47, To = 69, Color = System.Drawing.Color.FromArgb(255, 116, 0) });
-            philippineShape.ShapeSetting.FillSetting.ColorMappings.Add(new RangeColorMapping { From = 107, To = 237, Color = System.Drawing.Color.FromArgb(255, 77, 0) });
-            philippineShape.ShapeSetting.FillSetting.ColorMappings.Add(new RangeColorMapping { From = 481, To = 9000, Color = System.Drawing.Color.FromArgb(255, 0, 0) });
+            philippineShape.ShapeSetting.FillSetting.ColorMappings =
+                new System.Collections.ObjectModel.ObservableCollection<ColorMapping>
+                {
+                    new RangeColorMapping {From = 4, To = 22, Color = Color.FromArgb(255, 193, 0)},
+                    new RangeColorMapping {From = 28, To = 37, Color = Color.FromArgb(255, 154, 0)},
+                    new RangeColorMapping {From = 47, To = 69, Color = Color.FromArgb(255, 116, 0)},
+                    new RangeColorMapping {From = 107, To = 237, Color = Color.FromArgb(255, 77, 0)},
+                    new RangeColorMapping {From = 481, To = 9000, Color = Color.FromArgb(255, 0, 0)}
+                };
             philippinesMap.MapBackgroundBrush = new SolidBrush(Color.FromArgb(20, 30, 39));
             philippinesMap.ShapeSelected += PhilippinesMap_ShapeSelected; //Hook the ShapeSelected event
             philippinesMap.Layers.Add(philippineShape);
@@ -269,11 +272,6 @@ namespace CovidInfoPH
             regionMapView.Render(canvas);
         }
 
-        private void regionMapView_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void uploadButton_Click(object sender, EventArgs e)
         {
             //SetStyle
@@ -321,8 +319,7 @@ namespace CovidInfoPH
         {
             PdfFont font = new PdfTrueTypeFont(new Font("Century Gothic", 12f), false);
             PdfFont boldFont = new PdfTrueTypeFont(new Font("Century Gothic", 22f, FontStyle.Bold), false);
-            PdfPen borderPen = new PdfPen(PdfBrushes.Black);
-            borderPen.Width = 0;
+            PdfPen borderPen = new PdfPen(PdfBrushes.Black) { Width = 0 };
 
             //AltStyle
             altStyle = new PdfCellStyle();
