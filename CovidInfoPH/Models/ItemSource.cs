@@ -22,7 +22,7 @@ namespace CovidInfoPH.Models
             ObservableCollection<PhRegion> regionsList = new ObservableCollection<PhRegion>();
             foreach (var item in valuePairs)
             {
-                regionsList.Add(new PhRegion() { Cases = item.Value.Values.Sum(c => c.Cases), Region = item.Key });
+                regionsList.Add(new PhRegion() { Cases = item.Value.Values.Select(p => p.Cases).Max(), Region = item.Key });
             }
             return regionsList;
         }
