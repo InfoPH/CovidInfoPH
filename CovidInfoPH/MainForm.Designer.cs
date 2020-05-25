@@ -114,6 +114,7 @@
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.DashBoard = new Bunifu.UI.WinForms.BunifuPages();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.selectedRegionlabel = new System.Windows.Forms.Label();
             this.searchRegionButton = new Guna.UI2.WinForms.Guna2Button();
             this.minimizeButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.closeButton = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -136,7 +137,6 @@
             this.bunifuPanelElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuPanelElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
-            this.selectedRegionlabel = new System.Windows.Forms.Label();
             this.menuBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.locationRegion.SuspendLayout();
@@ -1445,7 +1445,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.153847F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.153847F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 204F));
             this.tableLayoutPanel1.Controls.Add(this.deathsColorlabel, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label8, 6, 0);
@@ -1472,7 +1472,7 @@
             this.deathsColorlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109)))));
             this.bunifuTransition1.SetDecoration(this.deathsColorlabel, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.deathsColorlabel, BunifuAnimatorNS.DecorationType.None);
-            this.deathsColorlabel.Location = new System.Drawing.Point(1132, 8);
+            this.deathsColorlabel.Location = new System.Drawing.Point(1131, 8);
             this.deathsColorlabel.Name = "deathsColorlabel";
             this.deathsColorlabel.Size = new System.Drawing.Size(20, 20);
             this.deathsColorlabel.TabIndex = 75;
@@ -1506,7 +1506,7 @@
             this.label8.Dock = System.Windows.Forms.DockStyle.Left;
             this.label8.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(1158, 0);
+            this.label8.Location = new System.Drawing.Point(1157, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 36);
             this.label8.TabIndex = 0;
@@ -1522,7 +1522,7 @@
             this.casesColorlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
             this.bunifuTransition1.SetDecoration(this.casesColorlabel, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.casesColorlabel, BunifuAnimatorNS.DecorationType.None);
-            this.casesColorlabel.Location = new System.Drawing.Point(670, 8);
+            this.casesColorlabel.Location = new System.Drawing.Point(669, 8);
             this.casesColorlabel.Name = "casesColorlabel";
             this.casesColorlabel.Size = new System.Drawing.Size(20, 20);
             this.casesColorlabel.TabIndex = 73;
@@ -1538,7 +1538,7 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Left;
             this.label6.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(696, 0);
+            this.label6.Location = new System.Drawing.Point(695, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 36);
             this.label6.TabIndex = 0;
@@ -1554,7 +1554,7 @@
             this.recoveriesColorlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
             this.bunifuTransition1.SetDecoration(this.recoveriesColorlabel, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.recoveriesColorlabel, BunifuAnimatorNS.DecorationType.None);
-            this.recoveriesColorlabel.Location = new System.Drawing.Point(901, 8);
+            this.recoveriesColorlabel.Location = new System.Drawing.Point(900, 8);
             this.recoveriesColorlabel.Name = "recoveriesColorlabel";
             this.recoveriesColorlabel.Size = new System.Drawing.Size(20, 20);
             this.recoveriesColorlabel.TabIndex = 74;
@@ -1570,7 +1570,7 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Left;
             this.label7.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(927, 0);
+            this.label7.Location = new System.Drawing.Point(926, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(112, 36);
             this.label7.TabIndex = 0;
@@ -1662,6 +1662,22 @@
             this.bunifuToolTip1.SetToolTip(this.topPanel, "");
             this.bunifuToolTip1.SetToolTipIcon(this.topPanel, null);
             this.bunifuToolTip1.SetToolTipTitle(this.topPanel, "");
+            // 
+            // selectedRegionlabel
+            // 
+            this.selectedRegionlabel.AutoSize = true;
+            this.bunifuTransition2.SetDecoration(this.selectedRegionlabel, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.selectedRegionlabel, BunifuAnimatorNS.DecorationType.None);
+            this.selectedRegionlabel.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectedRegionlabel.ForeColor = System.Drawing.Color.White;
+            this.selectedRegionlabel.Location = new System.Drawing.Point(412, 28);
+            this.selectedRegionlabel.Name = "selectedRegionlabel";
+            this.selectedRegionlabel.Size = new System.Drawing.Size(195, 23);
+            this.selectedRegionlabel.TabIndex = 59;
+            this.selectedRegionlabel.Text = "Selected Region: All";
+            this.bunifuToolTip1.SetToolTip(this.selectedRegionlabel, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.selectedRegionlabel, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.selectedRegionlabel, "");
             // 
             // searchRegionButton
             // 
@@ -1948,22 +1964,6 @@
             this.bunifuToolTip1.TitleForeColor = System.Drawing.Color.Black;
             this.bunifuToolTip1.ToolTipPosition = new System.Drawing.Point(0, 0);
             this.bunifuToolTip1.ToolTipTitle = null;
-            // 
-            // selectedRegionlabel
-            // 
-            this.selectedRegionlabel.AutoSize = true;
-            this.bunifuTransition2.SetDecoration(this.selectedRegionlabel, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.selectedRegionlabel, BunifuAnimatorNS.DecorationType.None);
-            this.selectedRegionlabel.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectedRegionlabel.ForeColor = System.Drawing.Color.White;
-            this.selectedRegionlabel.Location = new System.Drawing.Point(412, 28);
-            this.selectedRegionlabel.Name = "selectedRegionlabel";
-            this.selectedRegionlabel.Size = new System.Drawing.Size(166, 23);
-            this.selectedRegionlabel.TabIndex = 59;
-            this.selectedRegionlabel.Text = "Selected Region:";
-            this.bunifuToolTip1.SetToolTip(this.selectedRegionlabel, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.selectedRegionlabel, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.selectedRegionlabel, "");
             // 
             // MainForm
             // 
