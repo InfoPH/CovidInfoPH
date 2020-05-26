@@ -111,7 +111,7 @@
             this.name.ForeColor = System.Drawing.Color.White;
             this.name.Location = new System.Drawing.Point(284, 96);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(279, 45);
+            this.name.Size = new System.Drawing.Size(194, 31);
             this.name.TabIndex = 3;
             this.name.Text = "COVIDinfo-PH";
             this.bunifuToolTip1.SetToolTip(this.name, "");
@@ -128,7 +128,7 @@
             this.meetLabel.ForeColor = System.Drawing.Color.White;
             this.meetLabel.Location = new System.Drawing.Point(250, 96);
             this.meetLabel.Name = "meetLabel";
-            this.meetLabel.Size = new System.Drawing.Size(349, 45);
+            this.meetLabel.Size = new System.Drawing.Size(246, 31);
             this.meetLabel.TabIndex = 3;
             this.meetLabel.Text = "Meet the creators!";
             this.bunifuToolTip1.SetToolTip(this.meetLabel, "");
@@ -145,7 +145,7 @@
             this.arizalaName.ForeColor = System.Drawing.Color.White;
             this.arizalaName.Location = new System.Drawing.Point(154, 308);
             this.arizalaName.Name = "arizalaName";
-            this.arizalaName.Size = new System.Drawing.Size(131, 64);
+            this.arizalaName.Size = new System.Drawing.Size(88, 42);
             this.arizalaName.TabIndex = 3;
             this.arizalaName.Text = "Arizala\r\nJohndayll";
             this.arizalaName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -163,7 +163,7 @@
             this.martinezName.ForeColor = System.Drawing.Color.White;
             this.martinezName.Location = new System.Drawing.Point(133, 308);
             this.martinezName.Name = "martinezName";
-            this.martinezName.Size = new System.Drawing.Size(179, 64);
+            this.martinezName.Size = new System.Drawing.Size(123, 42);
             this.martinezName.TabIndex = 3;
             this.martinezName.Text = "Martinez\r\nJose Raphael";
             this.martinezName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -181,7 +181,7 @@
             this.braulioName.ForeColor = System.Drawing.Color.White;
             this.braulioName.Location = new System.Drawing.Point(358, 308);
             this.braulioName.Name = "braulioName";
-            this.braulioName.Size = new System.Drawing.Size(100, 64);
+            this.braulioName.Size = new System.Drawing.Size(67, 42);
             this.braulioName.TabIndex = 3;
             this.braulioName.Text = "Braulio\r\nVaeda";
             this.braulioName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -199,7 +199,7 @@
             this.ninoName.ForeColor = System.Drawing.Color.White;
             this.ninoName.Location = new System.Drawing.Point(365, 308);
             this.ninoName.Name = "ninoName";
-            this.ninoName.Size = new System.Drawing.Size(83, 64);
+            this.ninoName.Size = new System.Drawing.Size(55, 42);
             this.ninoName.TabIndex = 3;
             this.ninoName.Text = "Nino\r\nKovie";
             this.ninoName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -217,7 +217,7 @@
             this.itangName.ForeColor = System.Drawing.Color.White;
             this.itangName.Location = new System.Drawing.Point(558, 308);
             this.itangName.Name = "itangName";
-            this.itangName.Size = new System.Drawing.Size(76, 64);
+            this.itangName.Size = new System.Drawing.Size(52, 42);
             this.itangName.TabIndex = 3;
             this.itangName.Text = "Itang\r\nRyan";
             this.itangName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -235,7 +235,7 @@
             this.ortegaName.ForeColor = System.Drawing.Color.White;
             this.ortegaName.Location = new System.Drawing.Point(512, 308);
             this.ortegaName.Name = "ortegaName";
-            this.ortegaName.Size = new System.Drawing.Size(182, 64);
+            this.ortegaName.Size = new System.Drawing.Size(125, 42);
             this.ortegaName.TabIndex = 3;
             this.ortegaName.Text = "Jiz De Ortega\r\nKeino";
             this.ortegaName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -271,7 +271,7 @@
             this.bunifuLabel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(253, 47);
+            this.bunifuLabel1.Size = new System.Drawing.Size(172, 33);
             this.bunifuLabel1.TabIndex = 5;
             this.bunifuLabel1.Text = "COVIDinfo-PH";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
