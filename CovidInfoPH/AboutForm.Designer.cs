@@ -45,10 +45,13 @@
             this.iacImageButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.closeButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.logoPictureBox = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.bunifuImageButton2 = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.bunifuImageButton3 = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -61,9 +64,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.label1.Location = new System.Drawing.Point(226, 51);
+            this.label1.Location = new System.Drawing.Point(151, 33);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 37);
+            this.label1.Size = new System.Drawing.Size(75, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "About";
             this.bunifuToolTip1.SetToolTip(this.label1, "");
@@ -75,9 +79,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Proxima Soft", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.label2.Location = new System.Drawing.Point(224, 90);
+            this.label2.Location = new System.Drawing.Point(149, 58);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(333, 54);
+            this.label2.Size = new System.Drawing.Size(226, 36);
             this.label2.TabIndex = 1;
             this.label2.Text = "COVIDinfo-PH";
             this.bunifuToolTip1.SetToolTip(this.label2, "");
@@ -89,9 +94,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.label3.Location = new System.Drawing.Point(88, 452);
+            this.label3.Location = new System.Drawing.Point(59, 294);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 37);
+            this.label3.Size = new System.Drawing.Size(102, 25);
             this.label3.TabIndex = 1;
             this.label3.Text = "Creators";
             this.bunifuToolTip1.SetToolTip(this.label3, "");
@@ -103,9 +109,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.label4.Location = new System.Drawing.Point(90, 491);
+            this.label4.Location = new System.Drawing.Point(60, 319);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(251, 162);
+            this.label4.Size = new System.Drawing.Size(167, 108);
             this.label4.TabIndex = 1;
             this.label4.Text = "Ryan Caezar Itang\r\nJohndayll Arizala\r\nJose Raphael Martinez\r\nJohn Kovie Nino\r\nVae" +
     "da Braulio\r\nKeino Jiz De Ortega";
@@ -118,9 +125,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.label5.Location = new System.Drawing.Point(400, 362);
+            this.label5.Location = new System.Drawing.Point(267, 235);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(427, 162);
+            this.label5.Size = new System.Drawing.Size(286, 108);
             this.label5.TabIndex = 1;
             this.label5.Text = "The mission of COVIDinfo-PH \r\nis to visualize the data of \r\nthe coronavirus disea" +
     "se cases in \r\nthe Philippines, enabling deep analytics\r\n thanks to the range of " +
@@ -135,9 +143,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.label6.Location = new System.Drawing.Point(515, 324);
+            this.label6.Location = new System.Drawing.Point(343, 211);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(195, 37);
+            this.label6.Size = new System.Drawing.Size(138, 25);
             this.label6.TabIndex = 1;
             this.label6.Text = "Our Mission";
             this.bunifuToolTip1.SetToolTip(this.label6, "");
@@ -149,9 +158,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.label7.Location = new System.Drawing.Point(752, 546);
+            this.label7.Location = new System.Drawing.Point(501, 355);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(300, 108);
+            this.label7.Size = new System.Drawing.Size(198, 72);
             this.label7.TabIndex = 1;
             this.label7.Text = "All the data gathered \r\nare from the Department of\r\n Health (DOH) Philippines \r\nD" +
     "ata Drop";
@@ -165,9 +175,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.label8.Location = new System.Drawing.Point(870, 508);
+            this.label8.Location = new System.Drawing.Point(580, 330);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(173, 37);
+            this.label8.Size = new System.Drawing.Size(122, 25);
             this.label8.TabIndex = 1;
             this.label8.Text = "Disclaimer";
             this.bunifuToolTip1.SetToolTip(this.label8, "");
@@ -229,18 +240,17 @@
             this.dohImageButton.ImageActive = null;
             this.dohImageButton.ImageLocation = null;
             this.dohImageButton.ImageMargin = 40;
-            this.dohImageButton.ImageSize = new System.Drawing.Size(100, 100);
-            this.dohImageButton.ImageZoomSize = new System.Drawing.Size(140, 140);
+            this.dohImageButton.ImageSize = new System.Drawing.Size(53, 51);
+            this.dohImageButton.ImageZoomSize = new System.Drawing.Size(93, 91);
             this.dohImageButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("dohImageButton.InitialImage")));
-            this.dohImageButton.Location = new System.Drawing.Point(961, 15);
-            this.dohImageButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dohImageButton.Location = new System.Drawing.Point(641, 10);
             this.dohImageButton.Name = "dohImageButton";
             this.dohImageButton.Rotation = 0;
             this.dohImageButton.ShowActiveImage = true;
             this.dohImageButton.ShowCursorChanges = true;
             this.dohImageButton.ShowImageBorders = true;
             this.dohImageButton.ShowSizeMarkers = false;
-            this.dohImageButton.Size = new System.Drawing.Size(140, 140);
+            this.dohImageButton.Size = new System.Drawing.Size(93, 91);
             this.dohImageButton.TabIndex = 63;
             this.bunifuToolTip1.SetToolTip(this.dohImageButton, "Visit Department of Heath");
             this.bunifuToolTip1.SetToolTipIcon(this.dohImageButton, global::CovidInfoPH.Properties.Resources.icons8_open_in_browser_400px);
@@ -265,18 +275,17 @@
             this.iacImageButton.ImageActive = null;
             this.iacImageButton.ImageLocation = null;
             this.iacImageButton.ImageMargin = 40;
-            this.iacImageButton.ImageSize = new System.Drawing.Size(100, 100);
-            this.iacImageButton.ImageZoomSize = new System.Drawing.Size(140, 140);
+            this.iacImageButton.ImageSize = new System.Drawing.Size(53, 51);
+            this.iacImageButton.ImageZoomSize = new System.Drawing.Size(93, 91);
             this.iacImageButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("iacImageButton.InitialImage")));
-            this.iacImageButton.Location = new System.Drawing.Point(813, 15);
-            this.iacImageButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.iacImageButton.Location = new System.Drawing.Point(542, 10);
             this.iacImageButton.Name = "iacImageButton";
             this.iacImageButton.Rotation = 0;
             this.iacImageButton.ShowActiveImage = true;
             this.iacImageButton.ShowCursorChanges = true;
             this.iacImageButton.ShowImageBorders = true;
             this.iacImageButton.ShowSizeMarkers = false;
-            this.iacImageButton.Size = new System.Drawing.Size(140, 140);
+            this.iacImageButton.Size = new System.Drawing.Size(93, 91);
             this.iacImageButton.TabIndex = 62;
             this.bunifuToolTip1.SetToolTip(this.iacImageButton, "Visit iACADEMY");
             this.bunifuToolTip1.SetToolTipIcon(this.iacImageButton, global::CovidInfoPH.Properties.Resources.icons8_open_in_browser_400px);
@@ -301,18 +310,18 @@
             this.closeButton.ImageActive = null;
             this.closeButton.ImageLocation = null;
             this.closeButton.ImageMargin = 20;
-            this.closeButton.ImageSize = new System.Drawing.Size(46, 45);
-            this.closeButton.ImageZoomSize = new System.Drawing.Size(66, 65);
+            this.closeButton.ImageSize = new System.Drawing.Size(24, 22);
+            this.closeButton.ImageZoomSize = new System.Drawing.Size(44, 42);
             this.closeButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("closeButton.InitialImage")));
-            this.closeButton.Location = new System.Drawing.Point(1131, 15);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.closeButton.Location = new System.Drawing.Point(754, 10);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.closeButton.Name = "closeButton";
             this.closeButton.Rotation = 0;
             this.closeButton.ShowActiveImage = true;
             this.closeButton.ShowCursorChanges = true;
             this.closeButton.ShowImageBorders = true;
             this.closeButton.ShowSizeMarkers = false;
-            this.closeButton.Size = new System.Drawing.Size(66, 65);
+            this.closeButton.Size = new System.Drawing.Size(44, 42);
             this.closeButton.TabIndex = 57;
             this.bunifuToolTip1.SetToolTip(this.closeButton, "Go Back");
             this.bunifuToolTip1.SetToolTipIcon(this.closeButton, null);
@@ -326,12 +335,12 @@
             // logoPictureBox
             // 
             this.logoPictureBox.Image = global::CovidInfoPH.Properties.Resources._100806507_567126430854677_5731667829703311360_n;
-            this.logoPictureBox.Location = new System.Drawing.Point(14, 15);
-            this.logoPictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.logoPictureBox.Location = new System.Drawing.Point(9, 10);
+            this.logoPictureBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.logoPictureBox.Name = "logoPictureBox";
             this.logoPictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.logoPictureBox.ShadowDecoration.Parent = this.logoPictureBox;
-            this.logoPictureBox.Size = new System.Drawing.Size(206, 228);
+            this.logoPictureBox.Size = new System.Drawing.Size(137, 148);
             this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoPictureBox.TabIndex = 0;
             this.logoPictureBox.TabStop = false;
@@ -339,117 +348,52 @@
             this.bunifuToolTip1.SetToolTipIcon(this.logoPictureBox, null);
             this.bunifuToolTip1.SetToolTipTitle(this.logoPictureBox, "");
             // 
-            // bunifuImageButton1
+            // pictureBox1
             // 
-            this.bunifuImageButton1.ActiveImage = null;
-            this.bunifuImageButton1.AllowAnimations = true;
-            this.bunifuImageButton1.AllowBuffering = false;
-            this.bunifuImageButton1.AllowZooming = true;
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.ErrorImage")));
-            this.bunifuImageButton1.FadeWhenInactive = false;
-            this.bunifuImageButton1.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.bunifuImageButton1.Image = global::CovidInfoPH.Properties.Resources.icons8_field_208px_1;
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.ImageLocation = null;
-            this.bunifuImageButton1.ImageMargin = 40;
-            this.bunifuImageButton1.ImageSize = new System.Drawing.Size(129, 148);
-            this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(169, 188);
-            this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
-            this.bunifuImageButton1.Location = new System.Drawing.Point(522, 149);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Rotation = 0;
-            this.bunifuImageButton1.ShowActiveImage = true;
-            this.bunifuImageButton1.ShowCursorChanges = true;
-            this.bunifuImageButton1.ShowImageBorders = true;
-            this.bunifuImageButton1.ShowSizeMarkers = false;
-            this.bunifuImageButton1.Size = new System.Drawing.Size(169, 188);
-            this.bunifuImageButton1.TabIndex = 59;
-            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton1, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.bunifuImageButton1, null);
-            this.bunifuImageButton1.ToolTipText = "";
-            this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton1, "");
-            this.bunifuImageButton1.WaitOnLoad = false;
-            this.bunifuImageButton1.Zoom = 40;
-            this.bunifuImageButton1.ZoomSpeed = 10;
+            this.pictureBox1.BackgroundImage = global::CovidInfoPH.Properties.Resources.icons8_disclaimer_208px;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(704, 335);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(82, 92);
+            this.pictureBox1.TabIndex = 64;
+            this.pictureBox1.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.pictureBox1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.pictureBox1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.pictureBox1, "");
             // 
-            // bunifuImageButton2
+            // pictureBox2
             // 
-            this.bunifuImageButton2.ActiveImage = null;
-            this.bunifuImageButton2.AllowAnimations = true;
-            this.bunifuImageButton2.AllowBuffering = false;
-            this.bunifuImageButton2.AllowZooming = true;
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.ErrorImage")));
-            this.bunifuImageButton2.FadeWhenInactive = false;
-            this.bunifuImageButton2.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.bunifuImageButton2.Image = global::CovidInfoPH.Properties.Resources.icons8_people_208px;
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.ImageLocation = null;
-            this.bunifuImageButton2.ImageMargin = 40;
-            this.bunifuImageButton2.ImageSize = new System.Drawing.Size(129, 148);
-            this.bunifuImageButton2.ImageZoomSize = new System.Drawing.Size(169, 188);
-            this.bunifuImageButton2.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.InitialImage")));
-            this.bunifuImageButton2.Location = new System.Drawing.Point(64, 271);
-            this.bunifuImageButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Rotation = 0;
-            this.bunifuImageButton2.ShowActiveImage = true;
-            this.bunifuImageButton2.ShowCursorChanges = true;
-            this.bunifuImageButton2.ShowImageBorders = true;
-            this.bunifuImageButton2.ShowSizeMarkers = false;
-            this.bunifuImageButton2.Size = new System.Drawing.Size(169, 188);
-            this.bunifuImageButton2.TabIndex = 60;
-            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton2, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.bunifuImageButton2, null);
-            this.bunifuImageButton2.ToolTipText = "";
-            this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton2, "");
-            this.bunifuImageButton2.WaitOnLoad = false;
-            this.bunifuImageButton2.Zoom = 40;
-            this.bunifuImageButton2.ZoomSpeed = 10;
+            this.pictureBox2.BackgroundImage = global::CovidInfoPH.Properties.Resources.icons8_people_208px;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(67, 205);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(82, 92);
+            this.pictureBox2.TabIndex = 64;
+            this.pictureBox2.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.pictureBox2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.pictureBox2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.pictureBox2, "");
             // 
-            // bunifuImageButton3
+            // pictureBox3
             // 
-            this.bunifuImageButton3.ActiveImage = null;
-            this.bunifuImageButton3.AllowAnimations = true;
-            this.bunifuImageButton3.AllowBuffering = false;
-            this.bunifuImageButton3.AllowZooming = true;
-            this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.ErrorImage")));
-            this.bunifuImageButton3.FadeWhenInactive = false;
-            this.bunifuImageButton3.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.bunifuImageButton3.Image = global::CovidInfoPH.Properties.Resources.icons8_disclaimer_208px;
-            this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.ImageLocation = null;
-            this.bunifuImageButton3.ImageMargin = 40;
-            this.bunifuImageButton3.ImageSize = new System.Drawing.Size(129, 148);
-            this.bunifuImageButton3.ImageZoomSize = new System.Drawing.Size(169, 188);
-            this.bunifuImageButton3.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.InitialImage")));
-            this.bunifuImageButton3.Location = new System.Drawing.Point(1042, 493);
-            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Rotation = 0;
-            this.bunifuImageButton3.ShowActiveImage = true;
-            this.bunifuImageButton3.ShowCursorChanges = true;
-            this.bunifuImageButton3.ShowImageBorders = true;
-            this.bunifuImageButton3.ShowSizeMarkers = false;
-            this.bunifuImageButton3.Size = new System.Drawing.Size(169, 188);
-            this.bunifuImageButton3.TabIndex = 61;
-            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton3, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.bunifuImageButton3, null);
-            this.bunifuImageButton3.ToolTipText = "";
-            this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton3, "");
-            this.bunifuImageButton3.WaitOnLoad = false;
-            this.bunifuImageButton3.Zoom = 40;
-            this.bunifuImageButton3.ZoomSpeed = 10;
+            this.pictureBox3.BackgroundImage = global::CovidInfoPH.Properties.Resources.icons8_field_208px_1;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(363, 116);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(82, 92);
+            this.pictureBox3.TabIndex = 64;
+            this.pictureBox3.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.pictureBox3, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.pictureBox3, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.pictureBox3, "");
             // 
             // AboutForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(1213, 695);
+            this.ClientSize = new System.Drawing.Size(809, 452);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.dohImageButton);
             this.Controls.Add(this.iacImageButton);
             this.Controls.Add(this.closeButton);
@@ -462,15 +406,17 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.logoPictureBox);
-            this.Controls.Add(this.bunifuImageButton1);
-            this.Controls.Add(this.bunifuImageButton2);
-            this.Controls.Add(this.bunifuImageButton3);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "AboutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AboutForm";
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -490,11 +436,11 @@
         private System.Windows.Forms.Label label6;
         private Bunifu.UI.WinForms.BunifuImageButton closeButton;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton1;
-        private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton2;
-        private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton3;
         private Bunifu.UI.WinForms.BunifuImageButton dohImageButton;
         private Bunifu.UI.WinForms.BunifuImageButton iacImageButton;
         private Bunifu.UI.WinForms.BunifuToolTip bunifuToolTip1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
