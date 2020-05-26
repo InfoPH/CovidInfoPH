@@ -216,7 +216,7 @@ namespace CovidInfoPH
         #endregion
 
         #region Create Report
-        private void SetStyles(ref PdfCellStyle altStyle, ref PdfCellStyle defStyle, ref PdfCellStyle headerStyle)
+        private void SetStyles(out PdfCellStyle altStyle, out PdfCellStyle defStyle, out PdfCellStyle headerStyle)
         {
             PdfFont font = new PdfTrueTypeFont(new Font("Century Gothic", 12f), false);
             PdfFont boldFont = new PdfTrueTypeFont(new Font("Century Gothic", 22f, FontStyle.Bold), false);
@@ -225,7 +225,9 @@ namespace CovidInfoPH
             //AltStyle
             altStyle = new PdfCellStyle
             {
-                Font = font, BackgroundBrush = new PdfSolidBrush(new PdfColor(192, 201, 219)), BorderPen = borderPen
+                Font = font,
+                BackgroundBrush = new PdfSolidBrush(new PdfColor(192, 201, 219)),
+                BorderPen = borderPen
             };
 
             //DefStyle
@@ -325,7 +327,7 @@ namespace CovidInfoPH
 
         private void UploadReport()
         {
-            WebClient client = new WebClient {Credentials = new NetworkCredential("Johndayll", "apple2001")};
+            WebClient client = new WebClient { Credentials = new NetworkCredential("Johndayll", "apple2001") };
             client.UploadFile("ftp://66.220.9.50/My Documents/RegionReport.pdf",
                 @"C:\Users\ADMIN\Downloads\CovidInfoPH\CovidInfoPH\bin\Debug\Documents\RegionInfo.pdf");
         }
@@ -469,12 +471,8 @@ namespace CovidInfoPH
         private void uploadButton_Click(object sender, EventArgs e)
         {
             //SetStyle
-            PdfDocument doc = new PdfDocument();
-            doc.PageSettings.Height = 800;
-            PdfCellStyle altStyle = new PdfCellStyle();
-            PdfCellStyle defStyle = new PdfCellStyle();
-            PdfCellStyle headerStyle = new PdfCellStyle();
-            SetStyles(ref altStyle, ref defStyle, ref headerStyle);
+            PdfDocument doc = new PdfDocument { PageSettings = { Height = 800 } };
+            SetStyles(out PdfCellStyle altStyle, out PdfCellStyle defStyle, out PdfCellStyle headerStyle);
             PdfPage page = doc.Pages.Add();
             PdfGraphics g = page.Graphics;
 
@@ -507,14 +505,14 @@ namespace CovidInfoPH
 
             UploadReport();
         }
-        #endregion
-
-        #endregion
 
         private void bunifuImageButton3_Click(object sender, EventArgs e)
         {
             AboutForm about = new AboutForm();
             about.ShowDialog();
         }
+        #endregion
+
+        #endregion
     }
 }
