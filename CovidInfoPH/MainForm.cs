@@ -337,7 +337,8 @@ namespace CovidInfoPH
 
         private void DatePicker_ValueChanged(object sender, EventArgs e)
         {
-            if (RegionSearchForm.SearchResult != "All")
+            if (selectedRegionlabel.Text.Substring(
+                selectedRegionlabel.Text.IndexOf(':') + 2) != "All")
             {
                 selectedRegionlabel.Text = $"Selected Region: {RegionSearchForm.SearchResult}";
                 FadeOutValues();
@@ -385,6 +386,7 @@ namespace CovidInfoPH
         {
             WindowState = FormWindowState.Minimized;
         }
+
         private void PhilippinesMap_ShapeSelected(object sender, ShapeSelectedEventArgs e)
         {
             uploadButton.Enabled = true;
