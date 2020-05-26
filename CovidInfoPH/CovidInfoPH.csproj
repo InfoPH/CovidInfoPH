@@ -169,5 +169,17 @@
     <None Update="Resources\up_arrow1.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
+
+    <!--
+    <Compile Include="RegionSearchForm.cs">
+      <Subtype>Form</Subtype>
+    </Compile>
+    <Compile Include="RegionSearchForm.Designer.cs">
+      <DependentUpon>RegionSearchForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RegionSearchForm.resx">
+      <DependentUpon>RegionSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    -->
   </ItemGroup>
 </Project>
