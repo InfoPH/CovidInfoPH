@@ -126,6 +126,7 @@
             // 
             // usernameTextBox
             // 
+            this.usernameTextBox.Animated = true;
             this.usernameTextBox.BorderColor = System.Drawing.Color.Silver;
             this.usernameTextBox.BorderThickness = 2;
             this.usernameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -151,7 +152,7 @@
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.PasswordChar = '\0';
             this.usernameTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.usernameTextBox.PlaceholderText = "Username";
+            this.usernameTextBox.PlaceholderText = "Username/Email";
             this.usernameTextBox.SelectedText = "";
             this.usernameTextBox.ShadowDecoration.Parent = this.usernameTextBox;
             this.usernameTextBox.Size = new System.Drawing.Size(355, 46);
@@ -161,6 +162,7 @@
             // 
             // passTextBox
             // 
+            this.passTextBox.Animated = true;
             this.passTextBox.BorderColor = System.Drawing.Color.Silver;
             this.passTextBox.BorderThickness = 2;
             this.passTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
