@@ -41,16 +41,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dohImageButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.iacImageButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.closeButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.logoPictureBox = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -226,6 +226,19 @@
             this.bunifuToolTip1.ToolTipPosition = new System.Drawing.Point(0, 0);
             this.bunifuToolTip1.ToolTipTitle = null;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::CovidInfoPH.Properties.Resources.icons8_people_208px;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(67, 205);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(82, 92);
+            this.pictureBox2.TabIndex = 64;
+            this.pictureBox2.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.pictureBox2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.pictureBox2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.pictureBox2, "");
+            // 
             // dohImageButton
             // 
             this.dohImageButton.ActiveImage = null;
@@ -334,13 +347,13 @@
             // 
             // logoPictureBox
             // 
-            this.logoPictureBox.Image = global::CovidInfoPH.Properties.Resources._100806507_567126430854677_5731667829703311360_n;
+            this.logoPictureBox.Image = global::CovidInfoPH.Properties.Resources.loading_icon;
             this.logoPictureBox.Location = new System.Drawing.Point(9, 10);
             this.logoPictureBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.logoPictureBox.Name = "logoPictureBox";
             this.logoPictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.logoPictureBox.ShadowDecoration.Parent = this.logoPictureBox;
-            this.logoPictureBox.Size = new System.Drawing.Size(137, 148);
+            this.logoPictureBox.Size = new System.Drawing.Size(137, 137);
             this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoPictureBox.TabIndex = 0;
             this.logoPictureBox.TabStop = false;
@@ -360,19 +373,6 @@
             this.bunifuToolTip1.SetToolTip(this.pictureBox1, "");
             this.bunifuToolTip1.SetToolTipIcon(this.pictureBox1, null);
             this.bunifuToolTip1.SetToolTipTitle(this.pictureBox1, "");
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::CovidInfoPH.Properties.Resources.icons8_people_208px;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(67, 205);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(82, 92);
-            this.pictureBox2.TabIndex = 64;
-            this.pictureBox2.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.pictureBox2, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.pictureBox2, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.pictureBox2, "");
             // 
             // pictureBox3
             // 
@@ -413,9 +413,9 @@
             this.Name = "AboutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AboutForm";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
