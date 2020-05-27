@@ -646,6 +646,7 @@ namespace CovidInfoPH
             DisplayDataGrid(false);
             RefreshData(false);
             FadeInValues();
+            datePicker.Enabled = true;
         }
 
         private void monthRadioButton_Click(object sender, EventArgs e)
@@ -656,7 +657,7 @@ namespace CovidInfoPH
             DisplayDataGrid(true);
             RefreshData(true);
             FadeInValues();
-            datePicker.Enabled = true;
+
         }
     }
 }
