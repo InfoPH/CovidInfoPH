@@ -124,6 +124,9 @@
   <data name="icons8_close_window_104px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_close_window_104px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="loading_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loading_logo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="NCR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\region-photos\NCR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -132,6 +135,9 @@
   </data>
   <data name="Region_VIII" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\region-photos\Region VIII.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_idea_100px_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_idea_100px_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_minimize_window_104px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_minimize_window_104px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,6 +154,9 @@
   <data name="icons8_disclaimer_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_disclaimer_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="loading_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loading_icon.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="info_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\info_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,8 +166,11 @@
   <data name="Region_X" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\region-photos\Region X.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_idea_100px_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_idea_100px_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Johndayll" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Johndayll.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_password_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_password_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_open_in_browser_400px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_open_in_browser_400px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -171,9 +183,6 @@
   </data>
   <data name="100806507_567126430854677_5731667829703311360_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\100806507_567126430854677_5731667829703311360_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Johndayll" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Johndayll.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iac_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iac_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,9 +211,6 @@
   <data name="Keino" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Keino.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Car" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\region-photos\Car.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Region_XI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\region-photos\Region XI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -226,8 +232,8 @@
   <data name="doh_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\doh_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_password_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_password_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Region_IX" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\region-photos\Region IX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_hide_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_hide_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,8 +259,8 @@
   <data name="icons8_exit_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_exit_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Region_VII" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\region-photos\Region VII.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Car" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\region-photos\Car.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_field_208px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_field_208px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -268,10 +274,10 @@
   <data name="Region_IV_B" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\region-photos\Region IV-B.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Region_IX" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\region-photos\Region IX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Region_VII" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\region-photos\Region VII.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loading_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loading_logo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo_static" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_static.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -272,7 +272,7 @@
             this.bunifuLabel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(227, 40);
+            this.bunifuLabel1.Size = new System.Drawing.Size(172, 33);
             this.bunifuLabel1.TabIndex = 5;
             this.bunifuLabel1.Text = "COVIDinfo-PH";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -425,7 +425,7 @@
             // 
             this.logoPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuTransition1.SetDecoration(this.logoPictureBox, BunifuAnimatorNS.DecorationType.None);
-            this.logoPictureBox.Image = global::CovidInfoPH.Properties.Resources.logo;
+            this.logoPictureBox.Image = global::CovidInfoPH.Properties.Resources.loading_icon;
             this.logoPictureBox.Location = new System.Drawing.Point(320, 145);
             this.logoPictureBox.Name = "logoPictureBox";
             this.logoPictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
