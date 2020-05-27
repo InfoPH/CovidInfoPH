@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -50,7 +49,12 @@
             this.regionDatePicker = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.regionMapView = new Bunifu.DataViz.WinForms.BunifuDataViz();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.uploadButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.optionLabel2 = new System.Windows.Forms.Label();
+            this.optionLabel1 = new System.Windows.Forms.Label();
+            this.uploadButton = new Guna.UI2.WinForms.Guna2Button();
+            this.optionsLabel = new System.Windows.Forms.Label();
+            this.option2 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.option1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.regionLabel = new System.Windows.Forms.Label();
             this.philippinesMap = new Syncfusion.Windows.Forms.Maps.Maps();
             this.generalCases = new System.Windows.Forms.TabPage();
@@ -127,6 +131,8 @@
             this.bunifuPanelElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.buttonElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.ftpUploadStatusLabel = new System.Windows.Forms.Label();
+            this.localSaveStatusLabel = new System.Windows.Forms.Label();
             this.menuBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.locationRegion.SuspendLayout();
@@ -474,7 +480,14 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.optionLabel2);
+            this.panel3.Controls.Add(this.optionLabel1);
+            this.panel3.Controls.Add(this.localSaveStatusLabel);
+            this.panel3.Controls.Add(this.ftpUploadStatusLabel);
             this.panel3.Controls.Add(this.uploadButton);
+            this.panel3.Controls.Add(this.optionsLabel);
+            this.panel3.Controls.Add(this.option2);
+            this.panel3.Controls.Add(this.option1);
             this.panel3.Controls.Add(this.regionLabel);
             this.bunifuTransition2.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
@@ -488,82 +501,139 @@
             this.bunifuToolTip1.SetToolTipIcon(this.panel3, null);
             this.bunifuToolTip1.SetToolTipTitle(this.panel3, "");
             // 
+            // optionLabel2
+            // 
+            this.optionLabel2.AutoSize = true;
+            this.bunifuTransition2.SetDecoration(this.optionLabel2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.optionLabel2, BunifuAnimatorNS.DecorationType.None);
+            this.optionLabel2.Font = new System.Drawing.Font("Proxima Soft", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optionLabel2.ForeColor = System.Drawing.Color.White;
+            this.optionLabel2.Location = new System.Drawing.Point(62, 196);
+            this.optionLabel2.Name = "optionLabel2";
+            this.optionLabel2.Size = new System.Drawing.Size(217, 25);
+            this.optionLabel2.TabIndex = 81;
+            this.optionLabel2.Text = "Upload to FTP server";
+            this.bunifuToolTip1.SetToolTip(this.optionLabel2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.optionLabel2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.optionLabel2, "");
+            // 
+            // optionLabel1
+            // 
+            this.optionLabel1.AutoSize = true;
+            this.bunifuTransition2.SetDecoration(this.optionLabel1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.optionLabel1, BunifuAnimatorNS.DecorationType.None);
+            this.optionLabel1.Font = new System.Drawing.Font("Proxima Soft", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optionLabel1.ForeColor = System.Drawing.Color.White;
+            this.optionLabel1.Location = new System.Drawing.Point(62, 165);
+            this.optionLabel1.Name = "optionLabel1";
+            this.optionLabel1.Size = new System.Drawing.Size(191, 25);
+            this.optionLabel1.TabIndex = 80;
+            this.optionLabel1.Text = "Save to local drive";
+            this.bunifuToolTip1.SetToolTip(this.optionLabel1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.optionLabel1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.optionLabel1, "");
+            // 
             // uploadButton
             // 
-            this.uploadButton.AllowToggling = false;
-            this.uploadButton.AnimationSpeed = 200;
-            this.uploadButton.AutoGenerateColors = false;
-            this.uploadButton.BackColor = System.Drawing.Color.Transparent;
-            this.uploadButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.uploadButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uploadButton.BackgroundImage")));
-            this.uploadButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.uploadButton.ButtonText = "Upload Report";
-            this.uploadButton.ButtonTextMarginLeft = 0;
-            this.uploadButton.ColorContrastOnClick = 45;
-            this.uploadButton.ColorContrastOnHover = 45;
+            this.uploadButton.Animated = true;
+            this.uploadButton.AutoRoundedCorners = true;
+            this.uploadButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
+            this.uploadButton.BorderRadius = 22;
+            this.uploadButton.BorderThickness = 1;
+            this.uploadButton.CheckedState.Parent = this.uploadButton;
             this.uploadButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.uploadButton.CustomizableEdges = borderEdges1;
+            this.uploadButton.CustomImages.Parent = this.uploadButton;
             this.bunifuTransition2.SetDecoration(this.uploadButton, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.uploadButton, BunifuAnimatorNS.DecorationType.None);
-            this.uploadButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.uploadButton.DisabledBorderColor = System.Drawing.Color.Empty;
-            this.uploadButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.uploadButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.uploadButton.Enabled = false;
-            this.uploadButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.uploadButton.Font = new System.Drawing.Font("Proxima Soft", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uploadButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(24)))), ((int)(((byte)(35)))));
+            this.uploadButton.Font = new System.Drawing.Font("Proxima Soft", 11F);
             this.uploadButton.ForeColor = System.Drawing.Color.White;
-            this.uploadButton.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.uploadButton.IconMarginLeft = 11;
-            this.uploadButton.IconPadding = 10;
-            this.uploadButton.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.uploadButton.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.uploadButton.IdleBorderRadius = 3;
-            this.uploadButton.IdleBorderThickness = 1;
-            this.uploadButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.uploadButton.IdleIconLeftImage = null;
-            this.uploadButton.IdleIconRightImage = null;
-            this.uploadButton.IndicateFocus = false;
-            this.uploadButton.Location = new System.Drawing.Point(10, 70);
-            this.uploadButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.uploadButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
+            this.uploadButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
+            this.uploadButton.HoverState.Parent = this.uploadButton;
+            this.uploadButton.Image = global::CovidInfoPH.Properties.Resources.icons8_pdf_208px;
+            this.uploadButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.uploadButton.Location = new System.Drawing.Point(3, 70);
+            this.uploadButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uploadButton.Name = "uploadButton";
-            this.uploadButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.uploadButton.onHoverState.BorderRadius = 3;
-            this.uploadButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.uploadButton.onHoverState.BorderThickness = 1;
-            this.uploadButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.uploadButton.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.uploadButton.onHoverState.IconLeftImage = null;
-            this.uploadButton.onHoverState.IconRightImage = null;
-            this.uploadButton.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.uploadButton.OnIdleState.BorderRadius = 3;
-            this.uploadButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.uploadButton.OnIdleState.BorderThickness = 1;
-            this.uploadButton.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.uploadButton.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.uploadButton.OnIdleState.IconLeftImage = null;
-            this.uploadButton.OnIdleState.IconRightImage = null;
-            this.uploadButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.uploadButton.OnPressedState.BorderRadius = 3;
-            this.uploadButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.uploadButton.OnPressedState.BorderThickness = 1;
-            this.uploadButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.uploadButton.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.uploadButton.OnPressedState.IconLeftImage = null;
-            this.uploadButton.OnPressedState.IconRightImage = null;
-            this.uploadButton.Size = new System.Drawing.Size(236, 56);
-            this.uploadButton.TabIndex = 75;
-            this.uploadButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uploadButton.TextMarginLeft = 0;
+            this.uploadButton.ShadowDecoration.Parent = this.uploadButton;
+            this.uploadButton.Size = new System.Drawing.Size(193, 46);
+            this.uploadButton.TabIndex = 60;
+            this.uploadButton.Text = "Save Report";
+            this.uploadButton.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.bunifuToolTip1.SetToolTip(this.uploadButton, "");
             this.bunifuToolTip1.SetToolTipIcon(this.uploadButton, null);
             this.bunifuToolTip1.SetToolTipTitle(this.uploadButton, "");
-            this.uploadButton.UseDefaultRadiusAndThickness = true;
             this.uploadButton.Click += new System.EventHandler(this.uploadButton_Click);
+            // 
+            // optionsLabel
+            // 
+            this.optionsLabel.AutoSize = true;
+            this.bunifuTransition2.SetDecoration(this.optionsLabel, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.optionsLabel, BunifuAnimatorNS.DecorationType.None);
+            this.optionsLabel.Font = new System.Drawing.Font("Proxima Soft Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optionsLabel.ForeColor = System.Drawing.Color.White;
+            this.optionsLabel.Location = new System.Drawing.Point(5, 129);
+            this.optionsLabel.Name = "optionsLabel";
+            this.optionsLabel.Size = new System.Drawing.Size(94, 25);
+            this.optionsLabel.TabIndex = 79;
+            this.optionsLabel.Text = "Options:";
+            this.bunifuToolTip1.SetToolTip(this.optionsLabel, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.optionsLabel, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.optionsLabel, "");
+            // 
+            // option2
+            // 
+            this.option2.Animated = true;
+            this.option2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(209)))), ((int)(((byte)(56)))));
+            this.option2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(209)))), ((int)(((byte)(56)))));
+            this.option2.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.option2.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.option2.CheckedState.Parent = this.option2;
+            this.option2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition2.SetDecoration(this.option2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.option2, BunifuAnimatorNS.DecorationType.None);
+            this.option2.Location = new System.Drawing.Point(10, 196);
+            this.option2.Name = "option2";
+            this.option2.ShadowDecoration.Parent = this.option2;
+            this.option2.Size = new System.Drawing.Size(46, 25);
+            this.option2.TabIndex = 77;
+            this.bunifuToolTip1.SetToolTip(this.option2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.option2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.option2, "");
+            this.option2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.option2.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.option2.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.option2.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.option2.UncheckedState.Parent = this.option2;
+            this.option2.CheckedChanged += new System.EventHandler(this.option_CheckedChanged);
+            // 
+            // option1
+            // 
+            this.option1.Animated = true;
+            this.option1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(209)))), ((int)(((byte)(56)))));
+            this.option1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(209)))), ((int)(((byte)(56)))));
+            this.option1.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.option1.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.option1.CheckedState.Parent = this.option1;
+            this.option1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition2.SetDecoration(this.option1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.option1, BunifuAnimatorNS.DecorationType.None);
+            this.option1.Location = new System.Drawing.Point(10, 165);
+            this.option1.Name = "option1";
+            this.option1.ShadowDecoration.Parent = this.option1;
+            this.option1.Size = new System.Drawing.Size(46, 25);
+            this.option1.TabIndex = 76;
+            this.bunifuToolTip1.SetToolTip(this.option1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.option1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.option1, "");
+            this.option1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.option1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.option1.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.option1.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.option1.UncheckedState.Parent = this.option1;
+            this.option1.CheckedChanged += new System.EventHandler(this.option_CheckedChanged);
             // 
             // regionLabel
             // 
@@ -574,9 +644,9 @@
             this.regionLabel.ForeColor = System.Drawing.Color.White;
             this.regionLabel.Location = new System.Drawing.Point(3, 14);
             this.regionLabel.Name = "regionLabel";
-            this.regionLabel.Size = new System.Drawing.Size(200, 37);
+            this.regionLabel.Size = new System.Drawing.Size(219, 37);
             this.regionLabel.TabIndex = 74;
-            this.regionLabel.Text = "Region Here";
+            this.regionLabel.Text = "Select Region";
             this.bunifuToolTip1.SetToolTip(this.regionLabel, "");
             this.bunifuToolTip1.SetToolTipIcon(this.regionLabel, null);
             this.bunifuToolTip1.SetToolTipTitle(this.regionLabel, "");
@@ -1362,7 +1432,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.153847F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.153847F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 248F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 279F));
             this.tableLayoutPanel1.Controls.Add(this.deathsColorlabel, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label8, 6, 0);
@@ -1390,7 +1460,7 @@
             this.deathsColorlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109)))));
             this.bunifuTransition1.SetDecoration(this.deathsColorlabel, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.deathsColorlabel, BunifuAnimatorNS.DecorationType.None);
-            this.deathsColorlabel.Location = new System.Drawing.Point(1086, 9);
+            this.deathsColorlabel.Location = new System.Drawing.Point(1056, 9);
             this.deathsColorlabel.Name = "deathsColorlabel";
             this.deathsColorlabel.Size = new System.Drawing.Size(20, 20);
             this.deathsColorlabel.TabIndex = 75;
@@ -1424,7 +1494,7 @@
             this.label8.Dock = System.Windows.Forms.DockStyle.Left;
             this.label8.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(1112, 0);
+            this.label8.Location = new System.Drawing.Point(1082, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 38);
             this.label8.TabIndex = 0;
@@ -1440,7 +1510,7 @@
             this.casesColorlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
             this.bunifuTransition1.SetDecoration(this.casesColorlabel, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.casesColorlabel, BunifuAnimatorNS.DecorationType.None);
-            this.casesColorlabel.Location = new System.Drawing.Point(628, 9);
+            this.casesColorlabel.Location = new System.Drawing.Point(600, 9);
             this.casesColorlabel.Name = "casesColorlabel";
             this.casesColorlabel.Size = new System.Drawing.Size(20, 20);
             this.casesColorlabel.TabIndex = 73;
@@ -1456,7 +1526,7 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Left;
             this.label6.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(654, 0);
+            this.label6.Location = new System.Drawing.Point(626, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 38);
             this.label6.TabIndex = 0;
@@ -1472,7 +1542,7 @@
             this.recoveriesColorlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
             this.bunifuTransition1.SetDecoration(this.recoveriesColorlabel, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.recoveriesColorlabel, BunifuAnimatorNS.DecorationType.None);
-            this.recoveriesColorlabel.Location = new System.Drawing.Point(857, 9);
+            this.recoveriesColorlabel.Location = new System.Drawing.Point(828, 9);
             this.recoveriesColorlabel.Name = "recoveriesColorlabel";
             this.recoveriesColorlabel.Size = new System.Drawing.Size(20, 20);
             this.recoveriesColorlabel.TabIndex = 74;
@@ -1488,7 +1558,7 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Left;
             this.label7.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(883, 0);
+            this.label7.Location = new System.Drawing.Point(854, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(112, 38);
             this.label7.TabIndex = 0;
@@ -1534,10 +1604,10 @@
             this.DashBoard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DashBoard.Multiline = true;
             this.DashBoard.Name = "DashBoard";
-            this.DashBoard.Page = this.generalCases;
-            this.DashBoard.PageIndex = 0;
-            this.DashBoard.PageName = "generalCases";
-            this.DashBoard.PageTitle = "tabPage1";
+            this.DashBoard.Page = this.locationRegion;
+            this.DashBoard.PageIndex = 1;
+            this.DashBoard.PageName = "locationRegion";
+            this.DashBoard.PageTitle = "tabPage2";
             this.DashBoard.SelectedIndex = 0;
             this.DashBoard.Size = new System.Drawing.Size(1389, 745);
             this.DashBoard.TabIndex = 54;
@@ -1890,7 +1960,39 @@
             // buttonElipse
             // 
             this.buttonElipse.ElipseRadius = 20;
-            this.buttonElipse.TargetControl = this.uploadButton;
+            this.buttonElipse.TargetControl = this;
+            // 
+            // ftpUploadStatusLabel
+            // 
+            this.ftpUploadStatusLabel.AutoSize = true;
+            this.bunifuTransition2.SetDecoration(this.ftpUploadStatusLabel, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.ftpUploadStatusLabel, BunifuAnimatorNS.DecorationType.None);
+            this.ftpUploadStatusLabel.Font = new System.Drawing.Font("Proxima Soft", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ftpUploadStatusLabel.ForeColor = System.Drawing.Color.Green;
+            this.ftpUploadStatusLabel.Location = new System.Drawing.Point(273, 196);
+            this.ftpUploadStatusLabel.Name = "ftpUploadStatusLabel";
+            this.ftpUploadStatusLabel.Size = new System.Drawing.Size(0, 25);
+            this.ftpUploadStatusLabel.TabIndex = 82;
+            this.ftpUploadStatusLabel.Text = "   ";
+            this.bunifuToolTip1.SetToolTip(this.ftpUploadStatusLabel, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.ftpUploadStatusLabel, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.ftpUploadStatusLabel, "");
+            // 
+            // localSaveStatusLabel
+            // 
+            this.localSaveStatusLabel.AutoSize = true;
+            this.bunifuTransition2.SetDecoration(this.localSaveStatusLabel, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.localSaveStatusLabel, BunifuAnimatorNS.DecorationType.None);
+            this.localSaveStatusLabel.Font = new System.Drawing.Font("Proxima Soft", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.localSaveStatusLabel.ForeColor = System.Drawing.Color.Red;
+            this.localSaveStatusLabel.Location = new System.Drawing.Point(247, 165);
+            this.localSaveStatusLabel.Name = "localSaveStatusLabel";
+            this.localSaveStatusLabel.Size = new System.Drawing.Size(0, 25);
+            this.localSaveStatusLabel.TabIndex = 83;
+            this.localSaveStatusLabel.Text = "   ";
+            this.bunifuToolTip1.SetToolTip(this.localSaveStatusLabel, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.localSaveStatusLabel, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.localSaveStatusLabel, "");
             // 
             // MainForm
             // 
@@ -2039,9 +2141,16 @@
         private Bunifu.DataViz.WinForms.BunifuDataViz regionMapView;
         private Bunifu.UI.WinForms.BunifuDatePicker regionDatePicker;
         private System.Windows.Forms.Panel panel3;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton uploadButton;
         private Bunifu.Framework.UI.BunifuElipse buttonElipse;
         private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton3;
+        private Guna.UI2.WinForms.Guna2Button uploadButton;
+        private System.Windows.Forms.Label optionsLabel;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch option2;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch option1;
+        private System.Windows.Forms.Label optionLabel2;
+        private System.Windows.Forms.Label optionLabel1;
+        private System.Windows.Forms.Label localSaveStatusLabel;
+        private System.Windows.Forms.Label ftpUploadStatusLabel;
     }
 }
 
