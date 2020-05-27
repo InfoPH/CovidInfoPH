@@ -96,9 +96,6 @@ namespace CovidInfoPH
         }
         private void SetChartColors()
         {
-            generalCaseChart.colorSet.Add(Color.FromArgb(152, 135, 143));
-            generalCaseChart.colorSet.Add(Color.FromArgb(142, 174, 189));
-            generalCaseChart.colorSet.Add(Color.FromArgb(152, 94, 109));
             regionMapView.colorSet.Add(Color.FromArgb(152, 135, 143));
             regionMapView.colorSet.Add(Color.FromArgb(142, 174, 189));
             regionMapView.colorSet.Add(Color.FromArgb(152, 94, 109));
@@ -269,7 +266,6 @@ namespace CovidInfoPH
         private void FadeOutValues()
         {
             datePicker.Enabled = false;
-            bunifuTransition2.HideSync(generalCaseChart);
             bunifuTransition1.HideSync(caseGridView);
             bunifuTransition1.HideSync(newCasesNum);
             bunifuTransition1.HideSync(deathNum2);
@@ -288,7 +284,6 @@ namespace CovidInfoPH
             bunifuTransition1.ShowSync(deathNum2);
             bunifuTransition1.ShowSync(newCasesNum);
             bunifuTransition1.ShowSync(caseGridView);
-            bunifuTransition2.ShowSync(generalCaseChart);
 
         }
         #endregion
@@ -652,6 +647,7 @@ namespace CovidInfoPH
         private void monthRadioButton_Click(object sender, EventArgs e)
         {
             //Still no region feature
+            datePicker.Enabled = false;
             FadeOutValues();
             DisplayGraph(true);
             DisplayDataGrid(true);

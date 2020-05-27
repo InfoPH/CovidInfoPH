@@ -75,6 +75,13 @@
             this.philippinesMap = new Syncfusion.Windows.Forms.Maps.Maps();
             this.generalCases = new System.Windows.Forms.TabPage();
             this.tableDashBoard = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.datePicker = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.weekRadioButton = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.monthRadioButton = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.lowerDataPanel = new System.Windows.Forms.Panel();
             this.lowerDataTablePanel = new System.Windows.Forms.TableLayoutPanel();
             this.caseGridView = new Bunifu.Framework.UI.BunifuCustomDataGrid();
@@ -103,19 +110,17 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.weeklyReport = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.caseNum2 = new System.Windows.Forms.Label();
             this.deathNum2 = new System.Windows.Forms.Label();
+            this.caseNum2 = new System.Windows.Forms.Label();
             this.deathPercent = new Bunifu.UI.WinForms.BunifuCircleProgress();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.chartPanel = new System.Windows.Forms.Panel();
             this.dashBoardChart = new DevExpress.XtraCharts.ChartControl();
-            this.generalCaseChart = new Bunifu.DataViz.WinForms.BunifuDataViz();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
-            this.datePicker = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.DashBoard = new Bunifu.UI.WinForms.BunifuPages();
@@ -161,6 +166,7 @@
             this.panel3.SuspendLayout();
             this.generalCases.SuspendLayout();
             this.tableDashBoard.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.lowerDataPanel.SuspendLayout();
             this.lowerDataTablePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.caseGridView)).BeginInit();
@@ -185,7 +191,6 @@
             ((System.ComponentModel.ISupportInitialize)(stackedAreaSeriesView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(stackedAreaSeriesView3)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
             this.DashBoard.SuspendLayout();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
@@ -501,7 +506,7 @@
             this.bunifuTransition2.SetDecoration(this.regionMapView, BunifuAnimatorNS.DecorationType.None);
             this.regionMapView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.regionMapView.Location = new System.Drawing.Point(0, 0);
-            this.regionMapView.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.regionMapView.Margin = new System.Windows.Forms.Padding(5);
             this.regionMapView.Name = "regionMapView";
             this.regionMapView.Size = new System.Drawing.Size(588, 378);
             this.regionMapView.TabIndex = 75;
@@ -728,7 +733,7 @@
             this.philippinesMap.Location = new System.Drawing.Point(3, 1);
             this.philippinesMap.MapItemFont = null;
             this.philippinesMap.MapItemsShape = Syncfusion.Windows.Forms.Maps.MapItemShapes.Ellipse;
-            this.philippinesMap.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.philippinesMap.Margin = new System.Windows.Forms.Padding(20);
             this.philippinesMap.Name = "philippinesMap";
             this.philippinesMap.OnSelectionChanged = null;
             this.philippinesMap.Size = new System.Drawing.Size(627, 565);
@@ -761,11 +766,12 @@
             // 
             this.tableDashBoard.ColumnCount = 1;
             this.tableDashBoard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1213F));
+            this.tableDashBoard.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableDashBoard.Controls.Add(this.lowerDataPanel, 0, 2);
             this.tableDashBoard.Controls.Add(this.chartPanel, 0, 1);
             this.bunifuTransition2.SetDecoration(this.tableDashBoard, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.tableDashBoard, BunifuAnimatorNS.DecorationType.None);
-            this.tableDashBoard.Location = new System.Drawing.Point(13, 6);
+            this.tableDashBoard.Location = new System.Drawing.Point(2, 4);
             this.tableDashBoard.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.tableDashBoard.Name = "tableDashBoard";
             this.tableDashBoard.RowCount = 3;
@@ -778,6 +784,164 @@
             this.bunifuToolTip1.SetToolTip(this.tableDashBoard, "");
             this.bunifuToolTip1.SetToolTipIcon(this.tableDashBoard, null);
             this.bunifuToolTip1.SetToolTipTitle(this.tableDashBoard, "");
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 6;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.31171F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.34477F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.34477F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.99875F));
+            this.tableLayoutPanel3.Controls.Add(this.datePicker, 5, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label8, 4, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label9, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label10, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.weekRadioButton, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.monthRadioButton, 3, 0);
+            this.bunifuTransition2.SetDecoration(this.tableLayoutPanel3, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.tableLayoutPanel3, BunifuAnimatorNS.DecorationType.None);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1207, 29);
+            this.tableLayoutPanel3.TabIndex = 79;
+            this.bunifuToolTip1.SetToolTip(this.tableLayoutPanel3, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.tableLayoutPanel3, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.tableLayoutPanel3, "");
+            // 
+            // datePicker
+            // 
+            this.datePicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            this.datePicker.BorderRadius = 1;
+            this.datePicker.CalendarForeColor = System.Drawing.Color.White;
+            this.datePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
+            this.datePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
+            this.datePicker.Color = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
+            this.datePicker.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.datePicker.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
+            this.datePicker.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.bunifuTransition1.SetDecoration(this.datePicker, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.datePicker, BunifuAnimatorNS.DecorationType.None);
+            this.datePicker.DisabledColor = System.Drawing.Color.Gray;
+            this.datePicker.DisplayWeekNumbers = false;
+            this.datePicker.DPHeight = 0;
+            this.datePicker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.datePicker.FillDatePicker = false;
+            this.datePicker.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datePicker.ForeColor = System.Drawing.Color.White;
+            this.datePicker.Icon = ((System.Drawing.Image)(resources.GetObject("datePicker.Icon")));
+            this.datePicker.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
+            this.datePicker.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.datePicker.Location = new System.Drawing.Point(886, 2);
+            this.datePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datePicker.MaxDate = new System.DateTime(9998, 5, 14, 0, 0, 0, 0);
+            this.datePicker.MinDate = new System.DateTime(2020, 2, 4, 0, 0, 0, 0);
+            this.datePicker.MinimumSize = new System.Drawing.Size(265, 32);
+            this.datePicker.Name = "datePicker";
+            this.datePicker.Size = new System.Drawing.Size(313, 32);
+            this.datePicker.TabIndex = 61;
+            this.bunifuToolTip1.SetToolTip(this.datePicker, "Pick a date for the corresponding data");
+            this.bunifuToolTip1.SetToolTipIcon(this.datePicker, ((System.Drawing.Image)(resources.GetObject("datePicker.ToolTipIcon"))));
+            this.bunifuToolTip1.SetToolTipTitle(this.datePicker, "Date Picker");
+            this.datePicker.Value = new System.DateTime(2020, 5, 12, 0, 0, 0, 0);
+            this.datePicker.ValueChanged += new System.EventHandler(this.DatePicker_ValueChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
+            this.label8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label8.Font = new System.Drawing.Font("Proxima Soft", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(688, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(134, 30);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "View by month";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuToolTip1.SetToolTip(this.label8, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label8, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label8, "");
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.label9, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.label9, BunifuAnimatorNS.DecorationType.None);
+            this.label9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label9.Font = new System.Drawing.Font("Proxima Soft", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(460, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(128, 30);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "View by week";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuToolTip1.SetToolTip(this.label9, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label9, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label9, "");
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.label10, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.label10, BunifuAnimatorNS.DecorationType.None);
+            this.label10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label10.Font = new System.Drawing.Font("Proxima Soft", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(3, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(223, 30);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Data from the past 7 days";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuToolTip1.SetToolTip(this.label10, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label10, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label10, "");
+            // 
+            // weekRadioButton
+            // 
+            this.weekRadioButton.BorderThickness = 2;
+            this.weekRadioButton.Checked = true;
+            this.bunifuTransition1.SetDecoration(this.weekRadioButton, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.weekRadioButton, BunifuAnimatorNS.DecorationType.None);
+            this.weekRadioButton.Location = new System.Drawing.Point(430, 3);
+            this.weekRadioButton.Name = "weekRadioButton";
+            this.weekRadioButton.OutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
+            this.weekRadioButton.OutlineColorUnchecked = System.Drawing.Color.Gray;
+            this.weekRadioButton.RadioColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
+            this.weekRadioButton.Size = new System.Drawing.Size(24, 24);
+            this.weekRadioButton.TabIndex = 1;
+            this.weekRadioButton.Text = null;
+            this.bunifuToolTip1.SetToolTip(this.weekRadioButton, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.weekRadioButton, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.weekRadioButton, "");
+            this.weekRadioButton.Click += new System.EventHandler(this.weekRadioButton_Click);
+            // 
+            // monthRadioButton
+            // 
+            this.monthRadioButton.BorderThickness = 2;
+            this.monthRadioButton.Checked = false;
+            this.bunifuTransition1.SetDecoration(this.monthRadioButton, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.monthRadioButton, BunifuAnimatorNS.DecorationType.None);
+            this.monthRadioButton.Location = new System.Drawing.Point(658, 3);
+            this.monthRadioButton.Name = "monthRadioButton";
+            this.monthRadioButton.OutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
+            this.monthRadioButton.OutlineColorUnchecked = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
+            this.monthRadioButton.RadioColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
+            this.monthRadioButton.Size = new System.Drawing.Size(24, 24);
+            this.monthRadioButton.TabIndex = 1;
+            this.monthRadioButton.Text = null;
+            this.bunifuToolTip1.SetToolTip(this.monthRadioButton, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.monthRadioButton, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.monthRadioButton, "");
+            this.monthRadioButton.Click += new System.EventHandler(this.monthRadioButton_Click);
             // 
             // lowerDataPanel
             // 
@@ -1268,8 +1432,8 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.panel8.Controls.Add(this.caseNum2);
             this.panel8.Controls.Add(this.deathNum2);
+            this.panel8.Controls.Add(this.caseNum2);
             this.panel8.Controls.Add(this.deathPercent);
             this.panel8.Controls.Add(this.label2);
             this.panel8.Controls.Add(this.label3);
@@ -1286,6 +1450,22 @@
             this.bunifuToolTip1.SetToolTipIcon(this.panel8, null);
             this.bunifuToolTip1.SetToolTipTitle(this.panel8, "");
             // 
+            // deathNum2
+            // 
+            this.deathNum2.AutoSize = true;
+            this.bunifuTransition2.SetDecoration(this.deathNum2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.deathNum2, BunifuAnimatorNS.DecorationType.None);
+            this.deathNum2.Font = new System.Drawing.Font("Proxima Soft", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deathNum2.ForeColor = System.Drawing.Color.White;
+            this.deathNum2.Location = new System.Drawing.Point(113, 52);
+            this.deathNum2.Name = "deathNum2";
+            this.deathNum2.Size = new System.Drawing.Size(31, 32);
+            this.deathNum2.TabIndex = 0;
+            this.deathNum2.Text = "--";
+            this.bunifuToolTip1.SetToolTip(this.deathNum2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.deathNum2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.deathNum2, "");
+            // 
             // caseNum2
             // 
             this.caseNum2.AutoSize = true;
@@ -1301,19 +1481,6 @@
             this.bunifuToolTip1.SetToolTip(this.caseNum2, "");
             this.bunifuToolTip1.SetToolTipIcon(this.caseNum2, null);
             this.bunifuToolTip1.SetToolTipTitle(this.caseNum2, "");
-            // 
-            // deathNum2
-            // 
-            this.bunifuTransition2.SetDecoration(this.deathNum2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.deathNum2, BunifuAnimatorNS.DecorationType.None);
-            this.deathNum2.Location = new System.Drawing.Point(113, 52);
-            this.deathNum2.Name = "deathNum2";
-            this.deathNum2.Size = new System.Drawing.Size(35, 31);
-            this.deathNum2.TabIndex = 0;
-            this.deathNum2.Text = "--";
-            this.bunifuToolTip1.SetToolTip(this.deathNum2, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.deathNum2, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.deathNum2, "");
             // 
             // deathPercent
             // 
@@ -1401,10 +1568,8 @@
             // chartPanel
             // 
             this.chartPanel.Controls.Add(this.dashBoardChart);
-            this.chartPanel.Controls.Add(this.generalCaseChart);
             this.bunifuTransition1.SetDecoration(this.chartPanel, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.chartPanel, BunifuAnimatorNS.DecorationType.None);
-            this.chartPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartPanel.Location = new System.Drawing.Point(3, 34);
             this.chartPanel.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.chartPanel.Name = "chartPanel";
@@ -1457,42 +1622,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.dashBoardChart, null);
             this.bunifuToolTip1.SetToolTipTitle(this.dashBoardChart, "");
             // 
-            // generalCaseChart
-            // 
-            this.generalCaseChart.animationEnabled = false;
-            this.generalCaseChart.AxisLineColor = System.Drawing.Color.LightGray;
-            this.generalCaseChart.AxisXFontColor = System.Drawing.Color.White;
-            this.generalCaseChart.AxisXGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.generalCaseChart.AxisXGridThickness = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.generalCaseChart.AxisYFontColor = System.Drawing.Color.White;
-            this.generalCaseChart.AxisYGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.generalCaseChart.AxisYGridThickness = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.generalCaseChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.generalCaseChart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTransition1.SetDecoration(this.generalCaseChart, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.generalCaseChart, BunifuAnimatorNS.DecorationType.None);
-            this.generalCaseChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.generalCaseChart.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generalCaseChart.ForeColor = System.Drawing.Color.White;
-            this.generalCaseChart.Location = new System.Drawing.Point(0, 0);
-            this.generalCaseChart.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.generalCaseChart.Name = "generalCaseChart";
-            this.generalCaseChart.Size = new System.Drawing.Size(1207, 277);
-            this.generalCaseChart.TabIndex = 60;
-            this.generalCaseChart.Theme = Bunifu.DataViz.WinForms.BunifuDataViz._theme.theme1;
-            this.generalCaseChart.Title = "";
-            this.bunifuToolTip1.SetToolTip(this.generalCaseChart, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.generalCaseChart, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.generalCaseChart, "");
-            // 
             // bunifuLabel1
             // 
             this.bunifuLabel1.AutoEllipsis = false;
@@ -1513,8 +1642,15 @@
             this.bunifuToolTip1.SetToolTip(this.bunifuLabel1, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuLabel1, null);
             this.bunifuToolTip1.SetToolTipTitle(this.bunifuLabel1, "");
+            // 
+            // tableLayoutPanel1
+            // 
             this.bunifuTransition2.SetDecoration(this.tableLayoutPanel1, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.tableLayoutPanel1, BunifuAnimatorNS.DecorationType.None);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel1.TabIndex = 0;
             this.bunifuToolTip1.SetToolTip(this.tableLayoutPanel1, "");
             this.bunifuToolTip1.SetToolTipIcon(this.tableLayoutPanel1, null);
             this.bunifuToolTip1.SetToolTipTitle(this.tableLayoutPanel1, "");
@@ -1522,8 +1658,8 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
             this.label5.Dock = System.Windows.Forms.DockStyle.Left;
             this.label5.Font = new System.Drawing.Font("Proxima Soft", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
@@ -1538,48 +1674,11 @@
             this.bunifuToolTip1.SetToolTipIcon(this.label5, null);
             this.bunifuToolTip1.SetToolTipTitle(this.label5, "");
             // 
-            // datePicker
-            // 
-            this.datePicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.datePicker.BorderRadius = 1;
-            this.datePicker.CalendarForeColor = System.Drawing.Color.White;
-            this.datePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
-            this.datePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
-            this.datePicker.Color = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
-            this.datePicker.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.datePicker.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
-            this.datePicker.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.bunifuTransition1.SetDecoration(this.datePicker, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.datePicker, BunifuAnimatorNS.DecorationType.None);
-            this.datePicker.DisabledColor = System.Drawing.Color.Gray;
-            this.datePicker.DisplayWeekNumbers = false;
-            this.datePicker.DPHeight = 0;
-            this.datePicker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.datePicker.FillDatePicker = false;
-            this.datePicker.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datePicker.ForeColor = System.Drawing.Color.White;
-            this.datePicker.Icon = ((System.Drawing.Image)(resources.GetObject("datePicker.Icon")));
-            this.datePicker.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
-            this.datePicker.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.datePicker.Location = new System.Drawing.Point(386, 1);
-            this.datePicker.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.datePicker.MaxDate = new System.DateTime(9998, 5, 14, 0, 0, 0, 0);
-            this.datePicker.MinDate = new System.DateTime(2020, 2, 4, 0, 0, 0, 0);
-            this.datePicker.MinimumSize = new System.Drawing.Size(200, 32);
-            this.datePicker.Name = "datePicker";
-            this.datePicker.Size = new System.Drawing.Size(200, 32);
-            this.datePicker.TabIndex = 61;
-            this.bunifuToolTip1.SetToolTip(this.datePicker, "Pick a date for the corresponding data");
-            this.bunifuToolTip1.SetToolTipIcon(this.datePicker, ((System.Drawing.Image)(resources.GetObject("datePicker.ToolTipIcon"))));
-            this.bunifuToolTip1.SetToolTipTitle(this.datePicker, "Date Picker");
-            this.datePicker.Value = new System.DateTime(2020, 5, 12, 0, 0, 0, 0);
-            this.datePicker.ValueChanged += new System.EventHandler(this.DatePicker_ValueChanged);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.label7, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.label7, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.label7, BunifuAnimatorNS.DecorationType.None);
             this.label7.Dock = System.Windows.Forms.DockStyle.Left;
             this.label7.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
@@ -1597,8 +1696,8 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.label6, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.label6, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.label6, BunifuAnimatorNS.DecorationType.None);
             this.label6.Dock = System.Windows.Forms.DockStyle.Left;
             this.label6.Font = new System.Drawing.Font("Proxima Soft", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
@@ -1891,7 +1990,7 @@
             // generalCaseElipse
             // 
             this.generalCaseElipse.ElipseRadius = 30;
-            this.generalCaseElipse.TargetControl = this.generalCaseChart;
+            this.generalCaseElipse.TargetControl = this;
             // 
             // caseGridViewElipse
             // 
@@ -2021,6 +2120,8 @@
             this.generalCases.ResumeLayout(false);
             this.generalCases.PerformLayout();
             this.tableDashBoard.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.lowerDataPanel.ResumeLayout(false);
             this.lowerDataTablePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.caseGridView)).EndInit();
@@ -2050,8 +2151,6 @@
             ((System.ComponentModel.ISupportInitialize)(stackedAreaSeriesView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashBoardChart)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.DashBoard.ResumeLayout(false);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
@@ -2072,8 +2171,6 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private System.Windows.Forms.TableLayoutPanel tableDashBoard;
         private System.Windows.Forms.Panel lowerDataPanel;
-        private System.Windows.Forms.Panel chartPanel;
-        private Bunifu.DataViz.WinForms.BunifuDataViz generalCaseChart;
         private Bunifu.Framework.UI.BunifuElipse bunifuCasesElipse;
         private Bunifu.Framework.UI.BunifuElipse bunifuDeathsElipse;
         private Bunifu.Framework.UI.BunifuElipse bunifuRecoveriesElipse;
@@ -2109,7 +2206,6 @@
         private System.Windows.Forms.Label casesNum;
         private System.Windows.Forms.Label newCasesNum;
         private System.Windows.Forms.Label caseNum2;
-        private System.Windows.Forms.Label deathNum2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
@@ -2146,14 +2242,22 @@
         private System.Windows.Forms.Label optionLabel1;
         private System.Windows.Forms.Label localSaveStatusLabel;
         private System.Windows.Forms.Label ftpUploadStatusLabel;
-        private DevExpress.XtraCharts.ChartControl dashBoardChart;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private Bunifu.UI.WinForms.BunifuDatePicker datePicker;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private DevExpress.XtraCharts.ChartControl stackedChart;
         private BunifuAnimatorNS.BunifuTransition bunifuTransition1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private Bunifu.UI.WinForms.BunifuDatePicker datePicker;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private Bunifu.UI.WinForms.BunifuRadioButton weekRadioButton;
+        private Bunifu.UI.WinForms.BunifuRadioButton monthRadioButton;
+        private System.Windows.Forms.Label deathNum2;
+        private System.Windows.Forms.Panel chartPanel;
+        private DevExpress.XtraCharts.ChartControl dashBoardChart;
     }
 }
 
