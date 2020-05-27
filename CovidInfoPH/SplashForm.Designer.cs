@@ -42,24 +42,25 @@
             this.ortegaName = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.guna2WinProgressIndicator1 = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
-            this.exitButton = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.nino = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.braulio = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.logoPictureBox = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.martinez = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.arizala = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.ortega = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.itang = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.splashScreenElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.logoTimer = new System.Windows.Forms.Timer(this.components);
             this.nameTimer = new System.Windows.Forms.Timer(this.components);
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.showLogo = new System.Windows.Forms.Timer(this.components);
             this.showFace = new System.Windows.Forms.Timer(this.components);
+            this.exitButton = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.nino = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.braulio = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.loadingLogo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.logoPictureBox = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.martinez = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.arizala = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.ortega = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.itang = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nino)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.braulio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loadingLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.martinez)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arizala)).BeginInit();
@@ -281,20 +282,51 @@
             this.bunifuToolTip1.SetToolTipTitle(this.bunifuLabel1, "<b>COVIDinfo-PH</b> <span style=\\\"color: darkgray;\\\">•</span> <span style=\"color:" +
         " dimgray; font-family: consolas; font-size: 13px\">v1.0.0</span>");
             // 
-            // guna2WinProgressIndicator1
+            // splashScreenElipse
             // 
-            this.guna2WinProgressIndicator1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2WinProgressIndicator1.AutoStart = true;
-            this.guna2WinProgressIndicator1.CircleSize = 1F;
-            this.bunifuTransition1.SetDecoration(this.guna2WinProgressIndicator1, BunifuAnimatorNS.DecorationType.None);
-            this.guna2WinProgressIndicator1.Location = new System.Drawing.Point(355, 3);
-            this.guna2WinProgressIndicator1.Name = "guna2WinProgressIndicator1";
-            this.guna2WinProgressIndicator1.Size = new System.Drawing.Size(90, 90);
-            this.guna2WinProgressIndicator1.TabIndex = 5;
-            this.bunifuToolTip1.SetToolTip(this.guna2WinProgressIndicator1, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.guna2WinProgressIndicator1, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.guna2WinProgressIndicator1, "");
-            this.guna2WinProgressIndicator1.Visible = false;
+            this.splashScreenElipse.ElipseRadius = 60;
+            this.splashScreenElipse.TargetControl = this;
+            // 
+            // logoTimer
+            // 
+            this.logoTimer.Interval = 500;
+            this.logoTimer.Tick += new System.EventHandler(this.logoTimer_Tick);
+            // 
+            // nameTimer
+            // 
+            this.nameTimer.Interval = 1000;
+            this.nameTimer.Tick += new System.EventHandler(this.nameTimer_Tick);
+            // 
+            // bunifuTransition1
+            // 
+            this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
+            this.bunifuTransition1.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 1F;
+            this.bunifuTransition1.DefaultAnimation = animation1;
+            // 
+            // showLogo
+            // 
+            this.showLogo.Interval = 1000;
+            this.showLogo.Tick += new System.EventHandler(this.showLogo_Tick);
+            // 
+            // showFace
+            // 
+            this.showFace.Interval = 1000;
+            this.showFace.Tick += new System.EventHandler(this.showFace_Tick);
             // 
             // exitButton
             // 
@@ -371,11 +403,29 @@
             this.bunifuToolTip1.SetToolTipTitle(this.braulio, "");
             this.braulio.Visible = false;
             // 
+            // loadingLogo
+            // 
+            this.loadingLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuTransition1.SetDecoration(this.loadingLogo, BunifuAnimatorNS.DecorationType.None);
+            this.loadingLogo.Image = global::CovidInfoPH.Properties.Resources.loading_logo;
+            this.loadingLogo.Location = new System.Drawing.Point(355, 3);
+            this.loadingLogo.Name = "loadingLogo";
+            this.loadingLogo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.loadingLogo.ShadowDecoration.Parent = this.loadingLogo;
+            this.loadingLogo.Size = new System.Drawing.Size(90, 90);
+            this.loadingLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.loadingLogo.TabIndex = 2;
+            this.loadingLogo.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.loadingLogo, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.loadingLogo, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.loadingLogo, "");
+            this.loadingLogo.Visible = false;
+            // 
             // logoPictureBox
             // 
             this.logoPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuTransition1.SetDecoration(this.logoPictureBox, BunifuAnimatorNS.DecorationType.None);
-            this.logoPictureBox.Image = global::CovidInfoPH.Properties.Resources.logo;
+            this.logoPictureBox.Image = global::CovidInfoPH.Properties.Resources.loading_icon;
             this.logoPictureBox.Location = new System.Drawing.Point(320, 145);
             this.logoPictureBox.Name = "logoPictureBox";
             this.logoPictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -461,65 +511,19 @@
             this.bunifuToolTip1.SetToolTipTitle(this.itang, "");
             this.itang.Visible = false;
             // 
-            // splashScreenElipse
-            // 
-            this.splashScreenElipse.ElipseRadius = 60;
-            this.splashScreenElipse.TargetControl = this;
-            // 
-            // logoTimer
-            // 
-            this.logoTimer.Interval = 500;
-            this.logoTimer.Tick += new System.EventHandler(this.logoTimer_Tick);
-            // 
-            // nameTimer
-            // 
-            this.nameTimer.Interval = 1000;
-            this.nameTimer.Tick += new System.EventHandler(this.nameTimer_Tick);
-            // 
-            // bunifuTransition1
-            // 
-            this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
-            this.bunifuTransition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 1F;
-            this.bunifuTransition1.DefaultAnimation = animation1;
-            // 
-            // showLogo
-            // 
-            this.showLogo.Interval = 1000;
-            this.showLogo.Tick += new System.EventHandler(this.showLogo_Tick);
-            // 
-            // showFace
-            // 
-            this.showFace.Interval = 1000;
-            this.showFace.Tick += new System.EventHandler(this.showFace_Tick);
-            // 
             // SplashForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
-            this.Controls.Add(this.guna2WinProgressIndicator1);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.ninoName);
             this.Controls.Add(this.braulioName);
             this.Controls.Add(this.nino);
             this.Controls.Add(this.braulio);
+            this.Controls.Add(this.loadingLogo);
             this.Controls.Add(this.logoPictureBox);
             this.Controls.Add(this.meetLabel);
             this.Controls.Add(this.name);
@@ -547,6 +551,7 @@
             this.guna2GradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nino)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.braulio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loadingLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.martinez)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arizala)).EndInit();
@@ -583,7 +588,7 @@
         private System.Windows.Forms.Timer showFace;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Guna.UI2.WinForms.Guna2WinProgressIndicator guna2WinProgressIndicator1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox loadingLogo;
     }
 }
 
