@@ -642,9 +642,9 @@ namespace CovidInfoPH
         {
             //Still no region feature      
             FadeOutValues();
-            DisplayGraph(true);
-            DisplayDataGrid(true);
-            RefreshData(true);
+            DisplayGraph(false);
+            DisplayDataGrid(false);
+            RefreshData(false);
             FadeInValues();
         }
 
@@ -652,9 +652,9 @@ namespace CovidInfoPH
         {
             //Still no region feature
             FadeOutValues();
-            DisplayGraph(false);
-            DisplayDataGrid(false);
-            RefreshData(false);
+            DisplayGraph(true);
+            DisplayDataGrid(true);
+            RefreshData(true);
             FadeInValues();
             datePicker.Enabled = true;
         }
