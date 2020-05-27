@@ -51,7 +51,7 @@
             this.exitButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.nino = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.braulio = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2WinProgressIndicator1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.loadingLogo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.logoPictureBox = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.martinez = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.arizala = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -60,7 +60,7 @@
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nino)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.braulio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2WinProgressIndicator1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loadingLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.martinez)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arizala)).BeginInit();
@@ -403,23 +403,23 @@
             this.bunifuToolTip1.SetToolTipTitle(this.braulio, "");
             this.braulio.Visible = false;
             // 
-            // guna2WinProgressIndicator1
+            // loadingLogo
             // 
-            this.guna2WinProgressIndicator1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuTransition1.SetDecoration(this.guna2WinProgressIndicator1, BunifuAnimatorNS.DecorationType.None);
-            this.guna2WinProgressIndicator1.Image = global::CovidInfoPH.Properties.Resources.loading_logo;
-            this.guna2WinProgressIndicator1.Location = new System.Drawing.Point(355, 3);
-            this.guna2WinProgressIndicator1.Name = "guna2WinProgressIndicator1";
-            this.guna2WinProgressIndicator1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2WinProgressIndicator1.ShadowDecoration.Parent = this.guna2WinProgressIndicator1;
-            this.guna2WinProgressIndicator1.Size = new System.Drawing.Size(90, 90);
-            this.guna2WinProgressIndicator1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2WinProgressIndicator1.TabIndex = 2;
-            this.guna2WinProgressIndicator1.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.guna2WinProgressIndicator1, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.guna2WinProgressIndicator1, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.guna2WinProgressIndicator1, "");
-            this.guna2WinProgressIndicator1.Visible = false;
+            this.loadingLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuTransition1.SetDecoration(this.loadingLogo, BunifuAnimatorNS.DecorationType.None);
+            this.loadingLogo.Image = global::CovidInfoPH.Properties.Resources.loading_logo;
+            this.loadingLogo.Location = new System.Drawing.Point(355, 3);
+            this.loadingLogo.Name = "loadingLogo";
+            this.loadingLogo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.loadingLogo.ShadowDecoration.Parent = this.loadingLogo;
+            this.loadingLogo.Size = new System.Drawing.Size(90, 90);
+            this.loadingLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.loadingLogo.TabIndex = 2;
+            this.loadingLogo.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.loadingLogo, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.loadingLogo, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.loadingLogo, "");
+            this.loadingLogo.Visible = false;
             // 
             // logoPictureBox
             // 
@@ -523,7 +523,7 @@
             this.Controls.Add(this.braulioName);
             this.Controls.Add(this.nino);
             this.Controls.Add(this.braulio);
-            this.Controls.Add(this.guna2WinProgressIndicator1);
+            this.Controls.Add(this.loadingLogo);
             this.Controls.Add(this.logoPictureBox);
             this.Controls.Add(this.meetLabel);
             this.Controls.Add(this.name);
@@ -551,7 +551,7 @@
             this.guna2GradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nino)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.braulio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2WinProgressIndicator1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loadingLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.martinez)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arizala)).EndInit();
@@ -588,7 +588,7 @@
         private System.Windows.Forms.Timer showFace;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2WinProgressIndicator1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox loadingLogo;
     }
 }
 

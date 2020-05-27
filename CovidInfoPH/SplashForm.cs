@@ -165,7 +165,7 @@ namespace CovidInfoPH
             bunifuTransition1.ShowSync(ortega);
             bunifuTransition1.ShowSync(ortegaName);
 
-            bunifuTransition1.ShowSync(guna2WinProgressIndicator1);
+            bunifuTransition1.ShowSync(loadingLogo);
 
             await LoadDataFromSheetAsync();
 
@@ -178,7 +178,7 @@ namespace CovidInfoPH
             bunifuTransition1.Hide(ortega);
             bunifuTransition1.Hide(ortegaName);
 
-            bunifuTransition1.Hide(guna2WinProgressIndicator1);
+            bunifuTransition1.Hide(loadingLogo);
             bunifuTransition1.HideSync(meetLabel);
 
             Close();
