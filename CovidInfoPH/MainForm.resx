@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="bunifuTransition2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>268, 17</value>
+    <value>180, 17</value>
   </metadata>
   <data name="animation1.BlindCoeff" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -156,7 +156,7 @@
 </value>
   </data>
   <metadata name="bunifuTransition1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>604, 17</value>
+    <value>516, 17</value>
   </metadata>
   <data name="animation2.BlindCoeff" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -625,7 +625,7 @@
 </value>
   </data>
   <metadata name="bunifuToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>691, 103</value>
+    <value>786, 113</value>
   </metadata>
   <data name="bunifuImageButton3.ErrorImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2108,18 +2108,6 @@
         RKqUbLZ/AavBXmzWlOXSAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="uploadButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAOwAAAA4CAYAAAD+fBQtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAFrSURBVHhe7dOxTcNgFIXRfxRGYQImw8kgyE5FAzZskgWo
-        mCAQdDvcJ1c6VzrN02u/YWZlO54+H47L9nJYtgtwZ+b19dpoch3j9/jx7wm4D/N2mebtnFz/gt1/BO5G
-        chUsNEiugoUGyVWw0CC5ChYaJFfBQoPkKlhokFwFCw2Sq2ChQXIVLDRIroKFBslVsNAguQoWGiRXwUKD
-        5CpYaJBcBQsNkqtgoUFyFSw0SK6ChQbJVbDQILkKFhokV8FCg+QqWGiQXAULDZKrYKFBchUsNEiugoUG
-        yVWw0CC5ChYaJFfBQoPkKlhokFwFCw2Sq2ChQXIVLDRIroKFBslVsNAguQoWGiRXwUKD5CpYaJBcBQsN
-        kqtgoUFyFSw0SK6ChQbJVbDQILkKFhokV8FCg+QqWGiQXAULDZKrYKFBchUsNEiuY0zzdj4s6+4TcHvT
-        sn4n1zGOp/fHw7x+7T0Ct3WN9Xl+e0quZtaxMX4ABNSNJYPbbM4AAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="philippinesMap.Layers" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAKwBU3luY2Z1c2lvbi5NYXBzLldpbmRvd3MsIFZlcnNpb249MTgu
@@ -3240,51 +3228,51 @@
 </value>
   </data>
   <metadata name="formElipse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>465, 17</value>
+    <value>377, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>151</value>
   </metadata>
   <metadata name="bunifuCasesElipse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>513, 60</value>
+    <value>427, 65</value>
   </metadata>
   <metadata name="bunifuDeathsElipse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>687, 60</value>
+    <value>626, 65</value>
   </metadata>
   <metadata name="bunifuRecoveriesElipse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>870, 60</value>
+    <value>836, 65</value>
   </metadata>
   <metadata name="menuBarElipse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 103</value>
+    <value>17, 113</value>
   </metadata>
   <metadata name="topDragControl.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>169, 103</value>
+    <value>190, 113</value>
   </metadata>
   <metadata name="bunifuFormFadeTransition1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>801, 17</value>
+    <value>713, 17</value>
   </metadata>
   <metadata name="generalCaseElipse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>338, 60</value>
+    <value>227, 65</value>
   </metadata>
   <metadata name="caseGridViewElipse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>155, 60</value>
+    <value>17, 65</value>
   </metadata>
   <metadata name="bunifuPanelElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>329, 103</value>
+    <value>372, 113</value>
   </metadata>
   <metadata name="bunifuPanelElipse2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>510, 103</value>
+    <value>579, 113</value>
   </metadata>
   <metadata name="bunifuPanelElipse4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>847, 103</value>
+    <value>963, 113</value>
   </metadata>
   <metadata name="bunifuPanelElipse5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 146</value>
+    <value>17, 161</value>
   </metadata>
   <metadata name="bunifuPanelElipse3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>198, 146</value>
+    <value>224, 161</value>
   </metadata>
   <metadata name="buttonElipse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 60</value>
+    <value>991, 17</value>
   </metadata>
 </root>

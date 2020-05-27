@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
 using Bunifu.DataViz.WinForms;
@@ -323,16 +325,6 @@ namespace CovidInfoPH
 
         #endregion
 
-        #region Upload Report
-
-        private void UploadReport()
-        {
-            WebClient client = new WebClient { Credentials = new NetworkCredential("Johndayll", "apple2001") };
-            client.UploadFile("ftp://66.220.9.50/My Documents/RegionReport.pdf",
-                @"C:\Users\ADMIN\Downloads\CovidInfoPH\CovidInfoPH\bin\Debug\Documents\RegionInfo.pdf");
-        }
-        #endregion
-
         #region Input events
 
         private void DatePicker_ValueChanged(object sender, EventArgs e)
@@ -389,8 +381,6 @@ namespace CovidInfoPH
 
         private void PhilippinesMap_ShapeSelected(object sender, ShapeSelectedEventArgs e)
         {
-            uploadButton.Enabled = true;
-            regionDatePicker.Enabled = true;
             Canvas canvas = new Canvas();
             DataPoint cases = new DataPoint(BunifuDataViz._type.Bunifu_line);
             DataPoint deaths = new DataPoint(BunifuDataViz._type.Bunifu_line);
@@ -470,8 +460,10 @@ namespace CovidInfoPH
             regionMapView.Render(canvas);
         }
 
-        private void uploadButton_Click(object sender, EventArgs e)
+        private async void uploadButton_Click(object sender, EventArgs e)
         {
+            localSaveStatusLabel.Text = string.Empty;
+            ftpUploadStatusLabel.Text = string.Empty;
             //SetStyle
             PdfDocument doc = new PdfDocument { PageSettings = { Height = 800 } };
             SetStyles(out PdfCellStyle altStyle, out PdfCellStyle defStyle, out PdfCellStyle headerStyle);
@@ -480,9 +472,13 @@ namespace CovidInfoPH
 
             //Set the image
             string imageName = SetImage();
-            PdfBitmap logoTitle = new PdfBitmap(@"C:\Users\ADMIN\Downloads\CovidInfoPH\CovidInfoPH\Resources\pdf_logo.jpg");
-            PdfBitmap regionImage = new PdfBitmap($@"C:\Users\ADMIN\Downloads\CovidInfoPH\CovidInfoPH\Resources\region-photos\{imageName}.png");
-            g.DrawString(imageName, new PdfTrueTypeFont(new Font("Century Gothic", 26f, FontStyle.Bold), false), PdfBrushes.Black, new PointF(0, 210));
+            PdfBitmap logoTitle = new PdfBitmap(Properties.Resources.pdf_logo);
+            PdfBitmap regionImage =
+                new PdfBitmap(
+                    (Bitmap)Properties.Resources.ResourceManager.GetObject(imageName.Replace(' ', '_')
+                        .Replace('-', '_')));
+            g.DrawString(imageName, new PdfTrueTypeFont(new Font("Century Gothic", 26f, FontStyle.Bold), false),
+                PdfBrushes.Black, new PointF(0, 210));
             g.DrawImage(logoTitle, ((g.ClientSize.Width - 612) / 2), 0, 612, 210);
             g.DrawImage(regionImage, 0, (210 + 40), 200, 250);
 
@@ -502,10 +498,61 @@ namespace CovidInfoPH
             //Formatting
             table.Draw(page, 210, (210 + 40), 305);
 
-            //Save the document.
-            doc.Save(@"..\..\Documents\RegionInfo.pdf");
+            SaveFileDialog saveFile = new SaveFileDialog
+            {
+                Filter = "PDF File (*.pdf)|*.pdf",
+                AddExtension = true,
+                FileName = $"Stats Report - {imageName}.pdf",
+                DefaultExt = ".pdf"
+            };
 
-            UploadReport();
+            if (option1.Checked)
+            {
+                if (saveFile.ShowDialog() == DialogResult.OK && saveFile.CheckPathExists)
+                {
+                    try
+                    {
+                        doc.Save(saveFile.FileName);
+                        localSaveStatusLabel.ForeColor = Color.Green;
+                        localSaveStatusLabel.Text = "— success";
+                    }
+                    catch
+                    {
+                        localSaveStatusLabel.ForeColor = Color.Red;
+                        localSaveStatusLabel.Text = "— fail";
+                    }
+                }
+            }
+
+            if (option2.Checked)
+            {
+                MemoryStream stream = new MemoryStream();
+                doc.Save(stream);
+
+                LoginForm login = new LoginForm();
+                login.guna2AnimateWindow1.SetAnimateWindow(login);
+                login.ShowDialog();
+                if (!string.IsNullOrEmpty(LoginForm.Username))
+                {
+                    WebClient client = new WebClient
+                        {Credentials = new NetworkCredential(LoginForm.Username, LoginForm.Password)};
+                    try
+                    {
+                        await client.UploadDataTaskAsync(
+                            new Uri($"ftp://66.220.9.50/My Documents/Stats Report - {imageName}.pdf"),
+                            stream.ToArray());
+                        ftpUploadStatusLabel.ForeColor = Color.Green;
+                        ftpUploadStatusLabel.Text = "— success";
+                    }
+                    catch
+                    {
+                        ftpUploadStatusLabel.ForeColor = Color.Red;
+                        ftpUploadStatusLabel.Text = "— fail";
+                    }
+                }
+            }
+
+            doc.Close();
         }
 
         private void bunifuImageButton3_Click(object sender, EventArgs e)
@@ -516,5 +563,17 @@ namespace CovidInfoPH
         #endregion
 
         #endregion
+
+        private void option_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!option1.Checked && !option2.Checked)
+            {
+                uploadButton.Enabled = false;
+            }
+            else
+            {
+                uploadButton.Enabled = true;
+            }
+        }
     }
 }
