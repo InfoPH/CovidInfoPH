@@ -56,22 +56,6 @@ namespace CovidInfoPH
             return dt;
         }
 
-        //Overload for second page
-        private DataTable CreateChartData(DateTime dates, int number)
-        {
-            DataTable dt = new DataTable();
-
-            dt.Columns.Add("Argument", typeof(DateTime));
-            dt.Columns.Add("Value", typeof(int));
-
-            var row = dt.NewRow();
-            row["Argument"] = dates;
-            row["Value"] = number;
-            dt.Rows.Add(row);
-
-            return dt;
-        }
-
         private void LoadDashBoardChart()
         {
             dashBoardChart.Series["Cases"].DataSource = CreateChartData(Historical.Keys.ToList(),
@@ -460,8 +444,8 @@ namespace CovidInfoPH
         {
             WindowState = FormWindowState.Minimized;
         }
-
-        private void philippinesMap_ShapeSelected_1(object sender, ShapeSelectedEventArgs e)
+        
+        private void philippinesMap_ShapeSelected(object sender, ShapeSelectedEventArgs e)
         {
             uploadButton.Enabled = true;
             List<DateTime> dates = Patients.Select(p => p.DateConfirmed).Distinct().ToList();
@@ -469,12 +453,12 @@ namespace CovidInfoPH
             foreach (PhRegion region in e.Data)
             {
                 regionLabel.Text = region.Region;
-                stackedChart.Series["Cases"].DataSource = CreateChartData(dates.Last(),
-                    Regions[region.Region][dates.Last()].Cases);
-                stackedChart.Series["Deaths"].DataSource = CreateChartData(dates.Last(),
-                    Regions[region.Region][dates.Last()].Deaths);
-                stackedChart.Series["Recoveries"].DataSource = CreateChartData(dates.Last(),
-                    Regions[region.Region][dates.Last()].Recoveries);
+                stackedChart.Series["Cases"].DataSource = CreateChartData(Regions[region.Region].Keys.ToList(),
+                    Regions[region.Region].Values.Select(p => p.Cases).ToList());
+                stackedChart.Series["Deaths"].DataSource = CreateChartData(Regions[region.Region].Keys.ToList(),
+                    Regions[region.Region].Values.Select(p => p.Deaths).ToList());
+                stackedChart.Series["Recoveries"].DataSource = CreateChartData(Regions[region.Region].Keys.ToList(),
+                    Regions[region.Region].Values.Select(p => p.Recoveries).ToList());
             }
 
             stackedChart.Series["Cases"].ValueDataMembers.AddRange("Value");

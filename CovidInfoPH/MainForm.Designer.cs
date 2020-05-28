@@ -32,11 +32,11 @@
             BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.StackedBarSeriesView stackedBarSeriesView1 = new DevExpress.XtraCharts.StackedBarSeriesView();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
             DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.StackedBarSeriesView stackedBarSeriesView2 = new DevExpress.XtraCharts.StackedBarSeriesView();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView2 = new DevExpress.XtraCharts.LineSeriesView();
             DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.StackedBarSeriesView stackedBarSeriesView3 = new DevExpress.XtraCharts.StackedBarSeriesView();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView3 = new DevExpress.XtraCharts.LineSeriesView();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -162,11 +162,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.stackedChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(stackedBarSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(stackedBarSeriesView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(stackedBarSeriesView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).BeginInit();
             this.panel3.SuspendLayout();
             this.generalCases.SuspendLayout();
             this.tableDashBoard.SuspendLayout();
@@ -491,6 +491,8 @@
             this.bunifuTransition2.SetDecoration(this.stackedChart, BunifuAnimatorNS.DecorationType.None);
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            xyDiagram1.EnableAxisXScrolling = true;
+            xyDiagram1.EnableAxisXZooming = true;
             this.stackedChart.Diagram = xyDiagram1;
             this.stackedChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stackedChart.Legend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(76)))), ((int)(((byte)(78)))));
@@ -506,16 +508,13 @@
                 new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109))))), System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109))))))}));
             series1.ArgumentDataMember = "Argument";
             series1.Name = "Cases";
-            stackedBarSeriesView1.BarWidth = 0.4D;
-            series1.View = stackedBarSeriesView1;
+            series1.View = lineSeriesView1;
             series2.ArgumentDataMember = "Argument";
             series2.Name = "Recoveries";
-            stackedBarSeriesView2.BarWidth = 0.4D;
-            series2.View = stackedBarSeriesView2;
+            series2.View = lineSeriesView2;
             series3.ArgumentDataMember = "Argument";
             series3.Name = "Deaths";
-            stackedBarSeriesView3.BarWidth = 0.4D;
-            series3.View = stackedBarSeriesView3;
+            series3.View = lineSeriesView3;
             this.stackedChart.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1,
         series2,
@@ -753,7 +752,7 @@
             this.bunifuToolTip1.SetToolTipIcon(this.philippinesMap, null);
             this.bunifuToolTip1.SetToolTipTitle(this.philippinesMap, "");
             this.philippinesMap.ZoomFactor = 1F;
-            this.philippinesMap.ShapeSelected += new Syncfusion.Windows.Forms.Maps.Maps.ShapeSelectedEventHandler(this.philippinesMap_ShapeSelected_1);
+            this.philippinesMap.ShapeSelected += new Syncfusion.Windows.Forms.Maps.Maps.ShapeSelectedEventHandler(this.philippinesMap_ShapeSelected);
             // 
             // generalCases
             // 
@@ -1715,10 +1714,10 @@
             this.CovidInfoPages.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.CovidInfoPages.Multiline = true;
             this.CovidInfoPages.Name = "CovidInfoPages";
-            this.CovidInfoPages.Page = this.generalCases;
-            this.CovidInfoPages.PageIndex = 0;
-            this.CovidInfoPages.PageName = "generalCases";
-            this.CovidInfoPages.PageTitle = "tabPage1";
+            this.CovidInfoPages.Page = this.locationRegion;
+            this.CovidInfoPages.PageIndex = 1;
+            this.CovidInfoPages.PageName = "locationRegion";
+            this.CovidInfoPages.PageTitle = "tabPage2";
             this.CovidInfoPages.SelectedIndex = 0;
             this.CovidInfoPages.Size = new System.Drawing.Size(1389, 745);
             this.CovidInfoPages.TabIndex = 54;
@@ -2190,11 +2189,11 @@
             this.RegionDataTable.ResumeLayout(false);
             this.regionDataPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(stackedBarSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(stackedBarSeriesView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(stackedBarSeriesView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stackedChart)).EndInit();
             this.panel3.ResumeLayout(false);
