@@ -92,10 +92,10 @@ namespace CovidInfoPH
             latestData.Text = $"Latest data fetched: {Historical.Keys.Max(d => d):MMMM dd, yyyy}";
             ShowInTaskbar = true;
             bunifuFormFadeTransition1.ShowAsyc(this);
-            DisplayGraph(false);
+            DisplayGraph();
             InitializeMap();
-            DisplayDataGrid(false);
-            RefreshData(false);
+            DisplayDataGrid();
+            RefreshData();
         }
         #endregion
 
@@ -106,7 +106,7 @@ namespace CovidInfoPH
             //Maximum color - red
             decimal val = (value - min) / (max - min);
             int A = 255;
-            int R = Convert.ToByte(Color.Khaki.R * (1 + (1 - (decimal) Color.Red.R / Color.Khaki.R) * val));
+            int R = Convert.ToByte(Color.Khaki.R * (1 + (1 - (decimal)Color.Red.R / Color.Khaki.R) * val));
             int G = Convert.ToByte(Color.Khaki.G * (1 - val));
             int B = Convert.ToByte(Color.Khaki.B * (1 - val));
             return Color.FromArgb(A, R, G, B);
@@ -114,36 +114,38 @@ namespace CovidInfoPH
         #endregion
 
         #region Display data
-        private void DisplayDataGrid(bool isMonth)
+        private void DisplayDataGrid()
         {
             caseGridView.Rows.Clear();
-            if (isMonth)
+            if (monthRadioButton.Checked)
             {
-                for (int i = -(Historical.Count - 1); i < 1; i++)
+                foreach (KeyValuePair<DateTime, HistoricalInfo> historicalDateInfo in Historical.Reverse())
                 {
-                    caseGridView.Rows.Add($"{Historical.Keys.Last().AddDays(i): MM-dd-yyyy}", Historical[Historical.Keys.Last().AddDays(i)].Cases,
-                 Historical[Historical.Keys.Last().AddDays(i)].Deaths, Historical[Historical.Keys.Last().AddDays(i)].Recoveries);
+                    caseGridView.Rows.Add($"{historicalDateInfo.Key:MM-dd-yyyy}", historicalDateInfo.Value.Cases,
+                        historicalDateInfo.Value.Deaths, historicalDateInfo.Value.Recoveries);
                 }
             }
             else
             {
-                for (int i = -6; i < 1; i++)
+                foreach (KeyValuePair<DateTime, HistoricalInfo> historicalDateInfo in Historical.Where(h => h.Key > datePicker.Value.AddDays(-7) && h.Key <= datePicker.Value).Reverse())
                 {
-                    caseGridView.Rows.Add($"{datePicker.Value.AddDays(i): MM-dd-yyyy}", Historical[datePicker.Value.AddDays(i)].Cases,
-                    Historical[datePicker.Value.AddDays(i)].Deaths, Historical[datePicker.Value.AddDays(i)].Recoveries);
+                    caseGridView.Rows.Add($"{historicalDateInfo.Key:MM-dd-yyyy}", historicalDateInfo.Value.Cases,
+                        historicalDateInfo.Value.Deaths, historicalDateInfo.Value.Recoveries);
                 }
             }
         }
 
-        private void DisplayDataGrid(string region, bool isMonth)
+        private void DisplayDataGrid(string region)
         {
             throw new NotImplementedException();
         }
 
-        private void DisplayGraph(bool isMonth)
+        private void DisplayGraph()
         {
-            if (isMonth)
+            if (monthRadioButton.Checked)
             {
+                datePicker.Format = DateTimePickerFormat.Custom;
+                datePicker.CustomFormat = "MMMM";
                 dashBoardChart.Series["Cases"].FilterCriteria = new BinaryOperator("Argument", Historical.Keys.Last(), BinaryOperatorType.LessOrEqual);
                 dashBoardChart.Series["Deaths"].FilterCriteria = new BinaryOperator("Argument", Historical.Keys.Last(), BinaryOperatorType.LessOrEqual);
                 dashBoardChart.Series["Recoveries"].FilterCriteria = new BinaryOperator("Argument", Historical.Keys.Last(), BinaryOperatorType.LessOrEqual);
@@ -160,19 +162,19 @@ namespace CovidInfoPH
             }
         }
 
-        private void DisplayGraph(string region, bool isMonth)
+        private void DisplayGraph(string region)
         {
             throw new NotImplementedException();
         }
 
-        private void RefreshData(bool isMonth)
+        private void RefreshData()
         {
             double cases;
             double deaths;
             double recoveries;
             int newCases;
 
-            if (isMonth)
+            if (monthRadioButton.Checked)
             {
                 cases = Historical[Historical.Keys.Last()].Cases;
                 deaths = Historical[Historical.Keys.Last()].Deaths;
@@ -201,13 +203,13 @@ namespace CovidInfoPH
 
         }
 
-        private void RefreshData(string region, bool isMonth)
+        private void RefreshData(string region)
         {
             double cases;
             double deaths;
             double recoveries;
             int newCases;
-            if (isMonth)
+            if (monthRadioButton.Checked)
             {
                 cases = Regions[region][Patients[Patients.Count - 1].DateConfirmed].Cases;
                 deaths = Regions[region][Patients[Patients.Count - 1].DateConfirmed].Deaths;
@@ -404,18 +406,18 @@ namespace CovidInfoPH
             {
                 selectedRegionlabel.Text = $"Selected Region: {RegionSearchForm.SearchResult}";
                 FadeOutValues();
-                RefreshData(RegionSearchForm.SearchResult, false);
-                DisplayGraph(RegionSearchForm.SearchResult, false);
-                DisplayDataGrid(RegionSearchForm.SearchResult, false);
+                RefreshData(RegionSearchForm.SearchResult);
+                DisplayGraph(RegionSearchForm.SearchResult);
+                DisplayDataGrid(RegionSearchForm.SearchResult);
                 FadeInValues();
                 datePicker.Enabled = true;
             }
             else
             {
                 FadeOutValues();
-                RefreshData(false);
-                DisplayGraph(false);
-                DisplayDataGrid(false);
+                RefreshData();
+                DisplayGraph();
+                DisplayDataGrid();
                 FadeInValues();
                 datePicker.Enabled = true;
             }
@@ -482,11 +484,6 @@ namespace CovidInfoPH
 
         private void searchRegionButton_Click(object sender, EventArgs e)
         {
-            //Check for radioButton
-            bool isMonth;
-            if (monthRadioButton.Checked) isMonth = false;
-            else isMonth = true;
-
             var searchButtonLocation = PointToScreen(searchRegionButton.Location);
             RegionSearchForm searchBar = new RegionSearchForm
             {
@@ -502,18 +499,18 @@ namespace CovidInfoPH
                 {
                     selectedRegionlabel.Text = $"Selected Region: {RegionSearchForm.SearchResult}";
                     FadeOutValues();
-                    RefreshData(RegionSearchForm.SearchResult, isMonth);
-                    DisplayGraph(RegionSearchForm.SearchResult, isMonth);
-                    DisplayDataGrid(RegionSearchForm.SearchResult, isMonth);
+                    RefreshData(RegionSearchForm.SearchResult);
+                    DisplayGraph(RegionSearchForm.SearchResult);
+                    DisplayDataGrid(RegionSearchForm.SearchResult);
                     FadeInValues();
                     datePicker.Enabled = true;
                 }
                 else
                 {
                     FadeOutValues();
-                    RefreshData(isMonth);
-                    DisplayGraph(isMonth);
-                    DisplayDataGrid(isMonth);
+                    RefreshData();
+                    DisplayGraph();
+                    DisplayDataGrid();
                     FadeInValues();
                     datePicker.Enabled = true;
                 }
@@ -637,9 +634,9 @@ namespace CovidInfoPH
         {
             //Still no region feature      
             FadeOutValues();
-            DisplayGraph(false);
-            DisplayDataGrid(false);
-            RefreshData(false);
+            DisplayGraph();
+            DisplayDataGrid();
+            RefreshData();
             FadeInValues();
             datePicker.Enabled = true;
         }
@@ -649,9 +646,9 @@ namespace CovidInfoPH
             //Still no region feature
             datePicker.Enabled = false;
             FadeOutValues();
-            DisplayGraph(true);
-            DisplayDataGrid(true);
-            RefreshData(true);
+            DisplayGraph();
+            DisplayDataGrid();
+            RefreshData();
             FadeInValues();
         }
 

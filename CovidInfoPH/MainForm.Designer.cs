@@ -80,8 +80,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.weekRadioButton = new Bunifu.UI.WinForms.BunifuRadioButton();
-            this.monthRadioButton = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lowerDataPanel = new System.Windows.Forms.Panel();
             this.lowerDataTablePanel = new System.Windows.Forms.TableLayoutPanel();
             this.caseGridView = new Bunifu.Framework.UI.BunifuCustomDataGrid();
@@ -128,6 +127,7 @@
             this.webControl1 = new EO.WinForm.WebControl();
             this.webView1 = new EO.WebBrowser.WebView();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.monthRadioButton = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.selectedRegionlabel = new System.Windows.Forms.Label();
             this.searchRegionButton = new Guna.UI2.WinForms.Guna2Button();
             this.minimizeButton = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -152,6 +152,7 @@
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.buttonElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.weekRadioButton = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.menuBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.locationRegion.SuspendLayout();
@@ -804,12 +805,13 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.34477F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.99875F));
+            this.tableLayoutPanel3.Controls.Add(this.weekRadioButton, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.monthRadioButton, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.datePicker, 5, 0);
             this.tableLayoutPanel3.Controls.Add(this.label8, 4, 0);
             this.tableLayoutPanel3.Controls.Add(this.label9, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.label10, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.weekRadioButton, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.monthRadioButton, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.dateTimePicker1, 0, 1);
             this.bunifuTransition2.SetDecoration(this.tableLayoutPanel3, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.tableLayoutPanel3, BunifuAnimatorNS.DecorationType.None);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -818,6 +820,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1359, 37);
             this.tableLayoutPanel3.TabIndex = 79;
             this.bunifuToolTip1.SetToolTip(this.tableLayoutPanel3, "");
@@ -856,7 +859,7 @@
             this.datePicker.Size = new System.Drawing.Size(352, 32);
             this.datePicker.TabIndex = 61;
             this.bunifuToolTip1.SetToolTip(this.datePicker, "Pick a date for the corresponding data");
-            this.bunifuToolTip1.SetToolTipIcon(this.datePicker, ((System.Drawing.Image)(resources.GetObject("datePicker.ToolTipIcon"))));
+            this.bunifuToolTip1.SetToolTipIcon(this.datePicker, null);
             this.bunifuToolTip1.SetToolTipTitle(this.datePicker, "Date Picker");
             this.datePicker.Value = new System.DateTime(2020, 5, 12, 0, 0, 0, 0);
             this.datePicker.ValueChanged += new System.EventHandler(this.DatePicker_ValueChanged);
@@ -915,45 +918,17 @@
             this.bunifuToolTip1.SetToolTipIcon(this.label10, null);
             this.bunifuToolTip1.SetToolTipTitle(this.label10, "");
             // 
-            // weekRadioButton
+            // dateTimePicker1
             // 
-            this.weekRadioButton.BorderThickness = 2;
-            this.weekRadioButton.Checked = false;
-            this.bunifuTransition1.SetDecoration(this.weekRadioButton, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.weekRadioButton, BunifuAnimatorNS.DecorationType.None);
-            this.weekRadioButton.Location = new System.Drawing.Point(484, 4);
-            this.weekRadioButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.weekRadioButton.Name = "weekRadioButton";
-            this.weekRadioButton.OutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
-            this.weekRadioButton.OutlineColorUnchecked = System.Drawing.Color.Gray;
-            this.weekRadioButton.RadioColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.weekRadioButton.Size = new System.Drawing.Size(27, 27);
-            this.weekRadioButton.TabIndex = 1;
-            this.weekRadioButton.Text = null;
-            this.bunifuToolTip1.SetToolTip(this.weekRadioButton, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.weekRadioButton, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.weekRadioButton, "");
-            this.weekRadioButton.Click += new System.EventHandler(this.weekRadioButton_Click);
-            // 
-            // monthRadioButton
-            // 
-            this.monthRadioButton.BorderThickness = 2;
-            this.monthRadioButton.Checked = true;
-            this.bunifuTransition1.SetDecoration(this.monthRadioButton, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.monthRadioButton, BunifuAnimatorNS.DecorationType.None);
-            this.monthRadioButton.Location = new System.Drawing.Point(741, 4);
-            this.monthRadioButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.monthRadioButton.Name = "monthRadioButton";
-            this.monthRadioButton.OutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
-            this.monthRadioButton.OutlineColorUnchecked = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
-            this.monthRadioButton.RadioColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.monthRadioButton.Size = new System.Drawing.Size(27, 27);
-            this.monthRadioButton.TabIndex = 1;
-            this.monthRadioButton.Text = null;
-            this.bunifuToolTip1.SetToolTip(this.monthRadioButton, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.monthRadioButton, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.monthRadioButton, "");
-            this.monthRadioButton.Click += new System.EventHandler(this.monthRadioButton_Click);
+            this.bunifuTransition1.SetDecoration(this.dateTimePicker1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.dateTimePicker1, BunifuAnimatorNS.DecorationType.None);
+            this.dateTimePicker1.Location = new System.Drawing.Point(3, 41);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker1.TabIndex = 62;
+            this.bunifuToolTip1.SetToolTip(this.dateTimePicker1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.dateTimePicker1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.dateTimePicker1, "");
             // 
             // lowerDataPanel
             // 
@@ -1740,10 +1715,10 @@
             this.CovidInfoPages.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.CovidInfoPages.Multiline = true;
             this.CovidInfoPages.Name = "CovidInfoPages";
-            this.CovidInfoPages.Page = this.locationRegion;
-            this.CovidInfoPages.PageIndex = 1;
-            this.CovidInfoPages.PageName = "locationRegion";
-            this.CovidInfoPages.PageTitle = "tabPage2";
+            this.CovidInfoPages.Page = this.generalCases;
+            this.CovidInfoPages.PageIndex = 0;
+            this.CovidInfoPages.PageName = "generalCases";
+            this.CovidInfoPages.PageTitle = "tabPage1";
             this.CovidInfoPages.SelectedIndex = 0;
             this.CovidInfoPages.Size = new System.Drawing.Size(1389, 745);
             this.CovidInfoPages.TabIndex = 54;
@@ -1830,6 +1805,32 @@
             this.bunifuToolTip1.SetToolTip(this.topPanel, "");
             this.bunifuToolTip1.SetToolTipIcon(this.topPanel, null);
             this.bunifuToolTip1.SetToolTipTitle(this.topPanel, "");
+            // 
+            // monthRadioButton
+            // 
+            this.monthRadioButton.Animated = true;
+            this.monthRadioButton.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
+            this.monthRadioButton.CheckedState.BorderThickness = 2;
+            this.monthRadioButton.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.monthRadioButton.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
+            this.monthRadioButton.CheckedState.Parent = this.monthRadioButton;
+            this.monthRadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.monthRadioButton, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.monthRadioButton, BunifuAnimatorNS.DecorationType.None);
+            this.monthRadioButton.Location = new System.Drawing.Point(741, 3);
+            this.monthRadioButton.Name = "monthRadioButton";
+            this.monthRadioButton.ShadowDecoration.Parent = this.monthRadioButton;
+            this.monthRadioButton.Size = new System.Drawing.Size(27, 27);
+            this.monthRadioButton.TabIndex = 60;
+            this.bunifuToolTip1.SetToolTip(this.monthRadioButton, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.monthRadioButton, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.monthRadioButton, "");
+            this.monthRadioButton.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.monthRadioButton.UncheckedState.BorderThickness = 2;
+            this.monthRadioButton.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.monthRadioButton.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.monthRadioButton.UncheckedState.Parent = this.monthRadioButton;
+            this.monthRadioButton.Click += new System.EventHandler(this.monthRadioButton_Click);
             // 
             // selectedRegionlabel
             // 
@@ -2137,6 +2138,33 @@
             animation1.TransparencyCoeff = 1F;
             this.bunifuTransition1.DefaultAnimation = animation1;
             // 
+            // weekRadioButton
+            // 
+            this.weekRadioButton.Animated = true;
+            this.weekRadioButton.Checked = true;
+            this.weekRadioButton.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
+            this.weekRadioButton.CheckedState.BorderThickness = 2;
+            this.weekRadioButton.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.weekRadioButton.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
+            this.weekRadioButton.CheckedState.Parent = this.weekRadioButton;
+            this.weekRadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.weekRadioButton, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.weekRadioButton, BunifuAnimatorNS.DecorationType.None);
+            this.weekRadioButton.Location = new System.Drawing.Point(484, 3);
+            this.weekRadioButton.Name = "weekRadioButton";
+            this.weekRadioButton.ShadowDecoration.Parent = this.weekRadioButton;
+            this.weekRadioButton.Size = new System.Drawing.Size(27, 27);
+            this.weekRadioButton.TabIndex = 61;
+            this.bunifuToolTip1.SetToolTip(this.weekRadioButton, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.weekRadioButton, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.weekRadioButton, "");
+            this.weekRadioButton.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.weekRadioButton.UncheckedState.BorderThickness = 2;
+            this.weekRadioButton.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.weekRadioButton.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.weekRadioButton.UncheckedState.Parent = this.weekRadioButton;
+            this.weekRadioButton.Click += new System.EventHandler(this.weekRadioButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2302,12 +2330,7 @@
         private System.Windows.Forms.Label label5;
         private BunifuAnimatorNS.BunifuTransition bunifuTransition1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private Bunifu.UI.WinForms.BunifuDatePicker datePicker;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private Bunifu.UI.WinForms.BunifuRadioButton weekRadioButton;
-        private Bunifu.UI.WinForms.BunifuRadioButton monthRadioButton;
         private System.Windows.Forms.Label deathNum2;
         private System.Windows.Forms.Panel chartPanel;
         private System.Windows.Forms.TabPage webPageTab;
@@ -2316,6 +2339,12 @@
         private EO.WebBrowser.WebView webView1;
         private DevExpress.XtraCharts.ChartControl stackedChart;
         private DevExpress.XtraCharts.ChartControl dashBoardChart;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private Bunifu.UI.WinForms.BunifuDatePicker datePicker;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private Guna.UI2.WinForms.Guna2CustomRadioButton monthRadioButton;
+        private Guna.UI2.WinForms.Guna2CustomRadioButton weekRadioButton;
     }
 }
 
