@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Data;
 using System.Diagnostics;
+using System.Drawing.Imaging;
 using System.Net;
 using Syncfusion.Windows.Forms.Maps;
 using Syncfusion.UI.Xaml.Maps;
@@ -561,10 +562,16 @@ namespace CovidInfoPH
                 new PdfBitmap(
                     (Bitmap)Properties.Resources.ResourceManager.GetObject(imageName.Replace(' ', '_')
                         .Replace('-', '_')));
+            //Save graph to image
+            MemoryStream chartImage = new MemoryStream();
+            lineChart.ExportToImage(chartImage,ImageFormat.Bmp);
+            PdfBitmap chartBitmap = new PdfBitmap(chartImage);
+
             g.DrawString(imageName, new PdfTrueTypeFont(new Font("Century Gothic", 26f, FontStyle.Bold), false),
                 PdfBrushes.Black, new PointF(0, 210));
             g.DrawImage(logoTitle, ((g.ClientSize.Width - 612) / 2), 0, 612, 210);
-            g.DrawImage(regionImage, 0, (210 + 40), 200, 250);
+            g.DrawImage(regionImage, 0, 250, 200, 250);
+            g.DrawImage(chartBitmap, ((g.ClientSize.Width) / 2), 500, chartBitmap.Width / 2.3f, chartBitmap.Height / 2.3f);
 
             //Create the table
             PdfLightTable table = new PdfLightTable();
