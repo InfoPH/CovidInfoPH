@@ -847,7 +847,7 @@
             this.datePicker.Location = new System.Drawing.Point(998, 2);
             this.datePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.datePicker.MaxDate = new System.DateTime(9998, 5, 14, 0, 0, 0, 0);
-            this.datePicker.MinDate = new System.DateTime(2020, 1, 30, 0, 0, 0, 0);
+            this.datePicker.MinDate = new System.DateTime(2020, 2, 4, 0, 0, 0, 0);
             this.datePicker.MinimumSize = new System.Drawing.Size(298, 32);
             this.datePicker.Name = "datePicker";
             this.datePicker.Size = new System.Drawing.Size(352, 32);
