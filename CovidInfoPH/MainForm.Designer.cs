@@ -42,11 +42,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.StackedAreaSeriesView stackedAreaSeriesView1 = new DevExpress.XtraCharts.StackedAreaSeriesView();
             DevExpress.XtraCharts.Series series5 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.StackedAreaSeriesView stackedAreaSeriesView2 = new DevExpress.XtraCharts.StackedAreaSeriesView();
             DevExpress.XtraCharts.Series series6 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.StackedAreaSeriesView stackedAreaSeriesView3 = new DevExpress.XtraCharts.StackedAreaSeriesView();
             Utilities.BunifuPages.BunifuAnimatorNS.Animation animation3 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
@@ -61,7 +58,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.RegionDataTable = new System.Windows.Forms.TableLayoutPanel();
             this.regionDataPanel = new System.Windows.Forms.Panel();
-            this.stackedChart = new DevExpress.XtraCharts.ChartControl();
+            this.lineChart = new DevExpress.XtraCharts.ChartControl();
             this.panel3 = new System.Windows.Forms.Panel();
             this.optionLabel2 = new System.Windows.Forms.Label();
             this.optionLabel1 = new System.Windows.Forms.Label();
@@ -159,7 +156,7 @@
             this.panel1.SuspendLayout();
             this.RegionDataTable.SuspendLayout();
             this.regionDataPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.stackedChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lineChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
@@ -190,11 +187,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dashBoardChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(stackedAreaSeriesView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(stackedAreaSeriesView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(stackedAreaSeriesView3)).BeginInit();
             this.CovidInfoPages.SuspendLayout();
             this.webPageTab.SuspendLayout();
             this.topPanel.SuspendLayout();
@@ -469,7 +463,7 @@
             // 
             // regionDataPanel
             // 
-            this.regionDataPanel.Controls.Add(this.stackedChart);
+            this.regionDataPanel.Controls.Add(this.lineChart);
             this.bunifuTransition1.SetDecoration(this.regionDataPanel, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.regionDataPanel, BunifuAnimatorNS.DecorationType.None);
             this.regionDataPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -482,27 +476,27 @@
             this.bunifuToolTip1.SetToolTipIcon(this.regionDataPanel, null);
             this.bunifuToolTip1.SetToolTipTitle(this.regionDataPanel, "");
             // 
-            // stackedChart
+            // lineChart
             // 
-            this.stackedChart.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
-            this.stackedChart.AppearanceNameSerializable = "Dark";
-            this.stackedChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            this.bunifuTransition1.SetDecoration(this.stackedChart, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.stackedChart, BunifuAnimatorNS.DecorationType.None);
+            this.lineChart.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
+            this.lineChart.AppearanceNameSerializable = "Dark";
+            this.lineChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            this.bunifuTransition1.SetDecoration(this.lineChart, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.lineChart, BunifuAnimatorNS.DecorationType.None);
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             xyDiagram1.EnableAxisXScrolling = true;
             xyDiagram1.EnableAxisXZooming = true;
-            this.stackedChart.Diagram = xyDiagram1;
-            this.stackedChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stackedChart.Legend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(76)))), ((int)(((byte)(78)))));
-            this.stackedChart.Legend.Font = new System.Drawing.Font("Proxima Soft", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stackedChart.Legend.Name = "Default Legend";
-            this.stackedChart.Location = new System.Drawing.Point(0, 0);
-            this.stackedChart.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.stackedChart.Name = "stackedChart";
-            this.stackedChart.PaletteName = "Covidinfo-Palette";
-            this.stackedChart.PaletteRepository.Add("Covidinfo-Palette", new DevExpress.XtraCharts.Palette("Covidinfo-Palette", DevExpress.XtraCharts.PaletteScaleMode.Repeat, new DevExpress.XtraCharts.PaletteEntry[] {
+            this.lineChart.Diagram = xyDiagram1;
+            this.lineChart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lineChart.Legend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(76)))), ((int)(((byte)(78)))));
+            this.lineChart.Legend.Font = new System.Drawing.Font("Proxima Soft", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lineChart.Legend.Name = "Default Legend";
+            this.lineChart.Location = new System.Drawing.Point(0, 0);
+            this.lineChart.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.lineChart.Name = "lineChart";
+            this.lineChart.PaletteName = "Covidinfo-Palette";
+            this.lineChart.PaletteRepository.Add("Covidinfo-Palette", new DevExpress.XtraCharts.Palette("Covidinfo-Palette", DevExpress.XtraCharts.PaletteScaleMode.Repeat, new DevExpress.XtraCharts.PaletteEntry[] {
                 new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143))))), System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))))),
                 new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189))))), System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))))),
                 new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109))))), System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109))))))}));
@@ -515,15 +509,15 @@
             series3.ArgumentDataMember = "Argument";
             series3.Name = "Deaths";
             series3.View = lineSeriesView3;
-            this.stackedChart.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+            this.lineChart.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1,
         series2,
         series3};
-            this.stackedChart.Size = new System.Drawing.Size(664, 475);
-            this.stackedChart.TabIndex = 78;
-            this.bunifuToolTip1.SetToolTip(this.stackedChart, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.stackedChart, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.stackedChart, "");
+            this.lineChart.Size = new System.Drawing.Size(664, 475);
+            this.lineChart.TabIndex = 78;
+            this.bunifuToolTip1.SetToolTip(this.lineChart, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lineChart, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lineChart, "");
             // 
             // panel3
             // 
@@ -835,6 +829,7 @@
             this.datePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
             this.datePicker.Color = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
             this.datePicker.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.datePicker.CustomFormat = "MMMM yyyy";
             this.datePicker.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
             this.datePicker.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
             this.bunifuTransition1.SetDecoration(this.datePicker, BunifuAnimatorNS.DecorationType.None);
@@ -852,7 +847,7 @@
             this.datePicker.Location = new System.Drawing.Point(998, 2);
             this.datePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.datePicker.MaxDate = new System.DateTime(9998, 5, 14, 0, 0, 0, 0);
-            this.datePicker.MinDate = new System.DateTime(2020, 2, 4, 0, 0, 0, 0);
+            this.datePicker.MinDate = new System.DateTime(2020, 1, 30, 0, 0, 0, 0);
             this.datePicker.MinimumSize = new System.Drawing.Size(298, 32);
             this.datePicker.Name = "datePicker";
             this.datePicker.Size = new System.Drawing.Size(352, 32);
@@ -1573,8 +1568,6 @@
             this.bunifuTransition1.SetDecoration(this.dashBoardChart, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.dashBoardChart, BunifuAnimatorNS.DecorationType.None);
             xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram2.AxisX.WholeRange.EndSideMargin = 0D;
-            xyDiagram2.AxisX.WholeRange.StartSideMargin = 0D;
             xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
             this.dashBoardChart.Diagram = xyDiagram2;
             this.dashBoardChart.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1591,13 +1584,10 @@
                 new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109))))), System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109))))))}));
             series4.ArgumentDataMember = "Argument";
             series4.Name = "Cases";
-            series4.View = stackedAreaSeriesView1;
             series5.ArgumentDataMember = "Argument";
             series5.Name = "Recoveries";
-            series5.View = stackedAreaSeriesView2;
             series6.ArgumentDataMember = "Argument";
             series6.Name = "Deaths";
-            series6.View = stackedAreaSeriesView3;
             this.dashBoardChart.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series4,
         series5,
@@ -1714,10 +1704,10 @@
             this.CovidInfoPages.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.CovidInfoPages.Multiline = true;
             this.CovidInfoPages.Name = "CovidInfoPages";
-            this.CovidInfoPages.Page = this.locationRegion;
-            this.CovidInfoPages.PageIndex = 1;
-            this.CovidInfoPages.PageName = "locationRegion";
-            this.CovidInfoPages.PageTitle = "tabPage2";
+            this.CovidInfoPages.Page = this.generalCases;
+            this.CovidInfoPages.PageIndex = 0;
+            this.CovidInfoPages.PageName = "generalCases";
+            this.CovidInfoPages.PageTitle = "tabPage1";
             this.CovidInfoPages.SelectedIndex = 0;
             this.CovidInfoPages.Size = new System.Drawing.Size(1389, 745);
             this.CovidInfoPages.TabIndex = 54;
@@ -2195,7 +2185,7 @@
             ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stackedChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lineChart)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.generalCases.ResumeLayout(false);
@@ -2225,11 +2215,8 @@
             this.panel8.PerformLayout();
             this.chartPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(stackedAreaSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(stackedAreaSeriesView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(stackedAreaSeriesView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashBoardChart)).EndInit();
             this.CovidInfoPages.ResumeLayout(false);
@@ -2336,7 +2323,7 @@
         private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton4;
         private EO.WinForm.WebControl webControl1;
         private EO.WebBrowser.WebView webView1;
-        private DevExpress.XtraCharts.ChartControl stackedChart;
+        private DevExpress.XtraCharts.ChartControl lineChart;
         private DevExpress.XtraCharts.ChartControl dashBoardChart;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;

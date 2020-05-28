@@ -16,6 +16,7 @@ using Syncfusion.Pdf.Tables;
 using Syncfusion.Pdf;
 using CovidInfoPH.Models;
 using DevExpress.Data.Filtering;
+using DevExpress.XtraCharts;
 
 namespace CovidInfoPH
 {
@@ -128,17 +129,22 @@ namespace CovidInfoPH
         {
             if (monthRadioButton.Checked)
             {
-                datePicker.Format = DateTimePickerFormat.Custom;
-                datePicker.CustomFormat = "MMMM";
-                dashBoardChart.Series["Cases"].FilterCriteria = new BinaryOperator("Argument", Historical.Keys.Last(), BinaryOperatorType.LessOrEqual);
-                dashBoardChart.Series["Deaths"].FilterCriteria = new BinaryOperator("Argument", Historical.Keys.Last(), BinaryOperatorType.LessOrEqual);
-                dashBoardChart.Series["Recoveries"].FilterCriteria = new BinaryOperator("Argument", Historical.Keys.Last(), BinaryOperatorType.LessOrEqual);
+                CriteriaOperator oneMonth = new BinaryOperator("Argument",
+                                                new DateTime(datePicker.Value.Year, datePicker.Value.Month, 1),
+                                                BinaryOperatorType.GreaterOrEqual) &
+                                            new BinaryOperator("Argument",
+                                                new DateTime(datePicker.Value.Year,
+                                                    datePicker.Value.Month, 1).AddMonths(1),
+                                                BinaryOperatorType.Less);
+                dashBoardChart.Series["Cases"].FilterCriteria = oneMonth;
+                dashBoardChart.Series["Deaths"].FilterCriteria = oneMonth;
+                dashBoardChart.Series["Recoveries"].FilterCriteria = oneMonth;
 
             }
             else
             {
                 dashBoardChart.Series["Cases"].FilterCriteria = new BinaryOperator("Argument", datePicker.Value.AddDays(-6), BinaryOperatorType.GreaterOrEqual) &
-                                                              new BinaryOperator("Argument", datePicker.Value, BinaryOperatorType.LessOrEqual);
+                                                                new BinaryOperator("Argument", datePicker.Value, BinaryOperatorType.LessOrEqual);
                 dashBoardChart.Series["Deaths"].FilterCriteria = new BinaryOperator("Argument", datePicker.Value.AddDays(-6), BinaryOperatorType.GreaterOrEqual) &
                                                    new BinaryOperator("Argument", datePicker.Value, BinaryOperatorType.LessOrEqual);
                 dashBoardChart.Series["Recoveries"].FilterCriteria = new BinaryOperator("Argument", datePicker.Value.AddDays(-6), BinaryOperatorType.GreaterOrEqual) &
@@ -261,6 +267,7 @@ namespace CovidInfoPH
 
         private void FadeInValues()
         {
+            datePicker.Enabled = true;
             bunifuTransition1.ShowSync(recovNum);
             bunifuTransition1.ShowSync(deathNum);
             bunifuTransition1.ShowSync(casesNum);
@@ -444,7 +451,7 @@ namespace CovidInfoPH
         {
             WindowState = FormWindowState.Minimized;
         }
-        
+
         private void philippinesMap_ShapeSelected(object sender, ShapeSelectedEventArgs e)
         {
             uploadButton.Enabled = true;
@@ -453,17 +460,17 @@ namespace CovidInfoPH
             foreach (PhRegion region in e.Data)
             {
                 regionLabel.Text = region.Region;
-                stackedChart.Series["Cases"].DataSource = CreateChartData(Regions[region.Region].Keys.ToList(),
+                lineChart.Series["Cases"].DataSource = CreateChartData(Regions[region.Region].Keys.ToList(),
                     Regions[region.Region].Values.Select(p => p.Cases).ToList());
-                stackedChart.Series["Deaths"].DataSource = CreateChartData(Regions[region.Region].Keys.ToList(),
+                lineChart.Series["Deaths"].DataSource = CreateChartData(Regions[region.Region].Keys.ToList(),
                     Regions[region.Region].Values.Select(p => p.Deaths).ToList());
-                stackedChart.Series["Recoveries"].DataSource = CreateChartData(Regions[region.Region].Keys.ToList(),
+                lineChart.Series["Recoveries"].DataSource = CreateChartData(Regions[region.Region].Keys.ToList(),
                     Regions[region.Region].Values.Select(p => p.Recoveries).ToList());
             }
 
-            stackedChart.Series["Cases"].ValueDataMembers.AddRange("Value");
-            stackedChart.Series["Deaths"].ValueDataMembers.AddRange("Value");
-            stackedChart.Series["Recoveries"].ValueDataMembers.AddRange("Value");
+            lineChart.Series["Cases"].ValueDataMembers.AddRange("Value");
+            lineChart.Series["Deaths"].ValueDataMembers.AddRange("Value");
+            lineChart.Series["Recoveries"].ValueDataMembers.AddRange("Value");
         }
 
         private void searchRegionButton_Click(object sender, EventArgs e)
@@ -616,21 +623,27 @@ namespace CovidInfoPH
 
         private void weekRadioButton_Click(object sender, EventArgs e)
         {
-            //Still no region feature      
+            datePicker.Format = DateTimePickerFormat.Long;
             FadeOutValues();
             DisplayGraph();
+            foreach (Series series in dashBoardChart.Series)
+            {
+                series.ChangeView(ViewType.Bar);
+            }
             DisplayDataGrid();
             RefreshData();
             FadeInValues();
-            datePicker.Enabled = true;
         }
 
         private void monthRadioButton_Click(object sender, EventArgs e)
         {
-            //Still no region feature
-            datePicker.Enabled = false;
+            datePicker.Format = DateTimePickerFormat.Custom;
             FadeOutValues();
             DisplayGraph();
+            foreach (Series series in dashBoardChart.Series)
+            {
+                series.ChangeView(ViewType.StackedArea);
+            }
             DisplayDataGrid();
             RefreshData();
             FadeInValues();
