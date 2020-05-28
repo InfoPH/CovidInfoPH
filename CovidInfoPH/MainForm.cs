@@ -393,26 +393,23 @@ namespace CovidInfoPH
 
         private void DatePicker_ValueChanged(object sender, EventArgs e)
         {
+            FadeOutValues();
             if (selectedRegionlabel.Text.Substring(
                      selectedRegionlabel.Text.IndexOf(':') + 2) != "All")
             {
-                selectedRegionlabel.Text = $"Selected Region: {RegionSearchForm.SearchResult}";
-                FadeOutValues();
                 RefreshData(RegionSearchForm.SearchResult);
                 DisplayGraph(RegionSearchForm.SearchResult);
                 DisplayDataGrid(RegionSearchForm.SearchResult);
-                FadeInValues();
-                datePicker.Enabled = true;
             }
             else
             {
-                FadeOutValues();
                 RefreshData();
                 DisplayGraph();
                 DisplayDataGrid();
-                FadeInValues();
-                datePicker.Enabled = true;
             }
+
+            FadeInValues();
+            datePicker.Enabled = true;
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
@@ -487,25 +484,23 @@ namespace CovidInfoPH
             if (!string.IsNullOrEmpty(RegionSearchForm.SearchResult) && selectedRegionlabel.Text.Substring(
                 selectedRegionlabel.Text.IndexOf(':') + 2) != RegionSearchForm.SearchResult)
             {
+                FadeOutValues();
                 if (RegionSearchForm.SearchResult != "All")
                 {
                     selectedRegionlabel.Text = $"Selected Region: {RegionSearchForm.SearchResult}";
-                    FadeOutValues();
                     RefreshData(RegionSearchForm.SearchResult);
                     DisplayGraph(RegionSearchForm.SearchResult);
                     DisplayDataGrid(RegionSearchForm.SearchResult);
-                    FadeInValues();
-                    datePicker.Enabled = true;
                 }
                 else
                 {
-                    FadeOutValues();
                     RefreshData();
                     DisplayGraph();
                     DisplayDataGrid();
-                    FadeInValues();
-                    datePicker.Enabled = true;
                 }
+
+                FadeInValues();
+                datePicker.Enabled = true;
             }
         }
 
@@ -625,29 +620,55 @@ namespace CovidInfoPH
         private void weekRadioButton_Click(object sender, EventArgs e)
         {
             datePicker.Format = DateTimePickerFormat.Long;
-            FadeOutValues();
-            DisplayGraph();
             foreach (Series series in dashBoardChart.Series)
             {
                 series.ChangeView(ViewType.Bar);
             }
-            DisplayDataGrid();
-            RefreshData();
+
+            FadeOutValues();
+            if (selectedRegionlabel.Text.Substring(
+                selectedRegionlabel.Text.IndexOf(':') + 2) != "All")
+            {
+                RefreshData(RegionSearchForm.SearchResult);
+                DisplayGraph(RegionSearchForm.SearchResult);
+                DisplayDataGrid(RegionSearchForm.SearchResult);
+            }
+            else
+            {
+                RefreshData();
+                DisplayGraph();
+                DisplayDataGrid();
+            }
+
             FadeInValues();
+            datePicker.Enabled = true;
         }
 
         private void monthRadioButton_Click(object sender, EventArgs e)
         {
             datePicker.Format = DateTimePickerFormat.Custom;
-            FadeOutValues();
-            DisplayGraph();
             foreach (Series series in dashBoardChart.Series)
             {
                 series.ChangeView(ViewType.StackedArea);
             }
-            DisplayDataGrid();
-            RefreshData();
+
+            FadeOutValues();
+            if (selectedRegionlabel.Text.Substring(
+                selectedRegionlabel.Text.IndexOf(':') + 2) != "All")
+            {
+                RefreshData(RegionSearchForm.SearchResult);
+                DisplayGraph(RegionSearchForm.SearchResult);
+                DisplayDataGrid(RegionSearchForm.SearchResult);
+            }
+            else
+            {
+                RefreshData();
+                DisplayGraph();
+                DisplayDataGrid();
+            }
+
             FadeInValues();
+            datePicker.Enabled = true;
         }
 
         private void WebView_BeforeNavigate(object sender, EO.WebBrowser.BeforeNavigateEventArgs e)
