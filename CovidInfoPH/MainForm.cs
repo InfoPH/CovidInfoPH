@@ -1,10 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
-using Bunifu.DataViz.WinForms;
 using CovidInfoPH.Models;
 using System.Drawing;
 using System.Globalization;
@@ -72,7 +70,7 @@ namespace CovidInfoPH
             return dt;
         }
 
-        private void loadDashBoardChart()
+        private void LoadDashBoardChart()
         {
             dashBoardChart.Series["Cases"].DataSource = CreateChartData(Historical.Keys.ToList(),
             Historical.Values.Select(p => p.Cases).ToList());
@@ -87,7 +85,7 @@ namespace CovidInfoPH
         }
         private void ShowForm(object sender, EventArgs e)
         {
-            loadDashBoardChart();
+            LoadDashBoardChart();
             latestData.Text = $"Latest data fetched: {Historical.Keys.Max(d => d):MMMM dd, yyyy}";
             ShowInTaskbar = true;
             bunifuFormFadeTransition1.ShowAsyc(this);
@@ -95,12 +93,6 @@ namespace CovidInfoPH
             InitializeMap();
             DisplayDataGrid(false);
             RefreshData(false);
-        }
-        private void SetChartColors()
-        {
-            regionMapView.colorSet.Add(Color.FromArgb(152, 135, 143));
-            regionMapView.colorSet.Add(Color.FromArgb(142, 174, 189));
-            regionMapView.colorSet.Add(Color.FromArgb(152, 94, 109));
         }
         #endregion
 
@@ -264,7 +256,6 @@ namespace CovidInfoPH
         #endregion
 
         #region Transtion data
-
         private void FadeOutValues()
         {
             datePicker.Enabled = false;
@@ -432,7 +423,7 @@ namespace CovidInfoPH
             bunifuImageButton4.FadeWhenInactive = true;
             bunifuTransition1.Show(searchRegionButton);
             bunifuTransition1.Show(selectedRegionlabel);
-            WellBeingGuide.SetPage(0);
+            CovidInfoPages.SetPage(0);
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
@@ -442,7 +433,7 @@ namespace CovidInfoPH
             bunifuImageButton4.FadeWhenInactive = true;
             bunifuTransition1.Hide(searchRegionButton);
             bunifuTransition1.Hide(selectedRegionlabel);
-            WellBeingGuide.SetPage(1);
+            CovidInfoPages.SetPage(1);
         }
         private void bunifuImageButton4_Click(object sender, EventArgs e)
         {
@@ -451,7 +442,7 @@ namespace CovidInfoPH
             bunifuImageButton4.FadeWhenInactive = false;
             bunifuTransition1.Hide(searchRegionButton);
             bunifuTransition1.Hide(selectedRegionlabel);
-            WellBeingGuide.SetPage(2);
+            CovidInfoPages.SetPage(2);
         }
         private void closeButton_Click(object sender, EventArgs e)
         {
@@ -629,9 +620,6 @@ namespace CovidInfoPH
             AboutForm about = new AboutForm();
             about.ShowDialog();
         }
-        #endregion
-
-        #endregion
 
         private void option_CheckedChanged(object sender, EventArgs e)
         {
@@ -674,7 +662,10 @@ namespace CovidInfoPH
                 e.Cancel = true;
                 Process.Start(e.NewUrl);
             }
-                
+
         }
+        #endregion
+
+        #endregion
     }
 }
