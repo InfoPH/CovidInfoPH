@@ -1584,10 +1584,13 @@
                 new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109))))), System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109))))))}));
             series4.ArgumentDataMember = "Argument";
             series4.Name = "Cases";
+            series4.ValueDataMembersSerializable = "Value";
             series5.ArgumentDataMember = "Argument";
             series5.Name = "Recoveries";
+            series5.ValueDataMembersSerializable = "Value";
             series6.ArgumentDataMember = "Argument";
             series6.Name = "Deaths";
+            series6.ValueDataMembersSerializable = "Value";
             this.dashBoardChart.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series4,
         series5,

@@ -15,6 +15,7 @@ using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Tables;
 using Syncfusion.Pdf;
 using CovidInfoPH.Models;
+using DevExpress.DashboardWin.ServiceModel;
 using DevExpress.Data.Filtering;
 using DevExpress.XtraCharts;
 
@@ -65,10 +66,16 @@ namespace CovidInfoPH
                 Historical.Values.Select(p => p.Deaths).ToList());
             dashBoardChart.Series["Recoveries"].DataSource = CreateChartData(Historical.Keys.ToList(),
                 Historical.Values.Select(p => p.Recoveries).ToList());
+        }
 
-            dashBoardChart.Series["Cases"].ValueDataMembers.AddRange("Value");
-            dashBoardChart.Series["Deaths"].ValueDataMembers.AddRange("Value");
-            dashBoardChart.Series["Recoveries"].ValueDataMembers.AddRange("Value");
+        private void LoadDashBoardChart(string region)
+        {
+            dashBoardChart.Series["Cases"].DataSource = CreateChartData(Regions[region].Keys.ToList(),
+                Regions[region].Values.Select(p => p.Cases).ToList());
+            dashBoardChart.Series["Deaths"].DataSource = CreateChartData(Regions[region].Keys.ToList(),
+                Regions[region].Values.Select(p => p.Deaths).ToList());
+            dashBoardChart.Series["Recoveries"].DataSource = CreateChartData(Regions[region].Keys.ToList(),
+                Regions[region].Values.Select(p => p.Recoveries).ToList());
         }
 
         private void ShowForm(object sender, EventArgs e)
@@ -122,7 +129,43 @@ namespace CovidInfoPH
 
         private void DisplayDataGrid(string region)
         {
-            throw new NotImplementedException();
+            caseGridView.Rows.Clear();
+            if (monthRadioButton.Checked)
+            {
+                foreach (KeyValuePair<DateTime, RegionDateInfo> regionInfo in Regions[region].Where(r => r.Key >=
+                                                                                                         new DateTime(
+                                                                                                                 datePicker
+                                                                                                                     .Value
+                                                                                                                     .Year,
+                                                                                                                 datePicker
+                                                                                                                     .Value
+                                                                                                                     .Month,
+                                                                                                                 1)
+                                                                                                             .AddMonths(
+                                                                                                                 -1) &&
+                                                                                                         r.Key <=
+                                                                                                         new DateTime(
+                                                                                                             datePicker
+                                                                                                                 .Value
+                                                                                                                 .Year,
+                                                                                                             datePicker
+                                                                                                                 .Value
+                                                                                                                 .Month,
+                                                                                                             1)).Reverse())
+                {
+                    caseGridView.Rows.Add($"{regionInfo.Key:MM-dd-yyyy}", regionInfo.Value.Cases,
+                        regionInfo.Value.Deaths, regionInfo.Value.Recoveries);
+                }
+            }
+            else
+            {
+                foreach (KeyValuePair<DateTime, RegionDateInfo> regionInfo in Regions[region]
+                    .Where(r => r.Key > datePicker.Value.AddDays(-7) && r.Key <= datePicker.Value).Reverse())
+                {
+                    caseGridView.Rows.Add($"{regionInfo.Key:MM-dd-yyyy}", regionInfo.Value.Cases,
+                        regionInfo.Value.Deaths, regionInfo.Value.Recoveries);
+                }
+            }
         }
 
         private void DisplayGraph()
@@ -150,11 +193,6 @@ namespace CovidInfoPH
                 dashBoardChart.Series["Recoveries"].FilterCriteria = new BinaryOperator("Argument", datePicker.Value.AddDays(-6), BinaryOperatorType.GreaterOrEqual) &
                                                    new BinaryOperator("Argument", datePicker.Value, BinaryOperatorType.LessOrEqual);
             }
-        }
-
-        private void DisplayGraph(string region)
-        {
-            throw new NotImplementedException();
         }
 
         private void RefreshData()
@@ -398,7 +436,7 @@ namespace CovidInfoPH
                      selectedRegionlabel.Text.IndexOf(':') + 2) != "All")
             {
                 RefreshData(RegionSearchForm.SearchResult);
-                DisplayGraph(RegionSearchForm.SearchResult);
+                DisplayGraph();
                 DisplayDataGrid(RegionSearchForm.SearchResult);
             }
             else
@@ -487,13 +525,15 @@ namespace CovidInfoPH
                 FadeOutValues();
                 if (RegionSearchForm.SearchResult != "All")
                 {
+                    LoadDashBoardChart(RegionSearchForm.SearchResult);
                     selectedRegionlabel.Text = $"Selected Region: {RegionSearchForm.SearchResult}";
                     RefreshData(RegionSearchForm.SearchResult);
-                    DisplayGraph(RegionSearchForm.SearchResult);
+                    DisplayGraph();
                     DisplayDataGrid(RegionSearchForm.SearchResult);
                 }
                 else
                 {
+                    LoadDashBoardChart();
                     RefreshData();
                     DisplayGraph();
                     DisplayDataGrid();
@@ -630,7 +670,7 @@ namespace CovidInfoPH
                 selectedRegionlabel.Text.IndexOf(':') + 2) != "All")
             {
                 RefreshData(RegionSearchForm.SearchResult);
-                DisplayGraph(RegionSearchForm.SearchResult);
+                DisplayGraph();
                 DisplayDataGrid(RegionSearchForm.SearchResult);
             }
             else
@@ -657,7 +697,7 @@ namespace CovidInfoPH
                 selectedRegionlabel.Text.IndexOf(':') + 2) != "All")
             {
                 RefreshData(RegionSearchForm.SearchResult);
-                DisplayGraph(RegionSearchForm.SearchResult);
+                DisplayGraph();
                 DisplayDataGrid(RegionSearchForm.SearchResult);
             }
             else
