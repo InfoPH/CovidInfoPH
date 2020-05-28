@@ -30,7 +30,6 @@
     <PackageReference Include="SheetToObjects.Adapters.GoogleSheets" Version="2.5.0" />
     <PackageReference Include="Syncfusion.Maps.Windows" Version="18.1.0.53" />
     <PackageReference Include="Syncfusion.Pdf.WinForms" Version="18.1.0.53" />
-    <PackageReference Include="WinFormAnimation" Version="1.6.0.4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -105,9 +104,6 @@
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.ToggleSwitch">
       <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForms.ToggleSwitch.dll</HintPath>
-    </Reference>
-    <Reference Include="BunifuDataViz">
-      <HintPath>..\lib\Bunifu Dataviz Advanced\BunifuDataViz.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\lib\Bunifu UI WinForms\Bunifu_UI_v1.5.3.dll</HintPath>
@@ -238,18 +234,6 @@
     <Reference Include="DevExpress.XtraVerticalGrid.v20.1">
       <HintPath>..\lib\Dev Express\DevExpress.XtraVerticalGrid.v20.1.dll</HintPath>
     </Reference>
-    <Reference Include="EO.Base">
-      <HintPath>..\lib\Web Browser\EO.Base.dll</HintPath>
-    </Reference>
-    <Reference Include="EO.WebBrowser">
-      <HintPath>..\lib\Web Browser\EO.WebBrowser.dll</HintPath>
-    </Reference>
-    <Reference Include="EO.WebBrowser.WinForm">
-      <HintPath>..\lib\EO.WebBrowser.WinForm.dll</HintPath>
-    </Reference>
-    <Reference Include="EO.WebEngine">
-      <HintPath>..\lib\Web Browser\EO.WebEngine.dll</HintPath>
-    </Reference>
     <Reference Include="Guna.UI2">
       <HintPath>..\lib\Guna UI\Guna.UI2.dll</HintPath>
     </Reference>
@@ -308,17 +292,5 @@
     <None Update="Resources\up_arrow1.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-
-    <!--
-    <Compile Include="RegionSearchForm.cs">
-      <Subtype>Form</Subtype>
-    </Compile>
-    <Compile Include="RegionSearchForm.Designer.cs">
-      <DependentUpon>RegionSearchForm.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="RegionSearchForm.resx">
-      <DependentUpon>RegionSearchForm.cs</DependentUpon>
-    </EmbeddedResource>
-    -->
   </ItemGroup>
 </Project>
