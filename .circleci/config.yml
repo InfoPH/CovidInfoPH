@@ -18,7 +18,7 @@ jobs:
           name: "Build and pack to win-x64"
           command: |
             $env:MSBuildSDKsPath = "C:\Program Files\dotnet\sdk\$(dotnet --version)\Sdks"
-            Invoke-MsBuild -Path .\CovidInfoPH.sln -MsBuildParameters "-property:Configuration=Release -p:RuntimeIdentifier=win-x64 -p:OutputPath=win-x64/"
+            Invoke-MsBuild -Path .\CovidInfoPH.sln -MsBuildParameters "-property:Configuration=Release -p:RuntimeIdentifier=win-x64 -p:OutputPath=win-x64/" -ShowBuildOutputInCurrentWindow
             [xml]$cn = Get-Content CovidInfoPH\CovidInfoPH.csproj
             if (!([string]::IsNullOrWhiteSpace($cn.Project.PropertyGroup.VersionSuffix))) { $outputPath = "output/CovidInfoPH.$(([string]$cn.Project.PropertyGroup.VersionPrefix).Trim())-$(([string]$cn.Project.PropertyGroup.VersionSuffix).Trim()).win-x64.zip"}
             else { $outputPath = "output/CovidInfoPH.$(([string]$cn.Project.PropertyGroup.VersionPrefix).Trim()).win-x64.zip" }
