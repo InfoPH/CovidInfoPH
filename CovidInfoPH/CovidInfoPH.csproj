@@ -26,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="EO.WebBrowser.WinForm" Version="20.1.45" />
     <PackageReference Include="SheetToObjects.Adapters.GoogleSheets" Version="2.5.0" />
     <PackageReference Include="Syncfusion.Maps.Windows" Version="18.1.0.53" />
     <PackageReference Include="Syncfusion.Pdf.WinForms" Version="18.1.0.53" />
@@ -236,6 +237,18 @@
     </Reference>
     <Reference Include="DevExpress.XtraVerticalGrid.v20.1">
       <HintPath>..\lib\Dev Express\DevExpress.XtraVerticalGrid.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.Base">
+      <HintPath>..\lib\Web Browser\EO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.WebBrowser">
+      <HintPath>..\lib\Web Browser\EO.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.WebBrowser.WinForm">
+      <HintPath>..\lib\EO.WebBrowser.WinForm.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.WebEngine">
+      <HintPath>..\lib\Web Browser\EO.WebEngine.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2">
       <HintPath>..\lib\Guna UI\Guna.UI2.dll</HintPath>

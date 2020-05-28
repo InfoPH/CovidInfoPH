@@ -13,6 +13,7 @@ using Syncfusion.UI.Xaml.Maps;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Tables;
 using System.Data;
+using System.Diagnostics;
 using System.Net;
 using Syncfusion.Pdf;
 using DevExpress.Data.Filtering;
@@ -32,6 +33,7 @@ namespace CovidInfoPH
             splash.Closed += ShowForm;
 
             InitializeComponent();
+            webControl1.WebView.BeforeNavigate += WebView_BeforeNavigate;
         }
 
         #region Methods
@@ -427,20 +429,30 @@ namespace CovidInfoPH
         {
             bunifuImageButton1.FadeWhenInactive = false;
             bunifuImageButton2.FadeWhenInactive = true;
+            bunifuImageButton4.FadeWhenInactive = true;
             bunifuTransition1.Show(searchRegionButton);
             bunifuTransition1.Show(selectedRegionlabel);
-            DashBoard.SetPage(0);
+            WellBeingGuide.SetPage(0);
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
             bunifuImageButton1.FadeWhenInactive = true;
             bunifuImageButton2.FadeWhenInactive = false;
+            bunifuImageButton4.FadeWhenInactive = true;
             bunifuTransition1.Hide(searchRegionButton);
             bunifuTransition1.Hide(selectedRegionlabel);
-            DashBoard.SetPage(1);
+            WellBeingGuide.SetPage(1);
         }
-
+        private void bunifuImageButton4_Click(object sender, EventArgs e)
+        {
+            bunifuImageButton1.FadeWhenInactive = true;
+            bunifuImageButton2.FadeWhenInactive = true;
+            bunifuImageButton4.FadeWhenInactive = false;
+            bunifuTransition1.Hide(searchRegionButton);
+            bunifuTransition1.Hide(selectedRegionlabel);
+            WellBeingGuide.SetPage(2);
+        }
         private void closeButton_Click(object sender, EventArgs e)
         {
             Close();
@@ -653,7 +665,16 @@ namespace CovidInfoPH
             DisplayDataGrid(true);
             RefreshData(true);
             FadeInValues();
+        }
 
+        private void WebView_BeforeNavigate(object sender, EO.WebBrowser.BeforeNavigateEventArgs e)
+        {
+            if (e.IsUserGesture)
+            {
+                e.Cancel = true;
+                Process.Start(e.NewUrl);
+            }
+                
         }
     }
 }

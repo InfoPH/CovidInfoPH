@@ -42,12 +42,6 @@
             this.ortegaName = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.splashScreenElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.logoTimer = new System.Windows.Forms.Timer(this.components);
-            this.nameTimer = new System.Windows.Forms.Timer(this.components);
-            this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.showLogo = new System.Windows.Forms.Timer(this.components);
-            this.showFace = new System.Windows.Forms.Timer(this.components);
             this.exitButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.nino = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.braulio = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -57,6 +51,12 @@
             this.arizala = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.ortega = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.itang = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.splashScreenElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.logoTimer = new System.Windows.Forms.Timer(this.components);
+            this.nameTimer = new System.Windows.Forms.Timer(this.components);
+            this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.showLogo = new System.Windows.Forms.Timer(this.components);
+            this.showFace = new System.Windows.Forms.Timer(this.components);
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nino)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.braulio)).BeginInit();
@@ -112,7 +112,7 @@
             this.name.ForeColor = System.Drawing.Color.White;
             this.name.Location = new System.Drawing.Point(284, 96);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(194, 31);
+            this.name.Size = new System.Drawing.Size(279, 45);
             this.name.TabIndex = 3;
             this.name.Text = "COVIDinfo-PH";
             this.bunifuToolTip1.SetToolTip(this.name, "");
@@ -129,7 +129,7 @@
             this.meetLabel.ForeColor = System.Drawing.Color.White;
             this.meetLabel.Location = new System.Drawing.Point(250, 96);
             this.meetLabel.Name = "meetLabel";
-            this.meetLabel.Size = new System.Drawing.Size(246, 31);
+            this.meetLabel.Size = new System.Drawing.Size(349, 45);
             this.meetLabel.TabIndex = 3;
             this.meetLabel.Text = "Meet the creators!";
             this.bunifuToolTip1.SetToolTip(this.meetLabel, "");
@@ -146,7 +146,7 @@
             this.arizalaName.ForeColor = System.Drawing.Color.White;
             this.arizalaName.Location = new System.Drawing.Point(154, 308);
             this.arizalaName.Name = "arizalaName";
-            this.arizalaName.Size = new System.Drawing.Size(88, 42);
+            this.arizalaName.Size = new System.Drawing.Size(131, 64);
             this.arizalaName.TabIndex = 3;
             this.arizalaName.Text = "Arizala\r\nJohndayll";
             this.arizalaName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -164,7 +164,7 @@
             this.martinezName.ForeColor = System.Drawing.Color.White;
             this.martinezName.Location = new System.Drawing.Point(133, 308);
             this.martinezName.Name = "martinezName";
-            this.martinezName.Size = new System.Drawing.Size(123, 42);
+            this.martinezName.Size = new System.Drawing.Size(179, 64);
             this.martinezName.TabIndex = 3;
             this.martinezName.Text = "Martinez\r\nJose Raphael";
             this.martinezName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -182,7 +182,7 @@
             this.braulioName.ForeColor = System.Drawing.Color.White;
             this.braulioName.Location = new System.Drawing.Point(358, 308);
             this.braulioName.Name = "braulioName";
-            this.braulioName.Size = new System.Drawing.Size(67, 42);
+            this.braulioName.Size = new System.Drawing.Size(100, 64);
             this.braulioName.TabIndex = 3;
             this.braulioName.Text = "Braulio\r\nVaeda";
             this.braulioName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -200,7 +200,7 @@
             this.ninoName.ForeColor = System.Drawing.Color.White;
             this.ninoName.Location = new System.Drawing.Point(365, 308);
             this.ninoName.Name = "ninoName";
-            this.ninoName.Size = new System.Drawing.Size(55, 42);
+            this.ninoName.Size = new System.Drawing.Size(83, 64);
             this.ninoName.TabIndex = 3;
             this.ninoName.Text = "Nino\r\nKovie";
             this.ninoName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -218,7 +218,7 @@
             this.itangName.ForeColor = System.Drawing.Color.White;
             this.itangName.Location = new System.Drawing.Point(558, 308);
             this.itangName.Name = "itangName";
-            this.itangName.Size = new System.Drawing.Size(52, 42);
+            this.itangName.Size = new System.Drawing.Size(76, 64);
             this.itangName.TabIndex = 3;
             this.itangName.Text = "Itang\r\nRyan";
             this.itangName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -236,7 +236,7 @@
             this.ortegaName.ForeColor = System.Drawing.Color.White;
             this.ortegaName.Location = new System.Drawing.Point(512, 308);
             this.ortegaName.Name = "ortegaName";
-            this.ortegaName.Size = new System.Drawing.Size(125, 42);
+            this.ortegaName.Size = new System.Drawing.Size(182, 64);
             this.ortegaName.TabIndex = 3;
             this.ortegaName.Text = "Jiz De Ortega\r\nKeino";
             this.ortegaName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -272,7 +272,7 @@
             this.bunifuLabel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(172, 33);
+            this.bunifuLabel1.Size = new System.Drawing.Size(253, 47);
             this.bunifuLabel1.TabIndex = 5;
             this.bunifuLabel1.Text = "COVIDinfo-PH";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -281,52 +281,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuLabel1, null);
             this.bunifuToolTip1.SetToolTipTitle(this.bunifuLabel1, "<b>COVIDinfo-PH</b> <span style=\\\"color: darkgray;\\\">•</span> <span style=\"color:" +
         " dimgray; font-family: consolas; font-size: 13px\">v1.0.0</span>");
-            // 
-            // splashScreenElipse
-            // 
-            this.splashScreenElipse.ElipseRadius = 60;
-            this.splashScreenElipse.TargetControl = this;
-            // 
-            // logoTimer
-            // 
-            this.logoTimer.Interval = 500;
-            this.logoTimer.Tick += new System.EventHandler(this.logoTimer_Tick);
-            // 
-            // nameTimer
-            // 
-            this.nameTimer.Interval = 1000;
-            this.nameTimer.Tick += new System.EventHandler(this.nameTimer_Tick);
-            // 
-            // bunifuTransition1
-            // 
-            this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
-            this.bunifuTransition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 1F;
-            this.bunifuTransition1.DefaultAnimation = animation1;
-            // 
-            // showLogo
-            // 
-            this.showLogo.Interval = 1000;
-            this.showLogo.Tick += new System.EventHandler(this.showLogo_Tick);
-            // 
-            // showFace
-            // 
-            this.showFace.Interval = 1000;
-            this.showFace.Tick += new System.EventHandler(this.showFace_Tick);
             // 
             // exitButton
             // 
@@ -510,6 +464,52 @@
             this.bunifuToolTip1.SetToolTipIcon(this.itang, null);
             this.bunifuToolTip1.SetToolTipTitle(this.itang, "");
             this.itang.Visible = false;
+            // 
+            // splashScreenElipse
+            // 
+            this.splashScreenElipse.ElipseRadius = 60;
+            this.splashScreenElipse.TargetControl = this;
+            // 
+            // logoTimer
+            // 
+            this.logoTimer.Interval = 500;
+            this.logoTimer.Tick += new System.EventHandler(this.logoTimer_Tick);
+            // 
+            // nameTimer
+            // 
+            this.nameTimer.Interval = 1000;
+            this.nameTimer.Tick += new System.EventHandler(this.nameTimer_Tick);
+            // 
+            // bunifuTransition1
+            // 
+            this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
+            this.bunifuTransition1.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 1F;
+            this.bunifuTransition1.DefaultAnimation = animation1;
+            // 
+            // showLogo
+            // 
+            this.showLogo.Interval = 1000;
+            this.showLogo.Tick += new System.EventHandler(this.showLogo_Tick);
+            // 
+            // showFace
+            // 
+            this.showFace.Interval = 1000;
+            this.showFace.Tick += new System.EventHandler(this.showFace_Tick);
             // 
             // SplashForm
             // 
