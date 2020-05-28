@@ -130,12 +130,12 @@ namespace CovidInfoPH
             if (monthRadioButton.Checked)
             {
                 CriteriaOperator oneMonth = new BinaryOperator("Argument",
-                                                new DateTime(datePicker.Value.Year, datePicker.Value.Month, 1),
+                                                new DateTime(datePicker.Value.Year, datePicker.Value.Month, 1).AddMonths(-1),
                                                 BinaryOperatorType.GreaterOrEqual) &
                                             new BinaryOperator("Argument",
                                                 new DateTime(datePicker.Value.Year,
-                                                    datePicker.Value.Month, 1).AddMonths(1),
-                                                BinaryOperatorType.Less);
+                                                    datePicker.Value.Month, 1),
+                                                BinaryOperatorType.LessOrEqual);
                 dashBoardChart.Series["Cases"].FilterCriteria = oneMonth;
                 dashBoardChart.Series["Deaths"].FilterCriteria = oneMonth;
                 dashBoardChart.Series["Recoveries"].FilterCriteria = oneMonth;
@@ -166,12 +166,13 @@ namespace CovidInfoPH
 
             if (monthRadioButton.Checked)
             {
-                cases = Historical[Historical.Keys.Last()].Cases;
-                deaths = Historical[Historical.Keys.Last()].Deaths;
-                recoveries = Historical[Historical.Keys.Last()].Recoveries;
-                newCases = Historical[Historical.Keys.Last()].Cases - Historical[datePicker.Value.AddMonths(-1)].Cases;
-                weeklyReport.Text = $"Monthly Report as of {Historical.Keys.Last(): MMMM dd, yyyy}";
-                newCasesDesc.Text = $"New cases since\n{Historical.Keys.Last().AddMonths(-1): MMMM}";
+                DateTime firstDayOfMonth = new DateTime(datePicker.Value.Year, datePicker.Value.Month, 1);
+                cases = Historical[firstDayOfMonth].Cases;
+                deaths = Historical[firstDayOfMonth].Deaths;
+                recoveries = Historical[firstDayOfMonth].Recoveries;
+                newCases = Historical[firstDayOfMonth].Cases - Historical[firstDayOfMonth.AddMonths(-1)].Cases;
+                weeklyReport.Text = $"Monthly Report as of {datePicker.Value: MMMM}";
+                newCasesDesc.Text = $"New cases since\n{datePicker.Value.AddMonths(-1): MMMM}";
             }
             else
             {
