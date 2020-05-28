@@ -1,19 +1,20 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Forms;
-using CovidInfoPH.Models;
 using System.Drawing;
 using System.Globalization;
+using System.Data;
+using System.Diagnostics;
+using System.Net;
 using Syncfusion.Windows.Forms.Maps;
 using Syncfusion.UI.Xaml.Maps;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Tables;
-using System.Data;
-using System.Diagnostics;
-using System.Net;
 using Syncfusion.Pdf;
+using CovidInfoPH.Models;
 using DevExpress.Data.Filtering;
 
 namespace CovidInfoPH
@@ -54,6 +55,7 @@ namespace CovidInfoPH
 
             return dt;
         }
+
         //Overload for second page
         private DataTable CreateChartData(DateTime dates, int number)
         {
@@ -83,6 +85,7 @@ namespace CovidInfoPH
             dashBoardChart.Series["Deaths"].ValueDataMembers.AddRange("Value");
             dashBoardChart.Series["Recoveries"].ValueDataMembers.AddRange("Value");
         }
+
         private void ShowForm(object sender, EventArgs e)
         {
             LoadDashBoardChart();
@@ -93,6 +96,20 @@ namespace CovidInfoPH
             InitializeMap();
             DisplayDataGrid(false);
             RefreshData(false);
+        }
+        #endregion
+
+        #region Heat Map Color Generation
+        public Color CalculateHeatMapColor(decimal value, decimal min, decimal max)
+        {
+            //Minimum color - khaki
+            //Maximum color - red
+            decimal val = (value - min) / (max - min);
+            int A = 255;
+            int R = Convert.ToByte(Color.Khaki.R * (1 + (1 - (decimal) Color.Red.R / Color.Khaki.R) * val));
+            int G = Convert.ToByte(Color.Khaki.G * (1 - val));
+            int B = Convert.ToByte(Color.Khaki.B * (1 - val));
+            return Color.FromArgb(A, R, G, B);
         }
         #endregion
 
@@ -120,14 +137,7 @@ namespace CovidInfoPH
 
         private void DisplayDataGrid(string region, bool isMonth)
         {
-            //No region feature
-            caseGridView.Rows.Clear();
-            for (int i = -6; i < 1; i++)
-            {
-                caseGridView.Rows.Add($"{datePicker.Value.AddDays(i): MM-dd-yyyy}",
-                    Regions[region][datePicker.Value.AddDays(i)].Cases,
-                    Regions[region][datePicker.Value.AddDays(i)].Deaths, Regions[region][datePicker.Value.AddDays(i)].Recoveries);
-            }
+            throw new NotImplementedException();
         }
 
         private void DisplayGraph(bool isMonth)
@@ -152,7 +162,7 @@ namespace CovidInfoPH
 
         private void DisplayGraph(string region, bool isMonth)
         {
-           //No region feature
+            throw new NotImplementedException();
         }
 
         private void RefreshData(bool isMonth)
@@ -240,17 +250,12 @@ namespace CovidInfoPH
             };
             philippineShape.ShapeSetting.FillSetting.AutoFillColors = false;
             philippineShape.ShapeSetting.ShapeColorValuePath = "Cases";
-            philippineShape.ShapeSetting.FillSetting.ColorMappings =
-                new System.Collections.ObjectModel.ObservableCollection<ColorMapping>
-                {
-                    new RangeColorMapping {From = 4, To = 22, Color = Color.FromArgb(255, 193, 0)},
-                    new RangeColorMapping {From = 28, To = 37, Color = Color.FromArgb(255, 154, 0)},
-                    new RangeColorMapping {From = 47, To = 69, Color = Color.FromArgb(255, 116, 0)},
-                    new RangeColorMapping {From = 107, To = 237, Color = Color.FromArgb(255, 77, 0)},
-                    new RangeColorMapping {From = 481, To = 11000, Color = Color.FromArgb(255, 0, 0)}
-                };
+            List<int> values = item.Regions.Select(r => r.Cases).ToList();
+            ObservableCollection<ColorMapping> colors = new ObservableCollection<ColorMapping>(values.Select(c =>
+                new EqualColorMapping { Value = c, Color = CalculateHeatMapColor(c, values.Min(), values.Max()) }));
+
+            philippineShape.ShapeSetting.FillSetting.ColorMappings = colors;
             philippinesMap.MapBackgroundBrush = new SolidBrush(Color.FromArgb(20, 30, 39));
-            philippinesMap.ShapeSelected += PhilippinesMap_ShapeSelected; //Hook the ShapeSelected event
             philippinesMap.Layers.Add(philippineShape);
         }
         #endregion
@@ -454,7 +459,7 @@ namespace CovidInfoPH
             WindowState = FormWindowState.Minimized;
         }
 
-        private void PhilippinesMap_ShapeSelected(object sender, ShapeSelectedEventArgs e)
+        private void philippinesMap_ShapeSelected_1(object sender, ShapeSelectedEventArgs e)
         {
             uploadButton.Enabled = true;
             List<DateTime> dates = Patients.Select(p => p.DateConfirmed).Distinct().ToList();
@@ -463,12 +468,13 @@ namespace CovidInfoPH
             {
                 regionLabel.Text = region.Region;
                 stackedChart.Series["Cases"].DataSource = CreateChartData(dates.Last(),
-               Regions[region.Region][dates.Last()].Cases);
+                    Regions[region.Region][dates.Last()].Cases);
                 stackedChart.Series["Deaths"].DataSource = CreateChartData(dates.Last(),
-                         Regions[region.Region][dates.Last()].Deaths);
+                    Regions[region.Region][dates.Last()].Deaths);
                 stackedChart.Series["Recoveries"].DataSource = CreateChartData(dates.Last(),
-                          Regions[region.Region][dates.Last()].Recoveries);
+                    Regions[region.Region][dates.Last()].Recoveries);
             }
+
             stackedChart.Series["Cases"].ValueDataMembers.AddRange("Value");
             stackedChart.Series["Deaths"].ValueDataMembers.AddRange("Value");
             stackedChart.Series["Recoveries"].ValueDataMembers.AddRange("Value");
@@ -512,12 +518,6 @@ namespace CovidInfoPH
                     datePicker.Enabled = true;
                 }
             }
-        }
-
-        private void regionDatePicker_ValueChanged(object sender, EventArgs e)
-        {
-            //remove
-   
         }
 
         private async void uploadButton_Click(object sender, EventArgs e)
@@ -595,7 +595,7 @@ namespace CovidInfoPH
                 if (!string.IsNullOrEmpty(LoginForm.Username))
                 {
                     WebClient client = new WebClient
-                        {Credentials = new NetworkCredential(LoginForm.Username, LoginForm.Password)};
+                    { Credentials = new NetworkCredential(LoginForm.Username, LoginForm.Password) };
                     try
                     {
                         await client.UploadDataTaskAsync(

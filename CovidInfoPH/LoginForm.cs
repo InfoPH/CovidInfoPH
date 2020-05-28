@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CovidInfoPH
@@ -27,18 +20,6 @@ namespace CovidInfoPH
             guna2ShadowForm1.SetShadowForm(this);
         }
 
-        private void authenticateButton_Click(object sender, EventArgs e)
-        {
-            Username = usernameTextBox.Text;
-            Password = passTextBox.Text;
-            Close();
-        }
-
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void passTextBox_IconRightClick(object sender, EventArgs e)
         {
             if (passTextBox.PasswordChar == '•')
@@ -56,6 +37,18 @@ namespace CovidInfoPH
         private void passTextBox_TextChanged(object sender, EventArgs e)
         {
             authenticateButton.Enabled = usernameTextBox.Text != string.Empty && passTextBox.Text != string.Empty;
+        }
+
+        private void authenticateButton_Click(object sender, EventArgs e)
+        {
+            Username = usernameTextBox.Text;
+            Password = passTextBox.Text;
+            Close();
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

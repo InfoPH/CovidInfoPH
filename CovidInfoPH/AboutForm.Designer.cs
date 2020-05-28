@@ -265,7 +265,7 @@
             this.dohImageButton.ShowSizeMarkers = false;
             this.dohImageButton.Size = new System.Drawing.Size(93, 91);
             this.dohImageButton.TabIndex = 63;
-            this.bunifuToolTip1.SetToolTip(this.dohImageButton, "Visit Department of Heath");
+            this.bunifuToolTip1.SetToolTip(this.dohImageButton, "Visit Department of Health");
             this.bunifuToolTip1.SetToolTipIcon(this.dohImageButton, global::CovidInfoPH.Properties.Resources.icons8_open_in_browser_400px);
             this.dohImageButton.ToolTipText = "";
             this.bunifuToolTip1.SetToolTipTitle(this.dohImageButton, "Open in browser");
