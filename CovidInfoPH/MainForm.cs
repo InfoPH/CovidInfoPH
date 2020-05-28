@@ -1,10 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
-using Bunifu.DataViz.WinForms;
 using CovidInfoPH.Models;
 using System.Drawing;
 using System.Globalization;
@@ -13,8 +11,10 @@ using Syncfusion.UI.Xaml.Maps;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Tables;
 using System.Data;
+using System.Diagnostics;
 using System.Net;
 using Syncfusion.Pdf;
+using DevExpress.Data.Filtering;
 
 namespace CovidInfoPH
 {
@@ -31,46 +31,96 @@ namespace CovidInfoPH
             splash.Closed += ShowForm;
 
             InitializeComponent();
+            webControl1.WebView.BeforeNavigate += WebView_BeforeNavigate;
         }
 
         #region Methods
 
         #region Load form & chart
+        private DataTable CreateChartData(List<DateTime> dates, List<int> numbers)
+        {
+            DataTable dt = new DataTable();
+
+            dt.Columns.Add("Argument", typeof(DateTime));
+            dt.Columns.Add("Value", typeof(int));
+
+            for (int i = 0; i < dates.Count; i++)
+            {
+                var row = dt.NewRow();
+                row["Argument"] = dates[i];
+                row["Value"] = numbers[i];
+                dt.Rows.Add(row);
+            }
+
+            return dt;
+        }
+        //Overload for second page
+        private DataTable CreateChartData(DateTime dates, int number)
+        {
+            DataTable dt = new DataTable();
+
+            dt.Columns.Add("Argument", typeof(DateTime));
+            dt.Columns.Add("Value", typeof(int));
+
+            var row = dt.NewRow();
+            row["Argument"] = dates;
+            row["Value"] = number;
+            dt.Rows.Add(row);
+
+            return dt;
+        }
+
+        private void LoadDashBoardChart()
+        {
+            dashBoardChart.Series["Cases"].DataSource = CreateChartData(Historical.Keys.ToList(),
+            Historical.Values.Select(p => p.Cases).ToList());
+            dashBoardChart.Series["Deaths"].DataSource = CreateChartData(Historical.Keys.ToList(),
+                Historical.Values.Select(p => p.Deaths).ToList());
+            dashBoardChart.Series["Recoveries"].DataSource = CreateChartData(Historical.Keys.ToList(),
+                Historical.Values.Select(p => p.Recoveries).ToList());
+
+            dashBoardChart.Series["Cases"].ValueDataMembers.AddRange("Value");
+            dashBoardChart.Series["Deaths"].ValueDataMembers.AddRange("Value");
+            dashBoardChart.Series["Recoveries"].ValueDataMembers.AddRange("Value");
+        }
         private void ShowForm(object sender, EventArgs e)
         {
+            LoadDashBoardChart();
             latestData.Text = $"Latest data fetched: {Historical.Keys.Max(d => d):MMMM dd, yyyy}";
             ShowInTaskbar = true;
             bunifuFormFadeTransition1.ShowAsyc(this);
-            SetChartColors();
-            DisplayGraph();
+            DisplayGraph(false);
             InitializeMap();
-            DisplayDataGrid();
-            RefreshData();
-        }
-        private void SetChartColors()
-        {
-            generalCaseChart.colorSet.Add(Color.FromArgb(152, 135, 143));
-            generalCaseChart.colorSet.Add(Color.FromArgb(142, 174, 189));
-            generalCaseChart.colorSet.Add(Color.FromArgb(152, 94, 109));
-            regionMapView.colorSet.Add(Color.FromArgb(152, 135, 143));
-            regionMapView.colorSet.Add(Color.FromArgb(142, 174, 189));
-            regionMapView.colorSet.Add(Color.FromArgb(152, 94, 109));
+            DisplayDataGrid(false);
+            RefreshData(false);
         }
         #endregion
 
         #region Display data
-        private void DisplayDataGrid()
+        private void DisplayDataGrid(bool isMonth)
         {
             caseGridView.Rows.Clear();
-            for (int i = -6; i < 1; i++)
+            if (isMonth)
             {
-                caseGridView.Rows.Add($"{datePicker.Value.AddDays(i): MM-dd-yyyy}", Historical[datePicker.Value.AddDays(i)].Cases,
-                Historical[datePicker.Value.AddDays(i)].Deaths, Historical[datePicker.Value.AddDays(i)].Recoveries);
+                for (int i = -(Historical.Count - 1); i < 1; i++)
+                {
+                    caseGridView.Rows.Add($"{Historical.Keys.Last().AddDays(i): MM-dd-yyyy}", Historical[Historical.Keys.Last().AddDays(i)].Cases,
+                 Historical[Historical.Keys.Last().AddDays(i)].Deaths, Historical[Historical.Keys.Last().AddDays(i)].Recoveries);
+                }
+            }
+            else
+            {
+                for (int i = -6; i < 1; i++)
+                {
+                    caseGridView.Rows.Add($"{datePicker.Value.AddDays(i): MM-dd-yyyy}", Historical[datePicker.Value.AddDays(i)].Cases,
+                    Historical[datePicker.Value.AddDays(i)].Deaths, Historical[datePicker.Value.AddDays(i)].Recoveries);
+                }
             }
         }
 
-        private void DisplayDataGrid(string region)
+        private void DisplayDataGrid(string region, bool isMonth)
         {
+            //No region feature
             caseGridView.Rows.Clear();
             for (int i = -6; i < 1; i++)
             {
@@ -80,56 +130,57 @@ namespace CovidInfoPH
             }
         }
 
-        private void DisplayGraph()
+        private void DisplayGraph(bool isMonth)
         {
-            Canvas canvas = new Canvas();
-            DataPoint cases = new DataPoint(BunifuDataViz._type.Bunifu_column);
-            DataPoint deaths = new DataPoint(BunifuDataViz._type.Bunifu_column);
-            DataPoint recoveries = new DataPoint(BunifuDataViz._type.Bunifu_column);
-
-            for (int i = -6; i < 1; i++)
+            if (isMonth)
             {
-                cases.addLabely(datePicker.Value.AddDays(i).DayOfWeek.ToString(), Historical[datePicker.Value.AddDays(i)].Cases);
-                deaths.addLabely(datePicker.Value.AddDays(i).DayOfWeek.ToString(), Historical[datePicker.Value.AddDays(i)].Deaths);
-                recoveries.addLabely(datePicker.Value.AddDays(i).DayOfWeek.ToString(), Historical[datePicker.Value.AddDays(i)].Recoveries);
-            }
+                dashBoardChart.Series["Cases"].FilterCriteria = new BinaryOperator("Argument", Historical.Keys.Last(), BinaryOperatorType.LessOrEqual);
+                dashBoardChart.Series["Deaths"].FilterCriteria = new BinaryOperator("Argument", Historical.Keys.Last(), BinaryOperatorType.LessOrEqual);
+                dashBoardChart.Series["Recoveries"].FilterCriteria = new BinaryOperator("Argument", Historical.Keys.Last(), BinaryOperatorType.LessOrEqual);
 
-            canvas.addData(cases);
-            canvas.addData(recoveries);
-            canvas.addData(deaths);
-            generalCaseChart.Render(canvas);
+            }
+            else
+            {
+                dashBoardChart.Series["Cases"].FilterCriteria = new BinaryOperator("Argument", datePicker.Value.AddDays(-6), BinaryOperatorType.GreaterOrEqual) &
+                                                              new BinaryOperator("Argument", datePicker.Value, BinaryOperatorType.LessOrEqual);
+                dashBoardChart.Series["Deaths"].FilterCriteria = new BinaryOperator("Argument", datePicker.Value.AddDays(-6), BinaryOperatorType.GreaterOrEqual) &
+                                                   new BinaryOperator("Argument", datePicker.Value, BinaryOperatorType.LessOrEqual);
+                dashBoardChart.Series["Recoveries"].FilterCriteria = new BinaryOperator("Argument", datePicker.Value.AddDays(-6), BinaryOperatorType.GreaterOrEqual) &
+                                                   new BinaryOperator("Argument", datePicker.Value, BinaryOperatorType.LessOrEqual);
+            }
         }
 
-        private void DisplayGraph(string region)
+        private void DisplayGraph(string region, bool isMonth)
         {
-            Canvas canvas = new Canvas();
-            DataPoint cases = new DataPoint(BunifuDataViz._type.Bunifu_column);
-            DataPoint deaths = new DataPoint(BunifuDataViz._type.Bunifu_column);
-            DataPoint recoveries = new DataPoint(BunifuDataViz._type.Bunifu_column);
-
-            for (int i = -6; i < 1; i++)
-            {
-                //datePicker.Value.AddDays(i) - Time of day
-                cases.addLabely(datePicker.Value.AddDays(i).DayOfWeek.ToString(),
-                    Regions[region][datePicker.Value.AddDays(i)].Cases);
-                deaths.addLabely(datePicker.Value.AddDays(i).DayOfWeek.ToString(),
-                    Regions[region][datePicker.Value.AddDays(i)].Deaths);
-                recoveries.addLabely(datePicker.Value.AddDays(i).DayOfWeek.ToString(),
-                    Regions[region][datePicker.Value.AddDays(i)].Recoveries);
-            }
-
-            canvas.addData(cases);
-            canvas.addData(recoveries);
-            canvas.addData(deaths);
-            generalCaseChart.Render(canvas);
+           //No region feature
         }
 
-        private void RefreshData()
+        private void RefreshData(bool isMonth)
         {
-            double cases = Historical[datePicker.Value].Cases;
-            double deaths = Historical[datePicker.Value].Deaths;
-            double recoveries = Historical[datePicker.Value].Recoveries;
-            int newCases = Historical[datePicker.Value].Cases - Historical[datePicker.Value.AddDays(-6)].Cases;
+            double cases;
+            double deaths;
+            double recoveries;
+            int newCases;
+
+            if (isMonth)
+            {
+                cases = Historical[Historical.Keys.Last()].Cases;
+                deaths = Historical[Historical.Keys.Last()].Deaths;
+                recoveries = Historical[Historical.Keys.Last()].Recoveries;
+                newCases = Historical[Historical.Keys.Last()].Cases - Historical[datePicker.Value.AddMonths(-1)].Cases;
+                weeklyReport.Text = $"Monthly Report as of {Historical.Keys.Last(): MMMM dd, yyyy}";
+                newCasesDesc.Text = $"New cases since\n{Historical.Keys.Last().AddMonths(-1): MMMM}";
+            }
+            else
+            {
+                cases = Historical[datePicker.Value].Cases;
+                deaths = Historical[datePicker.Value].Deaths;
+                recoveries = Historical[datePicker.Value].Recoveries;
+                newCases = Historical[datePicker.Value].Cases - Historical[datePicker.Value.AddDays(-6)].Cases;
+                weeklyReport.Text = $"Weekly Report as of {datePicker.Value: MMMM dd, yyyy}";
+                newCasesDesc.Text = $"New cases since\n{datePicker.Value.AddDays(-6).DayOfWeek}";
+            }
+
             casesNum.Text = cases.ToString(CultureInfo.InvariantCulture);
             deathNum.Text = deaths.ToString(CultureInfo.InvariantCulture);
             caseNum2.Text = cases.ToString(CultureInfo.InvariantCulture);
@@ -137,16 +188,33 @@ namespace CovidInfoPH
             recovNum.Text = recoveries.ToString(CultureInfo.InvariantCulture);
             newCasesNum.Text = newCases.ToString();
             deathPercent.Value = Convert.ToInt32(deaths / cases * 100);
-            weeklyReport.Text = $"Weekly Report as of {datePicker.Value:MMMM dd, yyyy}";
-            newCasesDesc.Text = $"New cases since\n{datePicker.Value.AddDays(-6).DayOfWeek}";
+
         }
 
-        private void RefreshData(string region)
+        private void RefreshData(string region, bool isMonth)
         {
-            double cases = Regions[region][datePicker.Value].Cases;
-            double deaths = Regions[region][datePicker.Value].Deaths;
-            double recoveries = Regions[region][datePicker.Value].Recoveries;
-            int newCases = Regions[region][datePicker.Value].Cases - Regions[region][datePicker.Value.AddDays(-6)].Cases;
+            double cases;
+            double deaths;
+            double recoveries;
+            int newCases;
+            if (isMonth)
+            {
+                cases = Regions[region][Patients[Patients.Count - 1].DateConfirmed].Cases;
+                deaths = Regions[region][Patients[Patients.Count - 1].DateConfirmed].Deaths;
+                recoveries = Regions[region][Patients[Patients.Count - 1].DateConfirmed].Recoveries;
+                newCases = Regions[region][Patients[Patients.Count - 1].DateConfirmed].Cases - Regions[region][Patients[Patients.Count - 1].DateConfirmed.AddMonths(-1)].Cases;
+                weeklyReport.Text = $"Monthly Report as of {Patients[Patients.Count - 1].DateConfirmed:MMMM dd, yyyy}";
+                newCasesDesc.Text = $"New cases since\n{Patients[Patients.Count - 1].DateConfirmed.AddMonths(-1)}";
+            }
+            else
+            {
+                cases = Regions[region][datePicker.Value].Cases;
+                deaths = Regions[region][datePicker.Value].Deaths;
+                recoveries = Regions[region][datePicker.Value].Recoveries;
+                newCases = Regions[region][datePicker.Value].Cases - Regions[region][datePicker.Value.AddDays(-6)].Cases;
+                weeklyReport.Text = $"Weekly Report as of {datePicker.Value:MMMM dd, yyyy}";
+                newCasesDesc.Text = $"New cases since\n{datePicker.Value.AddDays(-6).DayOfWeek}";
+            }
             casesNum.Text = cases.ToString(CultureInfo.InvariantCulture);
             deathNum.Text = deaths.ToString(CultureInfo.InvariantCulture);
             caseNum2.Text = cases.ToString(CultureInfo.InvariantCulture);
@@ -154,8 +222,7 @@ namespace CovidInfoPH
             recovNum.Text = recoveries.ToString(CultureInfo.InvariantCulture);
             newCasesNum.Text = newCases.ToString();
             deathPercent.Value = Convert.ToInt32(deaths / cases * 100);
-            weeklyReport.Text = $"Weekly Report as of {datePicker.Value:MMMM dd, yyyy}";
-            newCasesDesc.Text = $"New cases since\n{datePicker.Value.AddDays(-6).DayOfWeek}";
+
         }
 
         private void InitializeMap()
@@ -180,7 +247,7 @@ namespace CovidInfoPH
                     new RangeColorMapping {From = 28, To = 37, Color = Color.FromArgb(255, 154, 0)},
                     new RangeColorMapping {From = 47, To = 69, Color = Color.FromArgb(255, 116, 0)},
                     new RangeColorMapping {From = 107, To = 237, Color = Color.FromArgb(255, 77, 0)},
-                    new RangeColorMapping {From = 481, To = 9000, Color = Color.FromArgb(255, 0, 0)}
+                    new RangeColorMapping {From = 481, To = 11000, Color = Color.FromArgb(255, 0, 0)}
                 };
             philippinesMap.MapBackgroundBrush = new SolidBrush(Color.FromArgb(20, 30, 39));
             philippinesMap.ShapeSelected += PhilippinesMap_ShapeSelected; //Hook the ShapeSelected event
@@ -189,11 +256,9 @@ namespace CovidInfoPH
         #endregion
 
         #region Transtion data
-
         private void FadeOutValues()
         {
             datePicker.Enabled = false;
-            bunifuTransition2.HideSync(generalCaseChart);
             bunifuTransition1.HideSync(caseGridView);
             bunifuTransition1.HideSync(newCasesNum);
             bunifuTransition1.HideSync(deathNum2);
@@ -212,7 +277,6 @@ namespace CovidInfoPH
             bunifuTransition1.ShowSync(deathNum2);
             bunifuTransition1.ShowSync(newCasesNum);
             bunifuTransition1.ShowSync(caseGridView);
-            bunifuTransition2.ShowSync(generalCaseChart);
 
         }
         #endregion
@@ -251,6 +315,7 @@ namespace CovidInfoPH
 
         private void SetData(ref DataTable table)
         {
+            DateTime latestDate = Patients[Patients.Count - 1].DateConfirmed;
             table.Clear();
             table.Columns.Add("Date");
             table.Columns.Add("Cases");
@@ -266,52 +331,52 @@ namespace CovidInfoPH
 
             //FirstRow
             DataRow date1 = table.NewRow();
-            date1["Date"] = regionDatePicker.Value.AddDays(-6);
-            date1["Cases"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-6)].Cases;
-            date1["Deaths"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-6)].Deaths;
-            date1["Recoveries"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-6)].Recoveries;
+            date1["Date"] = latestDate.AddDays(-6);
+            date1["Cases"] = Regions[regionLabel.Text][latestDate.AddDays(-6)].Cases;
+            date1["Deaths"] = Regions[regionLabel.Text][latestDate.AddDays(-6)].Deaths;
+            date1["Recoveries"] = Regions[regionLabel.Text][latestDate.AddDays(-6)].Recoveries;
             table.Rows.Add(date1);
 
             DataRow date2 = table.NewRow();
-            date2["Date"] = regionDatePicker.Value.AddDays(-5);
-            date2["Cases"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-5)].Cases;
-            date2["Deaths"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-5)].Deaths;
-            date2["Recoveries"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-5)].Recoveries;
+            date2["Date"] = latestDate.AddDays(-5);
+            date2["Cases"] = Regions[regionLabel.Text][latestDate.AddDays(-5)].Cases;
+            date2["Deaths"] = Regions[regionLabel.Text][latestDate.AddDays(-5)].Deaths;
+            date2["Recoveries"] = Regions[regionLabel.Text][latestDate.AddDays(-5)].Recoveries;
             table.Rows.Add(date2);
 
             DataRow date3 = table.NewRow();
-            date3["Date"] = regionDatePicker.Value.AddDays(-4);
-            date3["Cases"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-4)].Cases;
-            date3["Deaths"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-4)].Deaths;
-            date3["Recoveries"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-4)].Recoveries;
+            date3["Date"] = latestDate.AddDays(-4);
+            date3["Cases"] = Regions[regionLabel.Text][latestDate.AddDays(-4)].Cases;
+            date3["Deaths"] = Regions[regionLabel.Text][latestDate.AddDays(-4)].Deaths;
+            date3["Recoveries"] = Regions[regionLabel.Text][latestDate.AddDays(-4)].Recoveries;
             table.Rows.Add(date3);
 
             DataRow date4 = table.NewRow();
-            date4["Date"] = regionDatePicker.Value.AddDays(-3);
-            date4["Cases"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-3)].Cases;
-            date4["Deaths"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-3)].Deaths;
-            date4["Recoveries"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-3)].Recoveries;
+            date4["Date"] = latestDate.AddDays(-3);
+            date4["Cases"] = Regions[regionLabel.Text][latestDate.AddDays(-3)].Cases;
+            date4["Deaths"] = Regions[regionLabel.Text][latestDate.AddDays(-3)].Deaths;
+            date4["Recoveries"] = Regions[regionLabel.Text][latestDate.AddDays(-3)].Recoveries;
             table.Rows.Add(date4);
 
             DataRow date5 = table.NewRow();
-            date5["Date"] = regionDatePicker.Value.AddDays(-2);
-            date5["Cases"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-2)].Cases;
-            date5["Deaths"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-2)].Deaths;
-            date5["Recoveries"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-2)].Recoveries;
+            date5["Date"] = latestDate.AddDays(-2);
+            date5["Cases"] = Regions[regionLabel.Text][latestDate.AddDays(-2)].Cases;
+            date5["Deaths"] = Regions[regionLabel.Text][latestDate.AddDays(-2)].Deaths;
+            date5["Recoveries"] = Regions[regionLabel.Text][latestDate.AddDays(-2)].Recoveries;
             table.Rows.Add(date5);
 
             DataRow date6 = table.NewRow();
-            date6["Date"] = regionDatePicker.Value.AddDays(-1);
-            date6["Cases"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-1)].Cases;
-            date6["Deaths"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-1)].Deaths;
-            date6["Recoveries"] = Regions[regionLabel.Text][regionDatePicker.Value.AddDays(-1)].Recoveries;
+            date6["Date"] = latestDate.AddDays(-1);
+            date6["Cases"] = Regions[regionLabel.Text][latestDate.AddDays(-1)].Cases;
+            date6["Deaths"] = Regions[regionLabel.Text][latestDate.AddDays(-1)].Deaths;
+            date6["Recoveries"] = Regions[regionLabel.Text][latestDate.AddDays(-1)].Recoveries;
             table.Rows.Add(date6);
 
             DataRow date7 = table.NewRow();
-            date7["Date"] = regionDatePicker.Value;
-            date7["Cases"] = Regions[regionLabel.Text][regionDatePicker.Value].Cases;
-            date7["Deaths"] = Regions[regionLabel.Text][regionDatePicker.Value].Deaths;
-            date7["Recoveries"] = Regions[regionLabel.Text][regionDatePicker.Value].Recoveries;
+            date7["Date"] = latestDate;
+            date7["Cases"] = Regions[regionLabel.Text][latestDate].Cases;
+            date7["Deaths"] = Regions[regionLabel.Text][latestDate].Deaths;
+            date7["Recoveries"] = Regions[regionLabel.Text][latestDate].Recoveries;
             table.Rows.Add(date7);
         }
 
@@ -330,22 +395,22 @@ namespace CovidInfoPH
         private void DatePicker_ValueChanged(object sender, EventArgs e)
         {
             if (selectedRegionlabel.Text.Substring(
-                selectedRegionlabel.Text.IndexOf(':') + 2) != "All")
+                     selectedRegionlabel.Text.IndexOf(':') + 2) != "All")
             {
                 selectedRegionlabel.Text = $"Selected Region: {RegionSearchForm.SearchResult}";
                 FadeOutValues();
-                RefreshData(RegionSearchForm.SearchResult);
-                DisplayGraph(RegionSearchForm.SearchResult);
-                DisplayDataGrid(RegionSearchForm.SearchResult);
+                RefreshData(RegionSearchForm.SearchResult, false);
+                DisplayGraph(RegionSearchForm.SearchResult, false);
+                DisplayDataGrid(RegionSearchForm.SearchResult, false);
                 FadeInValues();
                 datePicker.Enabled = true;
             }
             else
             {
                 FadeOutValues();
-                RefreshData();
-                DisplayGraph();
-                DisplayDataGrid();
+                RefreshData(false);
+                DisplayGraph(false);
+                DisplayDataGrid(false);
                 FadeInValues();
                 datePicker.Enabled = true;
             }
@@ -355,20 +420,30 @@ namespace CovidInfoPH
         {
             bunifuImageButton1.FadeWhenInactive = false;
             bunifuImageButton2.FadeWhenInactive = true;
+            bunifuImageButton4.FadeWhenInactive = true;
             bunifuTransition1.Show(searchRegionButton);
             bunifuTransition1.Show(selectedRegionlabel);
-            DashBoard.SetPage(0);
+            CovidInfoPages.SetPage(0);
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
             bunifuImageButton1.FadeWhenInactive = true;
             bunifuImageButton2.FadeWhenInactive = false;
+            bunifuImageButton4.FadeWhenInactive = true;
             bunifuTransition1.Hide(searchRegionButton);
             bunifuTransition1.Hide(selectedRegionlabel);
-            DashBoard.SetPage(1);
+            CovidInfoPages.SetPage(1);
         }
-
+        private void bunifuImageButton4_Click(object sender, EventArgs e)
+        {
+            bunifuImageButton1.FadeWhenInactive = true;
+            bunifuImageButton2.FadeWhenInactive = true;
+            bunifuImageButton4.FadeWhenInactive = false;
+            bunifuTransition1.Hide(searchRegionButton);
+            bunifuTransition1.Hide(selectedRegionlabel);
+            CovidInfoPages.SetPage(2);
+        }
         private void closeButton_Click(object sender, EventArgs e)
         {
             Close();
@@ -381,32 +456,31 @@ namespace CovidInfoPH
 
         private void PhilippinesMap_ShapeSelected(object sender, ShapeSelectedEventArgs e)
         {
-            Canvas canvas = new Canvas();
-            DataPoint cases = new DataPoint(BunifuDataViz._type.Bunifu_line);
-            DataPoint deaths = new DataPoint(BunifuDataViz._type.Bunifu_line);
-            DataPoint recoveries = new DataPoint(BunifuDataViz._type.Bunifu_line);
-
-            //Adding transitions makes it laggy ://
+            uploadButton.Enabled = true;
+            List<DateTime> dates = Patients.Select(p => p.DateConfirmed).Distinct().ToList();
+            dates.Sort();
             foreach (PhRegion region in e.Data)
             {
                 regionLabel.Text = region.Region;
-                for (int i = -6; i < 1; i++)
-                {
-                    cases.addLabely(regionDatePicker.Value.AddDays(i).DayOfWeek.ToString(), Regions[region.Region][regionDatePicker.Value.AddDays(i)].Cases);
-                    deaths.addLabely(regionDatePicker.Value.AddDays(i).DayOfWeek.ToString(), Regions[region.Region][regionDatePicker.Value.AddDays(i)].Deaths);
-                    recoveries.addLabely(regionDatePicker.Value.AddDays(i).DayOfWeek.ToString(), Regions[region.Region][regionDatePicker.Value.AddDays(i)].Recoveries);
-                }
-
-                canvas.addData(cases);
-                canvas.addData(recoveries);
-                canvas.addData(deaths);
-                regionMapView.Render(canvas);
+                stackedChart.Series["Cases"].DataSource = CreateChartData(dates.Last(),
+               Regions[region.Region][dates.Last()].Cases);
+                stackedChart.Series["Deaths"].DataSource = CreateChartData(dates.Last(),
+                         Regions[region.Region][dates.Last()].Deaths);
+                stackedChart.Series["Recoveries"].DataSource = CreateChartData(dates.Last(),
+                          Regions[region.Region][dates.Last()].Recoveries);
             }
-
+            stackedChart.Series["Cases"].ValueDataMembers.AddRange("Value");
+            stackedChart.Series["Deaths"].ValueDataMembers.AddRange("Value");
+            stackedChart.Series["Recoveries"].ValueDataMembers.AddRange("Value");
         }
 
         private void searchRegionButton_Click(object sender, EventArgs e)
         {
+            //Check for radioButton
+            bool isMonth;
+            if (monthRadioButton.Checked) isMonth = false;
+            else isMonth = true;
+
             var searchButtonLocation = PointToScreen(searchRegionButton.Location);
             RegionSearchForm searchBar = new RegionSearchForm
             {
@@ -422,18 +496,18 @@ namespace CovidInfoPH
                 {
                     selectedRegionlabel.Text = $"Selected Region: {RegionSearchForm.SearchResult}";
                     FadeOutValues();
-                    RefreshData(RegionSearchForm.SearchResult);
-                    DisplayGraph(RegionSearchForm.SearchResult);
-                    DisplayDataGrid(RegionSearchForm.SearchResult);
+                    RefreshData(RegionSearchForm.SearchResult, isMonth);
+                    DisplayGraph(RegionSearchForm.SearchResult, isMonth);
+                    DisplayDataGrid(RegionSearchForm.SearchResult, isMonth);
                     FadeInValues();
                     datePicker.Enabled = true;
                 }
                 else
                 {
                     FadeOutValues();
-                    RefreshData();
-                    DisplayGraph();
-                    DisplayDataGrid();
+                    RefreshData(isMonth);
+                    DisplayGraph(isMonth);
+                    DisplayDataGrid(isMonth);
                     FadeInValues();
                     datePicker.Enabled = true;
                 }
@@ -442,22 +516,8 @@ namespace CovidInfoPH
 
         private void regionDatePicker_ValueChanged(object sender, EventArgs e)
         {
-            Canvas canvas = new Canvas();
-            DataPoint cases = new DataPoint(BunifuDataViz._type.Bunifu_line);
-            DataPoint deaths = new DataPoint(BunifuDataViz._type.Bunifu_line);
-            DataPoint recoveries = new DataPoint(BunifuDataViz._type.Bunifu_line);
-
-            for (int i = -6; i < 1; i++)
-            {
-                cases.addLabely(regionDatePicker.Value.AddDays(i).DayOfWeek.ToString(), Regions[regionLabel.Text][regionDatePicker.Value.AddDays(i)].Cases);
-                deaths.addLabely(regionDatePicker.Value.AddDays(i).DayOfWeek.ToString(), Regions[regionLabel.Text][regionDatePicker.Value.AddDays(i)].Deaths);
-                recoveries.addLabely(regionDatePicker.Value.AddDays(i).DayOfWeek.ToString(), Regions[regionLabel.Text][regionDatePicker.Value.AddDays(i)].Recoveries);
-            }
-
-            canvas.addData(cases);
-            canvas.addData(recoveries);
-            canvas.addData(deaths);
-            regionMapView.Render(canvas);
+            //remove
+   
         }
 
         private async void uploadButton_Click(object sender, EventArgs e)
@@ -560,9 +620,6 @@ namespace CovidInfoPH
             AboutForm about = new AboutForm();
             about.ShowDialog();
         }
-        #endregion
-
-        #endregion
 
         private void option_CheckedChanged(object sender, EventArgs e)
         {
@@ -575,5 +632,40 @@ namespace CovidInfoPH
                 uploadButton.Enabled = true;
             }
         }
+
+        private void weekRadioButton_Click(object sender, EventArgs e)
+        {
+            //Still no region feature      
+            FadeOutValues();
+            DisplayGraph(false);
+            DisplayDataGrid(false);
+            RefreshData(false);
+            FadeInValues();
+            datePicker.Enabled = true;
+        }
+
+        private void monthRadioButton_Click(object sender, EventArgs e)
+        {
+            //Still no region feature
+            datePicker.Enabled = false;
+            FadeOutValues();
+            DisplayGraph(true);
+            DisplayDataGrid(true);
+            RefreshData(true);
+            FadeInValues();
+        }
+
+        private void WebView_BeforeNavigate(object sender, EO.WebBrowser.BeforeNavigateEventArgs e)
+        {
+            if (e.IsUserGesture)
+            {
+                e.Cancel = true;
+                Process.Start(e.NewUrl);
+            }
+
+        }
+        #endregion
+
+        #endregion
     }
 }
