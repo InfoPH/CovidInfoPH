@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView2 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView3 = new DevExpress.XtraCharts.LineSeriesView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.Series series5 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.Series series6 = new DevExpress.XtraCharts.Series();
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation3 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            DevExpress.XtraCharts.XYDiagram xyDiagram3 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series7 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView4 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.Series series8 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView5 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.Series series9 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView6 = new DevExpress.XtraCharts.LineSeriesView();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            DevExpress.XtraCharts.XYDiagram xyDiagram4 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series10 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.Series series11 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.Series series12 = new DevExpress.XtraCharts.Series();
-            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation6 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
             this.menuBarPanel = new System.Windows.Forms.Panel();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.bunifuImageButton3 = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -73,6 +73,8 @@
             this.generalCases = new System.Windows.Forms.TabPage();
             this.tableDashBoard = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.weekRadioButton = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.monthRadioButton = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.datePicker = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -124,7 +126,6 @@
             this.webControl1 = new EO.WinForm.WebControl();
             this.webView1 = new EO.WebBrowser.WebView();
             this.topPanel = new System.Windows.Forms.Panel();
-            this.monthRadioButton = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.selectedRegionlabel = new System.Windows.Forms.Label();
             this.searchRegionButton = new Guna.UI2.WinForms.Guna2Button();
             this.minimizeButton = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -149,7 +150,6 @@
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.buttonElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.weekRadioButton = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.menuBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.locationRegion.SuspendLayout();
@@ -157,13 +157,13 @@
             this.RegionDataTable.SuspendLayout();
             this.regionDataPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lineChart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).BeginInit();
             this.panel3.SuspendLayout();
             this.generalCases.SuspendLayout();
             this.tableDashBoard.SuspendLayout();
@@ -185,10 +185,10 @@
             this.panel8.SuspendLayout();
             this.chartPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dashBoardChart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series6)).BeginInit();
             this.CovidInfoPages.SuspendLayout();
             this.webPageTab.SuspendLayout();
             this.topPanel.SuspendLayout();
@@ -299,10 +299,10 @@
             this.bunifuImageButton4.ShowSizeMarkers = false;
             this.bunifuImageButton4.Size = new System.Drawing.Size(80, 80);
             this.bunifuImageButton4.TabIndex = 0;
-            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton4, "COVID-19 Well-being guide");
+            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton4, "A summariezed guide to manage your well-being during this crisis");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuImageButton4, global::CovidInfoPH.Properties.Resources.icons8_idea_100px_2);
             this.bunifuImageButton4.ToolTipText = "";
-            this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton4, "");
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton4, "COVID-19 Well-being guide");
             this.bunifuImageButton4.WaitOnLoad = false;
             this.bunifuImageButton4.Zoom = 35;
             this.bunifuImageButton4.ZoomSpeed = 10;
@@ -389,22 +389,22 @@
             // 
             this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.bunifuTransition2.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(0);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 1F;
-            this.bunifuTransition2.DefaultAnimation = animation4;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 1F;
+            this.bunifuTransition2.DefaultAnimation = animation2;
             this.bunifuTransition2.Interval = 1;
             // 
             // locationRegion
@@ -483,11 +483,11 @@
             this.lineChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.bunifuTransition1.SetDecoration(this.lineChart, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.lineChart, BunifuAnimatorNS.DecorationType.None);
-            xyDiagram3.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram3.AxisY.VisibleInPanesSerializable = "-1";
-            xyDiagram3.EnableAxisXScrolling = true;
-            xyDiagram3.EnableAxisXZooming = true;
-            this.lineChart.Diagram = xyDiagram3;
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            xyDiagram1.EnableAxisXScrolling = true;
+            xyDiagram1.EnableAxisXZooming = true;
+            this.lineChart.Diagram = xyDiagram1;
             this.lineChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lineChart.Legend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(76)))), ((int)(((byte)(78)))));
             this.lineChart.Legend.Font = new System.Drawing.Font("Proxima Soft", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -500,19 +500,19 @@
                 new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143))))), System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))))),
                 new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189))))), System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))))),
                 new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109))))), System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109))))))}));
-            series7.ArgumentDataMember = "Argument";
-            series7.Name = "Cases";
-            series7.View = lineSeriesView4;
-            series8.ArgumentDataMember = "Argument";
-            series8.Name = "Recoveries";
-            series8.View = lineSeriesView5;
-            series9.ArgumentDataMember = "Argument";
-            series9.Name = "Deaths";
-            series9.View = lineSeriesView6;
+            series1.ArgumentDataMember = "Argument";
+            series1.Name = "Cases";
+            series1.View = lineSeriesView1;
+            series2.ArgumentDataMember = "Argument";
+            series2.Name = "Recoveries";
+            series2.View = lineSeriesView2;
+            series3.ArgumentDataMember = "Argument";
+            series3.Name = "Deaths";
+            series3.View = lineSeriesView3;
             this.lineChart.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series7,
-        series8,
-        series9};
+        series1,
+        series2,
+        series3};
             this.lineChart.Size = new System.Drawing.Size(664, 475);
             this.lineChart.TabIndex = 78;
             this.bunifuToolTip1.SetToolTip(this.lineChart, "");
@@ -820,6 +820,59 @@
             this.bunifuToolTip1.SetToolTipIcon(this.tableLayoutPanel3, null);
             this.bunifuToolTip1.SetToolTipTitle(this.tableLayoutPanel3, "");
             // 
+            // weekRadioButton
+            // 
+            this.weekRadioButton.Animated = true;
+            this.weekRadioButton.Checked = true;
+            this.weekRadioButton.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
+            this.weekRadioButton.CheckedState.BorderThickness = 2;
+            this.weekRadioButton.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.weekRadioButton.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
+            this.weekRadioButton.CheckedState.Parent = this.weekRadioButton;
+            this.weekRadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.weekRadioButton, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.weekRadioButton, BunifuAnimatorNS.DecorationType.None);
+            this.weekRadioButton.Location = new System.Drawing.Point(484, 3);
+            this.weekRadioButton.Name = "weekRadioButton";
+            this.weekRadioButton.ShadowDecoration.Parent = this.weekRadioButton;
+            this.weekRadioButton.Size = new System.Drawing.Size(27, 27);
+            this.weekRadioButton.TabIndex = 61;
+            this.bunifuToolTip1.SetToolTip(this.weekRadioButton, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.weekRadioButton, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.weekRadioButton, "");
+            this.weekRadioButton.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.weekRadioButton.UncheckedState.BorderThickness = 2;
+            this.weekRadioButton.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.weekRadioButton.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.weekRadioButton.UncheckedState.Parent = this.weekRadioButton;
+            this.weekRadioButton.Click += new System.EventHandler(this.weekRadioButton_Click);
+            // 
+            // monthRadioButton
+            // 
+            this.monthRadioButton.Animated = true;
+            this.monthRadioButton.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
+            this.monthRadioButton.CheckedState.BorderThickness = 2;
+            this.monthRadioButton.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.monthRadioButton.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
+            this.monthRadioButton.CheckedState.Parent = this.monthRadioButton;
+            this.monthRadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.monthRadioButton, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.monthRadioButton, BunifuAnimatorNS.DecorationType.None);
+            this.monthRadioButton.Location = new System.Drawing.Point(741, 3);
+            this.monthRadioButton.Name = "monthRadioButton";
+            this.monthRadioButton.ShadowDecoration.Parent = this.monthRadioButton;
+            this.monthRadioButton.Size = new System.Drawing.Size(27, 27);
+            this.monthRadioButton.TabIndex = 60;
+            this.bunifuToolTip1.SetToolTip(this.monthRadioButton, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.monthRadioButton, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.monthRadioButton, "");
+            this.monthRadioButton.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.monthRadioButton.UncheckedState.BorderThickness = 2;
+            this.monthRadioButton.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.monthRadioButton.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.monthRadioButton.UncheckedState.Parent = this.monthRadioButton;
+            this.monthRadioButton.Click += new System.EventHandler(this.monthRadioButton_Click);
+            // 
             // datePicker
             // 
             this.datePicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
@@ -966,22 +1019,22 @@
             this.caseGridView.AllowUserToDeleteRows = false;
             this.caseGridView.AllowUserToResizeColumns = false;
             this.caseGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            this.caseGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.caseGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.caseGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.caseGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.caseGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.caseGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.caseGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.caseGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.caseGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.caseGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.caseGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Date,
@@ -990,14 +1043,14 @@
             this.Recoveries});
             this.bunifuTransition2.SetDecoration(this.caseGridView, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.caseGridView, BunifuAnimatorNS.DecorationType.None);
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(32)))), ((int)(((byte)(44)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.caseGridView.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(32)))), ((int)(((byte)(44)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Proxima Soft", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.caseGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.caseGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.caseGridView.DoubleBuffered = true;
             this.caseGridView.EnableHeadersVisualStyles = false;
@@ -1567,9 +1620,9 @@
             this.dashBoardChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.bunifuTransition1.SetDecoration(this.dashBoardChart, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.dashBoardChart, BunifuAnimatorNS.DecorationType.None);
-            xyDiagram4.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram4.AxisY.VisibleInPanesSerializable = "-1";
-            this.dashBoardChart.Diagram = xyDiagram4;
+            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
+            this.dashBoardChart.Diagram = xyDiagram2;
             this.dashBoardChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dashBoardChart.Legend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(76)))), ((int)(((byte)(78)))));
             this.dashBoardChart.Legend.Font = new System.Drawing.Font("Proxima Soft", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1582,19 +1635,19 @@
                 new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143))))), System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))))),
                 new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189))))), System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))))),
                 new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109))))), System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(94)))), ((int)(((byte)(109))))))}));
-            series10.ArgumentDataMember = "Argument";
-            series10.Name = "Cases";
-            series10.ValueDataMembersSerializable = "Value";
-            series11.ArgumentDataMember = "Argument";
-            series11.Name = "Recoveries";
-            series11.ValueDataMembersSerializable = "Value";
-            series12.ArgumentDataMember = "Argument";
-            series12.Name = "Deaths";
-            series12.ValueDataMembersSerializable = "Value";
+            series4.ArgumentDataMember = "Argument";
+            series4.Name = "Cases";
+            series4.ValueDataMembersSerializable = "Value";
+            series5.ArgumentDataMember = "Argument";
+            series5.Name = "Recoveries";
+            series5.ValueDataMembersSerializable = "Value";
+            series6.ArgumentDataMember = "Argument";
+            series6.Name = "Deaths";
+            series6.ValueDataMembersSerializable = "Value";
             this.dashBoardChart.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series10,
-        series11,
-        series12};
+        series4,
+        series5,
+        series6};
             this.dashBoardChart.Size = new System.Drawing.Size(1358, 346);
             this.dashBoardChart.TabIndex = 63;
             this.bunifuToolTip1.SetToolTip(this.dashBoardChart, "");
@@ -1707,9 +1760,9 @@
             this.CovidInfoPages.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.CovidInfoPages.Multiline = true;
             this.CovidInfoPages.Name = "CovidInfoPages";
-            this.CovidInfoPages.Page = this.webPageTab;
-            this.CovidInfoPages.PageIndex = 2;
-            this.CovidInfoPages.PageName = "webPageTab";
+            this.CovidInfoPages.Page = this.generalCases;
+            this.CovidInfoPages.PageIndex = 0;
+            this.CovidInfoPages.PageName = "generalCases";
             this.CovidInfoPages.PageTitle = "tabPage1";
             this.CovidInfoPages.SelectedIndex = 0;
             this.CovidInfoPages.Size = new System.Drawing.Size(1389, 745);
@@ -1717,22 +1770,22 @@
             this.bunifuToolTip1.SetToolTip(this.CovidInfoPages, "");
             this.bunifuToolTip1.SetToolTipIcon(this.CovidInfoPages, null);
             this.bunifuToolTip1.SetToolTipTitle(this.CovidInfoPages, "");
-            animation6.AnimateOnlyDifferences = true;
-            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
-            animation6.LeafCoeff = 1F;
-            animation6.MaxTime = 1F;
-            animation6.MinTime = 0F;
-            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
-            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
-            animation6.MosaicSize = 0;
-            animation6.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            animation6.RotateCoeff = 0F;
-            animation6.RotateLimit = 0F;
-            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
-            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
-            animation6.TimeCoeff = 0F;
-            animation6.TransparencyCoeff = 0F;
-            this.CovidInfoPages.Transition = animation6;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 1F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.CovidInfoPages.Transition = animation3;
             this.CovidInfoPages.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Leaf;
             // 
             // webPageTab
@@ -1797,32 +1850,6 @@
             this.bunifuToolTip1.SetToolTip(this.topPanel, "");
             this.bunifuToolTip1.SetToolTipIcon(this.topPanel, null);
             this.bunifuToolTip1.SetToolTipTitle(this.topPanel, "");
-            // 
-            // monthRadioButton
-            // 
-            this.monthRadioButton.Animated = true;
-            this.monthRadioButton.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
-            this.monthRadioButton.CheckedState.BorderThickness = 2;
-            this.monthRadioButton.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.monthRadioButton.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.monthRadioButton.CheckedState.Parent = this.monthRadioButton;
-            this.monthRadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.monthRadioButton, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.monthRadioButton, BunifuAnimatorNS.DecorationType.None);
-            this.monthRadioButton.Location = new System.Drawing.Point(741, 3);
-            this.monthRadioButton.Name = "monthRadioButton";
-            this.monthRadioButton.ShadowDecoration.Parent = this.monthRadioButton;
-            this.monthRadioButton.Size = new System.Drawing.Size(27, 27);
-            this.monthRadioButton.TabIndex = 60;
-            this.bunifuToolTip1.SetToolTip(this.monthRadioButton, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.monthRadioButton, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.monthRadioButton, "");
-            this.monthRadioButton.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.monthRadioButton.UncheckedState.BorderThickness = 2;
-            this.monthRadioButton.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.monthRadioButton.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.monthRadioButton.UncheckedState.Parent = this.monthRadioButton;
-            this.monthRadioButton.Click += new System.EventHandler(this.monthRadioButton_Click);
             // 
             // selectedRegionlabel
             // 
@@ -2113,49 +2140,22 @@
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.bunifuTransition1.Cursor = null;
-            animation5.AnimateOnlyDifferences = true;
-            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
-            animation5.LeafCoeff = 0F;
-            animation5.MaxTime = 1F;
-            animation5.MinTime = 0F;
-            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
-            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
-            animation5.MosaicSize = 0;
-            animation5.Padding = new System.Windows.Forms.Padding(0);
-            animation5.RotateCoeff = 0F;
-            animation5.RotateLimit = 0F;
-            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
-            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
-            animation5.TimeCoeff = 0F;
-            animation5.TransparencyCoeff = 1F;
-            this.bunifuTransition1.DefaultAnimation = animation5;
-            // 
-            // weekRadioButton
-            // 
-            this.weekRadioButton.Animated = true;
-            this.weekRadioButton.Checked = true;
-            this.weekRadioButton.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(78)))), ((int)(((byte)(107)))));
-            this.weekRadioButton.CheckedState.BorderThickness = 2;
-            this.weekRadioButton.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.weekRadioButton.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(174)))), ((int)(((byte)(189)))));
-            this.weekRadioButton.CheckedState.Parent = this.weekRadioButton;
-            this.weekRadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.weekRadioButton, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.weekRadioButton, BunifuAnimatorNS.DecorationType.None);
-            this.weekRadioButton.Location = new System.Drawing.Point(484, 3);
-            this.weekRadioButton.Name = "weekRadioButton";
-            this.weekRadioButton.ShadowDecoration.Parent = this.weekRadioButton;
-            this.weekRadioButton.Size = new System.Drawing.Size(27, 27);
-            this.weekRadioButton.TabIndex = 61;
-            this.bunifuToolTip1.SetToolTip(this.weekRadioButton, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.weekRadioButton, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.weekRadioButton, "");
-            this.weekRadioButton.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.weekRadioButton.UncheckedState.BorderThickness = 2;
-            this.weekRadioButton.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.weekRadioButton.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.weekRadioButton.UncheckedState.Parent = this.weekRadioButton;
-            this.weekRadioButton.Click += new System.EventHandler(this.weekRadioButton_Click);
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 1F;
+            this.bunifuTransition1.DefaultAnimation = animation1;
             // 
             // MainForm
             // 
@@ -2181,13 +2181,13 @@
             this.panel1.ResumeLayout(false);
             this.RegionDataTable.ResumeLayout(false);
             this.regionDataPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lineChart)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -2217,10 +2217,10 @@
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.chartPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashBoardChart)).EndInit();
             this.CovidInfoPages.ResumeLayout(false);
             this.webPageTab.ResumeLayout(false);

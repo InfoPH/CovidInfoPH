@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CovidInfoPH.Models;
@@ -15,6 +16,8 @@ namespace CovidInfoPH
         public SplashForm()
         {
             InitializeComponent();
+            bunifuToolTip1.SetToolTipTitle(bunifuLabel1,
+                $"<b>COVIDinfo-PH</b> <span style=\\\"color: darkgray;\\\">•</span> <span style=\"color: dimgray; font-family: consolas; font-size: 13px\">{Assembly.GetExecutingAssembly().GetName().Version.ToString(3)}</span>");
         }
 
         #region Fetch data
