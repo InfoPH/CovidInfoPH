@@ -845,7 +845,6 @@
             this.weekRadioButton.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.weekRadioButton.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.weekRadioButton.UncheckedState.Parent = this.weekRadioButton;
-            this.weekRadioButton.Click += new System.EventHandler(this.weekRadioButton_Click);
             // 
             // monthRadioButton
             // 
@@ -871,7 +870,7 @@
             this.monthRadioButton.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.monthRadioButton.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.monthRadioButton.UncheckedState.Parent = this.monthRadioButton;
-            this.monthRadioButton.Click += new System.EventHandler(this.monthRadioButton_Click);
+            this.monthRadioButton.CheckedChanged += new System.EventHandler(this.monthRadioButton_CheckedChanged);
             // 
             // datePicker
             // 
@@ -2028,7 +2027,7 @@
             // 
             // formElipse
             // 
-            this.formElipse.ElipseRadius = 50;
+            this.formElipse.ElipseRadius = 55;
             this.formElipse.TargetControl = this;
             // 
             // bunifuCasesElipse
