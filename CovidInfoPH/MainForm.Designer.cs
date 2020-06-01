@@ -299,7 +299,7 @@
             this.bunifuImageButton4.ShowSizeMarkers = false;
             this.bunifuImageButton4.Size = new System.Drawing.Size(80, 80);
             this.bunifuImageButton4.TabIndex = 0;
-            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton4, "A summariezed guide to manage your well-being during this crisis");
+            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton4, "A summarized guide to manage your well-being in this pandemic.");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuImageButton4, global::CovidInfoPH.Properties.Resources.icons8_idea_100px_2);
             this.bunifuImageButton4.ToolTipText = "";
             this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton4, "COVID-19 Well-being guide");
@@ -1771,7 +1771,7 @@
             this.bunifuToolTip1.SetToolTipTitle(this.CovidInfoPages, "");
             animation3.AnimateOnlyDifferences = true;
             animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 1F;
+            animation3.LeafCoeff = 0F;
             animation3.MaxTime = 1F;
             animation3.MinTime = 0F;
             animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
@@ -1785,7 +1785,7 @@
             animation3.TimeCoeff = 0F;
             animation3.TransparencyCoeff = 0F;
             this.CovidInfoPages.Transition = animation3;
-            this.CovidInfoPages.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Leaf;
+            this.CovidInfoPages.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.VertSlide;
             // 
             // webPageTab
             // 

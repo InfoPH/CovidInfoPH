@@ -10,6 +10,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing.Imaging;
 using System.Net;
+using BunifuAnimatorNS;
 using Syncfusion.Windows.Forms.Maps;
 using Syncfusion.UI.Xaml.Maps;
 using Syncfusion.Pdf.Graphics;
@@ -134,7 +135,7 @@ namespace CovidInfoPH
                                 .Year,
                             datePicker.Value
                                 .Month))).Aggregate((i1, i2) => i1.Key > i2.Key ? i1 : i2).Key;
-                foreach (KeyValuePair<DateTime, HistoricalInfo> historicalDateInfo in Historical.Where(d => d.Key >= new DateTime(datePicker.Value.Year, datePicker.Value.Month,1) && d.Key <= latestDate).Reverse())
+                foreach (KeyValuePair<DateTime, HistoricalInfo> historicalDateInfo in Historical.Where(d => d.Key >= new DateTime(datePicker.Value.Year, datePicker.Value.Month, 1) && d.Key <= latestDate).Reverse())
                 {
                     caseGridView.Rows.Add($"{historicalDateInfo.Key:MM-dd-yyyy}", historicalDateInfo.Value.Cases,
                         historicalDateInfo.Value.Deaths, historicalDateInfo.Value.Recoveries);
@@ -554,6 +555,7 @@ namespace CovidInfoPH
             if (monthRadioButton.Checked)
             {
                 datePicker.Format = DateTimePickerFormat.Custom;
+                bunifuTransition1.Hide(label10, false, Animation.HorizSlide);
                 foreach (Series series in dashBoardChart.Series)
                 {
                     series.ChangeView(ViewType.StackedArea);
@@ -562,6 +564,7 @@ namespace CovidInfoPH
             else if (weekRadioButton.Checked)
             {
                 datePicker.Format = DateTimePickerFormat.Long;
+                bunifuTransition1.Show(label10, false, Animation.HorizSlide);
                 foreach (Series series in dashBoardChart.Series)
                 {
                     series.ChangeView(ViewType.Bar);
@@ -592,13 +595,14 @@ namespace CovidInfoPH
         }
         #endregion
 
+        #region Switch pages
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             bunifuImageButton1.FadeWhenInactive = false;
             bunifuImageButton2.FadeWhenInactive = true;
             bunifuImageButton4.FadeWhenInactive = true;
-            bunifuTransition1.Show(searchRegionButton);
-            bunifuTransition1.Show(selectedRegionlabel);
+            bunifuTransition1.ShowSync(searchRegionButton);
+            bunifuTransition1.ShowSync(selectedRegionlabel);
             CovidInfoPages.SetPage(0);
         }
 
@@ -607,8 +611,8 @@ namespace CovidInfoPH
             bunifuImageButton1.FadeWhenInactive = true;
             bunifuImageButton2.FadeWhenInactive = false;
             bunifuImageButton4.FadeWhenInactive = true;
-            bunifuTransition1.Hide(searchRegionButton);
-            bunifuTransition1.Hide(selectedRegionlabel);
+            bunifuTransition1.HideSync(searchRegionButton);
+            bunifuTransition1.HideSync(selectedRegionlabel);
             CovidInfoPages.SetPage(1);
         }
 
@@ -617,10 +621,11 @@ namespace CovidInfoPH
             bunifuImageButton1.FadeWhenInactive = true;
             bunifuImageButton2.FadeWhenInactive = true;
             bunifuImageButton4.FadeWhenInactive = false;
-            bunifuTransition1.Hide(searchRegionButton);
-            bunifuTransition1.Hide(selectedRegionlabel);
+            bunifuTransition1.HideSync(searchRegionButton);
+            bunifuTransition1.HideSync(selectedRegionlabel);
             CovidInfoPages.SetPage(2);
         }
+        #endregion
 
         private void closeButton_Click(object sender, EventArgs e)
         {
