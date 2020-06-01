@@ -299,7 +299,7 @@
             this.bunifuImageButton4.ShowSizeMarkers = false;
             this.bunifuImageButton4.Size = new System.Drawing.Size(80, 80);
             this.bunifuImageButton4.TabIndex = 0;
-            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton4, "A summariezed guide to manage your well-being during this crisis");
+            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton4, "A summarized guide to manage your well-being in this pandemic.");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuImageButton4, global::CovidInfoPH.Properties.Resources.icons8_idea_100px_2);
             this.bunifuImageButton4.ToolTipText = "";
             this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton4, "COVID-19 Well-being guide");
@@ -845,7 +845,6 @@
             this.weekRadioButton.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.weekRadioButton.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.weekRadioButton.UncheckedState.Parent = this.weekRadioButton;
-            this.weekRadioButton.Click += new System.EventHandler(this.weekRadioButton_Click);
             // 
             // monthRadioButton
             // 
@@ -871,7 +870,7 @@
             this.monthRadioButton.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.monthRadioButton.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.monthRadioButton.UncheckedState.Parent = this.monthRadioButton;
-            this.monthRadioButton.Click += new System.EventHandler(this.monthRadioButton_Click);
+            this.monthRadioButton.CheckedChanged += new System.EventHandler(this.monthRadioButton_CheckedChanged);
             // 
             // datePicker
             // 
@@ -1772,7 +1771,7 @@
             this.bunifuToolTip1.SetToolTipTitle(this.CovidInfoPages, "");
             animation3.AnimateOnlyDifferences = true;
             animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 1F;
+            animation3.LeafCoeff = 0F;
             animation3.MaxTime = 1F;
             animation3.MinTime = 0F;
             animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
@@ -1786,7 +1785,7 @@
             animation3.TimeCoeff = 0F;
             animation3.TransparencyCoeff = 0F;
             this.CovidInfoPages.Transition = animation3;
-            this.CovidInfoPages.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Leaf;
+            this.CovidInfoPages.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.VertSlide;
             // 
             // webPageTab
             // 
@@ -2028,7 +2027,7 @@
             // 
             // formElipse
             // 
-            this.formElipse.ElipseRadius = 50;
+            this.formElipse.ElipseRadius = 55;
             this.formElipse.TargetControl = this;
             // 
             // bunifuCasesElipse
@@ -2169,6 +2168,7 @@
             this.bunifuTransition1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.Name = "MainForm";
             this.Opacity = 0D;
