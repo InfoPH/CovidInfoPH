@@ -34,38 +34,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Bunifu.Core">
-      <HintPath>..\lib\Bunifu UI WinForms\Bunifu.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForm.BunifuShadowPanel">
-      <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForm.BunifuShadowPanel.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
-      <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
-      <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
-    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
       <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition">
-      <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
       <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
       <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
-      <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock">
-      <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuGauge">
-      <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
       <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
@@ -76,20 +52,8 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuPages">
       <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
-      <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar">
-      <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
-      <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
-    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
       <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuSlider">
-      <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
@@ -97,86 +61,17 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
       <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuTransition">
-      <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl">
-      <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.ToggleSwitch">
-      <HintPath>..\lib\Bunifu UI WinForms\Bunifu.UI.WinForms.ToggleSwitch.dll</HintPath>
-    </Reference>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\lib\Bunifu UI WinForms\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Charts.v20.1.Core">
       <HintPath>..\lib\Dev Express\DevExpress.Charts.v20.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.CodeParser.v20.1">
-      <HintPath>..\lib\Dev Express\DevExpress.CodeParser.v20.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Dashboard.v20.1.Core">
-      <HintPath>..\lib\Dev Express\DevExpress.Dashboard.v20.1.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Dashboard.v20.1.Win">
-      <HintPath>..\lib\Dev Express\DevExpress.Dashboard.v20.1.Win.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Data.Desktop.v20.1">
-      <HintPath>..\lib\Dev Express\DevExpress.Data.Desktop.v20.1.dll</HintPath>
-    </Reference>
     <Reference Include="DevExpress.Data.v20.1">
       <HintPath>..\lib\Dev Express\DevExpress.Data.v20.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.DataAccess.v20.1">
-      <HintPath>..\lib\Dev Express\DevExpress.DataAccess.v20.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.DataAccess.v20.1.UI">
-      <HintPath>..\lib\Dev Express\DevExpress.DataAccess.v20.1.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Diagram.v20.1.Core">
-      <HintPath>..\lib\Dev Express\DevExpress.Diagram.v20.1.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Images.v20.1">
-      <HintPath>..\lib\Dev Express\DevExpress.Images.v20.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Map.v20.1.Core">
-      <HintPath>..\lib\Dev Express\DevExpress.Map.v20.1.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Office.v20.1.Core">
-      <HintPath>..\lib\Dev Express\DevExpress.Office.v20.1.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Pdf.v20.1.Core">
-      <HintPath>..\lib\Dev Express\DevExpress.Pdf.v20.1.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Pdf.v20.1.Drawing">
-      <HintPath>..\lib\Dev Express\DevExpress.Pdf.v20.1.Drawing.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.PivotGrid.v20.1.Core">
-      <HintPath>..\lib\Dev Express\DevExpress.PivotGrid.v20.1.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Printing.v20.1.Core">
-      <HintPath>..\lib\Dev Express\DevExpress.Printing.v20.1.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.RichEdit.v20.1.Core">
-      <HintPath>..\lib\Dev Express\DevExpress.RichEdit.v20.1.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Sparkline.v20.1.Core">
-      <HintPath>..\lib\Dev Express\DevExpress.Sparkline.v20.1.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.TreeMap.v20.1.Core">
-      <HintPath>..\lib\Dev Express\DevExpress.TreeMap.v20.1.Core.dll</HintPath>
-    </Reference>
     <Reference Include="DevExpress.Utils.v20.1">
       <HintPath>..\lib\Dev Express\DevExpress.Utils.v20.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Utils.v20.1.UI">
-      <HintPath>..\lib\Dev Express\DevExpress.Utils.v20.1.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Xpo.v20.1">
-      <HintPath>..\lib\Dev Express\DevExpress.Xpo.v20.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraBars.v20.1">
-      <HintPath>..\lib\Dev Express\DevExpress.XtraBars.v20.1.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraCharts.v20.1">
       <HintPath>..\lib\Dev Express\DevExpress.XtraCharts.v20.1.dll</HintPath>
@@ -184,61 +79,12 @@
     <Reference Include="DevExpress.XtraCharts.v20.1.UI">
       <HintPath>..\lib\Dev Express\DevExpress.XtraCharts.v20.1.UI.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v20.1.Wizard">
-      <HintPath>..\lib\Dev Express\DevExpress.XtraCharts.v20.1.Wizard.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraDiagram.v20.1">
-      <HintPath>..\lib\Dev Express\DevExpress.XtraDiagram.v20.1.dll</HintPath>
-    </Reference>
     <Reference Include="DevExpress.XtraEditors.v20.1">
       <HintPath>..\lib\Dev Express\DevExpress.XtraEditors.v20.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraGauges.v20.1.Core">
-      <HintPath>..\lib\Dev Express\DevExpress.XtraGauges.v20.1.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraGauges.v20.1.Presets">
-      <HintPath>..\lib\Dev Express\DevExpress.XtraGauges.v20.1.Presets.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraGauges.v20.1.Win">
-      <HintPath>..\lib\Dev Express\DevExpress.XtraGauges.v20.1.Win.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraGrid.v20.1">
-      <HintPath>..\lib\Dev Express\DevExpress.XtraGrid.v20.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraLayout.v20.1">
-      <HintPath>..\lib\Dev Express\DevExpress.XtraLayout.v20.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraMap.v20.1">
-      <HintPath>..\lib\Dev Express\DevExpress.XtraMap.v20.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraNavBar.v20.1">
-      <HintPath>..\lib\Dev Express\DevExpress.XtraNavBar.v20.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraPivotGrid.v20.1">
-      <HintPath>..\lib\Dev Express\DevExpress.XtraPivotGrid.v20.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v20.1">
-      <HintPath>..\lib\Dev Express\DevExpress.XtraPrinting.v20.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraReports.v20.1">
-      <HintPath>..\lib\Dev Express\DevExpress.XtraReports.v20.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraRichEdit.v20.1">
-      <HintPath>..\lib\Dev Express\DevExpress.XtraRichEdit.v20.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v20.1">
-      <HintPath>..\lib\Dev Express\DevExpress.XtraTreeList.v20.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraTreeMap.v20.1">
-      <HintPath>..\lib\Dev Express\DevExpress.XtraTreeMap.v20.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraVerticalGrid.v20.1">
-      <HintPath>..\lib\Dev Express\DevExpress.XtraVerticalGrid.v20.1.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2">
       <HintPath>..\lib\Guna UI\Guna.UI2.dll</HintPath>
     </Reference>
-    <Reference Include="System.Management" />
   </ItemGroup>
 
   <ItemGroup>
