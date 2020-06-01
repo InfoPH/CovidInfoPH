@@ -254,7 +254,7 @@ namespace CovidInfoPH
                 deaths = Historical[datePicker.Value].Deaths;
                 recoveries = Historical[datePicker.Value].Recoveries;
                 newCases = Historical[datePicker.Value].Cases - Historical[datePicker.Value.AddDays(-6)].Cases;
-                weeklyReport.Text = $"Weekly Report as of {datePicker.Value: MMMM dd, yyyy}";
+                weeklyReport.Text = $"Weekly Report as of {datePicker.Value:d}";
                 newCasesDesc.Text = $"New cases since\n{datePicker.Value.AddDays(-6).DayOfWeek}";
             }
 
@@ -314,7 +314,7 @@ namespace CovidInfoPH
                 deaths = Regions[region][datePicker.Value].Deaths;
                 recoveries = Regions[region][datePicker.Value].Recoveries;
                 newCases = Regions[region][datePicker.Value].Cases - Regions[region][datePicker.Value.AddDays(-6)].Cases;
-                weeklyReport.Text = $"Weekly Report as of {datePicker.Value:MMMM dd, yyyy}";
+                weeklyReport.Text = $"Weekly Report as of {datePicker.Value:d}";
                 newCasesDesc.Text = $"New cases since\n{datePicker.Value.AddDays(-6).DayOfWeek}";
             }
             casesNum.Text = cases.ToString(CultureInfo.InvariantCulture);
