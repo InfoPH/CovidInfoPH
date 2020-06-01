@@ -9,6 +9,7 @@
 
   <PropertyGroup>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <ApplicationIcon>logo-icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
